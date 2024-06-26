@@ -29,7 +29,4 @@ const download = (url, dest, trim = false) => {
 }
 
 // https://github.com/UnryzeC/UjAPI/tree/main/uJAPIFiles
-
-const dest = path.join('..', 'src', 'common.j')
-
-download('https://raw.githubusercontent.com/UnryzeC/UjAPI/main/uJAPIFiles/common.j', dest, true)
+download('https://raw.githubusercontent.com/UnryzeC/UjAPI/main/uJAPIFiles/common.j', path.join('..', 'src', 'common.j'), true)

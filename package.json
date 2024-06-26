@@ -6,5 +6,8 @@
   "author": "nazarpunk",
   "contributors": [],
   "license": "UNLICENSED",
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "jass-to-ast": "^2.0.2"
+  }
 }
