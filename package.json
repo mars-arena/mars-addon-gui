@@ -1,0 +1,10 @@
+{
+  "name": "ujapi-gui",
+  "version": "1.0.0",
+  "private": true,
+  "keywords": [],
+  "author": "nazarpunk",
+  "contributors": [],
+  "license": "UNLICENSED",
+  "type": "module"
+}
