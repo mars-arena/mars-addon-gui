@@ -1,4 +1,3 @@
-set mpq=C:\Users\nazarpunk\Desktop\MPQEditor\MPQEditor.exe
-set root=Z:
+call variables.bat
 
-start "" %mpq% extract /console "%root%\src\umswe.mpq" * "%root%\src\umswe" /fp
+start "" %mpq% /extract "%root%\src\umswe.mpq" "UI\*" "%root%\src\umswe" /fp
