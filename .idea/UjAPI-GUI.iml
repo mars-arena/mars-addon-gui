@@ -3,6 +3,7 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/System Volume Information" />
       <excludeFolder url="file://$MODULE_DIR$/src/umswe" />
     </content>
     <orderEntry type="inheritedJdk" />
