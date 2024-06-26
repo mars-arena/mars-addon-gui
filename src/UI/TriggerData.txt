@@ -1,4 +1,5 @@
 [TriggerCategories]
+TC_UJAPI=WESTRING_TRIGCAT_UJAPI,ReplaceableTextures\WorldEditUI\Actions-UnitSelection
 TC_ARITHMETIC=WESTRING_TRIGCAT_ARITHMETIC,ReplaceableTextures\WorldEditUI\Actions-AI,1
 TC_NOTHING=WESTRING_TRIGCAT_NOTHING,ReplaceableTextures\WorldEditUI\Actions-Nothing,1
 TC_COMMENT=WESTRING_TRIGCAT_COMMENT,ReplaceableTextures\WorldEditUI\Actions-Comment,1
@@ -3817,6 +3818,11 @@ _OperatorCompareMultiboardItem_Category=TC_COMPATIBILITY
 
 
 [TriggerActions]
+
+AnalCunt=0,unit,integer,permanentoption
+_AnalCunt_Defaults=GetTriggerUnit,0,PermanentPerm
+_AnalCunt_Category=TC_UJAPI
+
 DoNothing=0,nothing
 _DoNothing_Category=TC_NOTHING
 

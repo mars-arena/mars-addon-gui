@@ -298,6 +298,11 @@ OperatorCompareMultiboardItemHint=Just here for COMPATIBILITY reasons. Multiboar
 
 
 [TriggerActionStrings]
+
+AnalCunt=Anal Cunt
+AnalCunt="Set Anal of ",~Hero," to ",~Integer,", the effect will be ",~Permanent
+AnalCuntHint=Changes the hero's agility [UMSWE]
+
 DoNothing=Do Nothing
 DoNothing="Do nothing"
 
