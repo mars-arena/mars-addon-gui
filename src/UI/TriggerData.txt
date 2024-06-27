@@ -1,19 +1,34 @@
 [TriggerCategories]
 TC_UjAPI_Ability=WESTRING_TRIGCAT_UjAPI_Ability,ReplaceableTextures\WorldEditUI\Actions-Nothing
+TC_UjAPI_Blight=WESTRING_TRIGCAT_UjAPI_Blight,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_Buff=WESTRING_TRIGCAT_UjAPI_Buff,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_Camera=WESTRING_TRIGCAT_UjAPI_Camera,ReplaceableTextures\WorldEditUI\Actions-Nothing
+TC_UjAPI_Cinematic=WESTRING_TRIGCAT_UjAPI_Cinematic,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_Convert=WESTRING_TRIGCAT_UjAPI_Convert,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_Destructable=WESTRING_TRIGCAT_UjAPI_Destructable,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_Doodad=WESTRING_TRIGCAT_UjAPI_Doodad,ReplaceableTextures\WorldEditUI\Actions-Nothing
+TC_UjAPI_Force=WESTRING_TRIGCAT_UjAPI_Force,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_Frame=WESTRING_TRIGCAT_UjAPI_Frame,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_Handle=WESTRING_TRIGCAT_UjAPI_Handle,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_HandleList=WESTRING_TRIGCAT_UjAPI_HandleList,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_Hashtable=WESTRING_TRIGCAT_UjAPI_Hashtable,ReplaceableTextures\WorldEditUI\Actions-Nothing
+TC_UjAPI_Image=WESTRING_TRIGCAT_UjAPI_Image,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_Item=WESTRING_TRIGCAT_UjAPI_Item,ReplaceableTextures\WorldEditUI\Actions-Nothing
+TC_UjAPI_Jass=WESTRING_TRIGCAT_UjAPI_Jass,ReplaceableTextures\WorldEditUI\Actions-Nothing
+TC_UjAPI_Leaderboard=WESTRING_TRIGCAT_UjAPI_Leaderboard,ReplaceableTextures\WorldEditUI\Actions-Nothing
+TC_UjAPI_Lightning=WESTRING_TRIGCAT_UjAPI_Lightning,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_Math=WESTRING_TRIGCAT_UjAPI_Math,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_Misc=WESTRING_TRIGCAT_UjAPI_Misc,ReplaceableTextures\WorldEditUI\Actions-Nothing
+TC_UjAPI_Mouse=WESTRING_TRIGCAT_UjAPI_Mouse,ReplaceableTextures\WorldEditUI\Actions-Nothing
+TC_UjAPI_Multiboard=WESTRING_TRIGCAT_UjAPI_Multiboard,ReplaceableTextures\WorldEditUI\Actions-Nothing
+TC_UjAPI_Order=WESTRING_TRIGCAT_UjAPI_Order,ReplaceableTextures\WorldEditUI\Actions-Nothing
+TC_UjAPI_Player=WESTRING_TRIGCAT_UjAPI_Player,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_Projectile=WESTRING_TRIGCAT_UjAPI_Projectile,ReplaceableTextures\WorldEditUI\Actions-Nothing
+TC_UjAPI_Quest=WESTRING_TRIGCAT_UjAPI_Quest,ReplaceableTextures\WorldEditUI\Actions-Nothing
+TC_UjAPI_Sound=WESTRING_TRIGCAT_UjAPI_Sound,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_Sync=WESTRING_TRIGCAT_UjAPI_Sync,ReplaceableTextures\WorldEditUI\Actions-Nothing
+TC_UjAPI_TextFile=WESTRING_TRIGCAT_UjAPI_TextFile,ReplaceableTextures\WorldEditUI\Actions-Nothing
+TC_UjAPI_TextTag=WESTRING_TRIGCAT_UjAPI_TextTag,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_Timer=WESTRING_TRIGCAT_UjAPI_Timer,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_Trackable=WESTRING_TRIGCAT_UjAPI_Trackable,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_Trigger=WESTRING_TRIGCAT_UjAPI_Trigger,ReplaceableTextures\WorldEditUI\Actions-Nothing
@@ -4045,12 +4060,12 @@ _AddItemToStock_Category=TC_UjAPI_Item
 
 AddLightning=1,string,boolean,real,real,real,real
 _AddLightning_Defaults=_,true,0,0,0,0
-_AddLightning_Category=TC_UjAPI_Misc
+_AddLightning_Category=TC_UjAPI_Lightning
 
 
 AddPlayerTechResearched=1,player,integer,integer
 _AddPlayerTechResearched_Defaults=Player00,0,0
-_AddPlayerTechResearched_Category=TC_UjAPI_Misc
+_AddPlayerTechResearched_Category=TC_UjAPI_Player
 
 
 AddResourceAmount=1,unit,integer
@@ -4205,7 +4220,7 @@ _BenchmarkStart_Category=TC_UjAPI_Misc
 
 CachePlayerHeroData=1,player
 _CachePlayerHeroData_Defaults=Player00
-_CachePlayerHeroData_Category=TC_UjAPI_Misc
+_CachePlayerHeroData_Category=TC_UjAPI_Player
 
 
 CameraSetDepthOfFieldScale=1,real
@@ -4400,7 +4415,7 @@ _CreateAbility_Category=TC_UjAPI_Ability
 
 CreateBlightedGoldmine=1,player,real,real,real
 _CreateBlightedGoldmine_Defaults=Player00,0,0,0
-_CreateBlightedGoldmine_Category=TC_UjAPI_Misc
+_CreateBlightedGoldmine_Category=TC_UjAPI_Unit
 
 
 CreateBuff=1,integer
@@ -4485,7 +4500,7 @@ _CreateFogModifierRect_Category=TC_UjAPI_Misc
 
 CreateForce=1,nothing
 _CreateForce_Defaults=
-_CreateForce_Category=TC_UjAPI_Misc
+_CreateForce_Category=TC_UjAPI_Force
 
 
 CreateFrame=1,string,framehandle,integer,integer
@@ -4525,12 +4540,12 @@ _CreateIllusionFromUnitEx_Category=TC_UjAPI_Unit
 
 CreateImage=1,string,real,real,real,real,real,real,real,real,real,integer
 _CreateImage_Defaults=_,0,0,0,0,0,0,0,0,0,0
-_CreateImage_Category=TC_UjAPI_Misc
+_CreateImage_Category=TC_UjAPI_Image
 
 
 CreateImageSimple=1,string,real,real,real,real,real,integer
 _CreateImageSimple_Defaults=_,0,0,0,0,0,0
-_CreateImageSimple_Category=TC_UjAPI_Misc
+_CreateImageSimple_Category=TC_UjAPI_Image
 
 
 CreateItem=1,integer,real,real
@@ -4545,7 +4560,7 @@ _CreateItemPool_Category=TC_UjAPI_Item
 
 CreateLeaderboard=1,nothing
 _CreateLeaderboard_Defaults=
-_CreateLeaderboard_Category=TC_UjAPI_Misc
+_CreateLeaderboard_Category=TC_UjAPI_Leaderboard
 
 
 CreateLearnCommandButtonEffect=1,integer
@@ -4555,7 +4570,7 @@ _CreateLearnCommandButtonEffect_Category=TC_UjAPI_Misc
 
 CreateMIDISound=1,string,integer,integer
 _CreateMIDISound_Defaults=_,0,0
-_CreateMIDISound_Category=TC_UjAPI_Misc
+_CreateMIDISound_Category=TC_UjAPI_Sound
 
 
 CreateMinimapIcon=1,real,real,integer,integer,integer,string,fogstate
@@ -4575,7 +4590,7 @@ _CreateMinimapIconOnUnit_Category=TC_UjAPI_Unit
 
 CreateMultiboard=1,nothing
 _CreateMultiboard_Defaults=
-_CreateMultiboard_Category=TC_UjAPI_Misc
+_CreateMultiboard_Category=TC_UjAPI_Multiboard
 
 
 CreateProjectile=1,integer
@@ -4590,7 +4605,7 @@ _CreateProjectileEx_Category=TC_UjAPI_Projectile
 
 CreateQuest=1,nothing
 _CreateQuest_Defaults=
-_CreateQuest_Category=TC_UjAPI_Misc
+_CreateQuest_Category=TC_UjAPI_Quest
 
 
 CreateRegion=1,nothing
@@ -4610,17 +4625,17 @@ _CreateSimpleGlueFrame_Category=TC_UjAPI_Frame
 
 CreateSound=1,string,boolean,boolean,boolean,integer,integer,string
 _CreateSound_Defaults=_,true,true,true,0,0,_
-_CreateSound_Category=TC_UjAPI_Misc
+_CreateSound_Category=TC_UjAPI_Sound
 
 
 CreateSoundFilenameWithLabel=1,string,boolean,boolean,boolean,integer,integer,string
 _CreateSoundFilenameWithLabel_Defaults=_,true,true,true,0,0,_
-_CreateSoundFilenameWithLabel_Category=TC_UjAPI_Misc
+_CreateSoundFilenameWithLabel_Category=TC_UjAPI_Sound
 
 
 CreateSoundFromLabel=1,string,boolean,boolean,boolean,integer,integer
 _CreateSoundFromLabel_Defaults=_,true,true,true,0,0
-_CreateSoundFromLabel_Category=TC_UjAPI_Misc
+_CreateSoundFromLabel_Category=TC_UjAPI_Sound
 
 
 CreateSprite=1,boolean
@@ -4630,7 +4645,7 @@ _CreateSprite_Category=TC_UjAPI_Misc
 
 CreateTextTag=1,nothing
 _CreateTextTag_Defaults=
-_CreateTextTag_Category=TC_UjAPI_Misc
+_CreateTextTag_Category=TC_UjAPI_TextTag
 
 
 CreateTimer=1,nothing
@@ -4685,7 +4700,7 @@ _CreateUpgradeCommandButtonEffect_Category=TC_UjAPI_Misc
 
 CripplePlayer=1,player,force,boolean
 _CripplePlayer_Defaults=Player00,_,true
-_CripplePlayer_Category=TC_UjAPI_Misc
+_CripplePlayer_Category=TC_UjAPI_Player
 
 
 DecUnitAbilityLevel=1,unit,integer
@@ -4750,12 +4765,12 @@ _DestroyItemPool_Category=TC_UjAPI_Item
 
 DestroyLeaderboard=1,leaderboard
 _DestroyLeaderboard_Defaults=_
-_DestroyLeaderboard_Category=TC_UjAPI_Misc
+_DestroyLeaderboard_Category=TC_UjAPI_Leaderboard
 
 
 DestroyLightning=1,lightning
 _DestroyLightning_Defaults=_
-_DestroyLightning_Category=TC_UjAPI_Misc
+_DestroyLightning_Category=TC_UjAPI_Lightning
 
 
 DestroyMinimapIcon=1,minimapicon
@@ -4765,7 +4780,7 @@ _DestroyMinimapIcon_Category=TC_UjAPI_Misc
 
 DestroyQuest=1,quest
 _DestroyQuest_Defaults=_
-_DestroyQuest_Category=TC_UjAPI_Misc
+_DestroyQuest_Category=TC_UjAPI_Quest
 
 
 DestroyQuestItem=1,questitem
@@ -4775,7 +4790,7 @@ _DestroyQuestItem_Category=TC_UjAPI_Item
 
 DestroyTextTag=1,texttag
 _DestroyTextTag_Defaults=_
-_DestroyTextTag_Category=TC_UjAPI_Misc
+_DestroyTextTag_Category=TC_UjAPI_TextTag
 
 
 DestroyTimerDialog=1,timerdialog
@@ -4840,7 +4855,7 @@ _DisplayChatMessageEx_Category=TC_UjAPI_Misc
 
 DisplayCineFilter=1,boolean
 _DisplayCineFilter_Defaults=true
-_DisplayCineFilter_Category=TC_UjAPI_Misc
+_DisplayCineFilter_Category=TC_UjAPI_Cinematic
 
 
 DisplayLoadDialog=1,nothing
@@ -4855,7 +4870,7 @@ _DisplayTimedChatMessage_Category=TC_UjAPI_Misc
 
 DisplayTimedTextFromPlayer=1,player,real,real,real,string
 _DisplayTimedTextFromPlayer_Defaults=Player00,0,0,0,_
-_DisplayTimedTextFromPlayer_Category=TC_UjAPI_Misc
+_DisplayTimedTextFromPlayer_Category=TC_UjAPI_Player
 
 
 DisplayTimedTopMessage=1,player,real,string
@@ -4945,7 +4960,7 @@ _EnableWorldFogBoundary_Category=TC_UjAPI_Misc
 
 EndCinematicScene=1,nothing
 _EndCinematicScene_Defaults=
-_EndCinematicScene_Category=TC_UjAPI_Misc
+_EndCinematicScene_Category=TC_UjAPI_Cinematic
 
 
 EndThematicMusic=1,nothing
@@ -5045,7 +5060,7 @@ _FirstOfGroup_Category=TC_UjAPI_Misc
 
 FlashQuestDialogButton=1,nothing
 _FlashQuestDialogButton_Defaults=
-_FlashQuestDialogButton_Category=TC_UjAPI_Misc
+_FlashQuestDialogButton_Category=TC_UjAPI_Quest
 
 
 FlushChildHashtable=1,hashtable,integer
@@ -5080,72 +5095,72 @@ _FogMaskEnable_Category=TC_UjAPI_Misc
 
 ForceAddPlayer=1,force,player
 _ForceAddPlayer_Defaults=_,Player00
-_ForceAddPlayer_Category=TC_UjAPI_Misc
+_ForceAddPlayer_Category=TC_UjAPI_Force
 
 
 ForceCampaignSelectScreen=1,nothing
 _ForceCampaignSelectScreen_Defaults=
-_ForceCampaignSelectScreen_Category=TC_UjAPI_Misc
+_ForceCampaignSelectScreen_Category=TC_UjAPI_Force
 
 
 ForceCinematicSubtitles=1,boolean
 _ForceCinematicSubtitles_Defaults=true
-_ForceCinematicSubtitles_Category=TC_UjAPI_Misc
+_ForceCinematicSubtitles_Category=TC_UjAPI_Force
 
 
 ForceCountPlayers=1,force
 _ForceCountPlayers_Defaults=_
-_ForceCountPlayers_Category=TC_UjAPI_Misc
+_ForceCountPlayers_Category=TC_UjAPI_Force
 
 
 ForceEnumAllies=1,force,player,boolexpr
 _ForceEnumAllies_Defaults=_,Player00,_
-_ForceEnumAllies_Category=TC_UjAPI_Misc
+_ForceEnumAllies_Category=TC_UjAPI_Force
 
 
 ForceEnumEnemies=1,force,player,boolexpr
 _ForceEnumEnemies_Defaults=_,Player00,_
-_ForceEnumEnemies_Category=TC_UjAPI_Misc
+_ForceEnumEnemies_Category=TC_UjAPI_Force
 
 
 ForceEnumPlayers=1,force,boolexpr
 _ForceEnumPlayers_Defaults=_,_
-_ForceEnumPlayers_Category=TC_UjAPI_Misc
+_ForceEnumPlayers_Category=TC_UjAPI_Force
 
 
 ForceEnumPlayersCounted=1,force,boolexpr,integer
 _ForceEnumPlayersCounted_Defaults=_,_,0
-_ForceEnumPlayersCounted_Category=TC_UjAPI_Misc
+_ForceEnumPlayersCounted_Category=TC_UjAPI_Force
 
 
 ForceHasPlayer=1,force,player
 _ForceHasPlayer_Defaults=_,Player00
-_ForceHasPlayer_Category=TC_UjAPI_Misc
+_ForceHasPlayer_Category=TC_UjAPI_Force
 
 
 ForcePlayerStartLocation=1,player,integer
 _ForcePlayerStartLocation_Defaults=Player00,0
-_ForcePlayerStartLocation_Category=TC_UjAPI_Misc
+_ForcePlayerStartLocation_Category=TC_UjAPI_Force
 
 
 ForceQuestDialogUpdate=1,nothing
 _ForceQuestDialogUpdate_Defaults=
-_ForceQuestDialogUpdate_Category=TC_UjAPI_Misc
+_ForceQuestDialogUpdate_Category=TC_UjAPI_Force
 
 
 ForceRemovePlayer=1,force,player
 _ForceRemovePlayer_Defaults=_,Player00
-_ForceRemovePlayer_Category=TC_UjAPI_Misc
+_ForceRemovePlayer_Category=TC_UjAPI_Force
 
 
 ForceUICancel=1,nothing
 _ForceUICancel_Defaults=
-_ForceUICancel_Category=TC_UjAPI_Misc
+_ForceUICancel_Category=TC_UjAPI_Force
 
 
 ForceUIKey=1,string
 _ForceUIKey_Defaults=_
-_ForceUIKey_Category=TC_UjAPI_Misc
+_ForceUIKey_Category=TC_UjAPI_Force
 
 
 GroupAddGroupEx=1,group,group
@@ -5190,12 +5205,12 @@ _GroupGetUnitByIndex_Category=TC_UjAPI_Unit
 
 GroupPointOrder=1,group,string,real,real
 _GroupPointOrder_Defaults=_,_,0,0
-_GroupPointOrder_Category=TC_UjAPI_Misc
+_GroupPointOrder_Category=TC_UjAPI_Order
 
 
 GroupPointOrderById=1,group,integer,real,real
 _GroupPointOrderById_Defaults=_,0,0,0
-_GroupPointOrderById_Category=TC_UjAPI_Misc
+_GroupPointOrderById_Category=TC_UjAPI_Order
 
 
 GroupRemoveGroupEx=1,group,group
@@ -5745,27 +5760,27 @@ _HandleListRemoveList_Category=TC_UjAPI_HandleList
 
 HaveSavedBoolean=1,hashtable,integer,integer
 _HaveSavedBoolean_Defaults=_,0,0
-_HaveSavedBoolean_Category=TC_UjAPI_Misc
+_HaveSavedBoolean_Category=TC_UjAPI_Hashtable
 
 
 HaveSavedHandle=1,hashtable,integer,integer
 _HaveSavedHandle_Defaults=_,0,0
-_HaveSavedHandle_Category=TC_UjAPI_Misc
+_HaveSavedHandle_Category=TC_UjAPI_Hashtable
 
 
 HaveSavedInteger=1,hashtable,integer,integer
 _HaveSavedInteger_Defaults=_,0,0
-_HaveSavedInteger_Category=TC_UjAPI_Misc
+_HaveSavedInteger_Category=TC_UjAPI_Hashtable
 
 
 HaveSavedReal=1,hashtable,integer,integer
 _HaveSavedReal_Defaults=_,0,0
-_HaveSavedReal_Category=TC_UjAPI_Misc
+_HaveSavedReal_Category=TC_UjAPI_Hashtable
 
 
 HaveSavedString=1,hashtable,integer,integer
 _HaveSavedString_Defaults=_,0,0
-_HaveSavedString_Category=TC_UjAPI_Misc
+_HaveSavedString_Category=TC_UjAPI_Hashtable
 
 
 HaveStoredBoolean=1,gamecache,string,string
@@ -5875,7 +5890,7 @@ _KillProjectile_Category=TC_UjAPI_Projectile
 
 KillSoundWhenDone=1,sound
 _KillSoundWhenDone_Defaults=_
-_KillSoundWhenDone_Category=TC_UjAPI_Misc
+_KillSoundWhenDone_Category=TC_UjAPI_Sound
 
 
 KillUnitEx=1,unit,unit
@@ -5905,12 +5920,12 @@ _LeaderboardAddItem_Category=TC_UjAPI_Item
 
 LeaderboardClear=1,leaderboard
 _LeaderboardClear_Defaults=_
-_LeaderboardClear_Category=TC_UjAPI_Misc
+_LeaderboardClear_Category=TC_UjAPI_Leaderboard
 
 
 LeaderboardDisplay=1,leaderboard,boolean
 _LeaderboardDisplay_Defaults=_,true
-_LeaderboardDisplay_Category=TC_UjAPI_Misc
+_LeaderboardDisplay_Category=TC_UjAPI_Leaderboard
 
 
 LeaderboardGetItemCount=1,leaderboard
@@ -5920,12 +5935,12 @@ _LeaderboardGetItemCount_Category=TC_UjAPI_Item
 
 LeaderboardGetLabelText=1,leaderboard
 _LeaderboardGetLabelText_Defaults=_
-_LeaderboardGetLabelText_Category=TC_UjAPI_Misc
+_LeaderboardGetLabelText_Category=TC_UjAPI_Leaderboard
 
 
 LeaderboardGetPlayerIndex=1,leaderboard,player
 _LeaderboardGetPlayerIndex_Defaults=_,Player00
-_LeaderboardGetPlayerIndex_Category=TC_UjAPI_Misc
+_LeaderboardGetPlayerIndex_Category=TC_UjAPI_Leaderboard
 
 
 LeaderboardHasPlayerItem=1,leaderboard,player
@@ -5970,12 +5985,12 @@ _LeaderboardSetItemValueColor_Category=TC_UjAPI_Item
 
 LeaderboardSetLabel=1,leaderboard,string
 _LeaderboardSetLabel_Defaults=_,_
-_LeaderboardSetLabel_Category=TC_UjAPI_Misc
+_LeaderboardSetLabel_Category=TC_UjAPI_Leaderboard
 
 
 LeaderboardSetLabelColor=1,leaderboard,integer,integer,integer,integer
 _LeaderboardSetLabelColor_Defaults=_,0,0,0,0
-_LeaderboardSetLabelColor_Category=TC_UjAPI_Misc
+_LeaderboardSetLabelColor_Category=TC_UjAPI_Leaderboard
 
 
 LeaderboardSetSizeByItemCount=1,leaderboard,integer
@@ -5985,12 +6000,12 @@ _LeaderboardSetSizeByItemCount_Category=TC_UjAPI_Item
 
 LeaderboardSetStyle=1,leaderboard,boolean,boolean,boolean,boolean
 _LeaderboardSetStyle_Defaults=_,true,true,true,true
-_LeaderboardSetStyle_Category=TC_UjAPI_Misc
+_LeaderboardSetStyle_Category=TC_UjAPI_Leaderboard
 
 
 LeaderboardSetValueColor=1,leaderboard,integer,integer,integer,integer
 _LeaderboardSetValueColor_Defaults=_,0,0,0,0
-_LeaderboardSetValueColor_Category=TC_UjAPI_Misc
+_LeaderboardSetValueColor_Category=TC_UjAPI_Leaderboard
 
 
 LeaderboardSortItemsByLabel=1,leaderboard,boolean
@@ -6310,12 +6325,12 @@ _MorphUnitToTypeIdEx_Category=TC_UjAPI_Unit
 
 MoveLightning=1,lightning,boolean,real,real,real,real
 _MoveLightning_Defaults=_,true,0,0,0,0
-_MoveLightning_Category=TC_UjAPI_Misc
+_MoveLightning_Category=TC_UjAPI_Lightning
 
 
 MultiboardGetColumnCount=1,multiboard
 _MultiboardGetColumnCount_Defaults=_
-_MultiboardGetColumnCount_Category=TC_UjAPI_Misc
+_MultiboardGetColumnCount_Category=TC_UjAPI_Multiboard
 
 
 MultiboardGetItem=1,multiboard,integer,integer
@@ -6325,22 +6340,22 @@ _MultiboardGetItem_Category=TC_UjAPI_Item
 
 MultiboardGetRowCount=1,multiboard
 _MultiboardGetRowCount_Defaults=_
-_MultiboardGetRowCount_Category=TC_UjAPI_Misc
+_MultiboardGetRowCount_Category=TC_UjAPI_Multiboard
 
 
 MultiboardGetTitleText=1,multiboard
 _MultiboardGetTitleText_Defaults=_
-_MultiboardGetTitleText_Category=TC_UjAPI_Misc
+_MultiboardGetTitleText_Category=TC_UjAPI_Multiboard
 
 
 MultiboardSuppressDisplay=1,boolean
 _MultiboardSuppressDisplay_Defaults=true
-_MultiboardSuppressDisplay_Category=TC_UjAPI_Misc
+_MultiboardSuppressDisplay_Category=TC_UjAPI_Multiboard
 
 
 NewSoundEnvironment=1,string
 _NewSoundEnvironment_Defaults=_
-_NewSoundEnvironment_Category=TC_UjAPI_Misc
+_NewSoundEnvironment_Category=TC_UjAPI_Sound
 
 
 Not=1,boolexpr
@@ -6355,57 +6370,57 @@ _Or_Category=TC_UjAPI_Misc
 
 OrderGetNext=1,orderhandle
 _OrderGetNext_Defaults=_
-_OrderGetNext_Category=TC_UjAPI_Misc
+_OrderGetNext_Category=TC_UjAPI_Order
 
 
 OrderGetSourceLoc=1,orderhandle
 _OrderGetSourceLoc_Defaults=_
-_OrderGetSourceLoc_Category=TC_UjAPI_Misc
+_OrderGetSourceLoc_Category=TC_UjAPI_Order
 
 
 OrderGetSourceX=1,orderhandle
 _OrderGetSourceX_Defaults=_
-_OrderGetSourceX_Category=TC_UjAPI_Misc
+_OrderGetSourceX_Category=TC_UjAPI_Order
 
 
 OrderGetSourceY=1,orderhandle
 _OrderGetSourceY_Defaults=_
-_OrderGetSourceY_Category=TC_UjAPI_Misc
+_OrderGetSourceY_Category=TC_UjAPI_Order
 
 
 OrderGetTarget=1,orderhandle
 _OrderGetTarget_Defaults=_
-_OrderGetTarget_Category=TC_UjAPI_Misc
+_OrderGetTarget_Category=TC_UjAPI_Order
 
 
 OrderGetTargetDestructable=1,orderhandle
 _OrderGetTargetDestructable_Defaults=_
-_OrderGetTargetDestructable_Category=TC_UjAPI_Destructable
+_OrderGetTargetDestructable_Category=TC_UjAPI_Order
 
 
 OrderGetTargetItem=1,orderhandle
 _OrderGetTargetItem_Defaults=_
-_OrderGetTargetItem_Category=TC_UjAPI_Item
+_OrderGetTargetItem_Category=TC_UjAPI_Order
 
 
 OrderGetTargetLoc=1,orderhandle
 _OrderGetTargetLoc_Defaults=_
-_OrderGetTargetLoc_Category=TC_UjAPI_Misc
+_OrderGetTargetLoc_Category=TC_UjAPI_Order
 
 
 OrderGetTargetUnit=1,orderhandle
 _OrderGetTargetUnit_Defaults=_
-_OrderGetTargetUnit_Category=TC_UjAPI_Unit
+_OrderGetTargetUnit_Category=TC_UjAPI_Order
 
 
 OrderGetTargetX=1,orderhandle
 _OrderGetTargetX_Defaults=_
-_OrderGetTargetX_Category=TC_UjAPI_Misc
+_OrderGetTargetX_Category=TC_UjAPI_Order
 
 
 OrderGetTargetY=1,orderhandle
 _OrderGetTargetY_Defaults=_
-_OrderGetTargetY_Category=TC_UjAPI_Misc
+_OrderGetTargetY_Category=TC_UjAPI_Order
 
 
 PanCameraTo=1,real,real
@@ -6485,22 +6500,22 @@ _PlaceRandomUnit_Category=TC_UjAPI_Unit
 
 Player=1,integer
 _Player_Defaults=0
-_Player_Category=TC_UjAPI_Misc
+_Player_Category=TC_UjAPI_Player
 
 
 PlayerGetLeaderboard=1,player
 _PlayerGetLeaderboard_Defaults=Player00
-_PlayerGetLeaderboard_Category=TC_UjAPI_Misc
+_PlayerGetLeaderboard_Category=TC_UjAPI_Leaderboard
 
 
 PlayerSetLeaderboard=1,player,leaderboard
 _PlayerSetLeaderboard_Defaults=Player00,_
-_PlayerSetLeaderboard_Category=TC_UjAPI_Misc
+_PlayerSetLeaderboard_Category=TC_UjAPI_Leaderboard
 
 
 PlayModelCinematic=1,string
 _PlayModelCinematic_Defaults=_
-_PlayModelCinematic_Category=TC_UjAPI_Misc
+_PlayModelCinematic_Category=TC_UjAPI_Cinematic
 
 
 PlayMusic=1,string
@@ -6575,47 +6590,47 @@ _QuestItemSetDescription_Category=TC_UjAPI_Item
 
 QuestSetCompleted=1,quest,boolean
 _QuestSetCompleted_Defaults=_,true
-_QuestSetCompleted_Category=TC_UjAPI_Misc
+_QuestSetCompleted_Category=TC_UjAPI_Quest
 
 
 QuestSetDescription=1,quest,string
 _QuestSetDescription_Defaults=_,_
-_QuestSetDescription_Category=TC_UjAPI_Misc
+_QuestSetDescription_Category=TC_UjAPI_Quest
 
 
 QuestSetDiscovered=1,quest,boolean
 _QuestSetDiscovered_Defaults=_,true
-_QuestSetDiscovered_Category=TC_UjAPI_Misc
+_QuestSetDiscovered_Category=TC_UjAPI_Quest
 
 
 QuestSetEnabled=1,quest,boolean
 _QuestSetEnabled_Defaults=_,true
-_QuestSetEnabled_Category=TC_UjAPI_Misc
+_QuestSetEnabled_Category=TC_UjAPI_Quest
 
 
 QuestSetFailed=1,quest,boolean
 _QuestSetFailed_Defaults=_,true
-_QuestSetFailed_Category=TC_UjAPI_Misc
+_QuestSetFailed_Category=TC_UjAPI_Quest
 
 
 QuestSetIconPath=1,quest,string
 _QuestSetIconPath_Defaults=_,_
-_QuestSetIconPath_Category=TC_UjAPI_Misc
+_QuestSetIconPath_Category=TC_UjAPI_Quest
 
 
 QuestSetRequired=1,quest,boolean
 _QuestSetRequired_Defaults=_,true
-_QuestSetRequired_Category=TC_UjAPI_Misc
+_QuestSetRequired_Category=TC_UjAPI_Quest
 
 
 QuestSetTitle=1,quest,string
 _QuestSetTitle_Defaults=_,_
-_QuestSetTitle_Category=TC_UjAPI_Misc
+_QuestSetTitle_Category=TC_UjAPI_Quest
 
 
 QueueBuildOrderById=1,unit,unitcode,real,real
 _QueueBuildOrderById_Defaults=_,hfoo,0,0
-_QueueBuildOrderById_Category=TC_UjAPI_Misc
+_QueueBuildOrderById_Category=TC_UjAPI_Order
 
 
 QueueDestructableAnimation=1,destructable,string
@@ -6650,17 +6665,17 @@ _QueueFrameSpriteAnimationByIndex_Category=TC_UjAPI_Frame
 
 QueueImmediateOrderById=1,unit,integer
 _QueueImmediateOrderById_Defaults=_,0
-_QueueImmediateOrderById_Category=TC_UjAPI_Misc
+_QueueImmediateOrderById_Category=TC_UjAPI_Order
 
 
 QueueInstantPointOrderById=1,unit,integer,real,real,widget
 _QueueInstantPointOrderById_Defaults=_,0,0,0,_
-_QueueInstantPointOrderById_Category=TC_UjAPI_Misc
+_QueueInstantPointOrderById_Category=TC_UjAPI_Order
 
 
 QueueInstantTargetOrderById=1,unit,integer,widget,widget
 _QueueInstantTargetOrderById_Defaults=_,0,_,_
-_QueueInstantTargetOrderById_Category=TC_UjAPI_Misc
+_QueueInstantTargetOrderById_Category=TC_UjAPI_Order
 
 
 QueueItemAnimation=1,item,string
@@ -6675,22 +6690,22 @@ _QueueItemAnimationByIndex_Category=TC_UjAPI_Item
 
 QueueNeutralImmediateOrderById=1,player,unit,unitcode
 _QueueNeutralImmediateOrderById_Defaults=Player00,_,hfoo
-_QueueNeutralImmediateOrderById_Category=TC_UjAPI_Misc
+_QueueNeutralImmediateOrderById_Category=TC_UjAPI_Order
 
 
 QueueNeutralPointOrderById=1,player,unit,unitcode,real,real
 _QueueNeutralPointOrderById_Defaults=Player00,_,hfoo,0,0
-_QueueNeutralPointOrderById_Category=TC_UjAPI_Misc
+_QueueNeutralPointOrderById_Category=TC_UjAPI_Order
 
 
 QueueNeutralTargetOrderById=1,player,unit,unitcode,widget
 _QueueNeutralTargetOrderById_Defaults=Player00,_,hfoo,_
-_QueueNeutralTargetOrderById_Category=TC_UjAPI_Misc
+_QueueNeutralTargetOrderById_Category=TC_UjAPI_Order
 
 
 QueuePointOrderById=1,unit,integer,real,real
 _QueuePointOrderById_Defaults=_,0,0,0
-_QueuePointOrderById_Category=TC_UjAPI_Misc
+_QueuePointOrderById_Category=TC_UjAPI_Order
 
 
 QueueProjectileAnimation=1,projectile,string
@@ -6725,7 +6740,7 @@ _QueueSpriteAnimationByIndex_Category=TC_UjAPI_Misc
 
 QueueTargetOrderById=1,unit,integer,widget
 _QueueTargetOrderById_Defaults=_,0,_
-_QueueTargetOrderById_Category=TC_UjAPI_Misc
+_QueueTargetOrderById_Category=TC_UjAPI_Order
 
 
 QueueTrackableAnimation=1,trackable,string
@@ -6790,7 +6805,7 @@ _RegisterFrameMouseButton_Category=TC_UjAPI_Frame
 
 RegisterStackedSound=1,sound,boolean,real,real
 _RegisterStackedSound_Defaults=_,true,0,0
-_RegisterStackedSound_Category=TC_UjAPI_Misc
+_RegisterStackedSound_Category=TC_UjAPI_Sound
 
 
 ReloadGame=1,nothing
@@ -6905,7 +6920,7 @@ _RemoveItemFromStock_Category=TC_UjAPI_Item
 
 RemovePlayer=1,player,playergameresult
 _RemovePlayer_Defaults=Player00,_
-_RemovePlayer_Category=TC_UjAPI_Misc
+_RemovePlayer_Category=TC_UjAPI_Player
 
 
 RemoveProjectile=1,projectile
@@ -6915,17 +6930,17 @@ _RemoveProjectile_Category=TC_UjAPI_Projectile
 
 RemoveSavedBoolean=1,hashtable,integer,integer
 _RemoveSavedBoolean_Defaults=_,0,0
-_RemoveSavedBoolean_Category=TC_UjAPI_Misc
+_RemoveSavedBoolean_Category=TC_UjAPI_Hashtable
 
 
 RemoveSavedHandle=1,hashtable,integer,integer
 _RemoveSavedHandle_Defaults=_,0,0
-_RemoveSavedHandle_Category=TC_UjAPI_Misc
+_RemoveSavedHandle_Category=TC_UjAPI_Hashtable
 
 
 RemoveSavedInteger=1,hashtable,integer,integer
 _RemoveSavedInteger_Defaults=_,0,0
-_RemoveSavedInteger_Category=TC_UjAPI_Misc
+_RemoveSavedInteger_Category=TC_UjAPI_Hashtable
 
 
 RemoveSaveDirectory=1,string
@@ -6935,17 +6950,17 @@ _RemoveSaveDirectory_Category=TC_UjAPI_Misc
 
 RemoveSavedReal=1,hashtable,integer,integer
 _RemoveSavedReal_Defaults=_,0,0
-_RemoveSavedReal_Category=TC_UjAPI_Misc
+_RemoveSavedReal_Category=TC_UjAPI_Hashtable
 
 
 RemoveSavedString=1,hashtable,integer,integer
 _RemoveSavedString_Defaults=_,0,0
-_RemoveSavedString_Category=TC_UjAPI_Misc
+_RemoveSavedString_Category=TC_UjAPI_Hashtable
 
 
 RemoveSound=1,sound
 _RemoveSound_Defaults=_
-_RemoveSound_Category=TC_UjAPI_Misc
+_RemoveSound_Category=TC_UjAPI_Sound
 
 
 RemoveSprite=1,sprite
@@ -6970,22 +6985,22 @@ _RenameSaveDirectory_Category=TC_UjAPI_Misc
 
 ReplaceMIDISound=1,sound,string,integer,integer
 _ReplaceMIDISound_Defaults=_,_,0,0
-_ReplaceMIDISound_Category=TC_UjAPI_Misc
+_ReplaceMIDISound_Category=TC_UjAPI_Sound
 
 
 ReplaceSound=1,sound,string,boolean,boolean,boolean,integer,integer,string
 _ReplaceSound_Defaults=_,_,true,true,true,0,0,_
-_ReplaceSound_Category=TC_UjAPI_Misc
+_ReplaceSound_Category=TC_UjAPI_Sound
 
 
 ReplaceSoundFromLabel=1,sound,string,boolean,boolean,boolean,integer,integer
 _ReplaceSoundFromLabel_Defaults=_,_,true,true,true,0,0
-_ReplaceSoundFromLabel_Category=TC_UjAPI_Misc
+_ReplaceSoundFromLabel_Category=TC_UjAPI_Sound
 
 
 ReplaceSoundWithLabel=1,sound,string,boolean,boolean,boolean,integer,integer,string
 _ReplaceSoundWithLabel_Defaults=_,_,true,true,true,0,0,_
-_ReplaceSoundWithLabel_Category=TC_UjAPI_Misc
+_ReplaceSoundWithLabel_Category=TC_UjAPI_Sound
 
 
 ResetAbilityFieldData=1,ability
@@ -6995,7 +7010,7 @@ _ResetAbilityFieldData_Category=TC_UjAPI_Ability
 
 ResetAbilityOrder=1,ability
 _ResetAbilityOrder_Defaults=_
-_ResetAbilityOrder_Category=TC_UjAPI_Ability
+_ResetAbilityOrder_Category=TC_UjAPI_Order
 
 
 ResetBuffFieldData=1,buff
@@ -7125,17 +7140,17 @@ _ReviveUnitLoc_Category=TC_UjAPI_Unit
 
 RunJassScript=1,string,string
 _RunJassScript_Defaults=_,_
-_RunJassScript_Category=TC_UjAPI_Misc
+_RunJassScript_Category=TC_UjAPI_Jass
 
 
 RunJassScriptEx=1,string,string,string
 _RunJassScriptEx_Defaults=_,_,_
-_RunJassScriptEx_Category=TC_UjAPI_Misc
+_RunJassScriptEx_Category=TC_UjAPI_Jass
 
 
 RunJassScriptSimple=1,string
 _RunJassScriptSimple_Defaults=_
-_RunJassScriptSimple_Category=TC_UjAPI_Misc
+_RunJassScriptSimple_Category=TC_UjAPI_Jass
 
 
 SaveAbilityHandle=1,hashtable,integer,integer,ability
@@ -7575,7 +7590,7 @@ _SetAbilityLevel_Category=TC_UjAPI_Ability
 
 SetAbilityOrderId=1,ability,integer
 _SetAbilityOrderId_Defaults=_,0
-_SetAbilityOrderId_Category=TC_UjAPI_Ability
+_SetAbilityOrderId_Category=TC_UjAPI_Order
 
 
 SetAbilityOwner=1,ability,unit
@@ -7660,22 +7675,22 @@ _SetBaseItemStringFieldById_Category=TC_UjAPI_Item
 
 SetBlight=1,player,real,real,real,boolean
 _SetBlight_Defaults=Player00,0,0,0,true
-_SetBlight_Category=TC_UjAPI_Misc
+_SetBlight_Category=TC_UjAPI_Blight
 
 
 SetBlightLoc=1,player,location,real,boolean
 _SetBlightLoc_Defaults=Player00,_,0,true
-_SetBlightLoc_Category=TC_UjAPI_Misc
+_SetBlightLoc_Category=TC_UjAPI_Blight
 
 
 SetBlightPoint=1,player,real,real,boolean
 _SetBlightPoint_Defaults=Player00,0,0,true
-_SetBlightPoint_Category=TC_UjAPI_Misc
+_SetBlightPoint_Category=TC_UjAPI_Blight
 
 
 SetBlightRect=1,player,rect,boolean
 _SetBlightRect_Defaults=Player00,_,true
-_SetBlightRect_Category=TC_UjAPI_Misc
+_SetBlightRect_Category=TC_UjAPI_Blight
 
 
 SetBuffBarRenderDuplicates=1,boolean
@@ -7840,47 +7855,47 @@ _SetCampaignMenuRaceEx_Category=TC_UjAPI_Misc
 
 SetCineFilterBlendMode=1,blendmode
 _SetCineFilterBlendMode_Defaults=_
-_SetCineFilterBlendMode_Category=TC_UjAPI_Misc
+_SetCineFilterBlendMode_Category=TC_UjAPI_Cinematic
 
 
 SetCineFilterDuration=1,real
 _SetCineFilterDuration_Defaults=0
-_SetCineFilterDuration_Category=TC_UjAPI_Misc
+_SetCineFilterDuration_Category=TC_UjAPI_Cinematic
 
 
 SetCineFilterEndColor=1,integer,integer,integer,integer
 _SetCineFilterEndColor_Defaults=0,0,0,0
-_SetCineFilterEndColor_Category=TC_UjAPI_Misc
+_SetCineFilterEndColor_Category=TC_UjAPI_Cinematic
 
 
 SetCineFilterEndUV=1,real,real,real,real
 _SetCineFilterEndUV_Defaults=0,0,0,0
-_SetCineFilterEndUV_Category=TC_UjAPI_Misc
+_SetCineFilterEndUV_Category=TC_UjAPI_Cinematic
 
 
 SetCineFilterStartColor=1,integer,integer,integer,integer
 _SetCineFilterStartColor_Defaults=0,0,0,0
-_SetCineFilterStartColor_Category=TC_UjAPI_Misc
+_SetCineFilterStartColor_Category=TC_UjAPI_Cinematic
 
 
 SetCineFilterStartUV=1,real,real,real,real
 _SetCineFilterStartUV_Defaults=0,0,0,0
-_SetCineFilterStartUV_Category=TC_UjAPI_Misc
+_SetCineFilterStartUV_Category=TC_UjAPI_Cinematic
 
 
 SetCineFilterTexMapFlags=1,texmapflags
 _SetCineFilterTexMapFlags_Defaults=_
-_SetCineFilterTexMapFlags_Category=TC_UjAPI_Misc
+_SetCineFilterTexMapFlags_Category=TC_UjAPI_Cinematic
 
 
 SetCineFilterTexture=1,string
 _SetCineFilterTexture_Defaults=_
-_SetCineFilterTexture_Category=TC_UjAPI_Misc
+_SetCineFilterTexture_Category=TC_UjAPI_Cinematic
 
 
 SetCinematicAudio=1,boolean
 _SetCinematicAudio_Defaults=true
-_SetCinematicAudio_Category=TC_UjAPI_Misc
+_SetCinematicAudio_Category=TC_UjAPI_Cinematic
 
 
 SetCinematicCamera=1,string
@@ -7890,7 +7905,7 @@ _SetCinematicCamera_Category=TC_UjAPI_Camera
 
 SetCinematicScene=1,unitcode,playercolor,string,string,real,real
 _SetCinematicScene_Defaults=hfoo,_,_,_,0,0
-_SetCinematicScene_Category=TC_UjAPI_Misc
+_SetCinematicScene_Category=TC_UjAPI_Cinematic
 
 
 SetCreatureDensity=1,mapdensity
@@ -8260,7 +8275,7 @@ _SetDoodadZ_Category=TC_UjAPI_Doodad
 
 SetEdCinematicAvailable=1,integer,boolean
 _SetEdCinematicAvailable_Defaults=0,true
-_SetEdCinematicAvailable_Category=TC_UjAPI_Misc
+_SetEdCinematicAvailable_Category=TC_UjAPI_Cinematic
 
 
 SetEnemyStartLocPrio=1,integer,integer,integer,startlocprio
@@ -8325,7 +8340,7 @@ _SetFogModifierFogState_Category=TC_UjAPI_Misc
 
 SetFogModifierForPlayer=1,fogmodifier,player
 _SetFogModifierForPlayer_Defaults=_,Player00
-_SetFogModifierForPlayer_Category=TC_UjAPI_Misc
+_SetFogModifierForPlayer_Category=TC_UjAPI_Player
 
 
 SetFogModifierPosition=1,fogmodifier,real,real
@@ -8840,77 +8855,77 @@ _SetIllusionDamageReceived_Category=TC_UjAPI_Unit
 
 SetImageColor=1,image,integer,integer,integer,integer
 _SetImageColor_Defaults=_,0,0,0,0
-_SetImageColor_Category=TC_UjAPI_Misc
+_SetImageColor_Category=TC_UjAPI_Image
 
 
 SetImageOrigin=1,image,real
 _SetImageOrigin_Defaults=_,0
-_SetImageOrigin_Category=TC_UjAPI_Misc
+_SetImageOrigin_Category=TC_UjAPI_Image
 
 
 SetImageOriginEx=1,image,real,real
 _SetImageOriginEx_Defaults=_,0,0
-_SetImageOriginEx_Category=TC_UjAPI_Misc
+_SetImageOriginEx_Category=TC_UjAPI_Image
 
 
 SetImageOriginX=1,image,real
 _SetImageOriginX_Defaults=_,0
-_SetImageOriginX_Category=TC_UjAPI_Misc
+_SetImageOriginX_Category=TC_UjAPI_Image
 
 
 SetImageOriginY=1,image,real
 _SetImageOriginY_Defaults=_,0
-_SetImageOriginY_Category=TC_UjAPI_Misc
+_SetImageOriginY_Category=TC_UjAPI_Image
 
 
 SetImagePosition=1,image,real,real,real
 _SetImagePosition_Defaults=_,0,0,0
-_SetImagePosition_Category=TC_UjAPI_Misc
+_SetImagePosition_Category=TC_UjAPI_Image
 
 
 SetImagePositionLoc=1,image,location
 _SetImagePositionLoc_Defaults=_,_
-_SetImagePositionLoc_Category=TC_UjAPI_Misc
+_SetImagePositionLoc_Category=TC_UjAPI_Image
 
 
 SetImageSize=1,image,real
 _SetImageSize_Defaults=_,0
-_SetImageSize_Category=TC_UjAPI_Misc
+_SetImageSize_Category=TC_UjAPI_Image
 
 
 SetImageSizeEx=1,image,real,real
 _SetImageSizeEx_Defaults=_,0,0
-_SetImageSizeEx_Category=TC_UjAPI_Misc
+_SetImageSizeEx_Category=TC_UjAPI_Image
 
 
 SetImageSizeX=1,image,real
 _SetImageSizeX_Defaults=_,0
-_SetImageSizeX_Category=TC_UjAPI_Misc
+_SetImageSizeX_Category=TC_UjAPI_Image
 
 
 SetImageSizeY=1,image,real
 _SetImageSizeY_Defaults=_,0
-_SetImageSizeY_Category=TC_UjAPI_Misc
+_SetImageSizeY_Category=TC_UjAPI_Image
 
 
 SetImageTexture=1,image,string
 _SetImageTexture_Defaults=_,_
-_SetImageTexture_Category=TC_UjAPI_Misc
+_SetImageTexture_Category=TC_UjAPI_Image
 
 
 SetImageX=1,image,real
 _SetImageX_Defaults=_,0
-_SetImageX_Category=TC_UjAPI_Misc
+_SetImageX_Category=TC_UjAPI_Image
 
 
 SetImageY=1,image,real
 _SetImageY_Defaults=_,0
-_SetImageY_Category=TC_UjAPI_Misc
+_SetImageY_Category=TC_UjAPI_Image
 
 
 SetImageZ=1,image,real
 _SetImageZ_Defaults=_,0
-_SetImageZ_Category=TC_UjAPI_Misc
+_SetImageZ_Category=TC_UjAPI_Image
 
 
 SetIntroShotModel=1,string
@@ -9130,132 +9145,132 @@ _SetItemZ_Category=TC_UjAPI_Item
 
 SetJassGlobalBoolean=1,jassthread,string,boolean
 _SetJassGlobalBoolean_Defaults=_,_,true
-_SetJassGlobalBoolean_Category=TC_UjAPI_Misc
+_SetJassGlobalBoolean_Category=TC_UjAPI_Jass
 
 
 SetJassGlobalHandle=1,jassthread,string,handle
 _SetJassGlobalHandle_Defaults=_,_,_
-_SetJassGlobalHandle_Category=TC_UjAPI_Misc
+_SetJassGlobalHandle_Category=TC_UjAPI_Jass
 
 
 SetJassGlobalInteger=1,jassthread,string,integer
 _SetJassGlobalInteger_Defaults=_,_,0
-_SetJassGlobalInteger_Category=TC_UjAPI_Misc
+_SetJassGlobalInteger_Category=TC_UjAPI_Jass
 
 
 SetJassGlobalReal=1,jassthread,string,real
 _SetJassGlobalReal_Defaults=_,_,0
-_SetJassGlobalReal_Category=TC_UjAPI_Misc
+_SetJassGlobalReal_Category=TC_UjAPI_Jass
 
 
 SetJassGlobalString=1,jassthread,string,string
 _SetJassGlobalString_Defaults=_,_,_
-_SetJassGlobalString_Category=TC_UjAPI_Misc
+_SetJassGlobalString_Category=TC_UjAPI_Jass
 
 
 SetJassLocalBoolean=1,string,boolean
 _SetJassLocalBoolean_Defaults=_,true
-_SetJassLocalBoolean_Category=TC_UjAPI_Misc
+_SetJassLocalBoolean_Category=TC_UjAPI_Jass
 
 
 SetJassLocalHandle=1,string,handle
 _SetJassLocalHandle_Defaults=_,_
-_SetJassLocalHandle_Category=TC_UjAPI_Misc
+_SetJassLocalHandle_Category=TC_UjAPI_Jass
 
 
 SetJassLocalInteger=1,string,integer
 _SetJassLocalInteger_Defaults=_,0
-_SetJassLocalInteger_Category=TC_UjAPI_Misc
+_SetJassLocalInteger_Category=TC_UjAPI_Jass
 
 
 SetJassLocalReal=1,string,real
 _SetJassLocalReal_Defaults=_,0
-_SetJassLocalReal_Category=TC_UjAPI_Misc
+_SetJassLocalReal_Category=TC_UjAPI_Jass
 
 
 SetJassLocalString=1,string,string
 _SetJassLocalString_Defaults=_,_
-_SetJassLocalString_Category=TC_UjAPI_Misc
+_SetJassLocalString_Category=TC_UjAPI_Jass
 
 
 SetLightningColor=1,lightning,real,real,real,real
 _SetLightningColor_Defaults=_,0,0,0,0
-_SetLightningColor_Category=TC_UjAPI_Misc
+_SetLightningColor_Category=TC_UjAPI_Lightning
 
 
 SetLightningColour=1,lightning,integer,integer,integer,integer
 _SetLightningColour_Defaults=_,0,0,0,0
-_SetLightningColour_Category=TC_UjAPI_Misc
+_SetLightningColour_Category=TC_UjAPI_Lightning
 
 
 SetLightningDuration=1,lightning,real
 _SetLightningDuration_Defaults=_,0
-_SetLightningDuration_Category=TC_UjAPI_Misc
+_SetLightningDuration_Category=TC_UjAPI_Lightning
 
 
 SetLightningLength=1,lightning,real
 _SetLightningLength_Defaults=_,0
-_SetLightningLength_Category=TC_UjAPI_Misc
+_SetLightningLength_Category=TC_UjAPI_Lightning
 
 
 SetLightningNoiseScaling=1,lightning,real
 _SetLightningNoiseScaling_Defaults=_,0
-_SetLightningNoiseScaling_Category=TC_UjAPI_Misc
+_SetLightningNoiseScaling_Category=TC_UjAPI_Lightning
 
 
 SetLightningSourcePositionLoc=1,lightning,location
 _SetLightningSourcePositionLoc_Defaults=_,_
-_SetLightningSourcePositionLoc_Category=TC_UjAPI_Misc
+_SetLightningSourcePositionLoc_Category=TC_UjAPI_Lightning
 
 
 SetLightningSourceX=1,lightning,real
 _SetLightningSourceX_Defaults=_,0
-_SetLightningSourceX_Category=TC_UjAPI_Misc
+_SetLightningSourceX_Category=TC_UjAPI_Lightning
 
 
 SetLightningSourceY=1,lightning,real
 _SetLightningSourceY_Defaults=_,0
-_SetLightningSourceY_Category=TC_UjAPI_Misc
+_SetLightningSourceY_Category=TC_UjAPI_Lightning
 
 
 SetLightningSourceZ=1,lightning,real
 _SetLightningSourceZ_Defaults=_,0
-_SetLightningSourceZ_Category=TC_UjAPI_Misc
+_SetLightningSourceZ_Category=TC_UjAPI_Lightning
 
 
 SetLightningTargetPositionLoc=1,lightning,location
 _SetLightningTargetPositionLoc_Defaults=_,_
-_SetLightningTargetPositionLoc_Category=TC_UjAPI_Misc
+_SetLightningTargetPositionLoc_Category=TC_UjAPI_Lightning
 
 
 SetLightningTargetX=1,lightning,real
 _SetLightningTargetX_Defaults=_,0
-_SetLightningTargetX_Category=TC_UjAPI_Misc
+_SetLightningTargetX_Category=TC_UjAPI_Lightning
 
 
 SetLightningTargetY=1,lightning,real
 _SetLightningTargetY_Defaults=_,0
-_SetLightningTargetY_Category=TC_UjAPI_Misc
+_SetLightningTargetY_Category=TC_UjAPI_Lightning
 
 
 SetLightningTargetZ=1,lightning,real
 _SetLightningTargetZ_Defaults=_,0
-_SetLightningTargetZ_Category=TC_UjAPI_Misc
+_SetLightningTargetZ_Category=TC_UjAPI_Lightning
 
 
 SetLightningTexture=1,lightning,string
 _SetLightningTexture_Defaults=_,_
-_SetLightningTexture_Category=TC_UjAPI_Misc
+_SetLightningTexture_Category=TC_UjAPI_Lightning
 
 
 SetLightningTextureCoordinates=1,lightning,real
 _SetLightningTextureCoordinates_Defaults=_,0
-_SetLightningTextureCoordinates_Category=TC_UjAPI_Misc
+_SetLightningTextureCoordinates_Category=TC_UjAPI_Lightning
 
 
 SetLightningWidth=1,lightning,real
 _SetLightningWidth_Defaults=_,0
-_SetLightningWidth_Category=TC_UjAPI_Misc
+_SetLightningWidth_Category=TC_UjAPI_Lightning
 
 
 SetMapDescription=1,string
@@ -9315,47 +9330,47 @@ _SetMissionAvailable_Category=TC_UjAPI_Misc
 
 SetMouseMoveEventDelay=1,integer
 _SetMouseMoveEventDelay_Defaults=0
-_SetMouseMoveEventDelay_Category=TC_UjAPI_Misc
+_SetMouseMoveEventDelay_Category=TC_UjAPI_Mouse
 
 
 SetMouseMoveEventScreenAxisEnabled=1,boolean
 _SetMouseMoveEventScreenAxisEnabled_Defaults=true
-_SetMouseMoveEventScreenAxisEnabled_Category=TC_UjAPI_Misc
+_SetMouseMoveEventScreenAxisEnabled_Category=TC_UjAPI_Mouse
 
 
 SetMouseMoveEventWorldAxisEnabled=1,boolean
 _SetMouseMoveEventWorldAxisEnabled_Defaults=true
-_SetMouseMoveEventWorldAxisEnabled_Category=TC_UjAPI_Misc
+_SetMouseMoveEventWorldAxisEnabled_Category=TC_UjAPI_Mouse
 
 
 SetMouseScreenPixelPosition=1,integer,integer
 _SetMouseScreenPixelPosition_Defaults=0,0
-_SetMouseScreenPixelPosition_Category=TC_UjAPI_Misc
+_SetMouseScreenPixelPosition_Category=TC_UjAPI_Mouse
 
 
 SetMouseScreenPixelX=1,integer
 _SetMouseScreenPixelX_Defaults=0
-_SetMouseScreenPixelX_Category=TC_UjAPI_Misc
+_SetMouseScreenPixelX_Category=TC_UjAPI_Mouse
 
 
 SetMouseScreenPixelY=1,integer
 _SetMouseScreenPixelY_Defaults=0
-_SetMouseScreenPixelY_Category=TC_UjAPI_Misc
+_SetMouseScreenPixelY_Category=TC_UjAPI_Mouse
 
 
 SetMouseScreenPosition=1,real,real
 _SetMouseScreenPosition_Defaults=0,0
-_SetMouseScreenPosition_Category=TC_UjAPI_Misc
+_SetMouseScreenPosition_Category=TC_UjAPI_Mouse
 
 
 SetMouseScreenX=1,real
 _SetMouseScreenX_Defaults=0
-_SetMouseScreenX_Category=TC_UjAPI_Misc
+_SetMouseScreenX_Category=TC_UjAPI_Mouse
 
 
 SetMouseScreenY=1,real
 _SetMouseScreenY_Defaults=0
-_SetMouseScreenY_Category=TC_UjAPI_Misc
+_SetMouseScreenY_Category=TC_UjAPI_Mouse
 
 
 SetMoveSpeedMaxAllowed=1,real
@@ -9380,7 +9395,7 @@ _SetMusicVolume_Category=TC_UjAPI_Misc
 
 SetOpCinematicAvailable=1,integer,boolean
 _SetOpCinematicAvailable_Defaults=0,true
-_SetOpCinematicAvailable_Category=TC_UjAPI_Misc
+_SetOpCinematicAvailable_Category=TC_UjAPI_Cinematic
 
 
 SetOperationLimit=1,integer
@@ -9395,77 +9410,77 @@ _SetPlayerAbilityAvailable_Category=TC_UjAPI_Ability
 
 SetPlayerAlliance=1,player,player,alliancetype,boolean
 _SetPlayerAlliance_Defaults=Player00,Player00,_,true
-_SetPlayerAlliance_Category=TC_UjAPI_Misc
+_SetPlayerAlliance_Category=TC_UjAPI_Player
 
 
 SetPlayerColor=1,player,playercolor
 _SetPlayerColor_Defaults=Player00,_
-_SetPlayerColor_Category=TC_UjAPI_Misc
+_SetPlayerColor_Category=TC_UjAPI_Player
 
 
 SetPlayerController=1,player,mapcontrol
 _SetPlayerController_Defaults=Player00,_
-_SetPlayerController_Category=TC_UjAPI_Misc
+_SetPlayerController_Category=TC_UjAPI_Player
 
 
 SetPlayerHandicap=1,player,real
 _SetPlayerHandicap_Defaults=Player00,0
-_SetPlayerHandicap_Category=TC_UjAPI_Misc
+_SetPlayerHandicap_Category=TC_UjAPI_Player
 
 
 SetPlayerHandicapDamage=1,player,real
 _SetPlayerHandicapDamage_Defaults=Player00,0
-_SetPlayerHandicapDamage_Category=TC_UjAPI_Misc
+_SetPlayerHandicapDamage_Category=TC_UjAPI_Player
 
 
 SetPlayerHandicapReviveTime=1,player,real
 _SetPlayerHandicapReviveTime_Defaults=Player00,0
-_SetPlayerHandicapReviveTime_Category=TC_UjAPI_Misc
+_SetPlayerHandicapReviveTime_Category=TC_UjAPI_Player
 
 
 SetPlayerHandicapXP=1,player,real
 _SetPlayerHandicapXP_Defaults=Player00,0
-_SetPlayerHandicapXP_Category=TC_UjAPI_Misc
+_SetPlayerHandicapXP_Category=TC_UjAPI_Player
 
 
 SetPlayerOnScoreScreen=1,player,boolean
 _SetPlayerOnScoreScreen_Defaults=Player00,true
-_SetPlayerOnScoreScreen_Category=TC_UjAPI_Misc
+_SetPlayerOnScoreScreen_Category=TC_UjAPI_Player
 
 
 SetPlayerRacePreference=1,player,racepreference
 _SetPlayerRacePreference_Defaults=Player00,_
-_SetPlayerRacePreference_Category=TC_UjAPI_Misc
+_SetPlayerRacePreference_Category=TC_UjAPI_Player
 
 
 SetPlayerRaceSelectable=1,player,boolean
 _SetPlayerRaceSelectable_Defaults=Player00,true
-_SetPlayerRaceSelectable_Category=TC_UjAPI_Misc
+_SetPlayerRaceSelectable_Category=TC_UjAPI_Player
 
 
 SetPlayers=1,integer
 _SetPlayers_Defaults=0
-_SetPlayers_Category=TC_UjAPI_Misc
+_SetPlayers_Category=TC_UjAPI_Player
 
 
 SetPlayerStartLocation=1,player,integer
 _SetPlayerStartLocation_Defaults=Player00,0
-_SetPlayerStartLocation_Category=TC_UjAPI_Misc
+_SetPlayerStartLocation_Category=TC_UjAPI_Player
 
 
 SetPlayerTaxRate=1,player,player,playerstate,integer
 _SetPlayerTaxRate_Defaults=Player00,Player00,_,0
-_SetPlayerTaxRate_Category=TC_UjAPI_Misc
+_SetPlayerTaxRate_Category=TC_UjAPI_Player
 
 
 SetPlayerTeam=1,player,integer
 _SetPlayerTeam_Defaults=Player00,0
-_SetPlayerTeam_Category=TC_UjAPI_Misc
+_SetPlayerTeam_Category=TC_UjAPI_Player
 
 
 SetPlayerTechResearched=1,player,integer,integer
 _SetPlayerTechResearched_Defaults=Player00,0,0
-_SetPlayerTechResearched_Category=TC_UjAPI_Misc
+_SetPlayerTechResearched_Category=TC_UjAPI_Player
 
 
 SetPlayerUnitsOwner=1,player,integer
@@ -9775,72 +9790,72 @@ _SetSkinDataString_Category=TC_UjAPI_Misc
 
 SetSoundChannel=1,sound,integer
 _SetSoundChannel_Defaults=_,0
-_SetSoundChannel_Category=TC_UjAPI_Misc
+_SetSoundChannel_Category=TC_UjAPI_Sound
 
 
 SetSoundConeAngles=1,sound,real,real,integer
 _SetSoundConeAngles_Defaults=_,0,0,0
-_SetSoundConeAngles_Category=TC_UjAPI_Misc
+_SetSoundConeAngles_Category=TC_UjAPI_Sound
 
 
 SetSoundConeOrientation=1,sound,real,real,real
 _SetSoundConeOrientation_Defaults=_,0,0,0
-_SetSoundConeOrientation_Category=TC_UjAPI_Misc
+_SetSoundConeOrientation_Category=TC_UjAPI_Sound
 
 
 SetSoundDistanceCutoff=1,sound,real
 _SetSoundDistanceCutoff_Defaults=_,0
-_SetSoundDistanceCutoff_Category=TC_UjAPI_Misc
+_SetSoundDistanceCutoff_Category=TC_UjAPI_Sound
 
 
 SetSoundDuration=1,sound,integer
 _SetSoundDuration_Defaults=_,0
-_SetSoundDuration_Category=TC_UjAPI_Misc
+_SetSoundDuration_Category=TC_UjAPI_Sound
 
 
 SetSoundFacialAnimationGroupLabel=1,sound,string
 _SetSoundFacialAnimationGroupLabel_Defaults=_,_
-_SetSoundFacialAnimationGroupLabel_Category=TC_UjAPI_Misc
+_SetSoundFacialAnimationGroupLabel_Category=TC_UjAPI_Sound
 
 
 SetSoundFacialAnimationLabel=1,sound,string
 _SetSoundFacialAnimationLabel_Defaults=_,_
-_SetSoundFacialAnimationLabel_Category=TC_UjAPI_Misc
+_SetSoundFacialAnimationLabel_Category=TC_UjAPI_Sound
 
 
 SetSoundFacialAnimationSetFilepath=1,sound,string
 _SetSoundFacialAnimationSetFilepath_Defaults=_,_
-_SetSoundFacialAnimationSetFilepath_Category=TC_UjAPI_Misc
+_SetSoundFacialAnimationSetFilepath_Category=TC_UjAPI_Sound
 
 
 SetSoundParamsFromLabel=1,sound,string
 _SetSoundParamsFromLabel_Defaults=_,_
-_SetSoundParamsFromLabel_Category=TC_UjAPI_Misc
+_SetSoundParamsFromLabel_Category=TC_UjAPI_Sound
 
 
 SetSoundPitch=1,sound,real
 _SetSoundPitch_Defaults=_,0
-_SetSoundPitch_Category=TC_UjAPI_Misc
+_SetSoundPitch_Category=TC_UjAPI_Sound
 
 
 SetSoundPlayPosition=1,sound,integer
 _SetSoundPlayPosition_Defaults=_,0
-_SetSoundPlayPosition_Category=TC_UjAPI_Misc
+_SetSoundPlayPosition_Category=TC_UjAPI_Sound
 
 
 SetSoundPosition=1,sound,real,real,real
 _SetSoundPosition_Defaults=_,0,0,0
-_SetSoundPosition_Category=TC_UjAPI_Misc
+_SetSoundPosition_Category=TC_UjAPI_Sound
 
 
 SetSoundVelocity=1,sound,real,real,real
 _SetSoundVelocity_Defaults=_,0,0,0
-_SetSoundVelocity_Category=TC_UjAPI_Misc
+_SetSoundVelocity_Category=TC_UjAPI_Sound
 
 
 SetSoundVolume=1,sound,integer
 _SetSoundVolume_Defaults=_,0
-_SetSoundVolume_Category=TC_UjAPI_Misc
+_SetSoundVolume_Category=TC_UjAPI_Sound
 
 
 SetSpecialEffectAlpha=1,effect,integer
@@ -9925,7 +9940,7 @@ _SetSpecialEffectPitch_Category=TC_UjAPI_Misc
 
 SetSpecialEffectPlayerColour=1,effect,playercolor
 _SetSpecialEffectPlayerColour_Defaults=_,_
-_SetSpecialEffectPlayerColour_Category=TC_UjAPI_Misc
+_SetSpecialEffectPlayerColour_Category=TC_UjAPI_Player
 
 
 SetSpecialEffectPosition=1,effect,real,real
@@ -10080,7 +10095,7 @@ _SetSpritePitch_Category=TC_UjAPI_Misc
 
 SetSpritePlayerColour=1,sprite,playercolor
 _SetSpritePlayerColour_Defaults=_,_
-_SetSpritePlayerColour_Category=TC_UjAPI_Misc
+_SetSpritePlayerColour_Category=TC_UjAPI_Player
 
 
 SetSpritePosition=1,sprite,real,real
@@ -10185,47 +10200,47 @@ _SetTerrainType_Category=TC_UjAPI_Misc
 
 SetTextTagAge=1,texttag,real
 _SetTextTagAge_Defaults=_,0
-_SetTextTagAge_Category=TC_UjAPI_Misc
+_SetTextTagAge_Category=TC_UjAPI_TextTag
 
 
 SetTextTagAlpha=1,texttag,integer
 _SetTextTagAlpha_Defaults=_,0
-_SetTextTagAlpha_Category=TC_UjAPI_Misc
+_SetTextTagAlpha_Category=TC_UjAPI_TextTag
 
 
 SetTextTagColor=1,texttag,integer,integer,integer,integer
 _SetTextTagColor_Defaults=_,0,0,0,0
-_SetTextTagColor_Category=TC_UjAPI_Misc
+_SetTextTagColor_Category=TC_UjAPI_TextTag
 
 
 SetTextTagFadepoint=1,texttag,real
 _SetTextTagFadepoint_Defaults=_,0
-_SetTextTagFadepoint_Category=TC_UjAPI_Misc
+_SetTextTagFadepoint_Category=TC_UjAPI_TextTag
 
 
 SetTextTagHeight=1,texttag,real
 _SetTextTagHeight_Defaults=_,0
-_SetTextTagHeight_Category=TC_UjAPI_Misc
+_SetTextTagHeight_Category=TC_UjAPI_TextTag
 
 
 SetTextTagLifespan=1,texttag,real
 _SetTextTagLifespan_Defaults=_,0
-_SetTextTagLifespan_Category=TC_UjAPI_Misc
+_SetTextTagLifespan_Category=TC_UjAPI_TextTag
 
 
 SetTextTagPermanent=1,texttag,boolean
 _SetTextTagPermanent_Defaults=_,true
-_SetTextTagPermanent_Category=TC_UjAPI_Misc
+_SetTextTagPermanent_Category=TC_UjAPI_TextTag
 
 
 SetTextTagPos=1,texttag,real,real,real
 _SetTextTagPos_Defaults=_,0,0,0
-_SetTextTagPos_Category=TC_UjAPI_Misc
+_SetTextTagPos_Category=TC_UjAPI_TextTag
 
 
 SetTextTagPositionLoc=1,texttag,location
 _SetTextTagPositionLoc_Defaults=_,_
-_SetTextTagPositionLoc_Category=TC_UjAPI_Misc
+_SetTextTagPositionLoc_Category=TC_UjAPI_TextTag
 
 
 SetTextTagPosUnit=1,texttag,unit,real
@@ -10235,62 +10250,62 @@ _SetTextTagPosUnit_Category=TC_UjAPI_Unit
 
 SetTextTagShadowAlpha=1,texttag,integer
 _SetTextTagShadowAlpha_Defaults=_,0
-_SetTextTagShadowAlpha_Category=TC_UjAPI_Misc
+_SetTextTagShadowAlpha_Category=TC_UjAPI_TextTag
 
 
 SetTextTagShadowColour=1,texttag,integer
 _SetTextTagShadowColour_Defaults=_,0
-_SetTextTagShadowColour_Category=TC_UjAPI_Misc
+_SetTextTagShadowColour_Category=TC_UjAPI_TextTag
 
 
 SetTextTagSuspended=1,texttag,boolean
 _SetTextTagSuspended_Defaults=_,true
-_SetTextTagSuspended_Category=TC_UjAPI_Misc
+_SetTextTagSuspended_Category=TC_UjAPI_TextTag
 
 
 SetTextTagText=1,texttag,string,real
 _SetTextTagText_Defaults=_,_,0
-_SetTextTagText_Category=TC_UjAPI_Misc
+_SetTextTagText_Category=TC_UjAPI_TextTag
 
 
 SetTextTagVelocity=1,texttag,real,real
 _SetTextTagVelocity_Defaults=_,0,0
-_SetTextTagVelocity_Category=TC_UjAPI_Misc
+_SetTextTagVelocity_Category=TC_UjAPI_TextTag
 
 
 SetTextTagVelocityX=1,texttag,real
 _SetTextTagVelocityX_Defaults=_,0
-_SetTextTagVelocityX_Category=TC_UjAPI_Misc
+_SetTextTagVelocityX_Category=TC_UjAPI_TextTag
 
 
 SetTextTagVelocityY=1,texttag,real
 _SetTextTagVelocityY_Defaults=_,0
-_SetTextTagVelocityY_Category=TC_UjAPI_Misc
+_SetTextTagVelocityY_Category=TC_UjAPI_TextTag
 
 
 SetTextTagVelocityZ=1,texttag,real
 _SetTextTagVelocityZ_Defaults=_,0
-_SetTextTagVelocityZ_Category=TC_UjAPI_Misc
+_SetTextTagVelocityZ_Category=TC_UjAPI_TextTag
 
 
 SetTextTagVisibility=1,texttag,boolean
 _SetTextTagVisibility_Defaults=_,true
-_SetTextTagVisibility_Category=TC_UjAPI_Misc
+_SetTextTagVisibility_Category=TC_UjAPI_TextTag
 
 
 SetTextTagX=1,texttag,real
 _SetTextTagX_Defaults=_,0
-_SetTextTagX_Category=TC_UjAPI_Misc
+_SetTextTagX_Category=TC_UjAPI_TextTag
 
 
 SetTextTagY=1,texttag,real
 _SetTextTagY_Defaults=_,0
-_SetTextTagY_Category=TC_UjAPI_Misc
+_SetTextTagY_Category=TC_UjAPI_TextTag
 
 
 SetTextTagZ=1,texttag,real
 _SetTextTagZ_Defaults=_,0
-_SetTextTagZ_Category=TC_UjAPI_Misc
+_SetTextTagZ_Category=TC_UjAPI_TextTag
 
 
 SetThematicMusicPlayPosition=1,integer
@@ -11345,7 +11360,7 @@ _ShowFrame_Category=TC_UjAPI_Frame
 
 ShowImage=1,image,boolean
 _ShowImage_Defaults=_,true
-_ShowImage_Category=TC_UjAPI_Misc
+_ShowImage_Category=TC_UjAPI_Image
 
 
 ShowInterface=1,boolean,real
@@ -11390,12 +11405,12 @@ _StartItemCooldown_Category=TC_UjAPI_Item
 
 StartSound=1,sound
 _StartSound_Defaults=_
-_StartSound_Category=TC_UjAPI_Misc
+_StartSound_Category=TC_UjAPI_Sound
 
 
 StartSoundEx=1,sound,boolean
 _StartSoundEx_Defaults=_,true
-_StartSoundEx_Category=TC_UjAPI_Misc
+_StartSoundEx_Category=TC_UjAPI_Sound
 
 
 StopCamera=1,nothing
@@ -11405,7 +11420,7 @@ _StopCamera_Category=TC_UjAPI_Camera
 
 StopJassThread=1,jassthread
 _StopJassThread_Defaults=_
-_StopJassThread_Category=TC_UjAPI_Misc
+_StopJassThread_Category=TC_UjAPI_Jass
 
 
 StopMusic=1,boolean
@@ -11415,7 +11430,7 @@ _StopMusic_Category=TC_UjAPI_Misc
 
 StopSound=1,sound,boolean,boolean
 _StopSound_Defaults=_,true,true
-_StopSound_Category=TC_UjAPI_Misc
+_StopSound_Category=TC_UjAPI_Sound
 
 
 StoreBoolean=1,gamecache,string,string,boolean
@@ -11640,67 +11655,67 @@ _TerrainDeformWave_Category=TC_UjAPI_Misc
 
 TextFileClear=1,textfilehandle
 _TextFileClear_Defaults=_
-_TextFileClear_Category=TC_UjAPI_Misc
+_TextFileClear_Category=TC_UjAPI_TextFile
 
 
 TextFileClose=1,textfilehandle
 _TextFileClose_Defaults=_
-_TextFileClose_Category=TC_UjAPI_Misc
+_TextFileClose_Category=TC_UjAPI_TextFile
 
 
 TextFileCountLines=1,textfilehandle
 _TextFileCountLines_Defaults=_
-_TextFileCountLines_Category=TC_UjAPI_Misc
+_TextFileCountLines_Category=TC_UjAPI_TextFile
 
 
 TextFileDelete=1,textfilehandle
 _TextFileDelete_Defaults=_
-_TextFileDelete_Category=TC_UjAPI_Misc
+_TextFileDelete_Category=TC_UjAPI_TextFile
 
 
 TextFileExists=1,string
 _TextFileExists_Defaults=_
-_TextFileExists_Category=TC_UjAPI_Misc
+_TextFileExists_Category=TC_UjAPI_TextFile
 
 
 TextFileGetPath=1,textfilehandle
 _TextFileGetPath_Defaults=_
-_TextFileGetPath_Category=TC_UjAPI_Misc
+_TextFileGetPath_Category=TC_UjAPI_TextFile
 
 
 TextFileGetSize=1,textfilehandle
 _TextFileGetSize_Defaults=_
-_TextFileGetSize_Category=TC_UjAPI_Misc
+_TextFileGetSize_Category=TC_UjAPI_TextFile
 
 
 TextFileGetSizeByPath=1,string
 _TextFileGetSizeByPath_Defaults=_
-_TextFileGetSizeByPath_Category=TC_UjAPI_Misc
+_TextFileGetSizeByPath_Category=TC_UjAPI_TextFile
 
 
 TextFileOpen=1,string
 _TextFileOpen_Defaults=_
-_TextFileOpen_Category=TC_UjAPI_Misc
+_TextFileOpen_Category=TC_UjAPI_TextFile
 
 
 TextFileRead=1,textfilehandle
 _TextFileRead_Defaults=_
-_TextFileRead_Category=TC_UjAPI_Misc
+_TextFileRead_Category=TC_UjAPI_TextFile
 
 
 TextFileReadAllLines=1,textfilehandle
 _TextFileReadAllLines_Defaults=_
-_TextFileReadAllLines_Category=TC_UjAPI_Misc
+_TextFileReadAllLines_Category=TC_UjAPI_TextFile
 
 
 TextFileReadLine=1,textfilehandle,integer
 _TextFileReadLine_Defaults=_,0
-_TextFileReadLine_Category=TC_UjAPI_Misc
+_TextFileReadLine_Category=TC_UjAPI_TextFile
 
 
 TextFileWriteLine=1,textfilehandle,string
 _TextFileWriteLine_Defaults=_,_
-_TextFileWriteLine_Category=TC_UjAPI_Misc
+_TextFileWriteLine_Category=TC_UjAPI_TextFile
 
 
 TimerDialogDisplay=1,timerdialog,boolean
@@ -11790,7 +11805,7 @@ _TimerSetTimeout_Category=TC_UjAPI_Timer
 
 TradePlayerResources=1,player,player,integer,integer
 _TradePlayerResources_Defaults=Player00,Player00,0,0
-_TradePlayerResources_Category=TC_UjAPI_Misc
+_TradePlayerResources_Category=TC_UjAPI_Player
 
 
 TriggerClear=1,trigger
@@ -12135,7 +12150,7 @@ _UnitCanSleepPerm_Category=TC_UjAPI_Unit
 
 UnitClearOrders=1,unit,boolean
 _UnitClearOrders_Defaults=_,true
-_UnitClearOrders_Category=TC_UjAPI_Unit
+_UnitClearOrders_Category=TC_UjAPI_Order
 
 
 UnitCountBuffsEx=1,unit,boolean,boolean,boolean,boolean,boolean,boolean,boolean
@@ -12195,7 +12210,7 @@ _UnitEnableMovement_Category=TC_UjAPI_Unit
 
 UnitForceStopOrder=1,unit,boolean
 _UnitForceStopOrder_Defaults=_,true
-_UnitForceStopOrder_Category=TC_UjAPI_Unit
+_UnitForceStopOrder_Category=TC_UjAPI_Order
 
 
 UnitGetConstructionProgress=1,unit
@@ -12325,12 +12340,12 @@ _UnitRemoveItemFromSlot_Category=TC_UjAPI_Unit
 
 UnitRemoveOrderByIndex=1,unit,integer
 _UnitRemoveOrderByIndex_Defaults=_,0
-_UnitRemoveOrderByIndex_Category=TC_UjAPI_Unit
+_UnitRemoveOrderByIndex_Category=TC_UjAPI_Order
 
 
 UnitRemoveOrderByOrderId=1,unit,integer,boolean
 _UnitRemoveOrderByOrderId_Defaults=_,0,true
-_UnitRemoveOrderByOrderId_Category=TC_UjAPI_Unit
+_UnitRemoveOrderByOrderId_Category=TC_UjAPI_Order
 
 
 UnitRemoveType=1,unit,unittype
@@ -12340,7 +12355,7 @@ _UnitRemoveType_Category=TC_UjAPI_Unit
 
 UnitReverseOrders=1,unit
 _UnitReverseOrders_Defaults=_
-_UnitReverseOrders_Category=TC_UjAPI_Unit
+_UnitReverseOrders_Category=TC_UjAPI_Order
 
 
 UnitSetConstructionRemainingTime=1,unit,real
@@ -12420,7 +12435,7 @@ _UnitWakeUp_Category=TC_UjAPI_Unit
 
 UnregisterStackedSound=1,sound,boolean,real,real
 _UnregisterStackedSound_Defaults=_,true,0,0
-_UnregisterStackedSound_Category=TC_UjAPI_Misc
+_UnregisterStackedSound_Category=TC_UjAPI_Sound
 
 
 UpdateUnitInfoBar=1,unit
@@ -15282,12 +15297,12 @@ _AddFrameSlider_Category=TC_UjAPI_Frame
 
 AddLightning=1,1,lightning,string,boolean,real,real,real,real
 _AddLightning_Defaults=_,true,0,0,0,0
-_AddLightning_Category=TC_UjAPI_Misc
+_AddLightning_Category=TC_UjAPI_Lightning
 
 
 AddLightningEx=1,1,lightning,string,boolean,real,real,real,real,real,real
 _AddLightningEx_Defaults=_,true,0,0,0,0,0,0
-_AddLightningEx_Category=TC_UjAPI_Misc
+_AddLightningEx_Category=TC_UjAPI_Lightning
 
 
 AddressToHandle=1,1,handle,integer
@@ -16022,7 +16037,7 @@ _CreateAbility_Category=TC_UjAPI_Ability
 
 CreateBlightedGoldmine=1,1,unit,player,real,real,real
 _CreateBlightedGoldmine_Defaults=Player00,0,0,0
-_CreateBlightedGoldmine_Category=TC_UjAPI_Misc
+_CreateBlightedGoldmine_Category=TC_UjAPI_Unit
 
 
 CreateBuff=1,1,buff,integer
@@ -16127,12 +16142,12 @@ _CreateIllusionFromUnitEx_Category=TC_UjAPI_Unit
 
 CreateImage=1,1,image,string,real,real,real,real,real,real,real,real,real,integer
 _CreateImage_Defaults=_,0,0,0,0,0,0,0,0,0,0
-_CreateImage_Category=TC_UjAPI_Misc
+_CreateImage_Category=TC_UjAPI_Image
 
 
 CreateImageSimple=1,1,image,string,real,real,real,real,real,integer
 _CreateImageSimple_Defaults=_,0,0,0,0,0,0
-_CreateImageSimple_Category=TC_UjAPI_Misc
+_CreateImageSimple_Category=TC_UjAPI_Image
 
 
 CreateItem=1,1,item,integer,real,real
@@ -16147,7 +16162,7 @@ _CreateItemPool_Category=TC_UjAPI_Item
 
 CreateLeaderboard=1,1,leaderboard,nothing
 _CreateLeaderboard_Defaults=
-_CreateLeaderboard_Category=TC_UjAPI_Misc
+_CreateLeaderboard_Category=TC_UjAPI_Leaderboard
 
 
 CreateLearnCommandButtonEffect=1,1,commandbuttoneffect,integer
@@ -16157,7 +16172,7 @@ _CreateLearnCommandButtonEffect_Category=TC_UjAPI_Misc
 
 CreateMIDISound=1,1,sound,string,integer,integer
 _CreateMIDISound_Defaults=_,0,0
-_CreateMIDISound_Category=TC_UjAPI_Misc
+_CreateMIDISound_Category=TC_UjAPI_Sound
 
 
 CreateMinimapIcon=1,1,minimapicon,real,real,integer,integer,integer,string,fogstate
@@ -16187,7 +16202,7 @@ _CreateProjectileEx_Category=TC_UjAPI_Projectile
 
 CreateQuest=1,1,quest,nothing
 _CreateQuest_Defaults=
-_CreateQuest_Category=TC_UjAPI_Misc
+_CreateQuest_Category=TC_UjAPI_Quest
 
 
 CreateSimpleFrame=1,1,framehandle,string,framehandle,integer
@@ -16202,17 +16217,17 @@ _CreateSimpleGlueFrame_Category=TC_UjAPI_Frame
 
 CreateSound=1,1,sound,string,boolean,boolean,boolean,integer,integer,string
 _CreateSound_Defaults=_,true,true,true,0,0,_
-_CreateSound_Category=TC_UjAPI_Misc
+_CreateSound_Category=TC_UjAPI_Sound
 
 
 CreateSoundFilenameWithLabel=1,1,sound,string,boolean,boolean,boolean,integer,integer,string
 _CreateSoundFilenameWithLabel_Defaults=_,true,true,true,0,0,_
-_CreateSoundFilenameWithLabel_Category=TC_UjAPI_Misc
+_CreateSoundFilenameWithLabel_Category=TC_UjAPI_Sound
 
 
 CreateSoundFromLabel=1,1,sound,string,boolean,boolean,boolean,integer,integer
 _CreateSoundFromLabel_Defaults=_,true,true,true,0,0
-_CreateSoundFromLabel_Category=TC_UjAPI_Misc
+_CreateSoundFromLabel_Category=TC_UjAPI_Sound
 
 
 CreateSprite=1,1,sprite,boolean
@@ -16222,7 +16237,7 @@ _CreateSprite_Category=TC_UjAPI_Misc
 
 CreateTextTag=1,1,texttag,nothing
 _CreateTextTag_Defaults=
-_CreateTextTag_Category=TC_UjAPI_Misc
+_CreateTextTag_Category=TC_UjAPI_TextTag
 
 
 CreateTimerDialog=1,1,timerdialog,timer
@@ -16262,7 +16277,7 @@ _DecUnitAbilityLevel_Category=TC_UjAPI_Unit
 
 DestroyLightning=1,1,boolean,lightning
 _DestroyLightning_Defaults=_
-_DestroyLightning_Category=TC_UjAPI_Misc
+_DestroyLightning_Category=TC_UjAPI_Lightning
 
 
 DialogAddQuitButton=1,1,button,dialog,boolean,string,integer
@@ -16287,12 +16302,12 @@ _Filter_Category=TC_UjAPI_Misc
 
 ForceCountPlayers=1,1,integer,force
 _ForceCountPlayers_Defaults=_
-_ForceCountPlayers_Category=TC_UjAPI_Misc
+_ForceCountPlayers_Category=TC_UjAPI_Force
 
 
 ForceHasPlayer=1,1,boolean,force,player
 _ForceHasPlayer_Defaults=_,Player00
-_ForceHasPlayer_Category=TC_UjAPI_Misc
+_ForceHasPlayer_Category=TC_UjAPI_Force
 
 
 GetAbilityBackswing=1,1,real,ability
@@ -16422,7 +16437,7 @@ _GetAbilityLevel_Category=TC_UjAPI_Ability
 
 GetAbilityOrderId=1,1,integer,ability
 _GetAbilityOrderId_Defaults=_
-_GetAbilityOrderId_Category=TC_UjAPI_Ability
+_GetAbilityOrderId_Category=TC_UjAPI_Order
 
 
 GetAbilityOwner=1,1,unit,ability
@@ -16522,22 +16537,22 @@ _GetBaseItemStringFieldById_Category=TC_UjAPI_Item
 
 GetBJMaxPlayers=1,1,integer,nothing
 _GetBJMaxPlayers_Defaults=
-_GetBJMaxPlayers_Category=TC_UjAPI_Misc
+_GetBJMaxPlayers_Category=TC_UjAPI_Player
 
 
 GetBJMaxPlayerSlots=1,1,integer,nothing
 _GetBJMaxPlayerSlots_Defaults=
-_GetBJMaxPlayerSlots_Category=TC_UjAPI_Misc
+_GetBJMaxPlayerSlots_Category=TC_UjAPI_Player
 
 
 GetBJPlayerNeutralExtra=1,1,integer,nothing
 _GetBJPlayerNeutralExtra_Defaults=
-_GetBJPlayerNeutralExtra_Category=TC_UjAPI_Misc
+_GetBJPlayerNeutralExtra_Category=TC_UjAPI_Player
 
 
 GetBJPlayerNeutralVictim=1,1,integer,nothing
 _GetBJPlayerNeutralVictim_Defaults=
-_GetBJPlayerNeutralVictim_Category=TC_UjAPI_Misc
+_GetBJPlayerNeutralVictim_Category=TC_UjAPI_Player
 
 
 GetBuffBaseBooleanArrayFieldById=1,1,boolean,integer,abilitybooleanfield,integer
@@ -17132,7 +17147,7 @@ _GetFloatGameState_Category=TC_UjAPI_Misc
 
 GetFogModifierForPlayer=1,1,player,fogmodifier
 _GetFogModifierForPlayer_Defaults=_
-_GetFogModifierForPlayer_Category=TC_UjAPI_Misc
+_GetFogModifierForPlayer_Category=TC_UjAPI_Player
 
 
 GetFogModifierRadius=1,1,real,fogmodifier
@@ -17587,7 +17602,7 @@ _GetHeroStr_Category=TC_UjAPI_Misc
 
 GetHostPlayer=1,1,player,nothing
 _GetHostPlayer_Defaults=
-_GetHostPlayer_Category=TC_UjAPI_Misc
+_GetHostPlayer_Category=TC_UjAPI_Player
 
 
 GetIllusionDamageDealt=1,1,real,unit
@@ -17602,77 +17617,77 @@ _GetIllusionDamageReceived_Category=TC_UjAPI_Unit
 
 GetImageColour=1,1,integer,image
 _GetImageColour_Defaults=_
-_GetImageColour_Category=TC_UjAPI_Misc
+_GetImageColour_Category=TC_UjAPI_Image
 
 
 GetImageConstantHeight=1,1,real,image
 _GetImageConstantHeight_Defaults=_
-_GetImageConstantHeight_Category=TC_UjAPI_Misc
+_GetImageConstantHeight_Category=TC_UjAPI_Image
 
 
 GetImageOriginX=1,1,real,image
 _GetImageOriginX_Defaults=_
-_GetImageOriginX_Category=TC_UjAPI_Misc
+_GetImageOriginX_Category=TC_UjAPI_Image
 
 
 GetImageOriginY=1,1,real,image
 _GetImageOriginY_Defaults=_
-_GetImageOriginY_Category=TC_UjAPI_Misc
+_GetImageOriginY_Category=TC_UjAPI_Image
 
 
 GetImagePositionLoc=1,1,location,image
 _GetImagePositionLoc_Defaults=_
-_GetImagePositionLoc_Category=TC_UjAPI_Misc
+_GetImagePositionLoc_Category=TC_UjAPI_Image
 
 
 GetImageScreenX=1,1,real,image
 _GetImageScreenX_Defaults=_
-_GetImageScreenX_Category=TC_UjAPI_Misc
+_GetImageScreenX_Category=TC_UjAPI_Image
 
 
 GetImageScreenY=1,1,real,image
 _GetImageScreenY_Defaults=_
-_GetImageScreenY_Category=TC_UjAPI_Misc
+_GetImageScreenY_Category=TC_UjAPI_Image
 
 
 GetImageSizeX=1,1,real,image
 _GetImageSizeX_Defaults=_
-_GetImageSizeX_Category=TC_UjAPI_Misc
+_GetImageSizeX_Category=TC_UjAPI_Image
 
 
 GetImageSizeY=1,1,real,image
 _GetImageSizeY_Defaults=_
-_GetImageSizeY_Category=TC_UjAPI_Misc
+_GetImageSizeY_Category=TC_UjAPI_Image
 
 
 GetImageTexture=1,1,string,image
 _GetImageTexture_Defaults=_
-_GetImageTexture_Category=TC_UjAPI_Misc
+_GetImageTexture_Category=TC_UjAPI_Image
 
 
 GetImageType=1,1,integer,image
 _GetImageType_Defaults=_
-_GetImageType_Category=TC_UjAPI_Misc
+_GetImageType_Category=TC_UjAPI_Image
 
 
 GetImageX=1,1,real,image
 _GetImageX_Defaults=_
-_GetImageX_Category=TC_UjAPI_Misc
+_GetImageX_Category=TC_UjAPI_Image
 
 
 GetImageY=1,1,real,image
 _GetImageY_Defaults=_
-_GetImageY_Category=TC_UjAPI_Misc
+_GetImageY_Category=TC_UjAPI_Image
 
 
 GetImageZ=1,1,real,image
 _GetImageZ_Defaults=_
-_GetImageZ_Category=TC_UjAPI_Misc
+_GetImageZ_Category=TC_UjAPI_Image
 
 
 GetIssuedOrderId=1,1,integer,nothing
 _GetIssuedOrderId_Defaults=
-_GetIssuedOrderId_Category=TC_UjAPI_Misc
+_GetIssuedOrderId_Category=TC_UjAPI_Order
 
 
 GetItemAbilityById=1,1,ability,item,integer
@@ -17852,67 +17867,67 @@ _GetItemZ_Category=TC_UjAPI_Item
 
 GetJassArrayLimit=1,1,integer,nothing
 _GetJassArrayLimit_Defaults=
-_GetJassArrayLimit_Category=TC_UjAPI_Misc
+_GetJassArrayLimit_Category=TC_UjAPI_Jass
 
 
 GetJassCurrentThread=1,1,jassthread,nothing
 _GetJassCurrentThread_Defaults=
-_GetJassCurrentThread_Category=TC_UjAPI_Misc
+_GetJassCurrentThread_Category=TC_UjAPI_Jass
 
 
 GetJassGlobalBoolean=1,1,boolean,jassthread,string
 _GetJassGlobalBoolean_Defaults=_,_
-_GetJassGlobalBoolean_Category=TC_UjAPI_Misc
+_GetJassGlobalBoolean_Category=TC_UjAPI_Jass
 
 
 GetJassGlobalHandle=1,1,handle,jassthread,string
 _GetJassGlobalHandle_Defaults=_,_
-_GetJassGlobalHandle_Category=TC_UjAPI_Misc
+_GetJassGlobalHandle_Category=TC_UjAPI_Jass
 
 
 GetJassGlobalInteger=1,1,integer,jassthread,string
 _GetJassGlobalInteger_Defaults=_,_
-_GetJassGlobalInteger_Category=TC_UjAPI_Misc
+_GetJassGlobalInteger_Category=TC_UjAPI_Jass
 
 
 GetJassGlobalReal=1,1,real,jassthread,string
 _GetJassGlobalReal_Defaults=_,_
-_GetJassGlobalReal_Category=TC_UjAPI_Misc
+_GetJassGlobalReal_Category=TC_UjAPI_Jass
 
 
 GetJassGlobalString=1,1,string,jassthread,string
 _GetJassGlobalString_Defaults=_,_
-_GetJassGlobalString_Category=TC_UjAPI_Misc
+_GetJassGlobalString_Category=TC_UjAPI_Jass
 
 
 GetJassLocalBoolean=1,1,boolean,string
 _GetJassLocalBoolean_Defaults=_
-_GetJassLocalBoolean_Category=TC_UjAPI_Misc
+_GetJassLocalBoolean_Category=TC_UjAPI_Jass
 
 
 GetJassLocalHandle=1,1,handle,string
 _GetJassLocalHandle_Defaults=_
-_GetJassLocalHandle_Category=TC_UjAPI_Misc
+_GetJassLocalHandle_Category=TC_UjAPI_Jass
 
 
 GetJassLocalInteger=1,1,integer,string
 _GetJassLocalInteger_Defaults=_
-_GetJassLocalInteger_Category=TC_UjAPI_Misc
+_GetJassLocalInteger_Category=TC_UjAPI_Jass
 
 
 GetJassLocalReal=1,1,real,string
 _GetJassLocalReal_Defaults=_
-_GetJassLocalReal_Category=TC_UjAPI_Misc
+_GetJassLocalReal_Category=TC_UjAPI_Jass
 
 
 GetJassLocalString=1,1,string,string
 _GetJassLocalString_Defaults=_
-_GetJassLocalString_Category=TC_UjAPI_Misc
+_GetJassLocalString_Category=TC_UjAPI_Jass
 
 
 GetJassMainThread=1,1,jassthread,nothing
 _GetJassMainThread_Defaults=
-_GetJassMainThread_Category=TC_UjAPI_Misc
+_GetJassMainThread_Category=TC_UjAPI_Jass
 
 
 GetKillingUnit=1,1,unit,nothing
@@ -17932,127 +17947,127 @@ _GetLearnedSkill_Category=TC_UjAPI_Misc
 
 GetLightningColorA=1,1,real,lightning
 _GetLightningColorA_Defaults=_
-_GetLightningColorA_Category=TC_UjAPI_Misc
+_GetLightningColorA_Category=TC_UjAPI_Lightning
 
 
 GetLightningColorB=1,1,real,lightning
 _GetLightningColorB_Defaults=_
-_GetLightningColorB_Category=TC_UjAPI_Misc
+_GetLightningColorB_Category=TC_UjAPI_Lightning
 
 
 GetLightningColorG=1,1,real,lightning
 _GetLightningColorG_Defaults=_
-_GetLightningColorG_Category=TC_UjAPI_Misc
+_GetLightningColorG_Category=TC_UjAPI_Lightning
 
 
 GetLightningColorR=1,1,real,lightning
 _GetLightningColorR_Defaults=_
-_GetLightningColorR_Category=TC_UjAPI_Misc
+_GetLightningColorR_Category=TC_UjAPI_Lightning
 
 
 GetLightningColour=1,1,integer,lightning
 _GetLightningColour_Defaults=_
-_GetLightningColour_Category=TC_UjAPI_Misc
+_GetLightningColour_Category=TC_UjAPI_Lightning
 
 
 GetLightningColourA=1,1,integer,lightning
 _GetLightningColourA_Defaults=_
-_GetLightningColourA_Category=TC_UjAPI_Misc
+_GetLightningColourA_Category=TC_UjAPI_Lightning
 
 
 GetLightningColourB=1,1,integer,lightning
 _GetLightningColourB_Defaults=_
-_GetLightningColourB_Category=TC_UjAPI_Misc
+_GetLightningColourB_Category=TC_UjAPI_Lightning
 
 
 GetLightningColourG=1,1,integer,lightning
 _GetLightningColourG_Defaults=_
-_GetLightningColourG_Category=TC_UjAPI_Misc
+_GetLightningColourG_Category=TC_UjAPI_Lightning
 
 
 GetLightningColourR=1,1,integer,lightning
 _GetLightningColourR_Defaults=_
-_GetLightningColourR_Category=TC_UjAPI_Misc
+_GetLightningColourR_Category=TC_UjAPI_Lightning
 
 
 GetLightningDuration=1,1,real,lightning
 _GetLightningDuration_Defaults=_
-_GetLightningDuration_Category=TC_UjAPI_Misc
+_GetLightningDuration_Category=TC_UjAPI_Lightning
 
 
 GetLightningLength=1,1,real,lightning
 _GetLightningLength_Defaults=_
-_GetLightningLength_Category=TC_UjAPI_Misc
+_GetLightningLength_Category=TC_UjAPI_Lightning
 
 
 GetLightningNoiseScaling=1,1,real,lightning
 _GetLightningNoiseScaling_Defaults=_
-_GetLightningNoiseScaling_Category=TC_UjAPI_Misc
+_GetLightningNoiseScaling_Category=TC_UjAPI_Lightning
 
 
 GetLightningScreenX=1,1,real,lightning
 _GetLightningScreenX_Defaults=_
-_GetLightningScreenX_Category=TC_UjAPI_Misc
+_GetLightningScreenX_Category=TC_UjAPI_Lightning
 
 
 GetLightningScreenY=1,1,real,lightning
 _GetLightningScreenY_Defaults=_
-_GetLightningScreenY_Category=TC_UjAPI_Misc
+_GetLightningScreenY_Category=TC_UjAPI_Lightning
 
 
 GetLightningSourcePositionLoc=1,1,location,lightning
 _GetLightningSourcePositionLoc_Defaults=_
-_GetLightningSourcePositionLoc_Category=TC_UjAPI_Misc
+_GetLightningSourcePositionLoc_Category=TC_UjAPI_Lightning
 
 
 GetLightningSourceX=1,1,real,lightning
 _GetLightningSourceX_Defaults=_
-_GetLightningSourceX_Category=TC_UjAPI_Misc
+_GetLightningSourceX_Category=TC_UjAPI_Lightning
 
 
 GetLightningSourceY=1,1,real,lightning
 _GetLightningSourceY_Defaults=_
-_GetLightningSourceY_Category=TC_UjAPI_Misc
+_GetLightningSourceY_Category=TC_UjAPI_Lightning
 
 
 GetLightningSourceZ=1,1,real,lightning
 _GetLightningSourceZ_Defaults=_
-_GetLightningSourceZ_Category=TC_UjAPI_Misc
+_GetLightningSourceZ_Category=TC_UjAPI_Lightning
 
 
 GetLightningTargetPositionLoc=1,1,location,lightning
 _GetLightningTargetPositionLoc_Defaults=_
-_GetLightningTargetPositionLoc_Category=TC_UjAPI_Misc
+_GetLightningTargetPositionLoc_Category=TC_UjAPI_Lightning
 
 
 GetLightningTargetX=1,1,real,lightning
 _GetLightningTargetX_Defaults=_
-_GetLightningTargetX_Category=TC_UjAPI_Misc
+_GetLightningTargetX_Category=TC_UjAPI_Lightning
 
 
 GetLightningTargetY=1,1,real,lightning
 _GetLightningTargetY_Defaults=_
-_GetLightningTargetY_Category=TC_UjAPI_Misc
+_GetLightningTargetY_Category=TC_UjAPI_Lightning
 
 
 GetLightningTargetZ=1,1,real,lightning
 _GetLightningTargetZ_Defaults=_
-_GetLightningTargetZ_Category=TC_UjAPI_Misc
+_GetLightningTargetZ_Category=TC_UjAPI_Lightning
 
 
 GetLightningTexture=1,1,string,lightning
 _GetLightningTexture_Defaults=_
-_GetLightningTexture_Category=TC_UjAPI_Misc
+_GetLightningTexture_Category=TC_UjAPI_Lightning
 
 
 GetLightningTextureCoordinates=1,1,real,lightning
 _GetLightningTextureCoordinates_Defaults=_
-_GetLightningTextureCoordinates_Category=TC_UjAPI_Misc
+_GetLightningTextureCoordinates_Category=TC_UjAPI_Lightning
 
 
 GetLightningWidth=1,1,real,lightning
 _GetLightningWidth_Defaults=_
-_GetLightningWidth_Category=TC_UjAPI_Misc
+_GetLightningWidth_Category=TC_UjAPI_Lightning
 
 
 GetLoadedUnit=1,1,unit,nothing
@@ -18107,52 +18122,52 @@ _GetMiscDataString_Category=TC_UjAPI_Misc
 
 GetMouseMoveEventDelay=1,1,integer,nothing
 _GetMouseMoveEventDelay_Defaults=
-_GetMouseMoveEventDelay_Category=TC_UjAPI_Misc
+_GetMouseMoveEventDelay_Category=TC_UjAPI_Mouse
 
 
 GetMouseMoveEventScreenAxisEnabled=1,1,boolean,nothing
 _GetMouseMoveEventScreenAxisEnabled_Defaults=
-_GetMouseMoveEventScreenAxisEnabled_Category=TC_UjAPI_Misc
+_GetMouseMoveEventScreenAxisEnabled_Category=TC_UjAPI_Mouse
 
 
 GetMouseMoveEventWorldAxisEnabled=1,1,boolean,nothing
 _GetMouseMoveEventWorldAxisEnabled_Defaults=
-_GetMouseMoveEventWorldAxisEnabled_Category=TC_UjAPI_Misc
+_GetMouseMoveEventWorldAxisEnabled_Category=TC_UjAPI_Mouse
 
 
 GetMouseScreenPixelX=1,1,integer,nothing
 _GetMouseScreenPixelX_Defaults=
-_GetMouseScreenPixelX_Category=TC_UjAPI_Misc
+_GetMouseScreenPixelX_Category=TC_UjAPI_Mouse
 
 
 GetMouseScreenPixelY=1,1,integer,nothing
 _GetMouseScreenPixelY_Defaults=
-_GetMouseScreenPixelY_Category=TC_UjAPI_Misc
+_GetMouseScreenPixelY_Category=TC_UjAPI_Mouse
 
 
 GetMouseScreenX=1,1,real,nothing
 _GetMouseScreenX_Defaults=
-_GetMouseScreenX_Category=TC_UjAPI_Misc
+_GetMouseScreenX_Category=TC_UjAPI_Mouse
 
 
 GetMouseScreenY=1,1,real,nothing
 _GetMouseScreenY_Defaults=
-_GetMouseScreenY_Category=TC_UjAPI_Misc
+_GetMouseScreenY_Category=TC_UjAPI_Mouse
 
 
 GetMouseWorldX=1,1,real,nothing
 _GetMouseWorldX_Defaults=
-_GetMouseWorldX_Category=TC_UjAPI_Misc
+_GetMouseWorldX_Category=TC_UjAPI_Mouse
 
 
 GetMouseWorldY=1,1,real,nothing
 _GetMouseWorldY_Defaults=
-_GetMouseWorldY_Category=TC_UjAPI_Misc
+_GetMouseWorldY_Category=TC_UjAPI_Mouse
 
 
 GetMouseWorldZ=1,1,real,nothing
 _GetMouseWorldZ_Defaults=
-_GetMouseWorldZ_Category=TC_UjAPI_Misc
+_GetMouseWorldZ_Category=TC_UjAPI_Mouse
 
 
 GetMoveSpeedMaxAllowed=1,1,real,nothing
@@ -18182,17 +18197,17 @@ _GetOperationLimit_Category=TC_UjAPI_Misc
 
 GetOrderPointX=1,1,real,nothing
 _GetOrderPointX_Defaults=
-_GetOrderPointX_Category=TC_UjAPI_Misc
+_GetOrderPointX_Category=TC_UjAPI_Order
 
 
 GetOrderPointY=1,1,real,nothing
 _GetOrderPointY_Defaults=
-_GetOrderPointY_Category=TC_UjAPI_Misc
+_GetOrderPointY_Category=TC_UjAPI_Order
 
 
 GetOrderTarget=1,1,widget,nothing
 _GetOrderTarget_Defaults=
-_GetOrderTarget_Category=TC_UjAPI_Misc
+_GetOrderTarget_Category=TC_UjAPI_Order
 
 
 GetOriginFrame=1,1,framehandle,originframetype,integer
@@ -18202,67 +18217,67 @@ _GetOriginFrame_Category=TC_UjAPI_Frame
 
 GetPlayerHandicap=1,1,real,player
 _GetPlayerHandicap_Defaults=Player00
-_GetPlayerHandicap_Category=TC_UjAPI_Misc
+_GetPlayerHandicap_Category=TC_UjAPI_Player
 
 
 GetPlayerHandicapDamage=1,1,real,player
 _GetPlayerHandicapDamage_Defaults=Player00
-_GetPlayerHandicapDamage_Category=TC_UjAPI_Misc
+_GetPlayerHandicapDamage_Category=TC_UjAPI_Player
 
 
 GetPlayerHandicapReviveTime=1,1,real,player
 _GetPlayerHandicapReviveTime_Defaults=Player00
-_GetPlayerHandicapReviveTime_Category=TC_UjAPI_Misc
+_GetPlayerHandicapReviveTime_Category=TC_UjAPI_Player
 
 
 GetPlayerHandicapXP=1,1,real,player
 _GetPlayerHandicapXP_Defaults=Player00
-_GetPlayerHandicapXP_Category=TC_UjAPI_Misc
+_GetPlayerHandicapXP_Category=TC_UjAPI_Player
 
 
 GetPlayerId=1,1,integer,player
 _GetPlayerId_Defaults=Player00
-_GetPlayerId_Category=TC_UjAPI_Misc
+_GetPlayerId_Category=TC_UjAPI_Player
 
 
 GetPlayerNeutralAggressive=1,1,integer,nothing
 _GetPlayerNeutralAggressive_Defaults=
-_GetPlayerNeutralAggressive_Category=TC_UjAPI_Misc
+_GetPlayerNeutralAggressive_Category=TC_UjAPI_Player
 
 
 GetPlayerNeutralPassive=1,1,integer,nothing
 _GetPlayerNeutralPassive_Defaults=
-_GetPlayerNeutralPassive_Category=TC_UjAPI_Misc
+_GetPlayerNeutralPassive_Category=TC_UjAPI_Player
 
 
 GetPlayerSelectable=1,1,boolean,player
 _GetPlayerSelectable_Defaults=Player00
-_GetPlayerSelectable_Category=TC_UjAPI_Misc
+_GetPlayerSelectable_Category=TC_UjAPI_Player
 
 
 GetPlayerStartLocation=1,1,integer,player
 _GetPlayerStartLocation_Defaults=Player00
-_GetPlayerStartLocation_Category=TC_UjAPI_Misc
+_GetPlayerStartLocation_Category=TC_UjAPI_Player
 
 
 GetPlayerTaxRate=1,1,integer,player,player,playerstate
 _GetPlayerTaxRate_Defaults=Player00,Player00,_
-_GetPlayerTaxRate_Category=TC_UjAPI_Misc
+_GetPlayerTaxRate_Category=TC_UjAPI_Player
 
 
 GetPlayerTechCount=1,1,integer,player,integer,boolean
 _GetPlayerTechCount_Defaults=Player00,0,true
-_GetPlayerTechCount_Category=TC_UjAPI_Misc
+_GetPlayerTechCount_Category=TC_UjAPI_Player
 
 
 GetPlayerTechMaxAllowed=1,1,integer,player,integer
 _GetPlayerTechMaxAllowed_Defaults=Player00,0
-_GetPlayerTechMaxAllowed_Category=TC_UjAPI_Misc
+_GetPlayerTechMaxAllowed_Category=TC_UjAPI_Player
 
 
 GetPlayerTechResearched=1,1,boolean,player,integer,boolean
 _GetPlayerTechResearched_Defaults=Player00,0,true
-_GetPlayerTechResearched_Category=TC_UjAPI_Misc
+_GetPlayerTechResearched_Category=TC_UjAPI_Player
 
 
 GetProjectileAnimationOffsetPercent=1,1,real,projectile
@@ -18507,22 +18522,22 @@ _GetSkinDataString_Category=TC_UjAPI_Misc
 
 GetSoundDuration=1,1,integer,sound
 _GetSoundDuration_Defaults=_
-_GetSoundDuration_Category=TC_UjAPI_Misc
+_GetSoundDuration_Category=TC_UjAPI_Sound
 
 
 GetSoundFileDuration=1,1,integer,string
 _GetSoundFileDuration_Defaults=_
-_GetSoundFileDuration_Category=TC_UjAPI_Misc
+_GetSoundFileDuration_Category=TC_UjAPI_Sound
 
 
 GetSoundIsLoading=1,1,boolean,sound
 _GetSoundIsLoading_Defaults=_
-_GetSoundIsLoading_Category=TC_UjAPI_Misc
+_GetSoundIsLoading_Category=TC_UjAPI_Sound
 
 
 GetSoundIsPlaying=1,1,boolean,sound
 _GetSoundIsPlaying_Defaults=_
-_GetSoundIsPlaying_Category=TC_UjAPI_Misc
+_GetSoundIsPlaying_Category=TC_UjAPI_Sound
 
 
 GetSpecialEffectAnimationOffsetPercent=1,1,real,effect
@@ -18587,7 +18602,7 @@ _GetSpecialEffectPitch_Category=TC_UjAPI_Misc
 
 GetSpecialEffectPlayerColour=1,1,playercolor,effect
 _GetSpecialEffectPlayerColour_Defaults=_
-_GetSpecialEffectPlayerColour_Category=TC_UjAPI_Misc
+_GetSpecialEffectPlayerColour_Category=TC_UjAPI_Player
 
 
 GetSpecialEffectPositionLoc=1,1,location,effect
@@ -18732,7 +18747,7 @@ _GetSpritePitch_Category=TC_UjAPI_Misc
 
 GetSpritePlayerColour=1,1,playercolor,sprite
 _GetSpritePlayerColour_Defaults=_
-_GetSpritePlayerColour_Category=TC_UjAPI_Misc
+_GetSpritePlayerColour_Category=TC_UjAPI_Player
 
 
 GetSpritePositionLoc=1,1,location,sprite
@@ -18912,97 +18927,97 @@ _GetTerrainVariance_Category=TC_UjAPI_Misc
 
 GetTextTagAge=1,1,real,texttag
 _GetTextTagAge_Defaults=_
-_GetTextTagAge_Category=TC_UjAPI_Misc
+_GetTextTagAge_Category=TC_UjAPI_TextTag
 
 
 GetTextTagAlpha=1,1,integer,texttag
 _GetTextTagAlpha_Defaults=_
-_GetTextTagAlpha_Category=TC_UjAPI_Misc
+_GetTextTagAlpha_Category=TC_UjAPI_TextTag
 
 
 GetTextTagColour=1,1,integer,texttag
 _GetTextTagColour_Defaults=_
-_GetTextTagColour_Category=TC_UjAPI_Misc
+_GetTextTagColour_Category=TC_UjAPI_TextTag
 
 
 GetTextTagFadepoint=1,1,real,texttag
 _GetTextTagFadepoint_Defaults=_
-_GetTextTagFadepoint_Category=TC_UjAPI_Misc
+_GetTextTagFadepoint_Category=TC_UjAPI_TextTag
 
 
 GetTextTagHeight=1,1,real,texttag
 _GetTextTagHeight_Defaults=_
-_GetTextTagHeight_Category=TC_UjAPI_Misc
+_GetTextTagHeight_Category=TC_UjAPI_TextTag
 
 
 GetTextTagLifespan=1,1,real,texttag
 _GetTextTagLifespan_Defaults=_
-_GetTextTagLifespan_Category=TC_UjAPI_Misc
+_GetTextTagLifespan_Category=TC_UjAPI_TextTag
 
 
 GetTextTagLimit=1,1,integer,nothing
 _GetTextTagLimit_Defaults=
-_GetTextTagLimit_Category=TC_UjAPI_Misc
+_GetTextTagLimit_Category=TC_UjAPI_TextTag
 
 
 GetTextTagPositionLoc=1,1,location,texttag
 _GetTextTagPositionLoc_Defaults=_
-_GetTextTagPositionLoc_Category=TC_UjAPI_Misc
+_GetTextTagPositionLoc_Category=TC_UjAPI_TextTag
 
 
 GetTextTagScreenX=1,1,real,texttag
 _GetTextTagScreenX_Defaults=_
-_GetTextTagScreenX_Category=TC_UjAPI_Misc
+_GetTextTagScreenX_Category=TC_UjAPI_TextTag
 
 
 GetTextTagScreenY=1,1,real,texttag
 _GetTextTagScreenY_Defaults=_
-_GetTextTagScreenY_Category=TC_UjAPI_Misc
+_GetTextTagScreenY_Category=TC_UjAPI_TextTag
 
 
 GetTextTagShadowAlpha=1,1,integer,texttag
 _GetTextTagShadowAlpha_Defaults=_
-_GetTextTagShadowAlpha_Category=TC_UjAPI_Misc
+_GetTextTagShadowAlpha_Category=TC_UjAPI_TextTag
 
 
 GetTextTagShadowColour=1,1,integer,texttag
 _GetTextTagShadowColour_Defaults=_
-_GetTextTagShadowColour_Category=TC_UjAPI_Misc
+_GetTextTagShadowColour_Category=TC_UjAPI_TextTag
 
 
 GetTextTagText=1,1,string,texttag
 _GetTextTagText_Defaults=_
-_GetTextTagText_Category=TC_UjAPI_Misc
+_GetTextTagText_Category=TC_UjAPI_TextTag
 
 
 GetTextTagVelocityX=1,1,real,texttag
 _GetTextTagVelocityX_Defaults=_
-_GetTextTagVelocityX_Category=TC_UjAPI_Misc
+_GetTextTagVelocityX_Category=TC_UjAPI_TextTag
 
 
 GetTextTagVelocityY=1,1,real,texttag
 _GetTextTagVelocityY_Defaults=_
-_GetTextTagVelocityY_Category=TC_UjAPI_Misc
+_GetTextTagVelocityY_Category=TC_UjAPI_TextTag
 
 
 GetTextTagVelocityZ=1,1,real,texttag
 _GetTextTagVelocityZ_Defaults=_
-_GetTextTagVelocityZ_Category=TC_UjAPI_Misc
+_GetTextTagVelocityZ_Category=TC_UjAPI_TextTag
 
 
 GetTextTagX=1,1,real,texttag
 _GetTextTagX_Defaults=_
-_GetTextTagX_Category=TC_UjAPI_Misc
+_GetTextTagX_Category=TC_UjAPI_TextTag
 
 
 GetTextTagY=1,1,real,texttag
 _GetTextTagY_Defaults=_
-_GetTextTagY_Category=TC_UjAPI_Misc
+_GetTextTagY_Category=TC_UjAPI_TextTag
 
 
 GetTextTagZ=1,1,real,texttag
 _GetTextTagZ_Defaults=_
-_GetTextTagZ_Category=TC_UjAPI_Misc
+_GetTextTagZ_Category=TC_UjAPI_TextTag
 
 
 GetTickCount=1,1,integer,nothing
@@ -19022,7 +19037,7 @@ _GetTimeStamp_Category=TC_UjAPI_Misc
 
 GetTournamentFinishNowPlayer=1,1,player,nothing
 _GetTournamentFinishNowPlayer_Defaults=
-_GetTournamentFinishNowPlayer_Category=TC_UjAPI_Misc
+_GetTournamentFinishNowPlayer_Category=TC_UjAPI_Player
 
 
 GetTrackableAnimationOffsetPercent=1,1,real,trackable
@@ -19267,7 +19282,7 @@ _GetTriggerItem_Category=TC_UjAPI_Trigger
 
 GetTriggerOrder=1,1,orderhandle,nothing
 _GetTriggerOrder_Defaults=
-_GetTriggerOrder_Category=TC_UjAPI_Trigger
+_GetTriggerOrder_Category=TC_UjAPI_Order
 
 
 GetTriggerPlayerIsKeyDown=1,1,boolean,nothing
@@ -19692,22 +19707,22 @@ _GetUnitModelObjectZ_Category=TC_UjAPI_Unit
 
 GetUnitOrderByIndex=1,1,orderhandle,unit,integer
 _GetUnitOrderByIndex_Defaults=_,0
-_GetUnitOrderByIndex_Category=TC_UjAPI_Unit
+_GetUnitOrderByIndex_Category=TC_UjAPI_Order
 
 
 GetUnitOrderByOrderId=1,1,orderhandle,unit,integer,integer
 _GetUnitOrderByOrderId_Defaults=_,0,0
-_GetUnitOrderByOrderId_Category=TC_UjAPI_Unit
+_GetUnitOrderByOrderId_Category=TC_UjAPI_Order
 
 
 GetUnitOrderCount=1,1,integer,unit
 _GetUnitOrderCount_Defaults=_
-_GetUnitOrderCount_Category=TC_UjAPI_Unit
+_GetUnitOrderCount_Category=TC_UjAPI_Order
 
 
 GetUnitOrderIdByIndex=1,1,integer,unit,integer
 _GetUnitOrderIdByIndex_Defaults=_,0
-_GetUnitOrderIdByIndex_Category=TC_UjAPI_Unit
+_GetUnitOrderIdByIndex_Category=TC_UjAPI_Order
 
 
 GetUnitPathingAIType=1,1,pathingaitype,unit
@@ -20242,22 +20257,22 @@ _GroupGetUnitByIndex_Category=TC_UjAPI_Unit
 
 GroupImmediateOrderById=1,1,boolean,group,integer
 _GroupImmediateOrderById_Defaults=_,0
-_GroupImmediateOrderById_Category=TC_UjAPI_Misc
+_GroupImmediateOrderById_Category=TC_UjAPI_Order
 
 
 GroupPointOrder=1,1,boolean,group,string,real,real
 _GroupPointOrder_Defaults=_,_,0,0
-_GroupPointOrder_Category=TC_UjAPI_Misc
+_GroupPointOrder_Category=TC_UjAPI_Order
 
 
 GroupPointOrderById=1,1,boolean,group,integer,real,real
 _GroupPointOrderById_Defaults=_,0,0,0
-_GroupPointOrderById_Category=TC_UjAPI_Misc
+_GroupPointOrderById_Category=TC_UjAPI_Order
 
 
 GroupPointOrderByIdLoc=1,1,boolean,group,integer,location
 _GroupPointOrderByIdLoc_Defaults=_,0,_
-_GroupPointOrderByIdLoc_Category=TC_UjAPI_Misc
+_GroupPointOrderByIdLoc_Category=TC_UjAPI_Order
 
 
 GroupRemoveGroupEx=1,1,integer,group,group
@@ -20267,7 +20282,7 @@ _GroupRemoveGroupEx_Category=TC_UjAPI_Misc
 
 GroupTargetOrderById=1,1,boolean,group,integer,widget
 _GroupTargetOrderById_Defaults=_,0,_
-_GroupTargetOrderById_Category=TC_UjAPI_Misc
+_GroupTargetOrderById_Category=TC_UjAPI_Order
 
 
 HandleListAddList=1,1,integer,handlelist,handlelist
@@ -21067,27 +21082,27 @@ _HandleToWidgetevent_Category=TC_UjAPI_Handle
 
 HaveSavedBoolean=1,1,boolean,hashtable,integer,integer
 _HaveSavedBoolean_Defaults=_,0,0
-_HaveSavedBoolean_Category=TC_UjAPI_Misc
+_HaveSavedBoolean_Category=TC_UjAPI_Hashtable
 
 
 HaveSavedHandle=1,1,boolean,hashtable,integer,integer
 _HaveSavedHandle_Defaults=_,0,0
-_HaveSavedHandle_Category=TC_UjAPI_Misc
+_HaveSavedHandle_Category=TC_UjAPI_Hashtable
 
 
 HaveSavedInteger=1,1,boolean,hashtable,integer,integer
 _HaveSavedInteger_Defaults=_,0,0
-_HaveSavedInteger_Category=TC_UjAPI_Misc
+_HaveSavedInteger_Category=TC_UjAPI_Hashtable
 
 
 HaveSavedReal=1,1,boolean,hashtable,integer,integer
 _HaveSavedReal_Defaults=_,0,0
-_HaveSavedReal_Category=TC_UjAPI_Misc
+_HaveSavedReal_Category=TC_UjAPI_Hashtable
 
 
 HaveSavedString=1,1,boolean,hashtable,integer,integer
 _HaveSavedString_Defaults=_,0,0
-_HaveSavedString_Category=TC_UjAPI_Misc
+_HaveSavedString_Category=TC_UjAPI_Hashtable
 
 
 HexToInt=1,1,integer,string
@@ -21192,7 +21207,7 @@ _IsBuffDispellable_Category=TC_UjAPI_Buff
 
 IsCineFilterDisplayed=1,1,boolean,nothing
 _IsCineFilterDisplayed_Defaults=
-_IsCineFilterDisplayed_Category=TC_UjAPI_Misc
+_IsCineFilterDisplayed_Category=TC_UjAPI_Cinematic
 
 
 IsCursorAnimationLocked=1,1,boolean,nothing
@@ -21222,7 +21237,7 @@ _IsDoodadVisible_Category=TC_UjAPI_Doodad
 
 IsFoggedToPlayer=1,1,boolean,real,real,player
 _IsFoggedToPlayer_Defaults=0,0,Player00
-_IsFoggedToPlayer_Category=TC_UjAPI_Misc
+_IsFoggedToPlayer_Category=TC_UjAPI_Player
 
 
 IsFogModifierFogState=1,1,boolean,fogmodifier,fogstate
@@ -21302,22 +21317,22 @@ _IsHeroUnitId_Category=TC_UjAPI_Unit
 
 IsImageRenderAboveWater=1,1,boolean,image
 _IsImageRenderAboveWater_Defaults=_
-_IsImageRenderAboveWater_Category=TC_UjAPI_Misc
+_IsImageRenderAboveWater_Category=TC_UjAPI_Image
 
 
 IsImageRenderAlways=1,1,boolean,image
 _IsImageRenderAlways_Defaults=_
-_IsImageRenderAlways_Category=TC_UjAPI_Misc
+_IsImageRenderAlways_Category=TC_UjAPI_Image
 
 
 IsImageRendered=1,1,boolean,image
 _IsImageRendered_Defaults=_
-_IsImageRendered_Category=TC_UjAPI_Misc
+_IsImageRendered_Category=TC_UjAPI_Image
 
 
 IsImageVisible=1,1,boolean,image
 _IsImageVisible_Defaults=_
-_IsImageVisible_Category=TC_UjAPI_Misc
+_IsImageVisible_Category=TC_UjAPI_Image
 
 
 IsItemDroppable=1,1,boolean,item
@@ -21367,12 +21382,12 @@ _IsKeyPressed_Category=TC_UjAPI_Misc
 
 IsMaskedToPlayer=1,1,boolean,real,real,player
 _IsMaskedToPlayer_Defaults=0,0,Player00
-_IsMaskedToPlayer_Category=TC_UjAPI_Misc
+_IsMaskedToPlayer_Category=TC_UjAPI_Player
 
 
 IsMouseKeyPressed=1,1,boolean,mousebuttontype
 _IsMouseKeyPressed_Defaults=_
-_IsMouseKeyPressed_Category=TC_UjAPI_Misc
+_IsMouseKeyPressed_Category=TC_UjAPI_Mouse
 
 
 IsNoDefeatCheat=1,1,boolean,nothing
@@ -21392,17 +21407,17 @@ _IsOperationLimitEnabled_Category=TC_UjAPI_Misc
 
 IsPlayerObserver=1,1,boolean,player
 _IsPlayerObserver_Defaults=Player00
-_IsPlayerObserver_Category=TC_UjAPI_Misc
+_IsPlayerObserver_Category=TC_UjAPI_Player
 
 
 IsPlayerRacePrefSet=1,1,boolean,player,racepreference
 _IsPlayerRacePrefSet_Defaults=Player00,_
-_IsPlayerRacePrefSet_Category=TC_UjAPI_Misc
+_IsPlayerRacePrefSet_Category=TC_UjAPI_Player
 
 
 IsPointBlighted=1,1,boolean,real,real
 _IsPointBlighted_Defaults=0,0
-_IsPointBlighted_Category=TC_UjAPI_Misc
+_IsPointBlighted_Category=TC_UjAPI_Blight
 
 
 IsProjectileAlive=1,1,boolean,projectile
@@ -21457,77 +21472,77 @@ _IsStatbarEnabled_Category=TC_UjAPI_Misc
 
 IssueBuildOrder=1,1,boolean,unit,string,real,real
 _IssueBuildOrder_Defaults=_,_,0,0
-_IssueBuildOrder_Category=TC_UjAPI_Misc
+_IssueBuildOrder_Category=TC_UjAPI_Order
 
 
 IssueBuildOrderById=1,1,boolean,unit,unitcode,real,real
 _IssueBuildOrderById_Defaults=_,hfoo,0,0
-_IssueBuildOrderById_Category=TC_UjAPI_Misc
+_IssueBuildOrderById_Category=TC_UjAPI_Order
 
 
 IssueImmediateOrderById=1,1,boolean,unit,integer
 _IssueImmediateOrderById_Defaults=_,0
-_IssueImmediateOrderById_Category=TC_UjAPI_Misc
+_IssueImmediateOrderById_Category=TC_UjAPI_Order
 
 
 IssueInstantPointOrder=1,1,boolean,unit,string,real,real,widget
 _IssueInstantPointOrder_Defaults=_,_,0,0,_
-_IssueInstantPointOrder_Category=TC_UjAPI_Misc
+_IssueInstantPointOrder_Category=TC_UjAPI_Order
 
 
 IssueInstantPointOrderById=1,1,boolean,unit,integer,real,real,widget
 _IssueInstantPointOrderById_Defaults=_,0,0,0,_
-_IssueInstantPointOrderById_Category=TC_UjAPI_Misc
+_IssueInstantPointOrderById_Category=TC_UjAPI_Order
 
 
 IssueInstantTargetOrderById=1,1,boolean,unit,integer,widget,widget
 _IssueInstantTargetOrderById_Defaults=_,0,_,_
-_IssueInstantTargetOrderById_Category=TC_UjAPI_Misc
+_IssueInstantTargetOrderById_Category=TC_UjAPI_Order
 
 
 IssueNeutralImmediateOrder=1,1,boolean,player,unit,string
 _IssueNeutralImmediateOrder_Defaults=Player00,_,_
-_IssueNeutralImmediateOrder_Category=TC_UjAPI_Misc
+_IssueNeutralImmediateOrder_Category=TC_UjAPI_Order
 
 
 IssueNeutralPointOrder=1,1,boolean,player,unit,string,real,real
 _IssueNeutralPointOrder_Defaults=Player00,_,_,0,0
-_IssueNeutralPointOrder_Category=TC_UjAPI_Misc
+_IssueNeutralPointOrder_Category=TC_UjAPI_Order
 
 
 IssueNeutralPointOrderById=1,1,boolean,player,unit,unitcode,real,real
 _IssueNeutralPointOrderById_Defaults=Player00,_,hfoo,0,0
-_IssueNeutralPointOrderById_Category=TC_UjAPI_Misc
+_IssueNeutralPointOrderById_Category=TC_UjAPI_Order
 
 
 IssueNeutralTargetOrder=1,1,boolean,player,unit,string,widget
 _IssueNeutralTargetOrder_Defaults=Player00,_,_,_
-_IssueNeutralTargetOrder_Category=TC_UjAPI_Misc
+_IssueNeutralTargetOrder_Category=TC_UjAPI_Order
 
 
 IssueNeutralTargetOrderById=1,1,boolean,player,unit,unitcode,widget
 _IssueNeutralTargetOrderById_Defaults=Player00,_,hfoo,_
-_IssueNeutralTargetOrderById_Category=TC_UjAPI_Misc
+_IssueNeutralTargetOrderById_Category=TC_UjAPI_Order
 
 
 IssuePointOrder=1,1,boolean,unit,string,real,real
 _IssuePointOrder_Defaults=_,_,0,0
-_IssuePointOrder_Category=TC_UjAPI_Misc
+_IssuePointOrder_Category=TC_UjAPI_Order
 
 
 IssuePointOrderById=1,1,boolean,unit,integer,real,real
 _IssuePointOrderById_Defaults=_,0,0,0
-_IssuePointOrderById_Category=TC_UjAPI_Misc
+_IssuePointOrderById_Category=TC_UjAPI_Order
 
 
 IssuePointOrderByIdLoc=1,1,boolean,unit,integer,location
 _IssuePointOrderByIdLoc_Defaults=_,0,_
-_IssuePointOrderByIdLoc_Category=TC_UjAPI_Misc
+_IssuePointOrderByIdLoc_Category=TC_UjAPI_Order
 
 
 IssueTargetOrderById=1,1,boolean,unit,integer,widget
 _IssueTargetOrderById_Defaults=_,0,_
-_IssueTargetOrderById_Category=TC_UjAPI_Misc
+_IssueTargetOrderById_Category=TC_UjAPI_Order
 
 
 IsTargetIndicatorEnabled=1,1,boolean,nothing
@@ -21542,17 +21557,17 @@ _IsTerrainPathable_Category=TC_UjAPI_Misc
 
 IsTextTagPermanent=1,1,real,texttag
 _IsTextTagPermanent_Defaults=_
-_IsTextTagPermanent_Category=TC_UjAPI_Misc
+_IsTextTagPermanent_Category=TC_UjAPI_TextTag
 
 
 IsTextTagSuspended=1,1,boolean,texttag
 _IsTextTagSuspended_Defaults=_
-_IsTextTagSuspended_Category=TC_UjAPI_Misc
+_IsTextTagSuspended_Category=TC_UjAPI_TextTag
 
 
 IsTextTagVisible=1,1,boolean,texttag
 _IsTextTagVisible_Defaults=_
-_IsTextTagVisible_Category=TC_UjAPI_Misc
+_IsTextTagVisible_Category=TC_UjAPI_TextTag
 
 
 IsTrackableVisible=1,1,boolean,trackable
@@ -21707,7 +21722,7 @@ _IsUnitTruesightImmune_Category=TC_UjAPI_Unit
 
 IsVisibleToPlayer=1,1,boolean,real,real,player
 _IsVisibleToPlayer_Defaults=0,0,Player00
-_IsVisibleToPlayer_Category=TC_UjAPI_Misc
+_IsVisibleToPlayer_Category=TC_UjAPI_Player
 
 
 IsWar3ImageInvulnerable=1,1,boolean,war3image
@@ -21767,7 +21782,7 @@ _ItemRemoveAbilityById_Category=TC_UjAPI_Ability
 
 LeaderboardGetPlayerIndex=1,1,integer,leaderboard,player
 _LeaderboardGetPlayerIndex_Defaults=_,Player00
-_LeaderboardGetPlayerIndex_Category=TC_UjAPI_Misc
+_LeaderboardGetPlayerIndex_Category=TC_UjAPI_Leaderboard
 
 
 LeaderboardHasPlayerItem=1,1,boolean,leaderboard,player
@@ -22207,12 +22222,12 @@ _MathTanDeg_Category=TC_UjAPI_Math
 
 MoveLightning=1,1,boolean,lightning,boolean,real,real,real,real
 _MoveLightning_Defaults=_,true,0,0,0,0
-_MoveLightning_Category=TC_UjAPI_Misc
+_MoveLightning_Category=TC_UjAPI_Lightning
 
 
 MoveLightningEx=1,1,boolean,lightning,boolean,real,real,real,real,real,real
 _MoveLightningEx_Defaults=_,true,0,0,0,0,0,0
-_MoveLightningEx_Category=TC_UjAPI_Misc
+_MoveLightningEx_Category=TC_UjAPI_Lightning
 
 
 Not=1,1,boolexpr,boolexpr
@@ -22227,72 +22242,72 @@ _Or_Category=TC_UjAPI_Misc
 
 OrderGetId=1,1,integer,orderhandle
 _OrderGetId_Defaults=_
-_OrderGetId_Category=TC_UjAPI_Misc
+_OrderGetId_Category=TC_UjAPI_Order
 
 
 OrderGetNext=1,1,orderhandle,orderhandle
 _OrderGetNext_Defaults=_
-_OrderGetNext_Category=TC_UjAPI_Misc
+_OrderGetNext_Category=TC_UjAPI_Order
 
 
 OrderGetSourceLoc=1,1,location,orderhandle
 _OrderGetSourceLoc_Defaults=_
-_OrderGetSourceLoc_Category=TC_UjAPI_Misc
+_OrderGetSourceLoc_Category=TC_UjAPI_Order
 
 
 OrderGetSourceX=1,1,real,orderhandle
 _OrderGetSourceX_Defaults=_
-_OrderGetSourceX_Category=TC_UjAPI_Misc
+_OrderGetSourceX_Category=TC_UjAPI_Order
 
 
 OrderGetSourceY=1,1,real,orderhandle
 _OrderGetSourceY_Defaults=_
-_OrderGetSourceY_Category=TC_UjAPI_Misc
+_OrderGetSourceY_Category=TC_UjAPI_Order
 
 
 OrderGetTarget=1,1,widget,orderhandle
 _OrderGetTarget_Defaults=_
-_OrderGetTarget_Category=TC_UjAPI_Misc
+_OrderGetTarget_Category=TC_UjAPI_Order
 
 
 OrderGetTargetDestructable=1,1,destructable,orderhandle
 _OrderGetTargetDestructable_Defaults=_
-_OrderGetTargetDestructable_Category=TC_UjAPI_Destructable
+_OrderGetTargetDestructable_Category=TC_UjAPI_Order
 
 
 OrderGetTargetItem=1,1,item,orderhandle
 _OrderGetTargetItem_Defaults=_
-_OrderGetTargetItem_Category=TC_UjAPI_Item
+_OrderGetTargetItem_Category=TC_UjAPI_Order
 
 
 OrderGetTargetLoc=1,1,location,orderhandle
 _OrderGetTargetLoc_Defaults=_
-_OrderGetTargetLoc_Category=TC_UjAPI_Misc
+_OrderGetTargetLoc_Category=TC_UjAPI_Order
 
 
 OrderGetTargetUnit=1,1,unit,orderhandle
 _OrderGetTargetUnit_Defaults=_
-_OrderGetTargetUnit_Category=TC_UjAPI_Unit
+_OrderGetTargetUnit_Category=TC_UjAPI_Order
 
 
 OrderGetTargetX=1,1,real,orderhandle
 _OrderGetTargetX_Defaults=_
-_OrderGetTargetX_Category=TC_UjAPI_Misc
+_OrderGetTargetX_Category=TC_UjAPI_Order
 
 
 OrderGetTargetY=1,1,real,orderhandle
 _OrderGetTargetY_Defaults=_
-_OrderGetTargetY_Category=TC_UjAPI_Misc
+_OrderGetTargetY_Category=TC_UjAPI_Order
 
 
 OrderId=1,1,integer,string
 _OrderId_Defaults=_
-_OrderId_Category=TC_UjAPI_Misc
+_OrderId_Category=TC_UjAPI_Order
 
 
 OrderId2String=1,1,string,integer
 _OrderId2String_Defaults=0
-_OrderId2String_Category=TC_UjAPI_Misc
+_OrderId2String_Category=TC_UjAPI_Order
 
 
 ParseTags=1,1,string,string
@@ -22312,12 +22327,12 @@ _PlaceRandomUnit_Category=TC_UjAPI_Unit
 
 Player=1,1,player,integer
 _Player_Defaults=0
-_Player_Category=TC_UjAPI_Misc
+_Player_Category=TC_UjAPI_Player
 
 
 PlayerGetLeaderboard=1,1,leaderboard,player
 _PlayerGetLeaderboard_Defaults=Player00
-_PlayerGetLeaderboard_Category=TC_UjAPI_Misc
+_PlayerGetLeaderboard_Category=TC_UjAPI_Leaderboard
 
 
 QuestCreateItem=1,1,questitem,quest
@@ -22327,47 +22342,47 @@ _QuestCreateItem_Category=TC_UjAPI_Item
 
 QueueBuildOrderById=1,1,boolean,unit,unitcode,real,real
 _QueueBuildOrderById_Defaults=_,hfoo,0,0
-_QueueBuildOrderById_Category=TC_UjAPI_Misc
+_QueueBuildOrderById_Category=TC_UjAPI_Order
 
 
 QueueImmediateOrderById=1,1,boolean,unit,integer
 _QueueImmediateOrderById_Defaults=_,0
-_QueueImmediateOrderById_Category=TC_UjAPI_Misc
+_QueueImmediateOrderById_Category=TC_UjAPI_Order
 
 
 QueueInstantPointOrderById=1,1,boolean,unit,integer,real,real,widget
 _QueueInstantPointOrderById_Defaults=_,0,0,0,_
-_QueueInstantPointOrderById_Category=TC_UjAPI_Misc
+_QueueInstantPointOrderById_Category=TC_UjAPI_Order
 
 
 QueueInstantTargetOrderById=1,1,boolean,unit,integer,widget,widget
 _QueueInstantTargetOrderById_Defaults=_,0,_,_
-_QueueInstantTargetOrderById_Category=TC_UjAPI_Misc
+_QueueInstantTargetOrderById_Category=TC_UjAPI_Order
 
 
 QueueNeutralImmediateOrderById=1,1,boolean,player,unit,unitcode
 _QueueNeutralImmediateOrderById_Defaults=Player00,_,hfoo
-_QueueNeutralImmediateOrderById_Category=TC_UjAPI_Misc
+_QueueNeutralImmediateOrderById_Category=TC_UjAPI_Order
 
 
 QueueNeutralPointOrderById=1,1,boolean,player,unit,unitcode,real,real
 _QueueNeutralPointOrderById_Defaults=Player00,_,hfoo,0,0
-_QueueNeutralPointOrderById_Category=TC_UjAPI_Misc
+_QueueNeutralPointOrderById_Category=TC_UjAPI_Order
 
 
 QueueNeutralTargetOrderById=1,1,boolean,player,unit,unitcode,widget
 _QueueNeutralTargetOrderById_Defaults=Player00,_,hfoo,_
-_QueueNeutralTargetOrderById_Category=TC_UjAPI_Misc
+_QueueNeutralTargetOrderById_Category=TC_UjAPI_Order
 
 
 QueuePointOrderById=1,1,boolean,unit,integer,real,real
 _QueuePointOrderById_Defaults=_,0,0,0
-_QueuePointOrderById_Category=TC_UjAPI_Misc
+_QueuePointOrderById_Category=TC_UjAPI_Order
 
 
 QueueTargetOrderById=1,1,boolean,unit,integer,widget
 _QueueTargetOrderById_Defaults=_,0,_
-_QueueTargetOrderById_Category=TC_UjAPI_Misc
+_QueueTargetOrderById_Category=TC_UjAPI_Order
 
 
 ReloadGameCachesFromDisk=1,1,boolean,nothing
@@ -22467,22 +22482,22 @@ _RenameSaveDirectory_Category=TC_UjAPI_Misc
 
 ReplaceMIDISound=1,1,sound,sound,string,integer,integer
 _ReplaceMIDISound_Defaults=_,_,0,0
-_ReplaceMIDISound_Category=TC_UjAPI_Misc
+_ReplaceMIDISound_Category=TC_UjAPI_Sound
 
 
 ReplaceSound=1,1,sound,sound,string,boolean,boolean,boolean,integer,integer,string
 _ReplaceSound_Defaults=_,_,true,true,true,0,0,_
-_ReplaceSound_Category=TC_UjAPI_Misc
+_ReplaceSound_Category=TC_UjAPI_Sound
 
 
 ReplaceSoundFromLabel=1,1,sound,sound,string,boolean,boolean,boolean,integer,integer
 _ReplaceSoundFromLabel_Defaults=_,_,true,true,true,0,0
-_ReplaceSoundFromLabel_Category=TC_UjAPI_Misc
+_ReplaceSoundFromLabel_Category=TC_UjAPI_Sound
 
 
 ReplaceSoundWithLabel=1,1,sound,sound,string,boolean,boolean,boolean,integer,integer,string
 _ReplaceSoundWithLabel_Defaults=_,_,true,true,true,0,0,_
-_ReplaceSoundWithLabel_Category=TC_UjAPI_Misc
+_ReplaceSoundWithLabel_Category=TC_UjAPI_Sound
 
 
 ResetAbilityFieldData=1,1,boolean,ability
@@ -22517,17 +22532,17 @@ _ReviveUnitLoc_Category=TC_UjAPI_Unit
 
 RunJassScript=1,1,jassthread,string,string
 _RunJassScript_Defaults=_,_
-_RunJassScript_Category=TC_UjAPI_Misc
+_RunJassScript_Category=TC_UjAPI_Jass
 
 
 RunJassScriptEx=1,1,jassthread,string,string,string
 _RunJassScriptEx_Defaults=_,_,_
-_RunJassScriptEx_Category=TC_UjAPI_Misc
+_RunJassScriptEx_Category=TC_UjAPI_Jass
 
 
 RunJassScriptSimple=1,1,jassthread,string
 _RunJassScriptSimple_Defaults=_
-_RunJassScriptSimple_Category=TC_UjAPI_Misc
+_RunJassScriptSimple_Category=TC_UjAPI_Jass
 
 
 SaveAbilityHandle=1,1,boolean,hashtable,integer,integer,ability
@@ -23147,62 +23162,62 @@ _SetItemStringField_Category=TC_UjAPI_Item
 
 SetJassGlobalBoolean=1,1,boolean,jassthread,string,boolean
 _SetJassGlobalBoolean_Defaults=_,_,true
-_SetJassGlobalBoolean_Category=TC_UjAPI_Misc
+_SetJassGlobalBoolean_Category=TC_UjAPI_Jass
 
 
 SetJassGlobalHandle=1,1,boolean,jassthread,string,handle
 _SetJassGlobalHandle_Defaults=_,_,_
-_SetJassGlobalHandle_Category=TC_UjAPI_Misc
+_SetJassGlobalHandle_Category=TC_UjAPI_Jass
 
 
 SetJassGlobalInteger=1,1,boolean,jassthread,string,integer
 _SetJassGlobalInteger_Defaults=_,_,0
-_SetJassGlobalInteger_Category=TC_UjAPI_Misc
+_SetJassGlobalInteger_Category=TC_UjAPI_Jass
 
 
 SetJassGlobalReal=1,1,boolean,jassthread,string,real
 _SetJassGlobalReal_Defaults=_,_,0
-_SetJassGlobalReal_Category=TC_UjAPI_Misc
+_SetJassGlobalReal_Category=TC_UjAPI_Jass
 
 
 SetJassGlobalString=1,1,boolean,jassthread,string,string
 _SetJassGlobalString_Defaults=_,_,_
-_SetJassGlobalString_Category=TC_UjAPI_Misc
+_SetJassGlobalString_Category=TC_UjAPI_Jass
 
 
 SetJassLocalBoolean=1,1,boolean,string,boolean
 _SetJassLocalBoolean_Defaults=_,true
-_SetJassLocalBoolean_Category=TC_UjAPI_Misc
+_SetJassLocalBoolean_Category=TC_UjAPI_Jass
 
 
 SetJassLocalHandle=1,1,boolean,string,handle
 _SetJassLocalHandle_Defaults=_,_
-_SetJassLocalHandle_Category=TC_UjAPI_Misc
+_SetJassLocalHandle_Category=TC_UjAPI_Jass
 
 
 SetJassLocalInteger=1,1,boolean,string,integer
 _SetJassLocalInteger_Defaults=_,0
-_SetJassLocalInteger_Category=TC_UjAPI_Misc
+_SetJassLocalInteger_Category=TC_UjAPI_Jass
 
 
 SetJassLocalReal=1,1,boolean,string,real
 _SetJassLocalReal_Defaults=_,0
-_SetJassLocalReal_Category=TC_UjAPI_Misc
+_SetJassLocalReal_Category=TC_UjAPI_Jass
 
 
 SetJassLocalString=1,1,boolean,string,string
 _SetJassLocalString_Defaults=_,_
-_SetJassLocalString_Category=TC_UjAPI_Misc
+_SetJassLocalString_Category=TC_UjAPI_Jass
 
 
 SetLightningColor=1,1,boolean,lightning,real,real,real,real
 _SetLightningColor_Defaults=_,0,0,0,0
-_SetLightningColor_Category=TC_UjAPI_Misc
+_SetLightningColor_Category=TC_UjAPI_Lightning
 
 
 SetLightningColour=1,1,boolean,lightning,integer,integer,integer,integer
 _SetLightningColour_Defaults=_,0,0,0,0
-_SetLightningColour_Category=TC_UjAPI_Misc
+_SetLightningColour_Category=TC_UjAPI_Lightning
 
 
 SetMiniMapTexture=1,1,boolean,string
@@ -23212,17 +23227,17 @@ _SetMiniMapTexture_Category=TC_UjAPI_Misc
 
 SetSoundFacialAnimationGroupLabel=1,1,boolean,sound,string
 _SetSoundFacialAnimationGroupLabel_Defaults=_,_
-_SetSoundFacialAnimationGroupLabel_Category=TC_UjAPI_Misc
+_SetSoundFacialAnimationGroupLabel_Category=TC_UjAPI_Sound
 
 
 SetSoundFacialAnimationLabel=1,1,boolean,sound,string
 _SetSoundFacialAnimationLabel_Defaults=_,_
-_SetSoundFacialAnimationLabel_Category=TC_UjAPI_Misc
+_SetSoundFacialAnimationLabel_Category=TC_UjAPI_Sound
 
 
 SetSoundFacialAnimationSetFilepath=1,1,boolean,sound,string
 _SetSoundFacialAnimationSetFilepath_Defaults=_,_
-_SetSoundFacialAnimationSetFilepath_Category=TC_UjAPI_Misc
+_SetSoundFacialAnimationSetFilepath_Category=TC_UjAPI_Sound
 
 
 SetUnitAbilityLevel=1,1,integer,unit,integer,integer
@@ -23322,7 +23337,7 @@ _SkinManagerGetLocalPath_Category=TC_UjAPI_Misc
 
 StopJassThread=1,1,boolean,jassthread
 _StopJassThread_Defaults=_
-_StopJassThread_Category=TC_UjAPI_Misc
+_StopJassThread_Category=TC_UjAPI_Jass
 
 
 StoreString=1,1,boolean,gamecache,string,string,string
@@ -23442,47 +23457,47 @@ _TerrainDeformWave_Category=TC_UjAPI_Misc
 
 TextFileCountLines=1,1,integer,textfilehandle
 _TextFileCountLines_Defaults=_
-_TextFileCountLines_Category=TC_UjAPI_Misc
+_TextFileCountLines_Category=TC_UjAPI_TextFile
 
 
 TextFileExists=1,1,boolean,string
 _TextFileExists_Defaults=_
-_TextFileExists_Category=TC_UjAPI_Misc
+_TextFileExists_Category=TC_UjAPI_TextFile
 
 
 TextFileGetPath=1,1,string,textfilehandle
 _TextFileGetPath_Defaults=_
-_TextFileGetPath_Category=TC_UjAPI_Misc
+_TextFileGetPath_Category=TC_UjAPI_TextFile
 
 
 TextFileGetSize=1,1,integer,textfilehandle
 _TextFileGetSize_Defaults=_
-_TextFileGetSize_Category=TC_UjAPI_Misc
+_TextFileGetSize_Category=TC_UjAPI_TextFile
 
 
 TextFileGetSizeByPath=1,1,integer,string
 _TextFileGetSizeByPath_Defaults=_
-_TextFileGetSizeByPath_Category=TC_UjAPI_Misc
+_TextFileGetSizeByPath_Category=TC_UjAPI_TextFile
 
 
 TextFileOpen=1,1,textfilehandle,string
 _TextFileOpen_Defaults=_
-_TextFileOpen_Category=TC_UjAPI_Misc
+_TextFileOpen_Category=TC_UjAPI_TextFile
 
 
 TextFileRead=1,1,string,textfilehandle
 _TextFileRead_Defaults=_
-_TextFileRead_Category=TC_UjAPI_Misc
+_TextFileRead_Category=TC_UjAPI_TextFile
 
 
 TextFileReadAllLines=1,1,string,textfilehandle
 _TextFileReadAllLines_Defaults=_
-_TextFileReadAllLines_Category=TC_UjAPI_Misc
+_TextFileReadAllLines_Category=TC_UjAPI_TextFile
 
 
 TextFileReadLine=1,1,string,textfilehandle,integer
 _TextFileReadLine_Defaults=_,0
-_TextFileReadLine_Category=TC_UjAPI_Misc
+_TextFileReadLine_Category=TC_UjAPI_TextFile
 
 
 TimerGetCallback=1,1,code,timer
@@ -23797,12 +23812,12 @@ _UnitRemoveItemFromSlot_Category=TC_UjAPI_Unit
 
 UnitRemoveOrderByIndex=1,1,boolean,unit,integer
 _UnitRemoveOrderByIndex_Defaults=_,0
-_UnitRemoveOrderByIndex_Category=TC_UjAPI_Unit
+_UnitRemoveOrderByIndex_Category=TC_UjAPI_Order
 
 
 UnitRemoveOrderByOrderId=1,1,boolean,unit,integer,boolean
 _UnitRemoveOrderByOrderId_Defaults=_,0,true
-_UnitRemoveOrderByOrderId_Category=TC_UjAPI_Unit
+_UnitRemoveOrderByOrderId_Category=TC_UjAPI_Order
 
 
 UnitRemoveType=1,1,boolean,unit,unittype

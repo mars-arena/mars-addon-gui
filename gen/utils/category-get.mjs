@@ -38,6 +38,21 @@ const Destructable = add('Destructable')
 const Doodad = add('Doodad')
 const HandleList = add('HandleList')
 const Handle = add('Handle')
+const Force = add('Force')
+const Leaderboard = add('Leaderboard')
+const Multiboard = add('Multiboard')
+const Quest = add('Quest')
+const Order = add('Order')
+const Sound = add('Sound')
+const Image = add('Image')
+const Jass = add('Jass')
+const Lightning = add('Lightning')
+const Cinematic = add('Cinematic')
+const TextFile = add('TextFile')
+const TextTag = add('TextTag')
+const Blight = add('Blight')
+const Player = add('Player')
+const Mouse = add('Mouse')
 
 /**
  * @param {import('jass-to-ast').Native} native
@@ -57,13 +72,30 @@ export default native => {
         return false
     }
 
+    /**
+     * @param {...string} names
+     * @return {boolean}
+     */
+    const s = (...names) => {
+        for (const n of names) {
+            if (name.startsWith(n)) return true
+        }
+        return false
+    }
+
+
     if (categoryIsMath(native)) return Math
     if (name.startsWith('Convert')) return Convert
-    if (name.startsWith('Save') || name.startsWith('Load')) return Hashtable
+    if (s('Save', 'Load', 'HaveSaved', 'RemoveSaved')) return Hashtable
     if (c('HandleList')) return HandleList
     if (name.startsWith('HandleTo')) return Handle
 
-    if (c('Unit', 'Corpse', 'Illusion', 'Building')) return Unit
+    if (c('Order')) return Order
+
+    if (c('War3Image')) return War3Image
+    if (c('Image')) return Image
+
+    if (c('Unit', 'Corpse', 'Illusion', 'Building', 'Goldmine')) return Unit
     if (c('Ability')) return Ability
     if (c('Buff')) return Buff
     if (c('Frame')) return Frame
@@ -76,9 +108,21 @@ export default native => {
     if (c('Item')) return Item
     if (c('Projectile')) return Projectile
     if (c('Camera')) return Camera
-    if (c('War3Image')) return War3Image
     if (c('Destructable')) return Destructable
     if (c('Doodad')) return Doodad
+    if (c('Force')) return Force
+    if (c('Leaderboard')) return Leaderboard
+    if (c('Multiboard')) return Multiboard
+    if (c('Quest')) return Quest
+    if (c('Sound')) return Sound
+    if (c('Jass')) return Jass
+    if (c('Lightning')) return Lightning
+    if (c('CineFilter', 'Cinematic')) return Cinematic
+    if (c('TextFile')) return TextFile
+    if (c('TextTag')) return TextTag
+    if (c('Blight')) return Blight
+    if (c('Player')) return Player
+    if (c('Mouse')) return Mouse
 
     return Misc
 }

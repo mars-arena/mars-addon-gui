@@ -25,7 +25,6 @@ cpdir(path.join(root, 'src', 'umswe', 'UI'), UI)
 const TriggerData = path.join(UI, 'TriggerData.txt')
 const TriggerStrings = path.join(UI, 'TriggerStrings.txt')
 
-
 let cat = ''
 for (const s of fs.readFileSync(TriggerData, {encoding: 'utf8', flag: 'r'}).split(/\r\n|\n/)) {
     const cm = s.match(/^\[([a-z0-9]+)\s*]/i)
