@@ -1,3 +1,4 @@
 # UjAPI-GUI
 
-[Download](https://github.com/WarRaft/UjAPI-GUI/tree/main/dist)
+- [UjAPI](https://github.com/UnryzeC/UjAPI)
+- [GUI](https://github.com/WarRaft/UjAPI-GUI/tree/main/dist)
