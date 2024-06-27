@@ -1,5 +1,7 @@
 ## Extract
 
+https://xgm.guru/p/wc3/addingactionstotriggereditor
+
 ```
 e[xtract] MpqFile FileName [TargetDir] [/listfile FileName] [/fp] [/lower]
 
