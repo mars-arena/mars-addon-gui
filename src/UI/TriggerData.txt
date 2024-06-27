@@ -1,32 +1,46 @@
 [TriggerCategories]
 TC_UjAPI_Ability=WESTRING_TRIGCAT_UjAPI_Ability,ReplaceableTextures\WorldEditUI\Actions-Nothing
+TC_UjAPI_AntiHack=WESTRING_TRIGCAT_UjAPI_AntiHack,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_Blight=WESTRING_TRIGCAT_UjAPI_Blight,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_Buff=WESTRING_TRIGCAT_UjAPI_Buff,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_Camera=WESTRING_TRIGCAT_UjAPI_Camera,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_Cinematic=WESTRING_TRIGCAT_UjAPI_Cinematic,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_Convert=WESTRING_TRIGCAT_UjAPI_Convert,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_Destructable=WESTRING_TRIGCAT_UjAPI_Destructable,ReplaceableTextures\WorldEditUI\Actions-Nothing
+TC_UjAPI_Dialog=WESTRING_TRIGCAT_UjAPI_Dialog,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_Doodad=WESTRING_TRIGCAT_UjAPI_Doodad,ReplaceableTextures\WorldEditUI\Actions-Nothing
+TC_UjAPI_FogModifier=WESTRING_TRIGCAT_UjAPI_FogModifier,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_Force=WESTRING_TRIGCAT_UjAPI_Force,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_Frame=WESTRING_TRIGCAT_UjAPI_Frame,ReplaceableTextures\WorldEditUI\Actions-Nothing
+TC_UjAPI_Group=WESTRING_TRIGCAT_UjAPI_Group,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_Handle=WESTRING_TRIGCAT_UjAPI_Handle,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_HandleList=WESTRING_TRIGCAT_UjAPI_HandleList,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_Hashtable=WESTRING_TRIGCAT_UjAPI_Hashtable,ReplaceableTextures\WorldEditUI\Actions-Nothing
+TC_UjAPI_Hero=WESTRING_TRIGCAT_UjAPI_Hero,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_Image=WESTRING_TRIGCAT_UjAPI_Image,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_Item=WESTRING_TRIGCAT_UjAPI_Item,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_Jass=WESTRING_TRIGCAT_UjAPI_Jass,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_Leaderboard=WESTRING_TRIGCAT_UjAPI_Leaderboard,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_Lightning=WESTRING_TRIGCAT_UjAPI_Lightning,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_Math=WESTRING_TRIGCAT_UjAPI_Math,ReplaceableTextures\WorldEditUI\Actions-Nothing
+TC_UjAPI_Message=WESTRING_TRIGCAT_UjAPI_Message,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_Misc=WESTRING_TRIGCAT_UjAPI_Misc,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_Mouse=WESTRING_TRIGCAT_UjAPI_Mouse,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_Multiboard=WESTRING_TRIGCAT_UjAPI_Multiboard,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_Order=WESTRING_TRIGCAT_UjAPI_Order,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_Player=WESTRING_TRIGCAT_UjAPI_Player,ReplaceableTextures\WorldEditUI\Actions-Nothing
+TC_UjAPI_Preload=WESTRING_TRIGCAT_UjAPI_Preload,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_Projectile=WESTRING_TRIGCAT_UjAPI_Projectile,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_Quest=WESTRING_TRIGCAT_UjAPI_Quest,ReplaceableTextures\WorldEditUI\Actions-Nothing
+TC_UjAPI_Rect=WESTRING_TRIGCAT_UjAPI_Rect,ReplaceableTextures\WorldEditUI\Actions-Nothing
+TC_UjAPI_Region=WESTRING_TRIGCAT_UjAPI_Region,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_Sound=WESTRING_TRIGCAT_UjAPI_Sound,ReplaceableTextures\WorldEditUI\Actions-Nothing
+TC_UjAPI_SpecialEffect=WESTRING_TRIGCAT_UjAPI_SpecialEffect,ReplaceableTextures\WorldEditUI\Actions-Nothing
+TC_UjAPI_Sprite=WESTRING_TRIGCAT_UjAPI_Sprite,ReplaceableTextures\WorldEditUI\Actions-Nothing
+TC_UjAPI_String=WESTRING_TRIGCAT_UjAPI_String,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_Sync=WESTRING_TRIGCAT_UjAPI_Sync,ReplaceableTextures\WorldEditUI\Actions-Nothing
+TC_UjAPI_Terrain=WESTRING_TRIGCAT_UjAPI_Terrain,ReplaceableTextures\WorldEditUI\Actions-Nothing
+TC_UjAPI_Test=WESTRING_TRIGCAT_UjAPI_Test,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_TextFile=WESTRING_TRIGCAT_UjAPI_TextFile,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_TextTag=WESTRING_TRIGCAT_UjAPI_TextTag,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_UjAPI_Timer=WESTRING_TRIGCAT_UjAPI_Timer,ReplaceableTextures\WorldEditUI\Actions-Nothing
@@ -3963,11 +3977,6 @@ _AddAbilityBaseRealLevelArrayFieldById_Defaults=0,_,0,0
 _AddAbilityBaseRealLevelArrayFieldById_Category=TC_UjAPI_Ability
 
 
-AddAbilityBaseStringLevelArrayFieldById=1,integer,abilitystringlevelarrayfield,integer,string
-_AddAbilityBaseStringLevelArrayFieldById_Defaults=0,_,0,_
-_AddAbilityBaseStringLevelArrayFieldById_Category=TC_UjAPI_Ability
-
-
 AddAbilityBooleanLevelArrayField=1,ability,abilitybooleanlevelarrayfield,integer,boolean
 _AddAbilityBooleanLevelArrayField_Defaults=_,_,0,true
 _AddAbilityBooleanLevelArrayField_Category=TC_UjAPI_Ability
@@ -3981,11 +3990,6 @@ _AddAbilityIntegerLevelArrayField_Category=TC_UjAPI_Ability
 AddAbilityRealLevelArrayField=1,ability,abilityreallevelarrayfield,integer,real
 _AddAbilityRealLevelArrayField_Defaults=_,_,0,0
 _AddAbilityRealLevelArrayField_Category=TC_UjAPI_Ability
-
-
-AddAbilityStringLevelArrayField=1,ability,abilitystringlevelarrayfield,integer,string
-_AddAbilityStringLevelArrayField_Defaults=_,_,0,_
-_AddAbilityStringLevelArrayField_Category=TC_UjAPI_Ability
 
 
 AddBuffBaseBooleanArrayFieldById=1,integer,abilitybooleanfield,boolean
@@ -4003,11 +4007,6 @@ _AddBuffBaseRealArrayFieldById_Defaults=0,_,0
 _AddBuffBaseRealArrayFieldById_Category=TC_UjAPI_Buff
 
 
-AddBuffBaseStringArrayFieldById=1,integer,abilitystringfield,string
-_AddBuffBaseStringArrayFieldById_Defaults=0,_,_
-_AddBuffBaseStringArrayFieldById_Category=TC_UjAPI_Buff
-
-
 AddBuffBooleanArrayField=1,buff,abilitybooleanfield,boolean
 _AddBuffBooleanArrayField_Defaults=_,_,true
 _AddBuffBooleanArrayField_Category=TC_UjAPI_Buff
@@ -4021,11 +4020,6 @@ _AddBuffIntegerArrayField_Category=TC_UjAPI_Buff
 AddBuffRealArrayField=1,buff,abilityrealfield,real
 _AddBuffRealArrayField_Defaults=_,_,0
 _AddBuffRealArrayField_Category=TC_UjAPI_Buff
-
-
-AddBuffStringArrayField=1,buff,abilitystringfield,string
-_AddBuffStringArrayField_Defaults=_,_,_
-_AddBuffStringArrayField_Category=TC_UjAPI_Buff
 
 
 AddFrameListItem=1,framehandle,string,framehandle
@@ -4045,17 +4039,12 @@ _AddFrameText_Category=TC_UjAPI_Frame
 
 AddHeroXP=1,unit,integer,boolean
 _AddHeroXP_Defaults=_,0,true
-_AddHeroXP_Category=TC_UjAPI_Misc
+_AddHeroXP_Category=TC_UjAPI_Hero
 
 
 AddIndicator=1,widget,integer,integer,integer,integer
 _AddIndicator_Defaults=_,0,0,0,0
-_AddIndicator_Category=TC_UjAPI_Misc
-
-
-AddItemToStock=1,unit,integer,integer,integer
-_AddItemToStock_Defaults=_,0,0,0
-_AddItemToStock_Category=TC_UjAPI_Item
+_AddIndicator_Category=TC_UjAPI_Widget
 
 
 AddLightning=1,string,boolean,real,real,real,real
@@ -4070,62 +4059,47 @@ _AddPlayerTechResearched_Category=TC_UjAPI_Player
 
 AddResourceAmount=1,unit,integer
 _AddResourceAmount_Defaults=_,0
-_AddResourceAmount_Category=TC_UjAPI_Misc
-
-
-AddressToHandle=1,integer
-_AddressToHandle_Defaults=0
-_AddressToHandle_Category=TC_UjAPI_Misc
+_AddResourceAmount_Category=TC_UjAPI_Unit
 
 
 AddSpecialEffect=1,string,real,real
 _AddSpecialEffect_Defaults=_,0,0
-_AddSpecialEffect_Category=TC_UjAPI_Misc
+_AddSpecialEffect_Category=TC_UjAPI_SpecialEffect
 
 
 AddSpecialEffectLoc=1,string,location
 _AddSpecialEffectLoc_Defaults=_,_
-_AddSpecialEffectLoc_Category=TC_UjAPI_Misc
+_AddSpecialEffectLoc_Category=TC_UjAPI_SpecialEffect
 
 
 AddSpecialEffectTarget=1,string,widget,string
 _AddSpecialEffectTarget_Defaults=_,_,_
-_AddSpecialEffectTarget_Category=TC_UjAPI_Misc
+_AddSpecialEffectTarget_Category=TC_UjAPI_SpecialEffect
 
 
 AddSpellEffect=1,string,effecttype,real,real
 _AddSpellEffect_Defaults=_,_,0,0
-_AddSpellEffect_Category=TC_UjAPI_Misc
+_AddSpellEffect_Category=TC_UjAPI_Ability
 
 
 AddSpellEffectById=1,integer,effecttype,real,real
 _AddSpellEffectById_Defaults=0,_,0,0
-_AddSpellEffectById_Category=TC_UjAPI_Misc
+_AddSpellEffectById_Category=TC_UjAPI_Ability
 
 
 AddSpellEffectLoc=1,string,effecttype,location
 _AddSpellEffectLoc_Defaults=_,_,_
-_AddSpellEffectLoc_Category=TC_UjAPI_Misc
+_AddSpellEffectLoc_Category=TC_UjAPI_Ability
 
 
 AddSpellEffectTarget=1,string,effecttype,widget,string
 _AddSpellEffectTarget_Defaults=_,_,_,_
-_AddSpellEffectTarget_Category=TC_UjAPI_Misc
-
-
-AddSpriteToTarget=1,string,sprite,string
-_AddSpriteToTarget_Defaults=_,_,_
-_AddSpriteToTarget_Category=TC_UjAPI_Misc
+_AddSpellEffectTarget_Category=TC_UjAPI_Ability
 
 
 AddUnitAnimationProperties=1,unit,string,boolean
 _AddUnitAnimationProperties_Defaults=_,_,true
 _AddUnitAnimationProperties_Category=TC_UjAPI_Unit
-
-
-AddUnitToStock=1,unit,unitcode,integer,integer
-_AddUnitToStock_Defaults=_,hfoo,0,0
-_AddUnitToStock_Category=TC_UjAPI_Unit
 
 
 AddWeatherEffect=1,rect,integer
@@ -4145,77 +4119,67 @@ _And_Category=TC_UjAPI_Misc
 
 AntiHackEnable=1,boolean
 _AntiHackEnable_Defaults=true
-_AntiHackEnable_Category=TC_UjAPI_Misc
+_AntiHackEnable_Category=TC_UjAPI_AntiHack
 
 
 AntiHackEnableEx=1,boolean,boolean,boolean
 _AntiHackEnableEx_Defaults=true,true,true
-_AntiHackEnableEx_Category=TC_UjAPI_Misc
+_AntiHackEnableEx_Category=TC_UjAPI_AntiHack
 
 
 AntiHackEnableKick=1,boolean
 _AntiHackEnableKick_Defaults=true
-_AntiHackEnableKick_Category=TC_UjAPI_Misc
+_AntiHackEnableKick_Category=TC_UjAPI_AntiHack
 
 
 AntiHackEnableModuleCheck=1,boolean
 _AntiHackEnableModuleCheck_Defaults=true
-_AntiHackEnableModuleCheck_Category=TC_UjAPI_Misc
+_AntiHackEnableModuleCheck_Category=TC_UjAPI_AntiHack
 
 
 AntiHackEnableProcessCheck=1,boolean
 _AntiHackEnableProcessCheck_Defaults=true
-_AntiHackEnableProcessCheck_Category=TC_UjAPI_Misc
-
-
-AttachSoundToUnit=1,sound,unit
-_AttachSoundToUnit_Defaults=_,_
-_AttachSoundToUnit_Category=TC_UjAPI_Unit
-
-
-AttachSpriteToTarget=1,sprite,sprite,string
-_AttachSpriteToTarget_Defaults=_,_,_
-_AttachSpriteToTarget_Category=TC_UjAPI_Misc
+_AntiHackEnableProcessCheck_Category=TC_UjAPI_AntiHack
 
 
 AutomationSetTestType=1,string
 _AutomationSetTestType_Defaults=_
-_AutomationSetTestType_Category=TC_UjAPI_Misc
+_AutomationSetTestType_Category=TC_UjAPI_Test
 
 
 AutomationTestEnd=1,nothing
 _AutomationTestEnd_Defaults=
-_AutomationTestEnd_Category=TC_UjAPI_Misc
+_AutomationTestEnd_Category=TC_UjAPI_Test
 
 
 AutomationTestingFinished=1,nothing
 _AutomationTestingFinished_Defaults=
-_AutomationTestingFinished_Category=TC_UjAPI_Misc
+_AutomationTestingFinished_Category=TC_UjAPI_Test
 
 
 AutomationTestStart=1,string
 _AutomationTestStart_Defaults=_
-_AutomationTestStart_Category=TC_UjAPI_Misc
+_AutomationTestStart_Category=TC_UjAPI_Test
 
 
 BenchmarkEnd=1,nothing
 _BenchmarkEnd_Defaults=
-_BenchmarkEnd_Category=TC_UjAPI_Misc
+_BenchmarkEnd_Category=TC_UjAPI_Test
 
 
 BenchmarkGetElapsed=1,integer
 _BenchmarkGetElapsed_Defaults=0
-_BenchmarkGetElapsed_Category=TC_UjAPI_Misc
+_BenchmarkGetElapsed_Category=TC_UjAPI_Test
 
 
 BenchmarkReset=1,nothing
 _BenchmarkReset_Defaults=
-_BenchmarkReset_Category=TC_UjAPI_Misc
+_BenchmarkReset_Category=TC_UjAPI_Test
 
 
 BenchmarkStart=1,nothing
 _BenchmarkStart_Defaults=
-_BenchmarkStart_Category=TC_UjAPI_Misc
+_BenchmarkStart_Category=TC_UjAPI_Test
 
 
 CachePlayerHeroData=1,player
@@ -4325,7 +4289,7 @@ _CastAbilityTarget_Category=TC_UjAPI_Ability
 
 Cheat=1,string
 _Cheat_Defaults=_
-_Cheat_Category=TC_UjAPI_Misc
+_Cheat_Category=TC_UjAPI_AntiHack
 
 
 ChooseRandomCreep=1,integer
@@ -4360,7 +4324,7 @@ _ClearMapMusic_Category=TC_UjAPI_Misc
 
 ClearTextMessages=1,nothing
 _ClearTextMessages_Defaults=
-_ClearTextMessages_Category=TC_UjAPI_Misc
+_ClearTextMessages_Category=TC_UjAPI_Message
 
 
 ClickFrame=1,framehandle
@@ -4380,17 +4344,17 @@ _Condition_Category=TC_UjAPI_Misc
 
 ConsoleEnable=1,boolean
 _ConsoleEnable_Defaults=true
-_ConsoleEnable_Category=TC_UjAPI_Misc
+_ConsoleEnable_Category=TC_UjAPI_Test
 
 
 ConsolePause=1,string
 _ConsolePause_Defaults=_
-_ConsolePause_Category=TC_UjAPI_Misc
+_ConsolePause_Category=TC_UjAPI_Test
 
 
 ConsolePrint=1,string
 _ConsolePrint_Defaults=_
-_ConsolePrint_Category=TC_UjAPI_Misc
+_ConsolePrint_Category=TC_UjAPI_Test
 
 
 CopySaveGame=1,string,string
@@ -4485,17 +4449,17 @@ _CreateDoodadZ_Category=TC_UjAPI_Doodad
 
 CreateFogModifierRadius=1,player,fogstate,real,real,real,boolean,boolean
 _CreateFogModifierRadius_Defaults=Player00,_,0,0,0,true,true
-_CreateFogModifierRadius_Category=TC_UjAPI_Misc
+_CreateFogModifierRadius_Category=TC_UjAPI_FogModifier
 
 
 CreateFogModifierRadiusLoc=1,player,fogstate,location,real,boolean,boolean
 _CreateFogModifierRadiusLoc_Defaults=Player00,_,_,0,true,true
-_CreateFogModifierRadiusLoc_Category=TC_UjAPI_Misc
+_CreateFogModifierRadiusLoc_Category=TC_UjAPI_FogModifier
 
 
 CreateFogModifierRect=1,player,fogstate,rect,boolean,boolean
 _CreateFogModifierRect_Defaults=Player00,_,_,true,true
-_CreateFogModifierRect_Category=TC_UjAPI_Misc
+_CreateFogModifierRect_Category=TC_UjAPI_Rect
 
 
 CreateForce=1,nothing
@@ -4515,7 +4479,7 @@ _CreateFrameByType_Category=TC_UjAPI_Frame
 
 CreateGroup=1,nothing
 _CreateGroup_Defaults=
-_CreateGroup_Category=TC_UjAPI_Misc
+_CreateGroup_Category=TC_UjAPI_Group
 
 
 CreateIllusion=1,player,unitcode,real,real,real
@@ -4610,7 +4574,7 @@ _CreateQuest_Category=TC_UjAPI_Quest
 
 CreateRegion=1,nothing
 _CreateRegion_Defaults=
-_CreateRegion_Category=TC_UjAPI_Misc
+_CreateRegion_Category=TC_UjAPI_Region
 
 
 CreateSimpleFrame=1,string,framehandle,integer
@@ -4640,7 +4604,7 @@ _CreateSoundFromLabel_Category=TC_UjAPI_Sound
 
 CreateSprite=1,boolean
 _CreateSprite_Defaults=true
-_CreateSprite_Category=TC_UjAPI_Misc
+_CreateSprite_Category=TC_UjAPI_Sprite
 
 
 CreateTextTag=1,nothing
@@ -4655,7 +4619,7 @@ _CreateTimer_Category=TC_UjAPI_Timer
 
 CreateTimerDialog=1,timer
 _CreateTimerDialog_Defaults=_
-_CreateTimerDialog_Category=TC_UjAPI_Timer
+_CreateTimerDialog_Category=TC_UjAPI_Dialog
 
 
 CreateTrigger=1,nothing
@@ -4795,7 +4759,7 @@ _DestroyTextTag_Category=TC_UjAPI_TextTag
 
 DestroyTimerDialog=1,timerdialog
 _DestroyTimerDialog_Defaults=_
-_DestroyTimerDialog_Category=TC_UjAPI_Timer
+_DestroyTimerDialog_Category=TC_UjAPI_Dialog
 
 
 DestroyUnitPool=1,unitpool
@@ -4805,27 +4769,27 @@ _DestroyUnitPool_Category=TC_UjAPI_Unit
 
 DetachSprite=1,sprite
 _DetachSprite_Defaults=_
-_DetachSprite_Category=TC_UjAPI_Misc
+_DetachSprite_Category=TC_UjAPI_Sprite
 
 
 DialogClear=1,dialog
 _DialogClear_Defaults=_
-_DialogClear_Category=TC_UjAPI_Misc
+_DialogClear_Category=TC_UjAPI_Dialog
 
 
 DialogCreate=1,nothing
 _DialogCreate_Defaults=
-_DialogCreate_Category=TC_UjAPI_Misc
+_DialogCreate_Category=TC_UjAPI_Dialog
 
 
 DialogDisplay=1,player,dialog,boolean
 _DialogDisplay_Defaults=Player00,_,true
-_DialogDisplay_Category=TC_UjAPI_Misc
+_DialogDisplay_Category=TC_UjAPI_Dialog
 
 
 DialogSetMessage=1,dialog,string
 _DialogSetMessage_Defaults=_,_
-_DialogSetMessage_Category=TC_UjAPI_Misc
+_DialogSetMessage_Category=TC_UjAPI_Dialog
 
 
 DisableAbility=1,ability,boolean,boolean
@@ -4845,12 +4809,12 @@ _DisableUnitAbilityEx_Category=TC_UjAPI_Unit
 
 DisplayChatMessage=1,player,integer,string
 _DisplayChatMessage_Defaults=Player00,0,_
-_DisplayChatMessage_Category=TC_UjAPI_Misc
+_DisplayChatMessage_Category=TC_UjAPI_Message
 
 
 DisplayChatMessageEx=1,player,integer,real,boolean,string
 _DisplayChatMessageEx_Defaults=Player00,0,0,true,_
-_DisplayChatMessageEx_Category=TC_UjAPI_Misc
+_DisplayChatMessageEx_Category=TC_UjAPI_Message
 
 
 DisplayCineFilter=1,boolean
@@ -4860,12 +4824,12 @@ _DisplayCineFilter_Category=TC_UjAPI_Cinematic
 
 DisplayLoadDialog=1,nothing
 _DisplayLoadDialog_Defaults=
-_DisplayLoadDialog_Category=TC_UjAPI_Misc
+_DisplayLoadDialog_Category=TC_UjAPI_Dialog
 
 
 DisplayTimedChatMessage=1,player,integer,real,string
 _DisplayTimedChatMessage_Defaults=Player00,0,0,_
-_DisplayTimedChatMessage_Category=TC_UjAPI_Misc
+_DisplayTimedChatMessage_Category=TC_UjAPI_Message
 
 
 DisplayTimedTextFromPlayer=1,player,real,real,real,string
@@ -4873,24 +4837,14 @@ _DisplayTimedTextFromPlayer_Defaults=Player00,0,0,0,_
 _DisplayTimedTextFromPlayer_Category=TC_UjAPI_Player
 
 
-DisplayTimedTopMessage=1,player,real,string
-_DisplayTimedTopMessage_Defaults=Player00,0,_
-_DisplayTimedTopMessage_Category=TC_UjAPI_Misc
-
-
 DisplayTimedWarningMessage=1,player,real,string
 _DisplayTimedWarningMessage_Defaults=Player00,0,_
-_DisplayTimedWarningMessage_Category=TC_UjAPI_Misc
-
-
-DisplayTopMessage=1,player,string
-_DisplayTopMessage_Defaults=Player00,_
-_DisplayTopMessage_Category=TC_UjAPI_Misc
+_DisplayTimedWarningMessage_Category=TC_UjAPI_Message
 
 
 DisplayWarningMessage=1,player,string
 _DisplayWarningMessage_Defaults=Player00,_
-_DisplayWarningMessage_Category=TC_UjAPI_Misc
+_DisplayWarningMessage_Category=TC_UjAPI_Message
 
 
 EditBlackBorders=1,real,real
@@ -4935,7 +4889,7 @@ _EnableStatbar_Category=TC_UjAPI_Misc
 
 EnableTargetIndicator=1,boolean
 _EnableTargetIndicator_Defaults=true
-_EnableTargetIndicator_Category=TC_UjAPI_Misc
+_EnableTargetIndicator_Category=TC_UjAPI_Widget
 
 
 EnableUnitAbility=1,unit,integer,boolean,boolean
@@ -5020,7 +4974,7 @@ _EnumProjectilesInRect_Category=TC_UjAPI_Projectile
 
 EnumSpecialEffectsInRange=1,real,real,real,boolexpr,code
 _EnumSpecialEffectsInRange_Defaults=0,0,0,_,_
-_EnumSpecialEffectsInRange_Category=TC_UjAPI_Misc
+_EnumSpecialEffectsInRange_Category=TC_UjAPI_SpecialEffect
 
 
 EnumTrackablesInRange=1,real,real,real,boolexpr,code
@@ -5040,12 +4994,12 @@ _EnumUnitBuffs_Category=TC_UjAPI_Unit
 
 ExecuteCode=1,code
 _ExecuteCode_Defaults=_
-_ExecuteCode_Category=TC_UjAPI_Misc
+_ExecuteCode_Category=TC_UjAPI_Jass
 
 
 ExecuteFuncEx=1,string
 _ExecuteFuncEx_Defaults=_
-_ExecuteFuncEx_Category=TC_UjAPI_Misc
+_ExecuteFuncEx_Category=TC_UjAPI_Jass
 
 
 Filter=1,code
@@ -5055,17 +5009,17 @@ _Filter_Category=TC_UjAPI_Misc
 
 FirstOfGroup=1,group
 _FirstOfGroup_Defaults=_
-_FirstOfGroup_Category=TC_UjAPI_Misc
+_FirstOfGroup_Category=TC_UjAPI_Group
 
 
 FlashQuestDialogButton=1,nothing
 _FlashQuestDialogButton_Defaults=
-_FlashQuestDialogButton_Category=TC_UjAPI_Quest
+_FlashQuestDialogButton_Category=TC_UjAPI_Dialog
 
 
 FlushChildHashtable=1,hashtable,integer
 _FlushChildHashtable_Defaults=_,0
-_FlushChildHashtable_Category=TC_UjAPI_Misc
+_FlushChildHashtable_Category=TC_UjAPI_Hashtable
 
 
 FlushGameCache=1,gamecache
@@ -5075,7 +5029,7 @@ _FlushGameCache_Category=TC_UjAPI_Misc
 
 FlushParentHashtable=1,hashtable
 _FlushParentHashtable_Defaults=_
-_FlushParentHashtable_Category=TC_UjAPI_Misc
+_FlushParentHashtable_Category=TC_UjAPI_Hashtable
 
 
 FlushStoredMission=1,gamecache,string
@@ -5145,7 +5099,7 @@ _ForcePlayerStartLocation_Category=TC_UjAPI_Force
 
 ForceQuestDialogUpdate=1,nothing
 _ForceQuestDialogUpdate_Defaults=
-_ForceQuestDialogUpdate_Category=TC_UjAPI_Force
+_ForceQuestDialogUpdate_Category=TC_UjAPI_Dialog
 
 
 ForceRemovePlayer=1,force,player
@@ -5165,7 +5119,7 @@ _ForceUIKey_Category=TC_UjAPI_Force
 
 GroupAddGroupEx=1,group,group
 _GroupAddGroupEx_Defaults=_,_
-_GroupAddGroupEx_Category=TC_UjAPI_Misc
+_GroupAddGroupEx_Category=TC_UjAPI_Group
 
 
 GroupAddUnit=1,group,unit
@@ -5195,7 +5149,7 @@ _GroupForEachUnit_Category=TC_UjAPI_Unit
 
 GroupGetCount=1,group
 _GroupGetCount_Defaults=_
-_GroupGetCount_Category=TC_UjAPI_Misc
+_GroupGetCount_Category=TC_UjAPI_Group
 
 
 GroupGetUnitByIndex=1,group,integer
@@ -5215,7 +5169,7 @@ _GroupPointOrderById_Category=TC_UjAPI_Order
 
 GroupRemoveGroupEx=1,group,group
 _GroupRemoveGroupEx_Defaults=_,_
-_GroupRemoveGroupEx_Category=TC_UjAPI_Misc
+_GroupRemoveGroupEx_Category=TC_UjAPI_Group
 
 
 GroupRemoveUnit=1,group,unit
@@ -5778,11 +5732,6 @@ _HaveSavedReal_Defaults=_,0,0
 _HaveSavedReal_Category=TC_UjAPI_Hashtable
 
 
-HaveSavedString=1,hashtable,integer,integer
-_HaveSavedString_Defaults=_,0,0
-_HaveSavedString_Category=TC_UjAPI_Hashtable
-
-
 HaveStoredBoolean=1,gamecache,string,string
 _HaveStoredBoolean_Defaults=_,_,_
 _HaveStoredBoolean_Category=TC_UjAPI_Misc
@@ -5798,19 +5747,9 @@ _HaveStoredReal_Defaults=_,_,_
 _HaveStoredReal_Category=TC_UjAPI_Misc
 
 
-HaveStoredString=1,gamecache,string,string
-_HaveStoredString_Defaults=_,_,_
-_HaveStoredString_Category=TC_UjAPI_Misc
-
-
 HaveStoredUnit=1,gamecache,string,string
 _HaveStoredUnit_Defaults=_,_,_
 _HaveStoredUnit_Category=TC_UjAPI_Unit
-
-
-HexToInt=1,string
-_HexToInt_Defaults=_
-_HexToInt_Category=TC_UjAPI_Misc
 
 
 HideOriginFrames=1,boolean
@@ -5830,27 +5769,7 @@ _InitGameCache_Category=TC_UjAPI_Misc
 
 InitHashtable=1,nothing
 _InitHashtable_Defaults=
-_InitHashtable_Category=TC_UjAPI_Misc
-
-
-IntegerToHandle=1,integer
-_IntegerToHandle_Defaults=0
-_IntegerToHandle_Category=TC_UjAPI_Misc
-
-
-IntToChar=1,integer
-_IntToChar_Defaults=0
-_IntToChar_Category=TC_UjAPI_Misc
-
-
-IntToHex=1,integer
-_IntToHex_Defaults=0
-_IntToHex_Category=TC_UjAPI_Misc
-
-
-IntToRoman=1,integer
-_IntToRoman_Defaults=0
-_IntToRoman_Category=TC_UjAPI_Misc
+_InitHashtable_Category=TC_UjAPI_Hashtable
 
 
 ItemAddAbility=1,item,ability
@@ -6313,16 +6232,6 @@ _Location_Defaults=0,0
 _Location_Category=TC_UjAPI_Misc
 
 
-MorphUnitToTypeId=1,unit,integer
-_MorphUnitToTypeId_Defaults=_,0
-_MorphUnitToTypeId_Category=TC_UjAPI_Unit
-
-
-MorphUnitToTypeIdEx=1,unit,integer,unitcode,boolean,boolean,integer,integer,boolean,boolean,ability,boolean
-_MorphUnitToTypeIdEx_Defaults=_,0,hfoo,true,true,0,0,true,true,_,true
-_MorphUnitToTypeIdEx_Category=TC_UjAPI_Unit
-
-
 MoveLightning=1,lightning,boolean,real,real,real,real
 _MoveLightning_Defaults=_,true,0,0,0,0
 _MoveLightning_Category=TC_UjAPI_Lightning
@@ -6423,26 +6332,6 @@ _OrderGetTargetY_Defaults=_
 _OrderGetTargetY_Category=TC_UjAPI_Order
 
 
-PanCameraTo=1,real,real
-_PanCameraTo_Defaults=0,0
-_PanCameraTo_Category=TC_UjAPI_Camera
-
-
-PanCameraToTimed=1,real,real,real
-_PanCameraToTimed_Defaults=0,0,0
-_PanCameraToTimed_Category=TC_UjAPI_Camera
-
-
-PanCameraToTimedWithZ=1,real,real,real,real
-_PanCameraToTimedWithZ_Defaults=0,0,0,0
-_PanCameraToTimedWithZ_Category=TC_UjAPI_Camera
-
-
-PanCameraToWithZ=1,real,real,real
-_PanCameraToWithZ_Defaults=0,0,0
-_PanCameraToWithZ_Category=TC_UjAPI_Camera
-
-
 ParseTags=1,string
 _ParseTags_Defaults=_
 _ParseTags_Category=TC_UjAPI_Misc
@@ -6538,39 +6427,34 @@ _PlayThematicMusicEx_Defaults=_,0
 _PlayThematicMusicEx_Category=TC_UjAPI_Misc
 
 
-Pow=1,real,real
-_Pow_Defaults=0,0
-_Pow_Category=TC_UjAPI_Misc
-
-
 PreloadEndEx=1,nothing
 _PreloadEndEx_Defaults=
-_PreloadEndEx_Category=TC_UjAPI_Misc
+_PreloadEndEx_Category=TC_UjAPI_Preload
 
 
 PreloadGenClear=1,nothing
 _PreloadGenClear_Defaults=
-_PreloadGenClear_Category=TC_UjAPI_Misc
+_PreloadGenClear_Category=TC_UjAPI_Preload
 
 
 PreloadGenEnd=1,string
 _PreloadGenEnd_Defaults=_
-_PreloadGenEnd_Category=TC_UjAPI_Misc
+_PreloadGenEnd_Category=TC_UjAPI_Preload
 
 
 PreloadGenStart=1,nothing
 _PreloadGenStart_Defaults=
-_PreloadGenStart_Category=TC_UjAPI_Misc
+_PreloadGenStart_Category=TC_UjAPI_Preload
 
 
 PreloadRefresh=1,nothing
 _PreloadRefresh_Defaults=
-_PreloadRefresh_Category=TC_UjAPI_Misc
+_PreloadRefresh_Category=TC_UjAPI_Preload
 
 
 PreloadStart=1,nothing
 _PreloadStart_Defaults=
-_PreloadStart_Category=TC_UjAPI_Misc
+_PreloadStart_Category=TC_UjAPI_Preload
 
 
 QuestCreateItem=1,quest
@@ -6720,22 +6604,22 @@ _QueueProjectileAnimationByIndex_Category=TC_UjAPI_Projectile
 
 QueueSpecialEffectAnimation=1,effect,string
 _QueueSpecialEffectAnimation_Defaults=_,_
-_QueueSpecialEffectAnimation_Category=TC_UjAPI_Misc
+_QueueSpecialEffectAnimation_Category=TC_UjAPI_SpecialEffect
 
 
 QueueSpecialEffectAnimationByIndex=1,effect,integer
 _QueueSpecialEffectAnimationByIndex_Defaults=_,0
-_QueueSpecialEffectAnimationByIndex_Category=TC_UjAPI_Misc
+_QueueSpecialEffectAnimationByIndex_Category=TC_UjAPI_SpecialEffect
 
 
 QueueSpriteAnimation=1,sprite,string
 _QueueSpriteAnimation_Defaults=_,_
-_QueueSpriteAnimation_Category=TC_UjAPI_Misc
+_QueueSpriteAnimation_Category=TC_UjAPI_Sprite
 
 
 QueueSpriteAnimationByIndex=1,sprite,integer
 _QueueSpriteAnimationByIndex_Defaults=_,0
-_QueueSpriteAnimationByIndex_Category=TC_UjAPI_Misc
+_QueueSpriteAnimationByIndex_Category=TC_UjAPI_Sprite
 
 
 QueueTargetOrderById=1,unit,integer,widget
@@ -6780,12 +6664,12 @@ _QueueWidgetAnimationByIndex_Category=TC_UjAPI_Widget
 
 Rect=1,real,real,real,real
 _Rect_Defaults=0,0,0,0
-_Rect_Category=TC_UjAPI_Misc
+_Rect_Category=TC_UjAPI_Rect
 
 
 RectFromLoc=1,location,location
 _RectFromLoc_Defaults=_,_
-_RectFromLoc_Category=TC_UjAPI_Misc
+_RectFromLoc_Category=TC_UjAPI_Rect
 
 
 RedrawUnit=1,unit
@@ -6828,11 +6712,6 @@ _RemoveAbilityBaseRealLevelArrayFieldById_Defaults=0,_,0,0
 _RemoveAbilityBaseRealLevelArrayFieldById_Category=TC_UjAPI_Ability
 
 
-RemoveAbilityBaseStringLevelArrayFieldById=1,integer,abilitystringlevelarrayfield,integer,string
-_RemoveAbilityBaseStringLevelArrayFieldById_Defaults=0,_,0,_
-_RemoveAbilityBaseStringLevelArrayFieldById_Category=TC_UjAPI_Ability
-
-
 RemoveAbilityBooleanLevelArrayField=1,ability,abilitybooleanlevelarrayfield,integer,boolean
 _RemoveAbilityBooleanLevelArrayField_Defaults=_,_,0,true
 _RemoveAbilityBooleanLevelArrayField_Category=TC_UjAPI_Ability
@@ -6846,11 +6725,6 @@ _RemoveAbilityIntegerLevelArrayField_Category=TC_UjAPI_Ability
 RemoveAbilityRealLevelArrayField=1,ability,abilityreallevelarrayfield,integer,real
 _RemoveAbilityRealLevelArrayField_Defaults=_,_,0,0
 _RemoveAbilityRealLevelArrayField_Category=TC_UjAPI_Ability
-
-
-RemoveAbilityStringLevelArrayField=1,ability,abilitystringlevelarrayfield,integer,string
-_RemoveAbilityStringLevelArrayField_Defaults=_,_,0,_
-_RemoveAbilityStringLevelArrayField_Category=TC_UjAPI_Ability
 
 
 RemoveBuffBaseBooleanArrayFieldById=1,integer,abilitybooleanfield,boolean
@@ -6868,11 +6742,6 @@ _RemoveBuffBaseRealArrayFieldById_Defaults=0,_,0
 _RemoveBuffBaseRealArrayFieldById_Category=TC_UjAPI_Buff
 
 
-RemoveBuffBaseStringArrayFieldById=1,integer,abilitystringfield,string
-_RemoveBuffBaseStringArrayFieldById_Defaults=0,_,_
-_RemoveBuffBaseStringArrayFieldById_Category=TC_UjAPI_Buff
-
-
 RemoveBuffBooleanArrayField=1,buff,abilitybooleanfield,boolean
 _RemoveBuffBooleanArrayField_Defaults=_,_,true
 _RemoveBuffBooleanArrayField_Category=TC_UjAPI_Buff
@@ -6886,11 +6755,6 @@ _RemoveBuffIntegerArrayField_Category=TC_UjAPI_Buff
 RemoveBuffRealArrayField=1,buff,abilityrealfield,real
 _RemoveBuffRealArrayField_Defaults=_,_,0
 _RemoveBuffRealArrayField_Category=TC_UjAPI_Buff
-
-
-RemoveBuffStringArrayField=1,buff,abilitystringfield,string
-_RemoveBuffStringArrayField_Defaults=_,_,_
-_RemoveBuffStringArrayField_Category=TC_UjAPI_Buff
 
 
 RemoveDoodad=1,doodad
@@ -6953,11 +6817,6 @@ _RemoveSavedReal_Defaults=_,0,0
 _RemoveSavedReal_Category=TC_UjAPI_Hashtable
 
 
-RemoveSavedString=1,hashtable,integer,integer
-_RemoveSavedString_Defaults=_,0,0
-_RemoveSavedString_Category=TC_UjAPI_Hashtable
-
-
 RemoveSound=1,sound
 _RemoveSound_Defaults=_
 _RemoveSound_Category=TC_UjAPI_Sound
@@ -6965,7 +6824,7 @@ _RemoveSound_Category=TC_UjAPI_Sound
 
 RemoveSprite=1,sprite
 _RemoveSprite_Defaults=_
-_RemoveSprite_Category=TC_UjAPI_Misc
+_RemoveSprite_Category=TC_UjAPI_Sprite
 
 
 RemoveUnitFromStock=1,unit,unitcode
@@ -7055,22 +6914,17 @@ _ResetProjectileMatrix_Category=TC_UjAPI_Projectile
 
 ResetSpecialEffectMatrix=1,effect
 _ResetSpecialEffectMatrix_Defaults=_
-_ResetSpecialEffectMatrix_Category=TC_UjAPI_Misc
+_ResetSpecialEffectMatrix_Category=TC_UjAPI_SpecialEffect
 
 
 ResetSpriteMatrix=1,sprite
 _ResetSpriteMatrix_Defaults=_
-_ResetSpriteMatrix_Category=TC_UjAPI_Misc
+_ResetSpriteMatrix_Category=TC_UjAPI_Sprite
 
 
 ResetTerrainFog=1,nothing
 _ResetTerrainFog_Defaults=
-_ResetTerrainFog_Category=TC_UjAPI_Misc
-
-
-ResetToGameCamera=1,real
-_ResetToGameCamera_Defaults=0
-_ResetToGameCamera_Category=TC_UjAPI_Camera
+_ResetTerrainFog_Category=TC_UjAPI_Terrain
 
 
 ResetTrackableMatrix=1,trackable
@@ -7125,7 +6979,7 @@ _ResumeTimer_Category=TC_UjAPI_Timer
 
 ReviveHero=1,unit,real,real,boolean
 _ReviveHero_Defaults=_,0,0,true
-_ReviveHero_Category=TC_UjAPI_Misc
+_ReviveHero_Category=TC_UjAPI_Hero
 
 
 ReviveUnit=1,unit,real,real
@@ -7513,21 +7367,6 @@ _SetAbilityBaseRealLevelFieldById_Defaults=0,_,0,0
 _SetAbilityBaseRealLevelFieldById_Category=TC_UjAPI_Ability
 
 
-SetAbilityBaseStringFieldById=1,integer,abilitystringfield,string
-_SetAbilityBaseStringFieldById_Defaults=0,_,_
-_SetAbilityBaseStringFieldById_Category=TC_UjAPI_Ability
-
-
-SetAbilityBaseStringLevelArrayFieldById=1,integer,abilitystringlevelarrayfield,integer,integer,string
-_SetAbilityBaseStringLevelArrayFieldById_Defaults=0,_,0,0,_
-_SetAbilityBaseStringLevelArrayFieldById_Category=TC_UjAPI_Ability
-
-
-SetAbilityBaseStringLevelFieldById=1,integer,abilitystringlevelfield,integer,string
-_SetAbilityBaseStringLevelFieldById_Defaults=0,_,0,_
-_SetAbilityBaseStringLevelFieldById_Category=TC_UjAPI_Ability
-
-
 SetAbilityBooleanField=1,ability,abilitybooleanfield,boolean
 _SetAbilityBooleanField_Defaults=_,_,true
 _SetAbilityBooleanField_Category=TC_UjAPI_Ability
@@ -7628,21 +7467,6 @@ _SetAbilityRemainingCooldown_Defaults=_,0
 _SetAbilityRemainingCooldown_Category=TC_UjAPI_Ability
 
 
-SetAbilityStringField=1,ability,abilitystringfield,string
-_SetAbilityStringField_Defaults=_,_,_
-_SetAbilityStringField_Category=TC_UjAPI_Ability
-
-
-SetAbilityStringLevelArrayField=1,ability,abilitystringlevelarrayfield,integer,integer,string
-_SetAbilityStringLevelArrayField_Defaults=_,_,0,0,_
-_SetAbilityStringLevelArrayField_Category=TC_UjAPI_Ability
-
-
-SetAbilityStringLevelField=1,ability,abilitystringlevelfield,integer,string
-_SetAbilityStringLevelField_Defaults=_,_,0,_
-_SetAbilityStringLevelField_Category=TC_UjAPI_Ability
-
-
 SetAttackSpeedMaxBonus=1,real
 _SetAttackSpeedMaxBonus_Defaults=0
 _SetAttackSpeedMaxBonus_Category=TC_UjAPI_Misc
@@ -7666,11 +7490,6 @@ _SetBaseItemIntegerFieldById_Category=TC_UjAPI_Item
 SetBaseItemRealFieldById=1,integer,itemrealfield,real
 _SetBaseItemRealFieldById_Defaults=0,_,0
 _SetBaseItemRealFieldById_Category=TC_UjAPI_Item
-
-
-SetBaseItemStringFieldById=1,integer,itemstringfield,string
-_SetBaseItemStringFieldById_Defaults=0,_,_
-_SetBaseItemStringFieldById_Category=TC_UjAPI_Item
 
 
 SetBlight=1,player,real,real,real,boolean
@@ -7728,16 +7547,6 @@ _SetBuffBaseRealFieldById_Defaults=0,_,0
 _SetBuffBaseRealFieldById_Category=TC_UjAPI_Buff
 
 
-SetBuffBaseStringArrayFieldById=1,integer,abilitystringfield,integer,string
-_SetBuffBaseStringArrayFieldById_Defaults=0,_,0,_
-_SetBuffBaseStringArrayFieldById_Category=TC_UjAPI_Buff
-
-
-SetBuffBaseStringFieldById=1,integer,abilitystringfield,string
-_SetBuffBaseStringFieldById_Defaults=0,_,_
-_SetBuffBaseStringFieldById_Category=TC_UjAPI_Buff
-
-
 SetBuffBooleanArrayField=1,buff,abilitybooleanfield,integer,boolean
 _SetBuffBooleanArrayField_Defaults=_,_,0,true
 _SetBuffBooleanArrayField_Category=TC_UjAPI_Buff
@@ -7791,16 +7600,6 @@ _SetBuffRealField_Category=TC_UjAPI_Buff
 SetBuffRemainingDuration=1,buff,real
 _SetBuffRemainingDuration_Defaults=_,0
 _SetBuffRemainingDuration_Category=TC_UjAPI_Buff
-
-
-SetBuffStringArrayField=1,buff,abilitystringfield,integer,string
-_SetBuffStringArrayField_Defaults=_,_,0,_
-_SetBuffStringArrayField_Category=TC_UjAPI_Buff
-
-
-SetBuffStringField=1,buff,abilitystringfield,string
-_SetBuffStringField_Defaults=_,_,_
-_SetBuffStringField_Category=TC_UjAPI_Buff
 
 
 SetCameraBounds=1,real,real,real,real,real,real,real,real
@@ -8063,11 +7862,6 @@ _SetDestructableScale_Defaults=_,0
 _SetDestructableScale_Category=TC_UjAPI_Destructable
 
 
-SetDestructableStringField=1,destructable,destructablestringfield,string
-_SetDestructableStringField_Defaults=_,_,_
-_SetDestructableStringField_Category=TC_UjAPI_Destructable
-
-
 SetDestructableTexture=1,destructable,string,integer
 _SetDestructableTexture_Defaults=_,_,0
 _SetDestructableTexture_Category=TC_UjAPI_Destructable
@@ -8115,12 +7909,12 @@ _SetDestructableZ_Category=TC_UjAPI_Destructable
 
 SetDialogueSpeakerNameKey=1,sound,string
 _SetDialogueSpeakerNameKey_Defaults=_,_
-_SetDialogueSpeakerNameKey_Category=TC_UjAPI_Misc
+_SetDialogueSpeakerNameKey_Category=TC_UjAPI_Dialog
 
 
 SetDialogueTextKey=1,sound,string
 _SetDialogueTextKey_Defaults=_,_
-_SetDialogueTextKey_Category=TC_UjAPI_Misc
+_SetDialogueTextKey_Category=TC_UjAPI_Dialog
 
 
 SetDoodadAnimation=1,real,real,real,integer,boolean,string,boolean
@@ -8290,42 +8084,37 @@ _SetEnemyStartLocPrioCount_Category=TC_UjAPI_Misc
 
 SetEventAttackType=1,attacktype
 _SetEventAttackType_Defaults=_
-_SetEventAttackType_Category=TC_UjAPI_Misc
+_SetEventAttackType_Category=TC_UjAPI_Unit
 
 
 SetEventDamage=1,real
 _SetEventDamage_Defaults=0
-_SetEventDamage_Category=TC_UjAPI_Misc
+_SetEventDamage_Category=TC_UjAPI_Unit
 
 
 SetEventDamageExtraFlag=1,integer,boolean
 _SetEventDamageExtraFlag_Defaults=0,true
-_SetEventDamageExtraFlag_Category=TC_UjAPI_Misc
+_SetEventDamageExtraFlag_Category=TC_UjAPI_Unit
 
 
 SetEventDamageFlag=1,integer,boolean
 _SetEventDamageFlag_Defaults=0,true
-_SetEventDamageFlag_Category=TC_UjAPI_Misc
+_SetEventDamageFlag_Category=TC_UjAPI_Unit
 
 
 SetEventDamageType=1,damagetype
 _SetEventDamageType_Defaults=_
-_SetEventDamageType_Category=TC_UjAPI_Misc
+_SetEventDamageType_Category=TC_UjAPI_Unit
 
 
 SetEventDamageTypeFlags=1,integer
 _SetEventDamageTypeFlags_Defaults=0
-_SetEventDamageTypeFlags_Category=TC_UjAPI_Misc
+_SetEventDamageTypeFlags_Category=TC_UjAPI_Unit
 
 
 SetEventWeaponType=1,weapontype
 _SetEventWeaponType_Defaults=_
 _SetEventWeaponType_Category=TC_UjAPI_Misc
-
-
-SetFDFDataString=1,string,string
-_SetFDFDataString_Defaults=_,_
-_SetFDFDataString_Category=TC_UjAPI_Misc
 
 
 SetFloatGameState=1,fgamestate,real
@@ -8335,7 +8124,7 @@ _SetFloatGameState_Category=TC_UjAPI_Misc
 
 SetFogModifierFogState=1,fogmodifier,fogstate,boolean
 _SetFogModifierFogState_Defaults=_,_,true
-_SetFogModifierFogState_Category=TC_UjAPI_Misc
+_SetFogModifierFogState_Category=TC_UjAPI_FogModifier
 
 
 SetFogModifierForPlayer=1,fogmodifier,player
@@ -8345,52 +8134,52 @@ _SetFogModifierForPlayer_Category=TC_UjAPI_Player
 
 SetFogModifierPosition=1,fogmodifier,real,real
 _SetFogModifierPosition_Defaults=_,0,0
-_SetFogModifierPosition_Category=TC_UjAPI_Misc
+_SetFogModifierPosition_Category=TC_UjAPI_FogModifier
 
 
 SetFogModifierPositionLoc=1,fogmodifier,location
 _SetFogModifierPositionLoc_Defaults=_,_
-_SetFogModifierPositionLoc_Category=TC_UjAPI_Misc
+_SetFogModifierPositionLoc_Category=TC_UjAPI_FogModifier
 
 
 SetFogModifierPositionWithZ=1,fogmodifier,real,real,real
 _SetFogModifierPositionWithZ_Defaults=_,0,0,0
-_SetFogModifierPositionWithZ_Category=TC_UjAPI_Misc
+_SetFogModifierPositionWithZ_Category=TC_UjAPI_FogModifier
 
 
 SetFogModifierRadius=1,fogmodifier,real
 _SetFogModifierRadius_Defaults=_,0
-_SetFogModifierRadius_Category=TC_UjAPI_Misc
+_SetFogModifierRadius_Category=TC_UjAPI_FogModifier
 
 
 SetFogModifierRadiusEx=1,fogmodifier,real,real,real
 _SetFogModifierRadiusEx_Defaults=_,0,0,0
-_SetFogModifierRadiusEx_Category=TC_UjAPI_Misc
+_SetFogModifierRadiusEx_Category=TC_UjAPI_FogModifier
 
 
 SetFogModifierRect=1,fogmodifier,rect
 _SetFogModifierRect_Defaults=_,_
-_SetFogModifierRect_Category=TC_UjAPI_Misc
+_SetFogModifierRect_Category=TC_UjAPI_Rect
 
 
 SetFogModifierRectEx=1,fogmodifier,real,real,real,real
 _SetFogModifierRectEx_Defaults=_,0,0,0,0
-_SetFogModifierRectEx_Category=TC_UjAPI_Misc
+_SetFogModifierRectEx_Category=TC_UjAPI_Rect
 
 
 SetFogModifierX=1,fogmodifier,real
 _SetFogModifierX_Defaults=_,0
-_SetFogModifierX_Category=TC_UjAPI_Misc
+_SetFogModifierX_Category=TC_UjAPI_FogModifier
 
 
 SetFogModifierY=1,fogmodifier,real
 _SetFogModifierY_Defaults=_,0
-_SetFogModifierY_Category=TC_UjAPI_Misc
+_SetFogModifierY_Category=TC_UjAPI_FogModifier
 
 
 SetFogModifierZ=1,fogmodifier,real
 _SetFogModifierZ_Defaults=_,0
-_SetFogModifierZ_Category=TC_UjAPI_Misc
+_SetFogModifierZ_Category=TC_UjAPI_FogModifier
 
 
 SetFogStateRadius=1,player,fogstate,real,real,real,boolean
@@ -8405,7 +8194,7 @@ _SetFogStateRadiusLoc_Category=TC_UjAPI_Misc
 
 SetFogStateRect=1,player,fogstate,rect,boolean
 _SetFogStateRect_Defaults=Player00,_,_,true
-_SetFogStateRect_Category=TC_UjAPI_Misc
+_SetFogStateRect_Category=TC_UjAPI_Rect
 
 
 SetFrameAbsolutePoint=1,framehandle,framepointtype,real,real
@@ -8793,11 +8582,6 @@ _SetFrameTextVerticalAlignment_Defaults=_,_
 _SetFrameTextVerticalAlignment_Category=TC_UjAPI_Frame
 
 
-SetFrameTooltip=1,framehandle,framehandle
-_SetFrameTooltip_Defaults=_,_
-_SetFrameTooltip_Category=TC_UjAPI_Frame
-
-
 SetFrameValue=1,framehandle,real
 _SetFrameValue_Defaults=_,0
 _SetFrameValue_Category=TC_UjAPI_Frame
@@ -8840,7 +8624,7 @@ _SetGameTypeSupported_Category=TC_UjAPI_Misc
 
 SetHeroPrimaryAttribute=1,unit,heroattribute
 _SetHeroPrimaryAttribute_Defaults=_,_
-_SetHeroPrimaryAttribute_Category=TC_UjAPI_Misc
+_SetHeroPrimaryAttribute_Category=TC_UjAPI_Hero
 
 
 SetIllusionDamageDealt=1,unit,real
@@ -9098,11 +8882,6 @@ _SetItemScale_Defaults=_,0
 _SetItemScale_Category=TC_UjAPI_Item
 
 
-SetItemStringField=1,item,itemstringfield,string
-_SetItemStringField_Defaults=_,_,_
-_SetItemStringField_Category=TC_UjAPI_Item
-
-
 SetItemTexture=1,item,string,integer
 _SetItemTexture_Defaults=_,_,0
 _SetItemTexture_Category=TC_UjAPI_Item
@@ -9163,11 +8942,6 @@ _SetJassGlobalReal_Defaults=_,_,0
 _SetJassGlobalReal_Category=TC_UjAPI_Jass
 
 
-SetJassGlobalString=1,jassthread,string,string
-_SetJassGlobalString_Defaults=_,_,_
-_SetJassGlobalString_Category=TC_UjAPI_Jass
-
-
 SetJassLocalBoolean=1,string,boolean
 _SetJassLocalBoolean_Defaults=_,true
 _SetJassLocalBoolean_Category=TC_UjAPI_Jass
@@ -9186,11 +8960,6 @@ _SetJassLocalInteger_Category=TC_UjAPI_Jass
 SetJassLocalReal=1,string,real
 _SetJassLocalReal_Defaults=_,0
 _SetJassLocalReal_Category=TC_UjAPI_Jass
-
-
-SetJassLocalString=1,string,string
-_SetJassLocalString_Defaults=_,_
-_SetJassLocalString_Category=TC_UjAPI_Jass
 
 
 SetLightningColor=1,lightning,real,real,real,real
@@ -9316,11 +9085,6 @@ _SetMinimapIconVisible_Category=TC_UjAPI_Misc
 SetMiniMapTexture=1,string
 _SetMiniMapTexture_Defaults=_
 _SetMiniMapTexture_Category=TC_UjAPI_Misc
-
-
-SetMiscDataString=1,string,string,integer,string
-_SetMiscDataString_Defaults=_,_,0,_
-_SetMiscDataString_Category=TC_UjAPI_Misc
 
 
 SetMissionAvailable=1,integer,integer,boolean
@@ -9765,12 +9529,12 @@ _SetRandomSeed_Category=TC_UjAPI_Misc
 
 SetRect=1,rect,real,real,real,real
 _SetRect_Defaults=_,0,0,0,0
-_SetRect_Category=TC_UjAPI_Misc
+_SetRect_Category=TC_UjAPI_Rect
 
 
 SetRectFromLoc=1,rect,location,location
 _SetRectFromLoc_Defaults=_,_,_
-_SetRectFromLoc_Category=TC_UjAPI_Misc
+_SetRectFromLoc_Category=TC_UjAPI_Rect
 
 
 SetResourceDensity=1,mapdensity
@@ -9781,11 +9545,6 @@ _SetResourceDensity_Category=TC_UjAPI_Misc
 SetScreenFieldOfView=1,real
 _SetScreenFieldOfView_Defaults=0
 _SetScreenFieldOfView_Category=TC_UjAPI_Misc
-
-
-SetSkinDataString=1,string,string,string,integer,string
-_SetSkinDataString_Defaults=_,_,_,0,_
-_SetSkinDataString_Category=TC_UjAPI_Misc
 
 
 SetSoundChannel=1,sound,integer
@@ -9860,82 +9619,82 @@ _SetSoundVolume_Category=TC_UjAPI_Sound
 
 SetSpecialEffectAlpha=1,effect,integer
 _SetSpecialEffectAlpha_Defaults=_,0
-_SetSpecialEffectAlpha_Category=TC_UjAPI_Misc
+_SetSpecialEffectAlpha_Category=TC_UjAPI_SpecialEffect
 
 
 SetSpecialEffectAnimation=1,effect,string
 _SetSpecialEffectAnimation_Defaults=_,_
-_SetSpecialEffectAnimation_Category=TC_UjAPI_Misc
+_SetSpecialEffectAnimation_Category=TC_UjAPI_SpecialEffect
 
 
 SetSpecialEffectAnimationByIndex=1,effect,integer
 _SetSpecialEffectAnimationByIndex_Defaults=_,0
-_SetSpecialEffectAnimationByIndex_Category=TC_UjAPI_Misc
+_SetSpecialEffectAnimationByIndex_Category=TC_UjAPI_SpecialEffect
 
 
 SetSpecialEffectAnimationOffsetPercent=1,effect,real
 _SetSpecialEffectAnimationOffsetPercent_Defaults=_,0
-_SetSpecialEffectAnimationOffsetPercent_Category=TC_UjAPI_Misc
+_SetSpecialEffectAnimationOffsetPercent_Category=TC_UjAPI_SpecialEffect
 
 
 SetSpecialEffectAnimationWithRarity=1,effect,string,raritycontrol
 _SetSpecialEffectAnimationWithRarity_Defaults=_,_,_
-_SetSpecialEffectAnimationWithRarity_Category=TC_UjAPI_Misc
+_SetSpecialEffectAnimationWithRarity_Category=TC_UjAPI_SpecialEffect
 
 
 SetSpecialEffectAnimationWithRarityByIndex=1,effect,integer,raritycontrol
 _SetSpecialEffectAnimationWithRarityByIndex_Defaults=_,0,_
-_SetSpecialEffectAnimationWithRarityByIndex_Category=TC_UjAPI_Misc
+_SetSpecialEffectAnimationWithRarityByIndex_Category=TC_UjAPI_SpecialEffect
 
 
 SetSpecialEffectColour=1,effect,integer
 _SetSpecialEffectColour_Defaults=_,0
-_SetSpecialEffectColour_Category=TC_UjAPI_Misc
+_SetSpecialEffectColour_Category=TC_UjAPI_SpecialEffect
 
 
 SetSpecialEffectFacing=1,effect,real
 _SetSpecialEffectFacing_Defaults=_,0
-_SetSpecialEffectFacing_Category=TC_UjAPI_Misc
+_SetSpecialEffectFacing_Category=TC_UjAPI_SpecialEffect
 
 
 SetSpecialEffectHeight=1,effect,real
 _SetSpecialEffectHeight_Defaults=_,0
-_SetSpecialEffectHeight_Category=TC_UjAPI_Misc
+_SetSpecialEffectHeight_Category=TC_UjAPI_SpecialEffect
 
 
 SetSpecialEffectMaterialTexture=1,effect,string,integer,integer
 _SetSpecialEffectMaterialTexture_Defaults=_,_,0,0
-_SetSpecialEffectMaterialTexture_Category=TC_UjAPI_Misc
+_SetSpecialEffectMaterialTexture_Category=TC_UjAPI_SpecialEffect
 
 
 SetSpecialEffectMatrixScale=1,effect,real,real,real
 _SetSpecialEffectMatrixScale_Defaults=_,0,0,0
-_SetSpecialEffectMatrixScale_Category=TC_UjAPI_Misc
+_SetSpecialEffectMatrixScale_Category=TC_UjAPI_SpecialEffect
 
 
 SetSpecialEffectModel=1,effect,string
 _SetSpecialEffectModel_Defaults=_,_
-_SetSpecialEffectModel_Category=TC_UjAPI_Misc
+_SetSpecialEffectModel_Category=TC_UjAPI_SpecialEffect
 
 
 SetSpecialEffectModelEx=1,effect,string,integer
 _SetSpecialEffectModelEx_Defaults=_,_,0
-_SetSpecialEffectModelEx_Category=TC_UjAPI_Misc
+_SetSpecialEffectModelEx_Category=TC_UjAPI_SpecialEffect
 
 
 SetSpecialEffectOrientation=1,effect,real,real,real
 _SetSpecialEffectOrientation_Defaults=_,0,0,0
-_SetSpecialEffectOrientation_Category=TC_UjAPI_Misc
+_SetSpecialEffectOrientation_Category=TC_UjAPI_SpecialEffect
 
 
 SetSpecialEffectOrientationEx=1,effect,real,real,real,integer
 _SetSpecialEffectOrientationEx_Defaults=_,0,0,0,0
-_SetSpecialEffectOrientationEx_Category=TC_UjAPI_Misc
+_SetSpecialEffectOrientationEx_Category=TC_UjAPI_SpecialEffect
 
 
 SetSpecialEffectPitch=1,effect,real
 _SetSpecialEffectPitch_Defaults=_,0
-_SetSpecialEffectPitch_Category=TC_UjAPI_Misc
+_SetSpecialEffectPitch_Category=TC_UjAPI_SpecialEffect
 
 
 SetSpecialEffectPlayerColour=1,effect,playercolor
@@ -9945,152 +9704,152 @@ _SetSpecialEffectPlayerColour_Category=TC_UjAPI_Player
 
 SetSpecialEffectPosition=1,effect,real,real
 _SetSpecialEffectPosition_Defaults=_,0,0
-_SetSpecialEffectPosition_Category=TC_UjAPI_Misc
+_SetSpecialEffectPosition_Category=TC_UjAPI_SpecialEffect
 
 
 SetSpecialEffectPositionLoc=1,effect,location
 _SetSpecialEffectPositionLoc_Defaults=_,_
-_SetSpecialEffectPositionLoc_Category=TC_UjAPI_Misc
+_SetSpecialEffectPositionLoc_Category=TC_UjAPI_SpecialEffect
 
 
 SetSpecialEffectPositionWithZ=1,effect,real,real,real
 _SetSpecialEffectPositionWithZ_Defaults=_,0,0,0
-_SetSpecialEffectPositionWithZ_Category=TC_UjAPI_Misc
+_SetSpecialEffectPositionWithZ_Category=TC_UjAPI_SpecialEffect
 
 
 SetSpecialEffectReplaceableTexture=1,effect,string,integer
 _SetSpecialEffectReplaceableTexture_Defaults=_,_,0
-_SetSpecialEffectReplaceableTexture_Category=TC_UjAPI_Misc
+_SetSpecialEffectReplaceableTexture_Category=TC_UjAPI_SpecialEffect
 
 
 SetSpecialEffectRoll=1,effect,real
 _SetSpecialEffectRoll_Defaults=_,0
-_SetSpecialEffectRoll_Category=TC_UjAPI_Misc
+_SetSpecialEffectRoll_Category=TC_UjAPI_SpecialEffect
 
 
 SetSpecialEffectScale=1,effect,real
 _SetSpecialEffectScale_Defaults=_,0
-_SetSpecialEffectScale_Category=TC_UjAPI_Misc
+_SetSpecialEffectScale_Category=TC_UjAPI_SpecialEffect
 
 
 SetSpecialEffectTexture=1,effect,string,integer
 _SetSpecialEffectTexture_Defaults=_,_,0
-_SetSpecialEffectTexture_Category=TC_UjAPI_Misc
+_SetSpecialEffectTexture_Category=TC_UjAPI_SpecialEffect
 
 
 SetSpecialEffectTimeScale=1,effect,real
 _SetSpecialEffectTimeScale_Defaults=_,0
-_SetSpecialEffectTimeScale_Category=TC_UjAPI_Misc
+_SetSpecialEffectTimeScale_Category=TC_UjAPI_SpecialEffect
 
 
 SetSpecialEffectVertexColour=1,effect,integer,integer,integer,integer
 _SetSpecialEffectVertexColour_Defaults=_,0,0,0,0
-_SetSpecialEffectVertexColour_Category=TC_UjAPI_Misc
+_SetSpecialEffectVertexColour_Category=TC_UjAPI_SpecialEffect
 
 
 SetSpecialEffectVisible=1,effect,boolean
 _SetSpecialEffectVisible_Defaults=_,true
-_SetSpecialEffectVisible_Category=TC_UjAPI_Misc
+_SetSpecialEffectVisible_Category=TC_UjAPI_SpecialEffect
 
 
 SetSpecialEffectX=1,effect,real
 _SetSpecialEffectX_Defaults=_,0
-_SetSpecialEffectX_Category=TC_UjAPI_Misc
+_SetSpecialEffectX_Category=TC_UjAPI_SpecialEffect
 
 
 SetSpecialEffectY=1,effect,real
 _SetSpecialEffectY_Defaults=_,0
-_SetSpecialEffectY_Category=TC_UjAPI_Misc
+_SetSpecialEffectY_Category=TC_UjAPI_SpecialEffect
 
 
 SetSpecialEffectYaw=1,effect,real
 _SetSpecialEffectYaw_Defaults=_,0
-_SetSpecialEffectYaw_Category=TC_UjAPI_Misc
+_SetSpecialEffectYaw_Category=TC_UjAPI_SpecialEffect
 
 
 SetSpecialEffectZ=1,effect,real
 _SetSpecialEffectZ_Defaults=_,0
-_SetSpecialEffectZ_Category=TC_UjAPI_Misc
+_SetSpecialEffectZ_Category=TC_UjAPI_SpecialEffect
 
 
 SetSpriteAlpha=1,sprite,integer
 _SetSpriteAlpha_Defaults=_,0
-_SetSpriteAlpha_Category=TC_UjAPI_Misc
+_SetSpriteAlpha_Category=TC_UjAPI_Sprite
 
 
 SetSpriteAnimation=1,sprite,string
 _SetSpriteAnimation_Defaults=_,_
-_SetSpriteAnimation_Category=TC_UjAPI_Misc
+_SetSpriteAnimation_Category=TC_UjAPI_Sprite
 
 
 SetSpriteAnimationByIndex=1,sprite,integer
 _SetSpriteAnimationByIndex_Defaults=_,0
-_SetSpriteAnimationByIndex_Category=TC_UjAPI_Misc
+_SetSpriteAnimationByIndex_Category=TC_UjAPI_Sprite
 
 
 SetSpriteAnimationOffsetPercent=1,sprite,real
 _SetSpriteAnimationOffsetPercent_Defaults=_,0
-_SetSpriteAnimationOffsetPercent_Category=TC_UjAPI_Misc
+_SetSpriteAnimationOffsetPercent_Category=TC_UjAPI_Sprite
 
 
 SetSpriteAnimationWithRarity=1,sprite,string,raritycontrol
 _SetSpriteAnimationWithRarity_Defaults=_,_,_
-_SetSpriteAnimationWithRarity_Category=TC_UjAPI_Misc
+_SetSpriteAnimationWithRarity_Category=TC_UjAPI_Sprite
 
 
 SetSpriteAnimationWithRarityByIndex=1,sprite,integer,raritycontrol
 _SetSpriteAnimationWithRarityByIndex_Defaults=_,0,_
-_SetSpriteAnimationWithRarityByIndex_Category=TC_UjAPI_Misc
+_SetSpriteAnimationWithRarityByIndex_Category=TC_UjAPI_Sprite
 
 
 SetSpriteColour=1,sprite,integer
 _SetSpriteColour_Defaults=_,0
-_SetSpriteColour_Category=TC_UjAPI_Misc
+_SetSpriteColour_Category=TC_UjAPI_Sprite
 
 
 SetSpriteFacing=1,sprite,real
 _SetSpriteFacing_Defaults=_,0
-_SetSpriteFacing_Category=TC_UjAPI_Misc
+_SetSpriteFacing_Category=TC_UjAPI_Sprite
 
 
 SetSpriteHeight=1,sprite,real
 _SetSpriteHeight_Defaults=_,0
-_SetSpriteHeight_Category=TC_UjAPI_Misc
+_SetSpriteHeight_Category=TC_UjAPI_Sprite
 
 
 SetSpriteMaterialTexture=1,sprite,string,integer,integer
 _SetSpriteMaterialTexture_Defaults=_,_,0,0
-_SetSpriteMaterialTexture_Category=TC_UjAPI_Misc
+_SetSpriteMaterialTexture_Category=TC_UjAPI_Sprite
 
 
 SetSpriteMatrixScale=1,sprite,real,real,real
 _SetSpriteMatrixScale_Defaults=_,0,0,0
-_SetSpriteMatrixScale_Category=TC_UjAPI_Misc
+_SetSpriteMatrixScale_Category=TC_UjAPI_Sprite
 
 
 SetSpriteModel=1,sprite,string
 _SetSpriteModel_Defaults=_,_
-_SetSpriteModel_Category=TC_UjAPI_Misc
+_SetSpriteModel_Category=TC_UjAPI_Sprite
 
 
 SetSpriteModelEx=1,sprite,string,integer
 _SetSpriteModelEx_Defaults=_,_,0
-_SetSpriteModelEx_Category=TC_UjAPI_Misc
+_SetSpriteModelEx_Category=TC_UjAPI_Sprite
 
 
 SetSpriteOrientation=1,sprite,real,real,real
 _SetSpriteOrientation_Defaults=_,0,0,0
-_SetSpriteOrientation_Category=TC_UjAPI_Misc
+_SetSpriteOrientation_Category=TC_UjAPI_Sprite
 
 
 SetSpriteOrientationEx=1,sprite,real,real,real,integer
 _SetSpriteOrientationEx_Defaults=_,0,0,0,0
-_SetSpriteOrientationEx_Category=TC_UjAPI_Misc
+_SetSpriteOrientationEx_Category=TC_UjAPI_Sprite
 
 
 SetSpritePitch=1,sprite,real
 _SetSpritePitch_Defaults=_,0
-_SetSpritePitch_Category=TC_UjAPI_Misc
+_SetSpritePitch_Category=TC_UjAPI_Sprite
 
 
 SetSpritePlayerColour=1,sprite,playercolor
@@ -10100,67 +9859,67 @@ _SetSpritePlayerColour_Category=TC_UjAPI_Player
 
 SetSpritePosition=1,sprite,real,real
 _SetSpritePosition_Defaults=_,0,0
-_SetSpritePosition_Category=TC_UjAPI_Misc
+_SetSpritePosition_Category=TC_UjAPI_Sprite
 
 
 SetSpritePositionLoc=1,sprite,location
 _SetSpritePositionLoc_Defaults=_,_
-_SetSpritePositionLoc_Category=TC_UjAPI_Misc
+_SetSpritePositionLoc_Category=TC_UjAPI_Sprite
 
 
 SetSpritePositionWithZ=1,sprite,real,real,real
 _SetSpritePositionWithZ_Defaults=_,0,0,0
-_SetSpritePositionWithZ_Category=TC_UjAPI_Misc
+_SetSpritePositionWithZ_Category=TC_UjAPI_Sprite
 
 
 SetSpriteReplaceableTexture=1,sprite,string,integer
 _SetSpriteReplaceableTexture_Defaults=_,_,0
-_SetSpriteReplaceableTexture_Category=TC_UjAPI_Misc
+_SetSpriteReplaceableTexture_Category=TC_UjAPI_Sprite
 
 
 SetSpriteRoll=1,sprite,real
 _SetSpriteRoll_Defaults=_,0
-_SetSpriteRoll_Category=TC_UjAPI_Misc
+_SetSpriteRoll_Category=TC_UjAPI_Sprite
 
 
 SetSpriteScale=1,sprite,real
 _SetSpriteScale_Defaults=_,0
-_SetSpriteScale_Category=TC_UjAPI_Misc
+_SetSpriteScale_Category=TC_UjAPI_Sprite
 
 
 SetSpriteTexture=1,sprite,string,integer
 _SetSpriteTexture_Defaults=_,_,0
-_SetSpriteTexture_Category=TC_UjAPI_Misc
+_SetSpriteTexture_Category=TC_UjAPI_Sprite
 
 
 SetSpriteTimeScale=1,sprite,real
 _SetSpriteTimeScale_Defaults=_,0
-_SetSpriteTimeScale_Category=TC_UjAPI_Misc
+_SetSpriteTimeScale_Category=TC_UjAPI_Sprite
 
 
 SetSpriteVertexColour=1,sprite,integer,integer,integer,integer
 _SetSpriteVertexColour_Defaults=_,0,0,0,0
-_SetSpriteVertexColour_Category=TC_UjAPI_Misc
+_SetSpriteVertexColour_Category=TC_UjAPI_Sprite
 
 
 SetSpriteX=1,sprite,real
 _SetSpriteX_Defaults=_,0
-_SetSpriteX_Category=TC_UjAPI_Misc
+_SetSpriteX_Category=TC_UjAPI_Sprite
 
 
 SetSpriteY=1,sprite,real
 _SetSpriteY_Defaults=_,0
-_SetSpriteY_Category=TC_UjAPI_Misc
+_SetSpriteY_Category=TC_UjAPI_Sprite
 
 
 SetSpriteYaw=1,sprite,real
 _SetSpriteYaw_Defaults=_,0
-_SetSpriteYaw_Category=TC_UjAPI_Misc
+_SetSpriteYaw_Category=TC_UjAPI_Sprite
 
 
 SetSpriteZ=1,sprite,real
 _SetSpriteZ_Defaults=_,0
-_SetSpriteZ_Category=TC_UjAPI_Misc
+_SetSpriteZ_Category=TC_UjAPI_Sprite
 
 
 SetStartLocPrio=1,integer,integer,integer,startlocprio
@@ -10180,22 +9939,22 @@ _SetTeams_Category=TC_UjAPI_Misc
 
 SetTerrainFog=1,real,real,real,real,real
 _SetTerrainFog_Defaults=0,0,0,0,0
-_SetTerrainFog_Category=TC_UjAPI_Misc
+_SetTerrainFog_Category=TC_UjAPI_Terrain
 
 
 SetTerrainFogEx=1,integer,real,real,real,real,real,real
 _SetTerrainFogEx_Defaults=0,0,0,0,0,0,0
-_SetTerrainFogEx_Category=TC_UjAPI_Misc
+_SetTerrainFogEx_Category=TC_UjAPI_Terrain
 
 
 SetTerrainPathable=1,real,real,pathingtype,boolean
 _SetTerrainPathable_Defaults=0,0,_,true
-_SetTerrainPathable_Category=TC_UjAPI_Misc
+_SetTerrainPathable_Category=TC_UjAPI_Terrain
 
 
 SetTerrainType=1,real,real,integer,integer,integer,integer
 _SetTerrainType_Defaults=0,0,0,0,0,0
-_SetTerrainType_Category=TC_UjAPI_Misc
+_SetTerrainType_Category=TC_UjAPI_Terrain
 
 
 SetTextTagAge=1,texttag,real
@@ -10598,11 +10357,6 @@ _SetUnitBaseRealFieldById_Defaults=hfoo,_,0
 _SetUnitBaseRealFieldById_Category=TC_UjAPI_Unit
 
 
-SetUnitBaseStringFieldById=1,unitcode,unitstringfield,string
-_SetUnitBaseStringFieldById_Defaults=hfoo,_,_
-_SetUnitBaseStringFieldById_Category=TC_UjAPI_Unit
-
-
 SetUnitBaseWeaponBooleanFieldById=1,unitcode,unitweaponbooleanfield,integer,boolean
 _SetUnitBaseWeaponBooleanFieldById_Defaults=hfoo,_,0,true
 _SetUnitBaseWeaponBooleanFieldById_Category=TC_UjAPI_Unit
@@ -10616,11 +10370,6 @@ _SetUnitBaseWeaponIntegerFieldById_Category=TC_UjAPI_Unit
 SetUnitBaseWeaponRealFieldById=1,unitcode,unitweaponrealfield,integer,real
 _SetUnitBaseWeaponRealFieldById_Defaults=hfoo,_,0,0
 _SetUnitBaseWeaponRealFieldById_Category=TC_UjAPI_Unit
-
-
-SetUnitBaseWeaponStringFieldById=1,unitcode,unitweaponstringfield,integer,string
-_SetUnitBaseWeaponStringFieldById_Defaults=hfoo,_,0,_
-_SetUnitBaseWeaponStringFieldById_Category=TC_UjAPI_Unit
 
 
 SetUnitBlendTime=1,unit,real
@@ -10903,11 +10652,6 @@ _SetUnitState_Defaults=_,_,0
 _SetUnitState_Category=TC_UjAPI_Unit
 
 
-SetUnitStringField=1,unit,unitstringfield,string
-_SetUnitStringField_Defaults=_,_,_
-_SetUnitStringField_Category=TC_UjAPI_Unit
-
-
 SetUnitStunCounter=1,unit,integer
 _SetUnitStunCounter_Defaults=_,0
 _SetUnitStunCounter_Category=TC_UjAPI_Unit
@@ -10981,11 +10725,6 @@ _SetUnitWeaponRealField_Category=TC_UjAPI_Unit
 SetUnitWeaponSoundByIndex=1,unit,integer,integer
 _SetUnitWeaponSoundByIndex_Defaults=_,0,0
 _SetUnitWeaponSoundByIndex_Category=TC_UjAPI_Unit
-
-
-SetUnitWeaponStringField=1,unit,unitweaponstringfield,integer,string
-_SetUnitWeaponStringField_Defaults=_,_,0,_
-_SetUnitWeaponStringField_Category=TC_UjAPI_Unit
 
 
 SetUnitWeaponTypeByIndex=1,unit,integer,weapontype
@@ -11448,104 +11187,14 @@ _StoreReal_Defaults=_,_,_,0
 _StoreReal_Category=TC_UjAPI_Misc
 
 
-StoreString=1,gamecache,string,string,string
-_StoreString_Defaults=_,_,_,_
-_StoreString_Category=TC_UjAPI_Misc
-
-
 StoreUnit=1,gamecache,string,string,unit
 _StoreUnit_Defaults=_,_,_,_
 _StoreUnit_Category=TC_UjAPI_Unit
 
 
-StringCase=1,string,boolean
-_StringCase_Defaults=_,true
-_StringCase_Category=TC_UjAPI_Misc
-
-
-StringContains=1,string,string,boolean
-_StringContains_Defaults=_,_,true
-_StringContains_Category=TC_UjAPI_Misc
-
-
-StringCount=1,string,string,boolean
-_StringCount_Defaults=_,_,true
-_StringCount_Category=TC_UjAPI_Misc
-
-
-StringFind=1,string,string,boolean
-_StringFind_Defaults=_,_,true
-_StringFind_Category=TC_UjAPI_Misc
-
-
-StringFindFirstNotOf=1,string,string,boolean
-_StringFindFirstNotOf_Defaults=_,_,true
-_StringFindFirstNotOf_Category=TC_UjAPI_Misc
-
-
-StringFindFirstOf=1,string,string,boolean
-_StringFindFirstOf_Defaults=_,_,true
-_StringFindFirstOf_Category=TC_UjAPI_Misc
-
-
-StringFindLastNotOf=1,string,string,boolean
-_StringFindLastNotOf_Defaults=_,_,true
-_StringFindLastNotOf_Category=TC_UjAPI_Misc
-
-
-StringFindLastOf=1,string,string,boolean
-_StringFindLastOf_Defaults=_,_,true
-_StringFindLastOf_Category=TC_UjAPI_Misc
-
-
-StringHash=1,string
-_StringHash_Defaults=_
-_StringHash_Category=TC_UjAPI_Misc
-
-
-StringInsert=1,string,string,integer,boolean
-_StringInsert_Defaults=_,_,0,true
-_StringInsert_Category=TC_UjAPI_Misc
-
-
-StringLength=1,string
-_StringLength_Defaults=_
-_StringLength_Category=TC_UjAPI_Misc
-
-
-StringReplace=1,string,string,string,boolean
-_StringReplace_Defaults=_,_,_,true
-_StringReplace_Category=TC_UjAPI_Misc
-
-
-StringReverse=1,string,boolean
-_StringReverse_Defaults=_,true
-_StringReverse_Category=TC_UjAPI_Misc
-
-
-StringTrim=1,string,boolean
-_StringTrim_Defaults=_,true
-_StringTrim_Category=TC_UjAPI_Misc
-
-
-StringTrimLeft=1,string,boolean
-_StringTrimLeft_Defaults=_,true
-_StringTrimLeft_Category=TC_UjAPI_Misc
-
-
-StringTrimRight=1,string,boolean
-_StringTrimRight_Defaults=_,true
-_StringTrimRight_Category=TC_UjAPI_Misc
-
-
-SubString=1,string,integer,integer
-_SubString_Defaults=_,0,0
-_SubString_Category=TC_UjAPI_Misc
-
-
 SuspendHeroXP=1,unit,boolean
 _SuspendHeroXP_Defaults=_,true
-_SuspendHeroXP_Category=TC_UjAPI_Misc
+_SuspendHeroXP_Category=TC_UjAPI_Hero
 
 
 SuspendTimeOfDay=1,boolean
@@ -11593,11 +11242,6 @@ _SyncSavedReal_Defaults=_,0,0
 _SyncSavedReal_Category=TC_UjAPI_Sync
 
 
-SyncSavedString=1,hashtable,integer,integer
-_SyncSavedString_Defaults=_,0,0
-_SyncSavedString_Category=TC_UjAPI_Sync
-
-
 SyncStoredBoolean=1,gamecache,string,string
 _SyncStoredBoolean_Defaults=_,_,_
 _SyncStoredBoolean_Category=TC_UjAPI_Sync
@@ -11613,44 +11257,34 @@ _SyncStoredReal_Defaults=_,_,_
 _SyncStoredReal_Category=TC_UjAPI_Sync
 
 
-SyncStoredString=1,gamecache,string,string
-_SyncStoredString_Defaults=_,_,_
-_SyncStoredString_Category=TC_UjAPI_Sync
-
-
 SyncStoredUnit=1,gamecache,string,string
 _SyncStoredUnit_Defaults=_,_,_
 _SyncStoredUnit_Category=TC_UjAPI_Unit
 
 
-SyncString=1,string
-_SyncString_Defaults=_
-_SyncString_Category=TC_UjAPI_Sync
-
-
 TerrainDeformCrater=1,real,real,real,real,integer,boolean
 _TerrainDeformCrater_Defaults=0,0,0,0,0,true
-_TerrainDeformCrater_Category=TC_UjAPI_Misc
+_TerrainDeformCrater_Category=TC_UjAPI_Terrain
 
 
 TerrainDeformRandom=1,real,real,real,real,real,integer,integer
 _TerrainDeformRandom_Defaults=0,0,0,0,0,0,0
-_TerrainDeformRandom_Category=TC_UjAPI_Misc
+_TerrainDeformRandom_Category=TC_UjAPI_Terrain
 
 
 TerrainDeformRipple=1,real,real,real,real,integer,integer,real,real,real,boolean
 _TerrainDeformRipple_Defaults=0,0,0,0,0,0,0,0,0,true
-_TerrainDeformRipple_Category=TC_UjAPI_Misc
+_TerrainDeformRipple_Category=TC_UjAPI_Terrain
 
 
 TerrainDeformStop=1,terraindeformation,integer
 _TerrainDeformStop_Defaults=_,0
-_TerrainDeformStop_Category=TC_UjAPI_Misc
+_TerrainDeformStop_Category=TC_UjAPI_Terrain
 
 
 TerrainDeformWave=1,real,real,real,real,real,real,real,real,integer,integer
 _TerrainDeformWave_Defaults=0,0,0,0,0,0,0,0,0,0
-_TerrainDeformWave_Category=TC_UjAPI_Misc
+_TerrainDeformWave_Category=TC_UjAPI_Terrain
 
 
 TextFileClear=1,textfilehandle
@@ -11720,32 +11354,32 @@ _TextFileWriteLine_Category=TC_UjAPI_TextFile
 
 TimerDialogDisplay=1,timerdialog,boolean
 _TimerDialogDisplay_Defaults=_,true
-_TimerDialogDisplay_Category=TC_UjAPI_Timer
+_TimerDialogDisplay_Category=TC_UjAPI_Dialog
 
 
 TimerDialogSetRealTimeRemaining=1,timerdialog,real
 _TimerDialogSetRealTimeRemaining_Defaults=_,0
-_TimerDialogSetRealTimeRemaining_Category=TC_UjAPI_Timer
+_TimerDialogSetRealTimeRemaining_Category=TC_UjAPI_Dialog
 
 
 TimerDialogSetSpeed=1,timerdialog,real
 _TimerDialogSetSpeed_Defaults=_,0
-_TimerDialogSetSpeed_Category=TC_UjAPI_Timer
+_TimerDialogSetSpeed_Category=TC_UjAPI_Dialog
 
 
 TimerDialogSetTimeColor=1,timerdialog,integer,integer,integer,integer
 _TimerDialogSetTimeColor_Defaults=_,0,0,0,0
-_TimerDialogSetTimeColor_Category=TC_UjAPI_Timer
+_TimerDialogSetTimeColor_Category=TC_UjAPI_Dialog
 
 
 TimerDialogSetTitle=1,timerdialog,string
 _TimerDialogSetTitle_Defaults=_,_
-_TimerDialogSetTitle_Category=TC_UjAPI_Timer
+_TimerDialogSetTitle_Category=TC_UjAPI_Dialog
 
 
 TimerDialogSetTitleColor=1,timerdialog,integer,integer,integer,integer
 _TimerDialogSetTitleColor_Defaults=_,0,0,0,0
-_TimerDialogSetTitleColor_Category=TC_UjAPI_Timer
+_TimerDialogSetTitleColor_Category=TC_UjAPI_Dialog
 
 
 TimerGetCallback=1,timer
@@ -11855,12 +11489,12 @@ _TriggerRegisterDeathEvent_Category=TC_UjAPI_Trigger
 
 TriggerRegisterDialogButtonEvent=1,trigger,button
 _TriggerRegisterDialogButtonEvent_Defaults=_,_
-_TriggerRegisterDialogButtonEvent_Category=TC_UjAPI_Trigger
+_TriggerRegisterDialogButtonEvent_Category=TC_UjAPI_Dialog
 
 
 TriggerRegisterDialogEvent=1,trigger,dialog
 _TriggerRegisterDialogEvent_Defaults=_,_
-_TriggerRegisterDialogEvent_Category=TC_UjAPI_Trigger
+_TriggerRegisterDialogEvent_Category=TC_UjAPI_Dialog
 
 
 TriggerRegisterEnterRegion=1,trigger,region,boolexpr
@@ -11910,7 +11544,7 @@ _TriggerRegisterPlayerEvent_Category=TC_UjAPI_Trigger
 
 TriggerRegisterPlayerHashtableDataSyncEvent=1,trigger,player,hashtable
 _TriggerRegisterPlayerHashtableDataSyncEvent_Defaults=_,Player00,_
-_TriggerRegisterPlayerHashtableDataSyncEvent_Category=TC_UjAPI_Trigger
+_TriggerRegisterPlayerHashtableDataSyncEvent_Category=TC_UjAPI_Hashtable
 
 
 TriggerRegisterPlayerKeyEvent=1,trigger,player,oskeytype,integer,boolean
@@ -12061,11 +11695,6 @@ _UnitAddItem_Category=TC_UjAPI_Unit
 UnitAddItemById=1,unit,integer
 _UnitAddItemById_Defaults=_,0
 _UnitAddItemById_Category=TC_UjAPI_Unit
-
-
-UnitAddItemToSlot=1,unit,item,integer
-_UnitAddItemToSlot_Defaults=_,_,0
-_UnitAddItemToSlot_Category=TC_UjAPI_Unit
 
 
 UnitAddSleep=1,unit,boolean
@@ -12263,11 +11892,6 @@ _UnitHasItem_Defaults=_,_
 _UnitHasItem_Category=TC_UjAPI_Unit
 
 
-UnitIgnoreAlarmToggled=1,unit
-_UnitIgnoreAlarmToggled_Defaults=_
-_UnitIgnoreAlarmToggled_Category=TC_UjAPI_Unit
-
-
 UnitInventorySize=1,unit
 _UnitInventorySize_Defaults=_
 _UnitInventorySize_Category=TC_UjAPI_Unit
@@ -12460,12 +12084,12 @@ _VersionSupported_Category=TC_UjAPI_Misc
 
 VolumeGroupReset=1,nothing
 _VolumeGroupReset_Defaults=
-_VolumeGroupReset_Category=TC_UjAPI_Misc
+_VolumeGroupReset_Category=TC_UjAPI_Group
 
 
 VolumeGroupSetVolume=1,volumegroup,real
 _VolumeGroupSetVolume_Defaults=_,0
-_VolumeGroupSetVolume_Category=TC_UjAPI_Misc
+_VolumeGroupSetVolume_Category=TC_UjAPI_Group
 
 
 WaygateActivate=1,unit,boolean
@@ -15295,6 +14919,16 @@ _AddFrameSlider_Defaults=_
 _AddFrameSlider_Category=TC_UjAPI_Frame
 
 
+AddItemToAllStock=1,1,nothing,integer,integer,integer
+_AddItemToAllStock_Defaults=0,0,0
+_AddItemToAllStock_Category=TC_UjAPI_Convert
+
+
+AddItemToStock=1,1,nothing,unit,integer,integer,integer
+_AddItemToStock_Defaults=_,0,0,0
+_AddItemToStock_Category=TC_UjAPI_Convert
+
+
 AddLightning=1,1,lightning,string,boolean,real,real,real,real
 _AddLightning_Defaults=_,true,0,0,0,0
 _AddLightning_Category=TC_UjAPI_Lightning
@@ -15307,27 +14941,37 @@ _AddLightningEx_Category=TC_UjAPI_Lightning
 
 AddressToHandle=1,1,handle,integer
 _AddressToHandle_Defaults=0
-_AddressToHandle_Category=TC_UjAPI_Misc
+_AddressToHandle_Category=TC_UjAPI_Convert
 
 
 AddSpellEffect=1,1,effect,string,effecttype,real,real
 _AddSpellEffect_Defaults=_,_,0,0
-_AddSpellEffect_Category=TC_UjAPI_Misc
+_AddSpellEffect_Category=TC_UjAPI_Ability
 
 
 AddSpellEffectLoc=1,1,effect,string,effecttype,location
 _AddSpellEffectLoc_Defaults=_,_,_
-_AddSpellEffectLoc_Category=TC_UjAPI_Misc
+_AddSpellEffectLoc_Category=TC_UjAPI_Ability
 
 
 AddSpellEffectTarget=1,1,effect,string,effecttype,widget,string
 _AddSpellEffectTarget_Defaults=_,_,_,_
-_AddSpellEffectTarget_Category=TC_UjAPI_Misc
+_AddSpellEffectTarget_Category=TC_UjAPI_Ability
 
 
 AddSpriteToTarget=1,1,sprite,string,sprite,string
 _AddSpriteToTarget_Defaults=_,_,_
-_AddSpriteToTarget_Category=TC_UjAPI_Misc
+_AddSpriteToTarget_Category=TC_UjAPI_Convert
+
+
+AddUnitToAllStock=1,1,nothing,unitcode,integer,integer
+_AddUnitToAllStock_Defaults=hfoo,0,0
+_AddUnitToAllStock_Category=TC_UjAPI_Convert
+
+
+AddUnitToStock=1,1,nothing,unit,unitcode,integer,integer
+_AddUnitToStock_Defaults=_,hfoo,0,0
+_AddUnitToStock_Category=TC_UjAPI_Convert
 
 
 AddWeatherEffect=1,1,weathereffect,rect,integer
@@ -15355,14 +14999,19 @@ _Atan2_Defaults=0,0
 _Atan2_Category=TC_UjAPI_Misc
 
 
+AttachSoundToUnit=1,1,nothing,sound,unit
+_AttachSoundToUnit_Defaults=_,_
+_AttachSoundToUnit_Category=TC_UjAPI_Convert
+
+
 AttachSpriteToTarget=1,1,sprite,sprite,sprite,string
 _AttachSpriteToTarget_Defaults=_,_,_
-_AttachSpriteToTarget_Category=TC_UjAPI_Misc
+_AttachSpriteToTarget_Category=TC_UjAPI_Convert
 
 
 BenchmarkGetElapsed=1,1,string,integer
 _BenchmarkGetElapsed_Defaults=0
-_BenchmarkGetElapsed_Category=TC_UjAPI_Misc
+_BenchmarkGetElapsed_Category=TC_UjAPI_Test
 
 
 BitwiseAND=1,1,integer,integer,integer
@@ -16097,17 +15746,17 @@ _CreateDoodadZ_Category=TC_UjAPI_Doodad
 
 CreateFogModifierRadius=1,1,fogmodifier,player,fogstate,real,real,real,boolean,boolean
 _CreateFogModifierRadius_Defaults=Player00,_,0,0,0,true,true
-_CreateFogModifierRadius_Category=TC_UjAPI_Misc
+_CreateFogModifierRadius_Category=TC_UjAPI_FogModifier
 
 
 CreateFogModifierRadiusLoc=1,1,fogmodifier,player,fogstate,location,real,boolean,boolean
 _CreateFogModifierRadiusLoc_Defaults=Player00,_,_,0,true,true
-_CreateFogModifierRadiusLoc_Category=TC_UjAPI_Misc
+_CreateFogModifierRadiusLoc_Category=TC_UjAPI_FogModifier
 
 
 CreateFogModifierRect=1,1,fogmodifier,player,fogstate,rect,boolean,boolean
 _CreateFogModifierRect_Defaults=Player00,_,_,true,true
-_CreateFogModifierRect_Category=TC_UjAPI_Misc
+_CreateFogModifierRect_Category=TC_UjAPI_Rect
 
 
 CreateFrame=1,1,framehandle,string,framehandle,integer,integer
@@ -16232,7 +15881,7 @@ _CreateSoundFromLabel_Category=TC_UjAPI_Sound
 
 CreateSprite=1,1,sprite,boolean
 _CreateSprite_Defaults=true
-_CreateSprite_Category=TC_UjAPI_Misc
+_CreateSprite_Category=TC_UjAPI_Sprite
 
 
 CreateTextTag=1,1,texttag,nothing
@@ -16242,7 +15891,7 @@ _CreateTextTag_Category=TC_UjAPI_TextTag
 
 CreateTimerDialog=1,1,timerdialog,timer
 _CreateTimerDialog_Defaults=_
-_CreateTimerDialog_Category=TC_UjAPI_Timer
+_CreateTimerDialog_Category=TC_UjAPI_Dialog
 
 
 CreateUbersplat=1,1,ubersplat,real,real,string,integer,integer,integer,integer,boolean,boolean
@@ -16282,7 +15931,27 @@ _DestroyLightning_Category=TC_UjAPI_Lightning
 
 DialogAddQuitButton=1,1,button,dialog,boolean,string,integer
 _DialogAddQuitButton_Defaults=_,true,_,0
-_DialogAddQuitButton_Category=TC_UjAPI_Misc
+_DialogAddQuitButton_Category=TC_UjAPI_Dialog
+
+
+DisplayTextToPlayer=1,1,nothing,player,real,real,string
+_DisplayTextToPlayer_Defaults=Player00,0,0,_
+_DisplayTextToPlayer_Category=TC_UjAPI_Convert
+
+
+DisplayTimedTextToPlayer=1,1,nothing,player,real,real,real,string
+_DisplayTimedTextToPlayer_Defaults=Player00,0,0,0,_
+_DisplayTimedTextToPlayer_Category=TC_UjAPI_Convert
+
+
+DisplayTimedTopMessage=1,1,nothing,player,real,string
+_DisplayTimedTopMessage_Defaults=Player00,0,_
+_DisplayTimedTopMessage_Category=TC_UjAPI_Convert
+
+
+DisplayTopMessage=1,1,nothing,player,string
+_DisplayTopMessage_Defaults=Player00,_
+_DisplayTopMessage_Category=TC_UjAPI_Convert
 
 
 EnumUnitAbilities=1,1,boolean,unit,boolexpr,code
@@ -16298,6 +15967,11 @@ _EnumUnitBuffs_Category=TC_UjAPI_Unit
 Filter=1,1,filterfunc,code
 _Filter_Defaults=_
 _Filter_Category=TC_UjAPI_Misc
+
+
+FlushStoredString=1,1,nothing,gamecache,string,string
+_FlushStoredString_Defaults=_,_,_
+_FlushStoredString_Category=TC_UjAPI_String
 
 
 ForceCountPlayers=1,1,integer,force
@@ -16702,7 +16376,7 @@ _GetClickedButton_Category=TC_UjAPI_Misc
 
 GetClickedDialog=1,1,dialog,nothing
 _GetClickedDialog_Defaults=
-_GetClickedDialog_Category=TC_UjAPI_Misc
+_GetClickedDialog_Category=TC_UjAPI_Dialog
 
 
 GetClientHeight=1,1,integer,nothing
@@ -16732,7 +16406,7 @@ _GetCreatureDensity_Category=TC_UjAPI_Misc
 
 GetCSimpleFontStringByName=1,1,framehandle,string,integer
 _GetCSimpleFontStringByName_Defaults=_,0
-_GetCSimpleFontStringByName_Category=TC_UjAPI_Misc
+_GetCSimpleFontStringByName_Category=TC_UjAPI_String
 
 
 GetCSimpleFrameByName=1,1,framehandle,string,integer
@@ -16892,12 +16566,12 @@ _GetDestructableZ_Category=TC_UjAPI_Destructable
 
 GetDialogueSpeakerNameKey=1,1,string,sound
 _GetDialogueSpeakerNameKey_Defaults=_
-_GetDialogueSpeakerNameKey_Category=TC_UjAPI_Misc
+_GetDialogueSpeakerNameKey_Category=TC_UjAPI_Dialog
 
 
 GetDialogueTextKey=1,1,string,sound
 _GetDialogueTextKey_Defaults=_
-_GetDialogueTextKey_Category=TC_UjAPI_Misc
+_GetDialogueTextKey_Category=TC_UjAPI_Dialog
 
 
 GetDoodadAnimationOffsetPercent=1,1,real,doodad
@@ -17022,7 +16696,7 @@ _GetEnumProjectile_Category=TC_UjAPI_Projectile
 
 GetEnumSpecialEffect=1,1,effect,nothing
 _GetEnumSpecialEffect_Defaults=
-_GetEnumSpecialEffect_Category=TC_UjAPI_Misc
+_GetEnumSpecialEffect_Category=TC_UjAPI_SpecialEffect
 
 
 GetEnumTrackable=1,1,trackable,nothing
@@ -17032,42 +16706,42 @@ _GetEnumTrackable_Category=TC_UjAPI_Trackable
 
 GetEventAttackType=1,1,attacktype,nothing
 _GetEventAttackType_Defaults=
-_GetEventAttackType_Category=TC_UjAPI_Misc
+_GetEventAttackType_Category=TC_UjAPI_Unit
 
 
 GetEventDamageExtraFlags=1,1,integer,nothing
 _GetEventDamageExtraFlags_Defaults=
-_GetEventDamageExtraFlags_Category=TC_UjAPI_Misc
+_GetEventDamageExtraFlags_Category=TC_UjAPI_Unit
 
 
 GetEventDamageFlags=1,1,integer,nothing
 _GetEventDamageFlags_Defaults=
-_GetEventDamageFlags_Category=TC_UjAPI_Misc
+_GetEventDamageFlags_Category=TC_UjAPI_Unit
 
 
 GetEventDamageIsExtraFlag=1,1,boolean,integer
 _GetEventDamageIsExtraFlag_Defaults=0
-_GetEventDamageIsExtraFlag_Category=TC_UjAPI_Misc
+_GetEventDamageIsExtraFlag_Category=TC_UjAPI_Unit
 
 
 GetEventDamageIsFlag=1,1,boolean,integer
 _GetEventDamageIsFlag_Defaults=0
-_GetEventDamageIsFlag_Category=TC_UjAPI_Misc
+_GetEventDamageIsFlag_Category=TC_UjAPI_Unit
 
 
 GetEventDamageTarget=1,1,unit,nothing
 _GetEventDamageTarget_Defaults=
-_GetEventDamageTarget_Category=TC_UjAPI_Misc
+_GetEventDamageTarget_Category=TC_UjAPI_Unit
 
 
 GetEventDamageType=1,1,damagetype,nothing
 _GetEventDamageType_Defaults=
-_GetEventDamageType_Category=TC_UjAPI_Misc
+_GetEventDamageType_Category=TC_UjAPI_Unit
 
 
 GetEventDamageTypeFlags=1,1,integer,nothing
 _GetEventDamageTypeFlags_Defaults=
-_GetEventDamageTypeFlags_Category=TC_UjAPI_Misc
+_GetEventDamageTypeFlags_Category=TC_UjAPI_Unit
 
 
 GetEventIsAttack=1,1,boolean,nothing
@@ -17097,7 +16771,7 @@ _GetEventWeaponType_Category=TC_UjAPI_Misc
 
 GetFDFDataString=1,1,string,string
 _GetFDFDataString_Defaults=_
-_GetFDFDataString_Category=TC_UjAPI_Misc
+_GetFDFDataString_Category=TC_UjAPI_String
 
 
 GetFilterAbility=1,1,ability,nothing
@@ -17127,7 +16801,7 @@ _GetFilterProjectile_Category=TC_UjAPI_Projectile
 
 GetFilterSpecialEffect=1,1,effect,nothing
 _GetFilterSpecialEffect_Defaults=
-_GetFilterSpecialEffect_Category=TC_UjAPI_Misc
+_GetFilterSpecialEffect_Category=TC_UjAPI_SpecialEffect
 
 
 GetFilterTrackable=1,1,trackable,nothing
@@ -17152,27 +16826,27 @@ _GetFogModifierForPlayer_Category=TC_UjAPI_Player
 
 GetFogModifierRadius=1,1,real,fogmodifier
 _GetFogModifierRadius_Defaults=_
-_GetFogModifierRadius_Category=TC_UjAPI_Misc
+_GetFogModifierRadius_Category=TC_UjAPI_FogModifier
 
 
 GetFogModifierRect=1,1,rect,fogmodifier
 _GetFogModifierRect_Defaults=_
-_GetFogModifierRect_Category=TC_UjAPI_Misc
+_GetFogModifierRect_Category=TC_UjAPI_Rect
 
 
 GetFogModifierX=1,1,real,fogmodifier
 _GetFogModifierX_Defaults=_
-_GetFogModifierX_Category=TC_UjAPI_Misc
+_GetFogModifierX_Category=TC_UjAPI_FogModifier
 
 
 GetFogModifierY=1,1,real,fogmodifier
 _GetFogModifierY_Defaults=_
-_GetFogModifierY_Category=TC_UjAPI_Misc
+_GetFogModifierY_Category=TC_UjAPI_FogModifier
 
 
 GetFogModifierZ=1,1,real,fogmodifier
 _GetFogModifierZ_Defaults=_
-_GetFogModifierZ_Category=TC_UjAPI_Misc
+_GetFogModifierZ_Category=TC_UjAPI_FogModifier
 
 
 GetFPS=1,1,real,nothing
@@ -17572,32 +17246,32 @@ _GetHandleReferenceCount_Category=TC_UjAPI_Misc
 
 GetHeroAgi=1,1,integer,unit,boolean
 _GetHeroAgi_Defaults=_,true
-_GetHeroAgi_Category=TC_UjAPI_Misc
+_GetHeroAgi_Category=TC_UjAPI_Hero
 
 
 GetHeroExperienceNeeded=1,1,integer,unit,integer
 _GetHeroExperienceNeeded_Defaults=_,0
-_GetHeroExperienceNeeded_Category=TC_UjAPI_Misc
+_GetHeroExperienceNeeded_Category=TC_UjAPI_Hero
 
 
 GetHeroInt=1,1,integer,unit,boolean
 _GetHeroInt_Defaults=_,true
-_GetHeroInt_Category=TC_UjAPI_Misc
+_GetHeroInt_Category=TC_UjAPI_Hero
 
 
 GetHeroMaxLevelExperienceNeeded=1,1,integer,unit
 _GetHeroMaxLevelExperienceNeeded_Defaults=_
-_GetHeroMaxLevelExperienceNeeded_Category=TC_UjAPI_Misc
+_GetHeroMaxLevelExperienceNeeded_Category=TC_UjAPI_Hero
 
 
 GetHeroPrimaryAttribute=1,1,heroattribute,unit
 _GetHeroPrimaryAttribute_Defaults=_
-_GetHeroPrimaryAttribute_Category=TC_UjAPI_Misc
+_GetHeroPrimaryAttribute_Category=TC_UjAPI_Hero
 
 
 GetHeroStr=1,1,integer,unit,boolean
 _GetHeroStr_Defaults=_,true
-_GetHeroStr_Category=TC_UjAPI_Misc
+_GetHeroStr_Category=TC_UjAPI_Hero
 
 
 GetHostPlayer=1,1,player,nothing
@@ -18087,7 +17761,7 @@ _GetLocalizedHotkey_Category=TC_UjAPI_Misc
 
 GetLocalizedString=1,1,string,string
 _GetLocalizedString_Defaults=_
-_GetLocalizedString_Category=TC_UjAPI_Misc
+_GetLocalizedString_Category=TC_UjAPI_String
 
 
 GetLocalTime=1,1,integer,timetype
@@ -18117,7 +17791,7 @@ _GetMappedTypeName_Category=TC_UjAPI_Misc
 
 GetMiscDataString=1,1,string,string,string,integer
 _GetMiscDataString_Defaults=_,_,0
-_GetMiscDataString_Category=TC_UjAPI_Misc
+_GetMiscDataString_Category=TC_UjAPI_String
 
 
 GetMouseMoveEventDelay=1,1,integer,nothing
@@ -18517,7 +18191,7 @@ _GetResourceDensity_Category=TC_UjAPI_Misc
 
 GetSkinDataString=1,1,string,string,string,string,integer
 _GetSkinDataString_Defaults=_,_,_,0
-_GetSkinDataString_Category=TC_UjAPI_Misc
+_GetSkinDataString_Category=TC_UjAPI_String
 
 
 GetSoundDuration=1,1,integer,sound
@@ -18542,62 +18216,62 @@ _GetSoundIsPlaying_Category=TC_UjAPI_Sound
 
 GetSpecialEffectAnimationOffsetPercent=1,1,real,effect
 _GetSpecialEffectAnimationOffsetPercent_Defaults=_
-_GetSpecialEffectAnimationOffsetPercent_Category=TC_UjAPI_Misc
+_GetSpecialEffectAnimationOffsetPercent_Category=TC_UjAPI_SpecialEffect
 
 
 GetSpecialEffectColour=1,1,integer,effect
 _GetSpecialEffectColour_Defaults=_
-_GetSpecialEffectColour_Category=TC_UjAPI_Misc
+_GetSpecialEffectColour_Category=TC_UjAPI_SpecialEffect
 
 
 GetSpecialEffectCurrentAnimationId=1,1,integer,effect
 _GetSpecialEffectCurrentAnimationId_Defaults=_
-_GetSpecialEffectCurrentAnimationId_Category=TC_UjAPI_Misc
+_GetSpecialEffectCurrentAnimationId_Category=TC_UjAPI_SpecialEffect
 
 
 GetSpecialEffectCurrentAnimationName=1,1,string,effect
 _GetSpecialEffectCurrentAnimationName_Defaults=_
-_GetSpecialEffectCurrentAnimationName_Category=TC_UjAPI_Misc
+_GetSpecialEffectCurrentAnimationName_Category=TC_UjAPI_SpecialEffect
 
 
 GetSpecialEffectFacing=1,1,real,effect
 _GetSpecialEffectFacing_Defaults=_
-_GetSpecialEffectFacing_Category=TC_UjAPI_Misc
+_GetSpecialEffectFacing_Category=TC_UjAPI_SpecialEffect
 
 
 GetSpecialEffectHeight=1,1,real,effect
 _GetSpecialEffectHeight_Defaults=_
-_GetSpecialEffectHeight_Category=TC_UjAPI_Misc
+_GetSpecialEffectHeight_Category=TC_UjAPI_SpecialEffect
 
 
 GetSpecialEffectModel=1,1,string,effect
 _GetSpecialEffectModel_Defaults=_
-_GetSpecialEffectModel_Category=TC_UjAPI_Misc
+_GetSpecialEffectModel_Category=TC_UjAPI_SpecialEffect
 
 
 GetSpecialEffectModelObjectPositionLoc=1,1,location,effect,string
 _GetSpecialEffectModelObjectPositionLoc_Defaults=_,_
-_GetSpecialEffectModelObjectPositionLoc_Category=TC_UjAPI_Misc
+_GetSpecialEffectModelObjectPositionLoc_Category=TC_UjAPI_SpecialEffect
 
 
 GetSpecialEffectModelObjectX=1,1,real,effect,string
 _GetSpecialEffectModelObjectX_Defaults=_,_
-_GetSpecialEffectModelObjectX_Category=TC_UjAPI_Misc
+_GetSpecialEffectModelObjectX_Category=TC_UjAPI_SpecialEffect
 
 
 GetSpecialEffectModelObjectY=1,1,real,effect,string
 _GetSpecialEffectModelObjectY_Defaults=_,_
-_GetSpecialEffectModelObjectY_Category=TC_UjAPI_Misc
+_GetSpecialEffectModelObjectY_Category=TC_UjAPI_SpecialEffect
 
 
 GetSpecialEffectModelObjectZ=1,1,real,effect,string
 _GetSpecialEffectModelObjectZ_Defaults=_,_
-_GetSpecialEffectModelObjectZ_Category=TC_UjAPI_Misc
+_GetSpecialEffectModelObjectZ_Category=TC_UjAPI_SpecialEffect
 
 
 GetSpecialEffectPitch=1,1,real,effect
 _GetSpecialEffectPitch_Defaults=_
-_GetSpecialEffectPitch_Category=TC_UjAPI_Misc
+_GetSpecialEffectPitch_Category=TC_UjAPI_SpecialEffect
 
 
 GetSpecialEffectPlayerColour=1,1,playercolor,effect
@@ -18607,57 +18281,57 @@ _GetSpecialEffectPlayerColour_Category=TC_UjAPI_Player
 
 GetSpecialEffectPositionLoc=1,1,location,effect
 _GetSpecialEffectPositionLoc_Defaults=_
-_GetSpecialEffectPositionLoc_Category=TC_UjAPI_Misc
+_GetSpecialEffectPositionLoc_Category=TC_UjAPI_SpecialEffect
 
 
 GetSpecialEffectRoll=1,1,real,effect
 _GetSpecialEffectRoll_Defaults=_
-_GetSpecialEffectRoll_Category=TC_UjAPI_Misc
+_GetSpecialEffectRoll_Category=TC_UjAPI_SpecialEffect
 
 
 GetSpecialEffectScale=1,1,real,effect
 _GetSpecialEffectScale_Defaults=_
-_GetSpecialEffectScale_Category=TC_UjAPI_Misc
+_GetSpecialEffectScale_Category=TC_UjAPI_SpecialEffect
 
 
 GetSpecialEffectScreenX=1,1,real,effect
 _GetSpecialEffectScreenX_Defaults=_
-_GetSpecialEffectScreenX_Category=TC_UjAPI_Misc
+_GetSpecialEffectScreenX_Category=TC_UjAPI_SpecialEffect
 
 
 GetSpecialEffectScreenY=1,1,real,effect
 _GetSpecialEffectScreenY_Defaults=_
-_GetSpecialEffectScreenY_Category=TC_UjAPI_Misc
+_GetSpecialEffectScreenY_Category=TC_UjAPI_SpecialEffect
 
 
 GetSpecialEffectSprite=1,1,sprite,effect
 _GetSpecialEffectSprite_Defaults=_
-_GetSpecialEffectSprite_Category=TC_UjAPI_Misc
+_GetSpecialEffectSprite_Category=TC_UjAPI_Sprite
 
 
 GetSpecialEffectTimeScale=1,1,real,effect
 _GetSpecialEffectTimeScale_Defaults=_
-_GetSpecialEffectTimeScale_Category=TC_UjAPI_Misc
+_GetSpecialEffectTimeScale_Category=TC_UjAPI_SpecialEffect
 
 
 GetSpecialEffectX=1,1,real,effect
 _GetSpecialEffectX_Defaults=_
-_GetSpecialEffectX_Category=TC_UjAPI_Misc
+_GetSpecialEffectX_Category=TC_UjAPI_SpecialEffect
 
 
 GetSpecialEffectY=1,1,real,effect
 _GetSpecialEffectY_Defaults=_
-_GetSpecialEffectY_Category=TC_UjAPI_Misc
+_GetSpecialEffectY_Category=TC_UjAPI_SpecialEffect
 
 
 GetSpecialEffectYaw=1,1,real,effect
 _GetSpecialEffectYaw_Defaults=_
-_GetSpecialEffectYaw_Category=TC_UjAPI_Misc
+_GetSpecialEffectYaw_Category=TC_UjAPI_SpecialEffect
 
 
 GetSpecialEffectZ=1,1,real,effect
 _GetSpecialEffectZ_Defaults=_
-_GetSpecialEffectZ_Category=TC_UjAPI_Misc
+_GetSpecialEffectZ_Category=TC_UjAPI_SpecialEffect
 
 
 GetSpellAbility=1,1,ability,nothing
@@ -18677,72 +18351,72 @@ _GetSpellTargetY_Category=TC_UjAPI_Misc
 
 GetSpriteAnimationOffsetPercent=1,1,real,sprite
 _GetSpriteAnimationOffsetPercent_Defaults=_
-_GetSpriteAnimationOffsetPercent_Category=TC_UjAPI_Misc
+_GetSpriteAnimationOffsetPercent_Category=TC_UjAPI_Sprite
 
 
 GetSpriteChildById=1,1,sprite,sprite,integer
 _GetSpriteChildById_Defaults=_,0
-_GetSpriteChildById_Category=TC_UjAPI_Misc
+_GetSpriteChildById_Category=TC_UjAPI_Sprite
 
 
 GetSpriteChildrenCount=1,1,integer,sprite
 _GetSpriteChildrenCount_Defaults=_
-_GetSpriteChildrenCount_Category=TC_UjAPI_Misc
+_GetSpriteChildrenCount_Category=TC_UjAPI_Sprite
 
 
 GetSpriteColour=1,1,integer,sprite
 _GetSpriteColour_Defaults=_
-_GetSpriteColour_Category=TC_UjAPI_Misc
+_GetSpriteColour_Category=TC_UjAPI_Sprite
 
 
 GetSpriteCurrentAnimationId=1,1,integer,sprite
 _GetSpriteCurrentAnimationId_Defaults=_
-_GetSpriteCurrentAnimationId_Category=TC_UjAPI_Misc
+_GetSpriteCurrentAnimationId_Category=TC_UjAPI_Sprite
 
 
 GetSpriteCurrentAnimationName=1,1,string,sprite
 _GetSpriteCurrentAnimationName_Defaults=_
-_GetSpriteCurrentAnimationName_Category=TC_UjAPI_Misc
+_GetSpriteCurrentAnimationName_Category=TC_UjAPI_Sprite
 
 
 GetSpriteFacing=1,1,real,sprite
 _GetSpriteFacing_Defaults=_
-_GetSpriteFacing_Category=TC_UjAPI_Misc
+_GetSpriteFacing_Category=TC_UjAPI_Sprite
 
 
 GetSpriteHeight=1,1,real,sprite
 _GetSpriteHeight_Defaults=_
-_GetSpriteHeight_Category=TC_UjAPI_Misc
+_GetSpriteHeight_Category=TC_UjAPI_Sprite
 
 
 GetSpriteModel=1,1,string,sprite
 _GetSpriteModel_Defaults=_
-_GetSpriteModel_Category=TC_UjAPI_Misc
+_GetSpriteModel_Category=TC_UjAPI_Sprite
 
 
 GetSpriteModelObjectPositionLoc=1,1,location,sprite,string
 _GetSpriteModelObjectPositionLoc_Defaults=_,_
-_GetSpriteModelObjectPositionLoc_Category=TC_UjAPI_Misc
+_GetSpriteModelObjectPositionLoc_Category=TC_UjAPI_Sprite
 
 
 GetSpriteModelObjectX=1,1,real,sprite,string
 _GetSpriteModelObjectX_Defaults=_,_
-_GetSpriteModelObjectX_Category=TC_UjAPI_Misc
+_GetSpriteModelObjectX_Category=TC_UjAPI_Sprite
 
 
 GetSpriteModelObjectY=1,1,real,sprite,string
 _GetSpriteModelObjectY_Defaults=_,_
-_GetSpriteModelObjectY_Category=TC_UjAPI_Misc
+_GetSpriteModelObjectY_Category=TC_UjAPI_Sprite
 
 
 GetSpriteModelObjectZ=1,1,real,sprite,string
 _GetSpriteModelObjectZ_Defaults=_,_
-_GetSpriteModelObjectZ_Category=TC_UjAPI_Misc
+_GetSpriteModelObjectZ_Category=TC_UjAPI_Sprite
 
 
 GetSpritePitch=1,1,real,sprite
 _GetSpritePitch_Defaults=_
-_GetSpritePitch_Category=TC_UjAPI_Misc
+_GetSpritePitch_Category=TC_UjAPI_Sprite
 
 
 GetSpritePlayerColour=1,1,playercolor,sprite
@@ -18752,52 +18426,52 @@ _GetSpritePlayerColour_Category=TC_UjAPI_Player
 
 GetSpritePositionLoc=1,1,location,sprite
 _GetSpritePositionLoc_Defaults=_
-_GetSpritePositionLoc_Category=TC_UjAPI_Misc
+_GetSpritePositionLoc_Category=TC_UjAPI_Sprite
 
 
 GetSpriteRoll=1,1,real,sprite
 _GetSpriteRoll_Defaults=_
-_GetSpriteRoll_Category=TC_UjAPI_Misc
+_GetSpriteRoll_Category=TC_UjAPI_Sprite
 
 
 GetSpriteScale=1,1,real,sprite
 _GetSpriteScale_Defaults=_
-_GetSpriteScale_Category=TC_UjAPI_Misc
+_GetSpriteScale_Category=TC_UjAPI_Sprite
 
 
 GetSpriteScreenX=1,1,real,sprite
 _GetSpriteScreenX_Defaults=_
-_GetSpriteScreenX_Category=TC_UjAPI_Misc
+_GetSpriteScreenX_Category=TC_UjAPI_Sprite
 
 
 GetSpriteScreenY=1,1,real,sprite
 _GetSpriteScreenY_Defaults=_
-_GetSpriteScreenY_Category=TC_UjAPI_Misc
+_GetSpriteScreenY_Category=TC_UjAPI_Sprite
 
 
 GetSpriteTimeScale=1,1,real,sprite
 _GetSpriteTimeScale_Defaults=_
-_GetSpriteTimeScale_Category=TC_UjAPI_Misc
+_GetSpriteTimeScale_Category=TC_UjAPI_Sprite
 
 
 GetSpriteX=1,1,real,sprite
 _GetSpriteX_Defaults=_
-_GetSpriteX_Category=TC_UjAPI_Misc
+_GetSpriteX_Category=TC_UjAPI_Sprite
 
 
 GetSpriteY=1,1,real,sprite
 _GetSpriteY_Defaults=_
-_GetSpriteY_Category=TC_UjAPI_Misc
+_GetSpriteY_Category=TC_UjAPI_Sprite
 
 
 GetSpriteYaw=1,1,real,sprite
 _GetSpriteYaw_Defaults=_
-_GetSpriteYaw_Category=TC_UjAPI_Misc
+_GetSpriteYaw_Category=TC_UjAPI_Sprite
 
 
 GetSpriteZ=1,1,real,sprite
 _GetSpriteZ_Defaults=_
-_GetSpriteZ_Category=TC_UjAPI_Misc
+_GetSpriteZ_Category=TC_UjAPI_Sprite
 
 
 GetStartLocationLoc=1,1,location,integer
@@ -18842,12 +18516,12 @@ _GetStoredReal_Category=TC_UjAPI_Misc
 
 GetStoredString=1,1,string,gamecache,string,string
 _GetStoredString_Defaults=_,_,_
-_GetStoredString_Category=TC_UjAPI_Misc
+_GetStoredString_Category=TC_UjAPI_String
 
 
 GetStringCount=1,1,integer,nothing
 _GetStringCount_Defaults=
-_GetStringCount_Category=TC_UjAPI_Misc
+_GetStringCount_Category=TC_UjAPI_String
 
 
 GetSyncedBoolean=1,1,boolean,nothing
@@ -18892,7 +18566,7 @@ _GetSyncSavedChildKey_Category=TC_UjAPI_Sync
 
 GetSyncSavedHashtable=1,1,hashtable,nothing
 _GetSyncSavedHashtable_Defaults=
-_GetSyncSavedHashtable_Category=TC_UjAPI_Sync
+_GetSyncSavedHashtable_Category=TC_UjAPI_Hashtable
 
 
 GetSyncSavedParentKey=1,1,integer,nothing
@@ -18912,17 +18586,17 @@ _GetSystemTime_Category=TC_UjAPI_Misc
 
 GetTerrainCliffLevel=1,1,integer,real,real
 _GetTerrainCliffLevel_Defaults=0,0
-_GetTerrainCliffLevel_Category=TC_UjAPI_Misc
+_GetTerrainCliffLevel_Category=TC_UjAPI_Terrain
 
 
 GetTerrainType=1,1,integer,real,real
 _GetTerrainType_Defaults=0,0
-_GetTerrainType_Category=TC_UjAPI_Misc
+_GetTerrainType_Category=TC_UjAPI_Terrain
 
 
 GetTerrainVariance=1,1,integer,real,real
 _GetTerrainVariance_Defaults=0,0
-_GetTerrainVariance_Category=TC_UjAPI_Misc
+_GetTerrainVariance_Category=TC_UjAPI_Terrain
 
 
 GetTextTagAge=1,1,real,texttag
@@ -19037,7 +18711,7 @@ _GetTimeStamp_Category=TC_UjAPI_Misc
 
 GetTournamentFinishNowPlayer=1,1,player,nothing
 _GetTournamentFinishNowPlayer_Defaults=
-_GetTournamentFinishNowPlayer_Category=TC_UjAPI_Player
+_GetTournamentFinishNowPlayer_Category=TC_UjAPI_Convert
 
 
 GetTrackableAnimationOffsetPercent=1,1,real,trackable
@@ -19867,12 +19541,12 @@ _GetUnitTimeScale_Category=TC_UjAPI_Unit
 
 GetUnitTotalMagicResist=1,1,real,unit
 _GetUnitTotalMagicResist_Defaults=_
-_GetUnitTotalMagicResist_Category=TC_UjAPI_Unit
+_GetUnitTotalMagicResist_Category=TC_UjAPI_Convert
 
 
 GetUnitTotalMoveSpeed=1,1,real,unit
 _GetUnitTotalMoveSpeed_Defaults=_
-_GetUnitTotalMoveSpeed_Category=TC_UjAPI_Unit
+_GetUnitTotalMoveSpeed_Category=TC_UjAPI_Convert
 
 
 GetUnitUnderCursor=1,1,unit,nothing
@@ -20232,7 +19906,7 @@ _GetWorldBounds_Category=TC_UjAPI_Misc
 
 GroupAddGroupEx=1,1,integer,group,group
 _GroupAddGroupEx_Defaults=_,_
-_GroupAddGroupEx_Category=TC_UjAPI_Misc
+_GroupAddGroupEx_Category=TC_UjAPI_Group
 
 
 GroupContainsUnit=1,1,boolean,group,unit
@@ -20247,7 +19921,7 @@ _GroupForEachUnit_Category=TC_UjAPI_Unit
 
 GroupGetCount=1,1,integer,group
 _GroupGetCount_Defaults=_
-_GroupGetCount_Category=TC_UjAPI_Misc
+_GroupGetCount_Category=TC_UjAPI_Group
 
 
 GroupGetUnitByIndex=1,1,unit,group,integer
@@ -20277,7 +19951,7 @@ _GroupPointOrderByIdLoc_Category=TC_UjAPI_Order
 
 GroupRemoveGroupEx=1,1,integer,group,group
 _GroupRemoveGroupEx_Defaults=_,_
-_GroupRemoveGroupEx_Category=TC_UjAPI_Misc
+_GroupRemoveGroupEx_Category=TC_UjAPI_Group
 
 
 GroupTargetOrderById=1,1,boolean,group,integer,widget
@@ -20792,7 +20466,7 @@ _HandleToHandle_Category=TC_UjAPI_Handle
 
 HandleToHashtable=1,1,hashtable,handle
 _HandleToHashtable_Defaults=_
-_HandleToHashtable_Category=TC_UjAPI_Handle
+_HandleToHashtable_Category=TC_UjAPI_Hashtable
 
 
 HandleToIGamestate=1,1,igamestate,handle
@@ -21107,7 +20781,7 @@ _HaveSavedString_Category=TC_UjAPI_Hashtable
 
 HexToInt=1,1,integer,string
 _HexToInt_Defaults=_
-_HexToInt_Category=TC_UjAPI_Misc
+_HexToInt_Category=TC_UjAPI_Convert
 
 
 I2C=1,1,code,integer
@@ -21117,7 +20791,7 @@ _I2C_Category=TC_UjAPI_Misc
 
 Id2String=1,1,string,integer
 _Id2String_Defaults=0
-_Id2String_Category=TC_UjAPI_Misc
+_Id2String_Category=TC_UjAPI_String
 
 
 IncUnitAbilityLevel=1,1,integer,unit,integer
@@ -21127,27 +20801,27 @@ _IncUnitAbilityLevel_Category=TC_UjAPI_Unit
 
 InitHashtable=1,1,hashtable,nothing
 _InitHashtable_Defaults=
-_InitHashtable_Category=TC_UjAPI_Misc
+_InitHashtable_Category=TC_UjAPI_Hashtable
 
 
 IntegerToHandle=1,1,handle,integer
 _IntegerToHandle_Defaults=0
-_IntegerToHandle_Category=TC_UjAPI_Misc
+_IntegerToHandle_Category=TC_UjAPI_Convert
 
 
 IntToChar=1,1,string,integer
 _IntToChar_Defaults=0
-_IntToChar_Category=TC_UjAPI_Misc
+_IntToChar_Category=TC_UjAPI_Convert
 
 
 IntToHex=1,1,string,integer
 _IntToHex_Defaults=0
-_IntToHex_Category=TC_UjAPI_Misc
+_IntToHex_Category=TC_UjAPI_Convert
 
 
 IntToRoman=1,1,string,integer
 _IntToRoman_Defaults=0
-_IntToRoman_Category=TC_UjAPI_Misc
+_IntToRoman_Category=TC_UjAPI_Convert
 
 
 IsAbilityAutocastEnabled=1,1,boolean,ability
@@ -21237,12 +20911,12 @@ _IsDoodadVisible_Category=TC_UjAPI_Doodad
 
 IsFoggedToPlayer=1,1,boolean,real,real,player
 _IsFoggedToPlayer_Defaults=0,0,Player00
-_IsFoggedToPlayer_Category=TC_UjAPI_Player
+_IsFoggedToPlayer_Category=TC_UjAPI_Convert
 
 
 IsFogModifierFogState=1,1,boolean,fogmodifier,fogstate
 _IsFogModifierFogState_Defaults=_,_
-_IsFogModifierFogState_Category=TC_UjAPI_Misc
+_IsFogModifierFogState_Category=TC_UjAPI_FogModifier
 
 
 IsFrameBorderEnabled=1,1,boolean,framehandle,integer
@@ -21382,7 +21056,7 @@ _IsKeyPressed_Category=TC_UjAPI_Misc
 
 IsMaskedToPlayer=1,1,boolean,real,real,player
 _IsMaskedToPlayer_Defaults=0,0,Player00
-_IsMaskedToPlayer_Category=TC_UjAPI_Player
+_IsMaskedToPlayer_Category=TC_UjAPI_Convert
 
 
 IsMouseKeyPressed=1,1,boolean,mousebuttontype
@@ -21392,12 +21066,12 @@ _IsMouseKeyPressed_Category=TC_UjAPI_Mouse
 
 IsNoDefeatCheat=1,1,boolean,nothing
 _IsNoDefeatCheat_Defaults=
-_IsNoDefeatCheat_Category=TC_UjAPI_Misc
+_IsNoDefeatCheat_Category=TC_UjAPI_AntiHack
 
 
 IsNoVictoryCheat=1,1,boolean,nothing
 _IsNoVictoryCheat_Defaults=
-_IsNoVictoryCheat_Category=TC_UjAPI_Misc
+_IsNoVictoryCheat_Category=TC_UjAPI_AntiHack
 
 
 IsOperationLimitEnabled=1,1,boolean,nothing
@@ -21457,12 +21131,12 @@ _IsSelectionEnabled_Category=TC_UjAPI_Misc
 
 IsSpecialEffectVisible=1,1,boolean,effect
 _IsSpecialEffectVisible_Defaults=_
-_IsSpecialEffectVisible_Category=TC_UjAPI_Misc
+_IsSpecialEffectVisible_Category=TC_UjAPI_SpecialEffect
 
 
 IsSpriteUber=1,1,boolean,sprite
 _IsSpriteUber_Defaults=_
-_IsSpriteUber_Category=TC_UjAPI_Misc
+_IsSpriteUber_Category=TC_UjAPI_Sprite
 
 
 IsStatbarEnabled=1,1,boolean,nothing
@@ -21547,12 +21221,12 @@ _IssueTargetOrderById_Category=TC_UjAPI_Order
 
 IsTargetIndicatorEnabled=1,1,boolean,nothing
 _IsTargetIndicatorEnabled_Defaults=
-_IsTargetIndicatorEnabled_Category=TC_UjAPI_Misc
+_IsTargetIndicatorEnabled_Category=TC_UjAPI_Widget
 
 
 IsTerrainPathable=1,1,boolean,real,real,pathingtype
 _IsTerrainPathable_Defaults=0,0,_
-_IsTerrainPathable_Category=TC_UjAPI_Misc
+_IsTerrainPathable_Category=TC_UjAPI_Terrain
 
 
 IsTextTagPermanent=1,1,real,texttag
@@ -21712,7 +21386,7 @@ _IsUnitTargetable_Category=TC_UjAPI_Unit
 
 IsUnitTower=1,1,boolean,unit
 _IsUnitTower_Defaults=_
-_IsUnitTower_Category=TC_UjAPI_Unit
+_IsUnitTower_Category=TC_UjAPI_Convert
 
 
 IsUnitTruesightImmune=1,1,boolean,unit
@@ -21722,7 +21396,7 @@ _IsUnitTruesightImmune_Category=TC_UjAPI_Unit
 
 IsVisibleToPlayer=1,1,boolean,real,real,player
 _IsVisibleToPlayer_Defaults=0,0,Player00
-_IsVisibleToPlayer_Category=TC_UjAPI_Player
+_IsVisibleToPlayer_Category=TC_UjAPI_Convert
 
 
 IsWar3ImageInvulnerable=1,1,boolean,war3image
@@ -22220,6 +21894,16 @@ _MathTanDeg_Defaults=0
 _MathTanDeg_Category=TC_UjAPI_Math
 
 
+MorphUnitToTypeId=1,1,nothing,unit,integer
+_MorphUnitToTypeId_Defaults=_,0
+_MorphUnitToTypeId_Category=TC_UjAPI_Convert
+
+
+MorphUnitToTypeIdEx=1,1,nothing,unit,integer,unitcode,boolean,boolean,integer,integer,boolean,boolean,ability,boolean
+_MorphUnitToTypeIdEx_Defaults=_,0,hfoo,true,true,0,0,true,true,_,true
+_MorphUnitToTypeIdEx_Category=TC_UjAPI_Convert
+
+
 MoveLightning=1,1,boolean,lightning,boolean,real,real,real,real
 _MoveLightning_Defaults=_,true,0,0,0,0
 _MoveLightning_Category=TC_UjAPI_Lightning
@@ -22228,6 +21912,16 @@ _MoveLightning_Category=TC_UjAPI_Lightning
 MoveLightningEx=1,1,boolean,lightning,boolean,real,real,real,real,real,real
 _MoveLightningEx_Defaults=_,true,0,0,0,0,0,0
 _MoveLightningEx_Category=TC_UjAPI_Lightning
+
+
+MoveRectTo=1,1,nothing,rect,real,real
+_MoveRectTo_Defaults=_,0,0
+_MoveRectTo_Category=TC_UjAPI_Convert
+
+
+MoveRectToLoc=1,1,nothing,rect,location
+_MoveRectToLoc_Defaults=_,_
+_MoveRectToLoc_Category=TC_UjAPI_Convert
 
 
 Not=1,1,boolexpr,boolexpr
@@ -22308,6 +22002,26 @@ _OrderId_Category=TC_UjAPI_Order
 OrderId2String=1,1,string,integer
 _OrderId2String_Defaults=0
 _OrderId2String_Category=TC_UjAPI_Order
+
+
+PanCameraTo=1,1,nothing,real,real
+_PanCameraTo_Defaults=0,0
+_PanCameraTo_Category=TC_UjAPI_Convert
+
+
+PanCameraToTimed=1,1,nothing,real,real,real
+_PanCameraToTimed_Defaults=0,0,0
+_PanCameraToTimed_Category=TC_UjAPI_Convert
+
+
+PanCameraToTimedWithZ=1,1,nothing,real,real,real,real
+_PanCameraToTimedWithZ_Defaults=0,0,0,0
+_PanCameraToTimedWithZ_Category=TC_UjAPI_Convert
+
+
+PanCameraToWithZ=1,1,nothing,real,real,real
+_PanCameraToWithZ_Defaults=0,0,0
+_PanCameraToWithZ_Category=TC_UjAPI_Convert
 
 
 ParseTags=1,1,string,string
@@ -22475,6 +22189,11 @@ _RemoveSaveDirectory_Defaults=_
 _RemoveSaveDirectory_Category=TC_UjAPI_Misc
 
 
+RemoveSavedString=1,1,nothing,hashtable,integer,integer
+_RemoveSavedString_Defaults=_,0,0
+_RemoveSavedString_Category=TC_UjAPI_Hashtable
+
+
 RenameSaveDirectory=1,1,boolean,string,string
 _RenameSaveDirectory_Defaults=_,_
 _RenameSaveDirectory_Category=TC_UjAPI_Misc
@@ -22510,6 +22229,11 @@ _ResetBuffFieldData_Defaults=_
 _ResetBuffFieldData_Category=TC_UjAPI_Buff
 
 
+ResetToGameCamera=1,1,nothing,real
+_ResetToGameCamera_Defaults=0
+_ResetToGameCamera_Category=TC_UjAPI_Convert
+
+
 RestoreUnit=1,1,unit,gamecache,string,string,player,real,real,real
 _RestoreUnit_Defaults=_,_,_,Player00,0,0,0
 _RestoreUnit_Category=TC_UjAPI_Unit
@@ -22517,7 +22241,7 @@ _RestoreUnit_Category=TC_UjAPI_Unit
 
 ReviveHero=1,1,boolean,unit,real,real,boolean
 _ReviveHero_Defaults=_,0,0,true
-_ReviveHero_Category=TC_UjAPI_Misc
+_ReviveHero_Category=TC_UjAPI_Hero
 
 
 ReviveUnit=1,1,boolean,unit,real,real
@@ -23052,42 +22776,47 @@ _SetDestructableStringField_Category=TC_UjAPI_Destructable
 
 SetDialogueSpeakerNameKey=1,1,boolean,sound,string
 _SetDialogueSpeakerNameKey_Defaults=_,_
-_SetDialogueSpeakerNameKey_Category=TC_UjAPI_Misc
+_SetDialogueSpeakerNameKey_Category=TC_UjAPI_Dialog
 
 
 SetDialogueTextKey=1,1,boolean,sound,string
 _SetDialogueTextKey_Defaults=_,_
-_SetDialogueTextKey_Category=TC_UjAPI_Misc
+_SetDialogueTextKey_Category=TC_UjAPI_Dialog
 
 
 SetEventAttackType=1,1,boolean,attacktype
 _SetEventAttackType_Defaults=_
-_SetEventAttackType_Category=TC_UjAPI_Misc
+_SetEventAttackType_Category=TC_UjAPI_Unit
 
 
 SetEventDamageExtraFlag=1,1,boolean,integer,boolean
 _SetEventDamageExtraFlag_Defaults=0,true
-_SetEventDamageExtraFlag_Category=TC_UjAPI_Misc
+_SetEventDamageExtraFlag_Category=TC_UjAPI_Unit
 
 
 SetEventDamageFlag=1,1,boolean,integer,boolean
 _SetEventDamageFlag_Defaults=0,true
-_SetEventDamageFlag_Category=TC_UjAPI_Misc
+_SetEventDamageFlag_Category=TC_UjAPI_Unit
 
 
 SetEventDamageType=1,1,boolean,damagetype
 _SetEventDamageType_Defaults=_
-_SetEventDamageType_Category=TC_UjAPI_Misc
+_SetEventDamageType_Category=TC_UjAPI_Unit
 
 
 SetEventDamageTypeFlags=1,1,boolean,integer
 _SetEventDamageTypeFlags_Defaults=0
-_SetEventDamageTypeFlags_Category=TC_UjAPI_Misc
+_SetEventDamageTypeFlags_Category=TC_UjAPI_Unit
 
 
 SetEventWeaponType=1,1,boolean,weapontype
 _SetEventWeaponType_Defaults=_
 _SetEventWeaponType_Category=TC_UjAPI_Misc
+
+
+SetFDFDataString=1,1,nothing,string,string
+_SetFDFDataString_Defaults=_,_
+_SetFDFDataString_Category=TC_UjAPI_String
 
 
 SetFrameAllPoints=1,1,boolean,framehandle,framehandle
@@ -23138,6 +22867,11 @@ _SetFrameSpriteVertexColour_Category=TC_UjAPI_Frame
 SetFrameSpriteYaw=1,1,boolean,framehandle,real
 _SetFrameSpriteYaw_Defaults=_,0
 _SetFrameSpriteYaw_Category=TC_UjAPI_Frame
+
+
+SetFrameTooltip=1,1,nothing,framehandle,framehandle
+_SetFrameTooltip_Defaults=_,_
+_SetFrameTooltip_Category=TC_UjAPI_Convert
 
 
 SetItemBooleanField=1,1,boolean,item,itembooleanfield,boolean
@@ -23223,6 +22957,16 @@ _SetLightningColour_Category=TC_UjAPI_Lightning
 SetMiniMapTexture=1,1,boolean,string
 _SetMiniMapTexture_Defaults=_
 _SetMiniMapTexture_Category=TC_UjAPI_Misc
+
+
+SetMiscDataString=1,1,nothing,string,string,integer,string
+_SetMiscDataString_Defaults=_,_,0,_
+_SetMiscDataString_Category=TC_UjAPI_String
+
+
+SetSkinDataString=1,1,nothing,string,string,string,integer,string
+_SetSkinDataString_Defaults=_,_,_,0,_
+_SetSkinDataString_Category=TC_UjAPI_String
 
 
 SetSoundFacialAnimationGroupLabel=1,1,boolean,sound,string
@@ -23342,7 +23086,7 @@ _StopJassThread_Category=TC_UjAPI_Jass
 
 StoreString=1,1,boolean,gamecache,string,string,string
 _StoreString_Defaults=_,_,_,_
-_StoreString_Category=TC_UjAPI_Misc
+_StoreString_Category=TC_UjAPI_String
 
 
 StoreUnit=1,1,boolean,gamecache,string,string,unit
@@ -23352,82 +23096,97 @@ _StoreUnit_Category=TC_UjAPI_Unit
 
 String2Id=1,1,integer,string
 _String2Id_Defaults=_
-_String2Id_Category=TC_UjAPI_Misc
+_String2Id_Category=TC_UjAPI_String
 
 
 StringContains=1,1,boolean,string,string,boolean
 _StringContains_Defaults=_,_,true
-_StringContains_Category=TC_UjAPI_Misc
+_StringContains_Category=TC_UjAPI_String
 
 
 StringCount=1,1,integer,string,string,boolean
 _StringCount_Defaults=_,_,true
-_StringCount_Category=TC_UjAPI_Misc
+_StringCount_Category=TC_UjAPI_String
 
 
 StringFind=1,1,integer,string,string,boolean
 _StringFind_Defaults=_,_,true
-_StringFind_Category=TC_UjAPI_Misc
+_StringFind_Category=TC_UjAPI_String
 
 
 StringFindFirstNotOf=1,1,integer,string,string,boolean
 _StringFindFirstNotOf_Defaults=_,_,true
-_StringFindFirstNotOf_Category=TC_UjAPI_Misc
+_StringFindFirstNotOf_Category=TC_UjAPI_String
 
 
 StringFindFirstOf=1,1,integer,string,string,boolean
 _StringFindFirstOf_Defaults=_,_,true
-_StringFindFirstOf_Category=TC_UjAPI_Misc
+_StringFindFirstOf_Category=TC_UjAPI_String
 
 
 StringFindLastNotOf=1,1,integer,string,string,boolean
 _StringFindLastNotOf_Defaults=_,_,true
-_StringFindLastNotOf_Category=TC_UjAPI_Misc
+_StringFindLastNotOf_Category=TC_UjAPI_String
 
 
 StringFindLastOf=1,1,integer,string,string,boolean
 _StringFindLastOf_Defaults=_,_,true
-_StringFindLastOf_Category=TC_UjAPI_Misc
+_StringFindLastOf_Category=TC_UjAPI_String
 
 
 StringHash=1,1,integer,string
 _StringHash_Defaults=_
-_StringHash_Category=TC_UjAPI_Misc
+_StringHash_Category=TC_UjAPI_String
 
 
 StringInsert=1,1,string,string,string,integer,boolean
 _StringInsert_Defaults=_,_,0,true
-_StringInsert_Category=TC_UjAPI_Misc
+_StringInsert_Category=TC_UjAPI_String
 
 
 StringReplace=1,1,string,string,string,string,boolean
 _StringReplace_Defaults=_,_,_,true
-_StringReplace_Category=TC_UjAPI_Misc
+_StringReplace_Category=TC_UjAPI_String
 
 
 StringReverse=1,1,string,string,boolean
 _StringReverse_Defaults=_,true
-_StringReverse_Category=TC_UjAPI_Misc
+_StringReverse_Category=TC_UjAPI_String
 
 
 StringTrim=1,1,string,string,boolean
 _StringTrim_Defaults=_,true
-_StringTrim_Category=TC_UjAPI_Misc
+_StringTrim_Category=TC_UjAPI_String
 
 
 StringTrimLeft=1,1,string,string,boolean
 _StringTrimLeft_Defaults=_,true
-_StringTrimLeft_Category=TC_UjAPI_Misc
+_StringTrimLeft_Category=TC_UjAPI_String
 
 
 StringTrimRight=1,1,string,string,boolean
 _StringTrimRight_Defaults=_,true
-_StringTrimRight_Category=TC_UjAPI_Misc
+_StringTrimRight_Category=TC_UjAPI_String
 
 
 SubString=1,1,string,string,integer,integer
 _SubString_Defaults=_,0,0
-_SubString_Category=TC_UjAPI_Misc
+_SubString_Category=TC_UjAPI_String
+
+
+SyncSavedString=1,1,nothing,hashtable,integer,integer
+_SyncSavedString_Defaults=_,0,0
+_SyncSavedString_Category=TC_UjAPI_Sync
+
+
+SyncStoredString=1,1,nothing,gamecache,string,string
+_SyncStoredString_Defaults=_,_,_
+_SyncStoredString_Category=TC_UjAPI_Sync
+
+
+SyncString=1,1,nothing,string
+_SyncString_Defaults=_
+_SyncString_Category=TC_UjAPI_Sync
 
 
 Tan=1,1,real,real
@@ -23437,22 +23196,22 @@ _Tan_Category=TC_UjAPI_Math
 
 TerrainDeformCrater=1,1,terraindeformation,real,real,real,real,integer,boolean
 _TerrainDeformCrater_Defaults=0,0,0,0,0,true
-_TerrainDeformCrater_Category=TC_UjAPI_Misc
+_TerrainDeformCrater_Category=TC_UjAPI_Terrain
 
 
 TerrainDeformRandom=1,1,terraindeformation,real,real,real,real,real,integer,integer
 _TerrainDeformRandom_Defaults=0,0,0,0,0,0,0
-_TerrainDeformRandom_Category=TC_UjAPI_Misc
+_TerrainDeformRandom_Category=TC_UjAPI_Terrain
 
 
 TerrainDeformRipple=1,1,terraindeformation,real,real,real,real,integer,integer,real,real,real,boolean
 _TerrainDeformRipple_Defaults=0,0,0,0,0,0,0,0,0,true
-_TerrainDeformRipple_Category=TC_UjAPI_Misc
+_TerrainDeformRipple_Category=TC_UjAPI_Terrain
 
 
 TerrainDeformWave=1,1,terraindeformation,real,real,real,real,real,real,real,real,integer,integer
 _TerrainDeformWave_Defaults=0,0,0,0,0,0,0,0,0,0
-_TerrainDeformWave_Category=TC_UjAPI_Misc
+_TerrainDeformWave_Category=TC_UjAPI_Terrain
 
 
 TextFileCountLines=1,1,integer,textfilehandle
@@ -23557,7 +23316,7 @@ _TriggerRegisterPlayerAllianceChange_Category=TC_UjAPI_Trigger
 
 TriggerRegisterPlayerHashtableDataSyncEvent=1,1,event,trigger,player,hashtable
 _TriggerRegisterPlayerHashtableDataSyncEvent_Defaults=_,Player00,_
-_TriggerRegisterPlayerHashtableDataSyncEvent_Category=TC_UjAPI_Trigger
+_TriggerRegisterPlayerHashtableDataSyncEvent_Category=TC_UjAPI_Hashtable
 
 
 TriggerRegisterPlayerKeyEvent=1,1,event,trigger,player,oskeytype,integer,boolean
@@ -23647,7 +23406,7 @@ _UnitAddItemById_Category=TC_UjAPI_Unit
 
 UnitAddItemToSlot=1,1,boolean,unit,item,integer
 _UnitAddItemToSlot_Defaults=_,_,0
-_UnitAddItemToSlot_Category=TC_UjAPI_Unit
+_UnitAddItemToSlot_Category=TC_UjAPI_Convert
 
 
 UnitAddType=1,1,boolean,unit,unittype

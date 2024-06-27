@@ -5,16 +5,35 @@ import {categoryIsMath} from './category-get.mjs'
  *  @return {number}
  */
 export default native => {
-    const n = native.name
+    const name = native.name
     const r = (native.returns ?? '').toString()
 
+    /**
+     * @param {...string} names
+     * @return {boolean}
+     */
+    const c = (...names) => {
+        for (const n of names) {
+            if (name.indexOf(n) >= 0) return true
+        }
+        return false
+    }
+
+    /**
+     * @param {...string} names
+     * @return {boolean}
+     */
+    const s = (...names) => {
+        for (const n of names) {
+            if (name.startsWith(n)) return true
+        }
+        return false
+    }
+
     if (
-        n.startsWith('Get') ||
-        n.startsWith('Is') ||
-        n.startsWith('Convert') ||
-        n.indexOf('2') >= 0 ||
-        n.startsWith('HandleTo') ||
-        n.indexOf('Id') >= 0 && r === 'integer' ||
+        s('Get', 'Is', 'Convert', 'HandleTo') ||
+        c('2', 'To', 'String') ||
+        c('Id') && r === 'integer' ||
         categoryIsMath(native)
     ) return 2
 

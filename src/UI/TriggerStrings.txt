@@ -299,31 +299,6 @@ OperatorCompareMultiboardItemHint=Just here for COMPATIBILITY reasons. Multiboar
 
 [TriggerActionStrings]
 
-Pow=Pow
-Pow="Pow(","real ",,~x,", ","real ",,~power,")"
-PowHint="[NATIVE]  real Pow (real x, real power)"
-
-
-SubString=SubString
-SubString="SubString(","string ",,~source,", ","integer ",,~start,", ","integer ",,~end,")"
-SubStringHint="[NATIVE]  string SubString (string source, integer start, integer end)"
-
-
-StringLength=StringLength
-StringLength="StringLength(","string ",,~s,")"
-StringLengthHint="[NATIVE]  integer StringLength (string s)"
-
-
-StringCase=StringCase
-StringCase="StringCase(","string ",,~source,", ","boolean ",,~upper,")"
-StringCaseHint="[NATIVE]  string StringCase (string source, boolean upper)"
-
-
-StringHash=StringHash
-StringHash="StringHash(","string ",,~s,")"
-StringHashHint="[NATIVE]  integer StringHash (string s)"
-
-
 SetMapName=SetMapName
 SetMapName="SetMapName(","string ",,~name,")"
 SetMapNameHint="[NATIVE]  nothing SetMapName (string name)"
@@ -1169,11 +1144,6 @@ UnitWakeUp="UnitWakeUp(","unit ",,~whichUnit,")"
 UnitWakeUpHint="[NATIVE]  nothing UnitWakeUp (unit whichUnit)"
 
 
-UnitIgnoreAlarmToggled=UnitIgnoreAlarmToggled
-UnitIgnoreAlarmToggled="UnitIgnoreAlarmToggled(","unit ",,~whichUnit,")"
-UnitIgnoreAlarmToggledHint="[NATIVE]  boolean UnitIgnoreAlarmToggled (unit whichUnit)"
-
-
 UnitPauseTimedLife=UnitPauseTimedLife
 UnitPauseTimedLife="UnitPauseTimedLife(","unit ",,~whichUnit,", ","boolean ",,~flag,")"
 UnitPauseTimedLifeHint="[NATIVE]  nothing UnitPauseTimedLife (unit whichUnit, boolean flag)"
@@ -1222,16 +1192,6 @@ WaygateActivateHint="[NATIVE]  nothing WaygateActivate (unit waygate, boolean ac
 WaygateIsActive=WaygateIsActive
 WaygateIsActive="WaygateIsActive(","unit ",,~waygate,")"
 WaygateIsActiveHint="[NATIVE]  boolean WaygateIsActive (unit waygate)"
-
-
-AddItemToStock=AddItemToStock
-AddItemToStock="AddItemToStock(","unit ",,~whichUnit,", ","integer ",,~itemId,", ","integer ",,~currentStock,", ","integer ",,~stockMax,")"
-AddItemToStockHint="[NATIVE]  nothing AddItemToStock (unit whichUnit, integer itemId, integer currentStock, integer stockMax)"
-
-
-AddUnitToStock=AddUnitToStock
-AddUnitToStock="AddUnitToStock(","unit ",,~whichUnit,", ","integer ",,~unitId,", ","integer ",,~currentStock,", ","integer ",,~stockMax,")"
-AddUnitToStockHint="[NATIVE]  nothing AddUnitToStock (unit whichUnit, integer unitId, integer currentStock, integer stockMax)"
 
 
 RemoveItemFromStock=RemoveItemFromStock
@@ -1489,11 +1449,6 @@ StoreUnit="StoreUnit(","gamecache ",,~cache,", ","string ",,~missionKey,", ","st
 StoreUnitHint="[NATIVE]  boolean StoreUnit (gamecache cache, string missionKey, string key, unit whichUnit)"
 
 
-StoreString=StoreString
-StoreString="StoreString(","gamecache ",,~cache,", ","string ",,~missionKey,", ","string ",,~key,", ","string ",,~value,")"
-StoreStringHint="[NATIVE]  boolean StoreString (gamecache cache, string missionKey, string key, string value)"
-
-
 SyncStoredInteger=SyncStoredInteger
 SyncStoredInteger="SyncStoredInteger(","gamecache ",,~cache,", ","string ",,~missionKey,", ","string ",,~key,")"
 SyncStoredIntegerHint="[NATIVE]  nothing SyncStoredInteger (gamecache cache, string missionKey, string key)"
@@ -1514,11 +1469,6 @@ SyncStoredUnit="SyncStoredUnit(","gamecache ",,~cache,", ","string ",,~missionKe
 SyncStoredUnitHint="[NATIVE]  nothing SyncStoredUnit (gamecache cache, string missionKey, string key)"
 
 
-SyncStoredString=SyncStoredString
-SyncStoredString="SyncStoredString(","gamecache ",,~cache,", ","string ",,~missionKey,", ","string ",,~key,")"
-SyncStoredStringHint="[NATIVE]  nothing SyncStoredString (gamecache cache, string missionKey, string key)"
-
-
 HaveStoredInteger=HaveStoredInteger
 HaveStoredInteger="HaveStoredInteger(","gamecache ",,~cache,", ","string ",,~missionKey,", ","string ",,~key,")"
 HaveStoredIntegerHint="[NATIVE]  boolean HaveStoredInteger (gamecache cache, string missionKey, string key)"
@@ -1537,11 +1487,6 @@ HaveStoredBooleanHint="[NATIVE]  boolean HaveStoredBoolean (gamecache cache, str
 HaveStoredUnit=HaveStoredUnit
 HaveStoredUnit="HaveStoredUnit(","gamecache ",,~cache,", ","string ",,~missionKey,", ","string ",,~key,")"
 HaveStoredUnitHint="[NATIVE]  boolean HaveStoredUnit (gamecache cache, string missionKey, string key)"
-
-
-HaveStoredString=HaveStoredString
-HaveStoredString="HaveStoredString(","gamecache ",,~cache,", ","string ",,~missionKey,", ","string ",,~key,")"
-HaveStoredStringHint="[NATIVE]  boolean HaveStoredString (gamecache cache, string missionKey, string key)"
 
 
 FlushGameCache=FlushGameCache
@@ -2004,11 +1949,6 @@ HaveSavedBoolean="HaveSavedBoolean(","hashtable ",,~table,", ","integer ",,~pare
 HaveSavedBooleanHint="[NATIVE]  boolean HaveSavedBoolean (hashtable table, integer parentKey, integer childKey)"
 
 
-HaveSavedString=HaveSavedString
-HaveSavedString="HaveSavedString(","hashtable ",,~table,", ","integer ",,~parentKey,", ","integer ",,~childKey,")"
-HaveSavedStringHint="[NATIVE]  boolean HaveSavedString (hashtable table, integer parentKey, integer childKey)"
-
-
 HaveSavedHandle=HaveSavedHandle
 HaveSavedHandle="HaveSavedHandle(","hashtable ",,~table,", ","integer ",,~parentKey,", ","integer ",,~childKey,")"
 HaveSavedHandleHint="[NATIVE]  boolean HaveSavedHandle (hashtable table, integer parentKey, integer childKey)"
@@ -2027,11 +1967,6 @@ RemoveSavedRealHint="[NATIVE]  nothing RemoveSavedReal (hashtable table, integer
 RemoveSavedBoolean=RemoveSavedBoolean
 RemoveSavedBoolean="RemoveSavedBoolean(","hashtable ",,~table,", ","integer ",,~parentKey,", ","integer ",,~childKey,")"
 RemoveSavedBooleanHint="[NATIVE]  nothing RemoveSavedBoolean (hashtable table, integer parentKey, integer childKey)"
-
-
-RemoveSavedString=RemoveSavedString
-RemoveSavedString="RemoveSavedString(","hashtable ",,~table,", ","integer ",,~parentKey,", ","integer ",,~childKey,")"
-RemoveSavedStringHint="[NATIVE]  nothing RemoveSavedString (hashtable table, integer parentKey, integer childKey)"
 
 
 RemoveSavedHandle=RemoveSavedHandle
@@ -2619,31 +2554,6 @@ StopCamera="StopCamera(",")"
 StopCameraHint="[NATIVE]  nothing StopCamera ()"
 
 
-ResetToGameCamera=ResetToGameCamera
-ResetToGameCamera="ResetToGameCamera(","real ",,~duration,")"
-ResetToGameCameraHint="[NATIVE]  nothing ResetToGameCamera (real duration)"
-
-
-PanCameraTo=PanCameraTo
-PanCameraTo="PanCameraTo(","real ",,~x,", ","real ",,~y,")"
-PanCameraToHint="[NATIVE]  nothing PanCameraTo (real x, real y)"
-
-
-PanCameraToTimed=PanCameraToTimed
-PanCameraToTimed="PanCameraToTimed(","real ",,~x,", ","real ",,~y,", ","real ",,~duration,")"
-PanCameraToTimedHint="[NATIVE]  nothing PanCameraToTimed (real x, real y, real duration)"
-
-
-PanCameraToWithZ=PanCameraToWithZ
-PanCameraToWithZ="PanCameraToWithZ(","real ",,~x,", ","real ",,~y,", ","real ",,~zOffsetDest,")"
-PanCameraToWithZHint="[NATIVE]  nothing PanCameraToWithZ (real x, real y, real zOffsetDest)"
-
-
-PanCameraToTimedWithZ=PanCameraToTimedWithZ
-PanCameraToTimedWithZ="PanCameraToTimedWithZ(","real ",,~x,", ","real ",,~y,", ","real ",,~zOffsetDest,", ","real ",,~duration,")"
-PanCameraToTimedWithZHint="[NATIVE]  nothing PanCameraToTimedWithZ (real x, real y, real zOffsetDest, real duration)"
-
-
 SetCinematicCamera=SetCinematicCamera
 SetCinematicCamera="SetCinematicCamera(","string ",,~cameraModelFile,")"
 SetCinematicCameraHint="[NATIVE]  nothing SetCinematicCamera (string cameraModelFile)"
@@ -2887,11 +2797,6 @@ SetSoundPositionHint="[NATIVE]  nothing SetSoundPosition (sound soundHandle, rea
 SetSoundVelocity=SetSoundVelocity
 SetSoundVelocity="SetSoundVelocity(","sound ",,~soundHandle,", ","real ",,~x,", ","real ",,~y,", ","real ",,~z,")"
 SetSoundVelocityHint="[NATIVE]  nothing SetSoundVelocity (sound soundHandle, real x, real y, real z)"
-
-
-AttachSoundToUnit=AttachSoundToUnit
-AttachSoundToUnit="AttachSoundToUnit(","sound ",,~soundHandle,", ","unit ",,~whichUnit,")"
-AttachSoundToUnitHint="[NATIVE]  nothing AttachSoundToUnit (sound soundHandle, unit whichUnit)"
 
 
 StartSound=StartSound
@@ -3209,36 +3114,6 @@ PreloadGenEnd="PreloadGenEnd(","string ",,~filename,")"
 PreloadGenEndHint="[NATIVE]  nothing PreloadGenEnd (string filename)"
 
 
-IntToHex=IntToHex
-IntToHex="IntToHex(","integer ",,~i,")"
-IntToHexHint="[UjAPI]  string IntToHex (integer i)"
-
-
-IntToChar=IntToChar
-IntToChar="IntToChar(","integer ",,~i,")"
-IntToCharHint="[UjAPI]  string IntToChar (integer i)"
-
-
-IntToRoman=IntToRoman
-IntToRoman="IntToRoman(","integer ",,~i,")"
-IntToRomanHint="[UjAPI]  string IntToRoman (integer i)"
-
-
-HexToInt=HexToInt
-HexToInt="HexToInt(","string ",,~hex,")"
-HexToIntHint="[UjAPI]  integer HexToInt (string hex)"
-
-
-IntegerToHandle=IntegerToHandle
-IntegerToHandle="IntegerToHandle(","integer ",,~i,")"
-IntegerToHandleHint="[UjAPI]  handle IntegerToHandle (integer i)"
-
-
-AddressToHandle=AddressToHandle
-AddressToHandle="AddressToHandle(","integer ",,~i,")"
-AddressToHandleHint="[UjAPI]  handle AddressToHandle (integer i)"
-
-
 RunJassScriptEx=RunJassScriptEx
 RunJassScriptEx="RunJassScriptEx(","string ",,~parentScriptFile,", ","string ",,~helperScriptFile,", ","string ",,~jassScriptFile,")"
 RunJassScriptExHint="[UjAPI]  jassthread RunJassScriptEx (string parentScriptFile, string helperScriptFile, string jassScriptFile)"
@@ -3269,11 +3144,6 @@ SetJassGlobalReal="SetJassGlobalReal(","jassthread ",,~thread,", ","string ",,~v
 SetJassGlobalRealHint="[UjAPI]  boolean SetJassGlobalReal (jassthread thread, string variableName, real value)"
 
 
-SetJassGlobalString=SetJassGlobalString
-SetJassGlobalString="SetJassGlobalString(","jassthread ",,~thread,", ","string ",,~variableName,", ","string ",,~value,")"
-SetJassGlobalStringHint="[UjAPI]  boolean SetJassGlobalString (jassthread thread, string variableName, string value)"
-
-
 SetJassGlobalHandle=SetJassGlobalHandle
 SetJassGlobalHandle="SetJassGlobalHandle(","jassthread ",,~thread,", ","string ",,~variableName,", ","handle ",,~value,")"
 SetJassGlobalHandleHint="[UjAPI]  boolean SetJassGlobalHandle (jassthread thread, string variableName, handle value)"
@@ -3292,11 +3162,6 @@ SetJassLocalIntegerHint="[UjAPI]  boolean SetJassLocalInteger (string variableNa
 SetJassLocalReal=SetJassLocalReal
 SetJassLocalReal="SetJassLocalReal(","string ",,~variableName,", ","real ",,~value,")"
 SetJassLocalRealHint="[UjAPI]  boolean SetJassLocalReal (string variableName, real value)"
-
-
-SetJassLocalString=SetJassLocalString
-SetJassLocalString="SetJassLocalString(","string ",,~variableName,", ","string ",,~value,")"
-SetJassLocalStringHint="[UjAPI]  boolean SetJassLocalString (string variableName, string value)"
 
 
 SetJassLocalHandle=SetJassLocalHandle
@@ -3327,71 +3192,6 @@ ExecuteCodeHint="[UjAPI]  nothing ExecuteCode (code c)"
 ExecuteFuncEx=ExecuteFuncEx
 ExecuteFuncEx="ExecuteFuncEx(","string ",,~funcName,")"
 ExecuteFuncExHint="[UjAPI]  nothing ExecuteFuncEx (string funcName)"
-
-
-StringContains=StringContains
-StringContains="StringContains(","string ",,~s,", ","string ",,~whichString,", ","boolean ",,~caseSensitive,")"
-StringContainsHint="[UjAPI]  boolean StringContains (string s, string whichString, boolean caseSensitive)"
-
-
-StringFind=StringFind
-StringFind="StringFind(","string ",,~s,", ","string ",,~whichString,", ","boolean ",,~caseSensitive,")"
-StringFindHint="[UjAPI]  integer StringFind (string s, string whichString, boolean caseSensitive)"
-
-
-StringFindFirstOf=StringFindFirstOf
-StringFindFirstOf="StringFindFirstOf(","string ",,~s,", ","string ",,~whichString,", ","boolean ",,~caseSensitive,")"
-StringFindFirstOfHint="[UjAPI]  integer StringFindFirstOf (string s, string whichString, boolean caseSensitive)"
-
-
-StringFindFirstNotOf=StringFindFirstNotOf
-StringFindFirstNotOf="StringFindFirstNotOf(","string ",,~s,", ","string ",,~whichString,", ","boolean ",,~caseSensitive,")"
-StringFindFirstNotOfHint="[UjAPI]  integer StringFindFirstNotOf (string s, string whichString, boolean caseSensitive)"
-
-
-StringFindLastOf=StringFindLastOf
-StringFindLastOf="StringFindLastOf(","string ",,~s,", ","string ",,~whichString,", ","boolean ",,~caseSensitive,")"
-StringFindLastOfHint="[UjAPI]  integer StringFindLastOf (string s, string whichString, boolean caseSensitive)"
-
-
-StringFindLastNotOf=StringFindLastNotOf
-StringFindLastNotOf="StringFindLastNotOf(","string ",,~s,", ","string ",,~whichString,", ","boolean ",,~caseSensitive,")"
-StringFindLastNotOfHint="[UjAPI]  integer StringFindLastNotOf (string s, string whichString, boolean caseSensitive)"
-
-
-StringCount=StringCount
-StringCount="StringCount(","string ",,~s,", ","string ",,~whichString,", ","boolean ",,~caseSensitive,")"
-StringCountHint="[UjAPI]  integer StringCount (string s, string whichString, boolean caseSensitive)"
-
-
-StringTrimLeft=StringTrimLeft
-StringTrimLeft="StringTrimLeft(","string ",,~s,", ","boolean ",,~caseSensitive,")"
-StringTrimLeftHint="[UjAPI]  string StringTrimLeft (string s, boolean caseSensitive)"
-
-
-StringTrimRight=StringTrimRight
-StringTrimRight="StringTrimRight(","string ",,~s,", ","boolean ",,~caseSensitive,")"
-StringTrimRightHint="[UjAPI]  string StringTrimRight (string s, boolean caseSensitive)"
-
-
-StringTrim=StringTrim
-StringTrim="StringTrim(","string ",,~s,", ","boolean ",,~caseSensitive,")"
-StringTrimHint="[UjAPI]  string StringTrim (string s, boolean caseSensitive)"
-
-
-StringReverse=StringReverse
-StringReverse="StringReverse(","string ",,~s,", ","boolean ",,~caseSensitive,")"
-StringReverseHint="[UjAPI]  string StringReverse (string s, boolean caseSensitive)"
-
-
-StringReplace=StringReplace
-StringReplace="StringReplace(","string ",,~s,", ","string ",,~whichString,", ","string ",,~replaceWith,", ","boolean ",,~caseSensitive,")"
-StringReplaceHint="[UjAPI]  string StringReplace (string s, string whichString, string replaceWith, boolean caseSensitive)"
-
-
-StringInsert=StringInsert
-StringInsert="StringInsert(","string ",,~s,", ","string ",,~whichString,", ","integer ",,~whichPosition,", ","boolean ",,~caseSensitive,")"
-StringInsertHint="[UjAPI]  string StringInsert (string s, string whichString, integer whichPosition, boolean caseSensitive)"
 
 
 ConsoleEnable=ConsoleEnable
@@ -3472,21 +3272,6 @@ TextFileReadHint="[UjAPI]  string TextFileRead (textfilehandle whichTextFile)"
 TextFileWriteLine=TextFileWriteLine
 TextFileWriteLine="TextFileWriteLine(","textfilehandle ",,~whichTextFile,", ","string ",,~text,")"
 TextFileWriteLineHint="[UjAPI]  nothing TextFileWriteLine (textfilehandle whichTextFile, string text)"
-
-
-SetMiscDataString=SetMiscDataString
-SetMiscDataString="SetMiscDataString(","string ",,~sectionName,", ","string ",,~optionName,", ","integer ",,~index,", ","string ",,~value,")"
-SetMiscDataStringHint="[UjAPI]  nothing SetMiscDataString (string sectionName, string optionName, integer index, string value)"
-
-
-SetSkinDataString=SetSkinDataString
-SetSkinDataString="SetSkinDataString(","string ",,~raceName,", ","string ",,~sectionName,", ","string ",,~optionName,", ","integer ",,~index,", ","string ",,~value,")"
-SetSkinDataStringHint="[UjAPI]  nothing SetSkinDataString (string raceName, string sectionName, string optionName, integer index, string value)"
-
-
-SetFDFDataString=SetFDFDataString
-SetFDFDataString="SetFDFDataString(","string ",,~sectionName,", ","string ",,~value,")"
-SetFDFDataStringHint="[UjAPI]  nothing SetFDFDataString (string sectionName, string value)"
 
 
 SetVisionMax=SetVisionMax
@@ -3702,16 +3487,6 @@ DisplayChatMessageHint="[UjAPI]  nothing DisplayChatMessage (player whichPlayer,
 DisplayTimedChatMessage=DisplayTimedChatMessage
 DisplayTimedChatMessage="DisplayTimedChatMessage(","player ",,~whichPlayer,", ","integer ",,~recipient,", ","real ",,~duration,", ","string ",,~message,")"
 DisplayTimedChatMessageHint="[UjAPI]  nothing DisplayTimedChatMessage (player whichPlayer, integer recipient, real duration, string message)"
-
-
-DisplayTopMessage=DisplayTopMessage
-DisplayTopMessage="DisplayTopMessage(","player ",,~toPlayer,", ","string ",,~message,")"
-DisplayTopMessageHint="[UjAPI]  nothing DisplayTopMessage (player toPlayer, string message)"
-
-
-DisplayTimedTopMessage=DisplayTimedTopMessage
-DisplayTimedTopMessage="DisplayTimedTopMessage(","player ",,~toPlayer,", ","real ",,~duration,", ","string ",,~message,")"
-DisplayTimedTopMessageHint="[UjAPI]  nothing DisplayTimedTopMessage (player toPlayer, real duration, string message)"
 
 
 EnumHandlesOfType=EnumHandlesOfType
@@ -4994,11 +4769,6 @@ SetAbilityBaseRealFieldById="SetAbilityBaseRealFieldById(","integer ",,~aid,", "
 SetAbilityBaseRealFieldByIdHint="[UjAPI]  boolean SetAbilityBaseRealFieldById (integer aid, abilityrealfield whichField, real value)"
 
 
-SetAbilityBaseStringFieldById=SetAbilityBaseStringFieldById
-SetAbilityBaseStringFieldById="SetAbilityBaseStringFieldById(","integer ",,~aid,", ","abilitystringfield ",,~whichField,", ","string ",,~value,")"
-SetAbilityBaseStringFieldByIdHint="[UjAPI]  boolean SetAbilityBaseStringFieldById (integer aid, abilitystringfield whichField, string value)"
-
-
 SetAbilityBaseIntegerLevelFieldById=SetAbilityBaseIntegerLevelFieldById
 SetAbilityBaseIntegerLevelFieldById="SetAbilityBaseIntegerLevelFieldById(","integer ",,~aid,", ","abilityintegerlevelfield ",,~whichField,", ","integer ",,~level,", ","integer ",,~value,")"
 SetAbilityBaseIntegerLevelFieldByIdHint="[UjAPI]  boolean SetAbilityBaseIntegerLevelFieldById (integer aid, abilityintegerlevelfield whichField, integer level, integer value)"
@@ -5012,11 +4782,6 @@ SetAbilityBaseBooleanLevelFieldByIdHint="[UjAPI]  boolean SetAbilityBaseBooleanL
 SetAbilityBaseRealLevelFieldById=SetAbilityBaseRealLevelFieldById
 SetAbilityBaseRealLevelFieldById="SetAbilityBaseRealLevelFieldById(","integer ",,~aid,", ","abilityreallevelfield ",,~whichField,", ","integer ",,~level,", ","real ",,~value,")"
 SetAbilityBaseRealLevelFieldByIdHint="[UjAPI]  boolean SetAbilityBaseRealLevelFieldById (integer aid, abilityreallevelfield whichField, integer level, real value)"
-
-
-SetAbilityBaseStringLevelFieldById=SetAbilityBaseStringLevelFieldById
-SetAbilityBaseStringLevelFieldById="SetAbilityBaseStringLevelFieldById(","integer ",,~aid,", ","abilitystringlevelfield ",,~whichField,", ","integer ",,~level,", ","string ",,~value,")"
-SetAbilityBaseStringLevelFieldByIdHint="[UjAPI]  boolean SetAbilityBaseStringLevelFieldById (integer aid, abilitystringlevelfield whichField, integer level, string value)"
 
 
 SetAbilityBaseIntegerLevelArrayFieldById=SetAbilityBaseIntegerLevelArrayFieldById
@@ -5064,21 +4829,6 @@ RemoveAbilityBaseRealLevelArrayFieldById="RemoveAbilityBaseRealLevelArrayFieldBy
 RemoveAbilityBaseRealLevelArrayFieldByIdHint="[UjAPI]  boolean RemoveAbilityBaseRealLevelArrayFieldById (integer aid, abilityreallevelarrayfield whichField, integer level, real value)"
 
 
-SetAbilityBaseStringLevelArrayFieldById=SetAbilityBaseStringLevelArrayFieldById
-SetAbilityBaseStringLevelArrayFieldById="SetAbilityBaseStringLevelArrayFieldById(","integer ",,~aid,", ","abilitystringlevelarrayfield ",,~whichField,", ","integer ",,~level,", ","integer ",,~index,", ","string ",,~value,")"
-SetAbilityBaseStringLevelArrayFieldByIdHint="[UjAPI]  boolean SetAbilityBaseStringLevelArrayFieldById (integer aid, abilitystringlevelarrayfield whichField, integer level, integer index, string value)"
-
-
-AddAbilityBaseStringLevelArrayFieldById=AddAbilityBaseStringLevelArrayFieldById
-AddAbilityBaseStringLevelArrayFieldById="AddAbilityBaseStringLevelArrayFieldById(","integer ",,~aid,", ","abilitystringlevelarrayfield ",,~whichField,", ","integer ",,~level,", ","string ",,~value,")"
-AddAbilityBaseStringLevelArrayFieldByIdHint="[UjAPI]  boolean AddAbilityBaseStringLevelArrayFieldById (integer aid, abilitystringlevelarrayfield whichField, integer level, string value)"
-
-
-RemoveAbilityBaseStringLevelArrayFieldById=RemoveAbilityBaseStringLevelArrayFieldById
-RemoveAbilityBaseStringLevelArrayFieldById="RemoveAbilityBaseStringLevelArrayFieldById(","integer ",,~aid,", ","abilitystringlevelarrayfield ",,~whichField,", ","integer ",,~level,", ","string ",,~value,")"
-RemoveAbilityBaseStringLevelArrayFieldByIdHint="[UjAPI]  boolean RemoveAbilityBaseStringLevelArrayFieldById (integer aid, abilitystringlevelarrayfield whichField, integer level, string value)"
-
-
 SetAbilityIntegerField=SetAbilityIntegerField
 SetAbilityIntegerField="SetAbilityIntegerField(","ability ",,~whichAbility,", ","abilityintegerfield ",,~whichField,", ","integer ",,~value,")"
 SetAbilityIntegerFieldHint="[UjAPI]  boolean SetAbilityIntegerField (ability whichAbility, abilityintegerfield whichField, integer value)"
@@ -5094,11 +4844,6 @@ SetAbilityRealField="SetAbilityRealField(","ability ",,~whichAbility,", ","abili
 SetAbilityRealFieldHint="[UjAPI]  boolean SetAbilityRealField (ability whichAbility, abilityrealfield whichField, real value)"
 
 
-SetAbilityStringField=SetAbilityStringField
-SetAbilityStringField="SetAbilityStringField(","ability ",,~whichAbility,", ","abilitystringfield ",,~whichField,", ","string ",,~value,")"
-SetAbilityStringFieldHint="[UjAPI]  boolean SetAbilityStringField (ability whichAbility, abilitystringfield whichField, string value)"
-
-
 SetAbilityIntegerLevelField=SetAbilityIntegerLevelField
 SetAbilityIntegerLevelField="SetAbilityIntegerLevelField(","ability ",,~whichAbility,", ","abilityintegerlevelfield ",,~whichField,", ","integer ",,~level,", ","integer ",,~value,")"
 SetAbilityIntegerLevelFieldHint="[UjAPI]  boolean SetAbilityIntegerLevelField (ability whichAbility, abilityintegerlevelfield whichField, integer level, integer value)"
@@ -5112,11 +4857,6 @@ SetAbilityBooleanLevelFieldHint="[UjAPI]  boolean SetAbilityBooleanLevelField (a
 SetAbilityRealLevelField=SetAbilityRealLevelField
 SetAbilityRealLevelField="SetAbilityRealLevelField(","ability ",,~whichAbility,", ","abilityreallevelfield ",,~whichField,", ","integer ",,~level,", ","real ",,~value,")"
 SetAbilityRealLevelFieldHint="[UjAPI]  boolean SetAbilityRealLevelField (ability whichAbility, abilityreallevelfield whichField, integer level, real value)"
-
-
-SetAbilityStringLevelField=SetAbilityStringLevelField
-SetAbilityStringLevelField="SetAbilityStringLevelField(","ability ",,~whichAbility,", ","abilitystringlevelfield ",,~whichField,", ","integer ",,~level,", ","string ",,~value,")"
-SetAbilityStringLevelFieldHint="[UjAPI]  boolean SetAbilityStringLevelField (ability whichAbility, abilitystringlevelfield whichField, integer level, string value)"
 
 
 SetAbilityIntegerLevelArrayField=SetAbilityIntegerLevelArrayField
@@ -5162,21 +4902,6 @@ AddAbilityRealLevelArrayFieldHint="[UjAPI]  boolean AddAbilityRealLevelArrayFiel
 RemoveAbilityRealLevelArrayField=RemoveAbilityRealLevelArrayField
 RemoveAbilityRealLevelArrayField="RemoveAbilityRealLevelArrayField(","ability ",,~whichAbility,", ","abilityreallevelarrayfield ",,~whichField,", ","integer ",,~level,", ","real ",,~value,")"
 RemoveAbilityRealLevelArrayFieldHint="[UjAPI]  boolean RemoveAbilityRealLevelArrayField (ability whichAbility, abilityreallevelarrayfield whichField, integer level, real value)"
-
-
-SetAbilityStringLevelArrayField=SetAbilityStringLevelArrayField
-SetAbilityStringLevelArrayField="SetAbilityStringLevelArrayField(","ability ",,~whichAbility,", ","abilitystringlevelarrayfield ",,~whichField,", ","integer ",,~level,", ","integer ",,~index,", ","string ",,~value,")"
-SetAbilityStringLevelArrayFieldHint="[UjAPI]  boolean SetAbilityStringLevelArrayField (ability whichAbility, abilitystringlevelarrayfield whichField, integer level, integer index, string value)"
-
-
-AddAbilityStringLevelArrayField=AddAbilityStringLevelArrayField
-AddAbilityStringLevelArrayField="AddAbilityStringLevelArrayField(","ability ",,~whichAbility,", ","abilitystringlevelarrayfield ",,~whichField,", ","integer ",,~level,", ","string ",,~value,")"
-AddAbilityStringLevelArrayFieldHint="[UjAPI]  boolean AddAbilityStringLevelArrayField (ability whichAbility, abilitystringlevelarrayfield whichField, integer level, string value)"
-
-
-RemoveAbilityStringLevelArrayField=RemoveAbilityStringLevelArrayField
-RemoveAbilityStringLevelArrayField="RemoveAbilityStringLevelArrayField(","ability ",,~whichAbility,", ","abilitystringlevelarrayfield ",,~whichField,", ","integer ",,~level,", ","string ",,~value,")"
-RemoveAbilityStringLevelArrayFieldHint="[UjAPI]  boolean RemoveAbilityStringLevelArrayField (ability whichAbility, abilitystringlevelarrayfield whichField, integer level, string value)"
 
 
 ResetAbilityFieldData=ResetAbilityFieldData
@@ -5309,11 +5034,6 @@ SetBuffBaseRealFieldById="SetBuffBaseRealFieldById(","integer ",,~bid,", ","abil
 SetBuffBaseRealFieldByIdHint="[UjAPI]  boolean SetBuffBaseRealFieldById (integer bid, abilityrealfield whichField, real value)"
 
 
-SetBuffBaseStringFieldById=SetBuffBaseStringFieldById
-SetBuffBaseStringFieldById="SetBuffBaseStringFieldById(","integer ",,~bid,", ","abilitystringfield ",,~whichField,", ","string ",,~value,")"
-SetBuffBaseStringFieldByIdHint="[UjAPI]  boolean SetBuffBaseStringFieldById (integer bid, abilitystringfield whichField, string value)"
-
-
 SetBuffBaseIntegerArrayFieldById=SetBuffBaseIntegerArrayFieldById
 SetBuffBaseIntegerArrayFieldById="SetBuffBaseIntegerArrayFieldById(","integer ",,~bid,", ","abilityintegerfield ",,~whichField,", ","integer ",,~index,", ","integer ",,~value,")"
 SetBuffBaseIntegerArrayFieldByIdHint="[UjAPI]  boolean SetBuffBaseIntegerArrayFieldById (integer bid, abilityintegerfield whichField, integer index, integer value)"
@@ -5359,21 +5079,6 @@ RemoveBuffBaseRealArrayFieldById="RemoveBuffBaseRealArrayFieldById(","integer ",
 RemoveBuffBaseRealArrayFieldByIdHint="[UjAPI]  boolean RemoveBuffBaseRealArrayFieldById (integer bid, abilityrealfield whichField, real value)"
 
 
-SetBuffBaseStringArrayFieldById=SetBuffBaseStringArrayFieldById
-SetBuffBaseStringArrayFieldById="SetBuffBaseStringArrayFieldById(","integer ",,~bid,", ","abilitystringfield ",,~whichField,", ","integer ",,~index,", ","string ",,~value,")"
-SetBuffBaseStringArrayFieldByIdHint="[UjAPI]  boolean SetBuffBaseStringArrayFieldById (integer bid, abilitystringfield whichField, integer index, string value)"
-
-
-AddBuffBaseStringArrayFieldById=AddBuffBaseStringArrayFieldById
-AddBuffBaseStringArrayFieldById="AddBuffBaseStringArrayFieldById(","integer ",,~bid,", ","abilitystringfield ",,~whichField,", ","string ",,~value,")"
-AddBuffBaseStringArrayFieldByIdHint="[UjAPI]  boolean AddBuffBaseStringArrayFieldById (integer bid, abilitystringfield whichField, string value)"
-
-
-RemoveBuffBaseStringArrayFieldById=RemoveBuffBaseStringArrayFieldById
-RemoveBuffBaseStringArrayFieldById="RemoveBuffBaseStringArrayFieldById(","integer ",,~bid,", ","abilitystringfield ",,~whichField,", ","string ",,~value,")"
-RemoveBuffBaseStringArrayFieldByIdHint="[UjAPI]  boolean RemoveBuffBaseStringArrayFieldById (integer bid, abilitystringfield whichField, string value)"
-
-
 SetBuffIntegerField=SetBuffIntegerField
 SetBuffIntegerField="SetBuffIntegerField(","buff ",,~whichBuff,", ","abilityintegerfield ",,~whichField,", ","integer ",,~value,")"
 SetBuffIntegerFieldHint="[UjAPI]  boolean SetBuffIntegerField (buff whichBuff, abilityintegerfield whichField, integer value)"
@@ -5387,11 +5092,6 @@ SetBuffBooleanFieldHint="[UjAPI]  boolean SetBuffBooleanField (buff whichBuff, a
 SetBuffRealField=SetBuffRealField
 SetBuffRealField="SetBuffRealField(","buff ",,~whichBuff,", ","abilityrealfield ",,~whichField,", ","real ",,~value,")"
 SetBuffRealFieldHint="[UjAPI]  boolean SetBuffRealField (buff whichBuff, abilityrealfield whichField, real value)"
-
-
-SetBuffStringField=SetBuffStringField
-SetBuffStringField="SetBuffStringField(","buff ",,~whichBuff,", ","abilitystringfield ",,~whichField,", ","string ",,~value,")"
-SetBuffStringFieldHint="[UjAPI]  boolean SetBuffStringField (buff whichBuff, abilitystringfield whichField, string value)"
 
 
 SetBuffIntegerArrayField=SetBuffIntegerArrayField
@@ -5437,21 +5137,6 @@ AddBuffRealArrayFieldHint="[UjAPI]  boolean AddBuffRealArrayField (buff whichBuf
 RemoveBuffRealArrayField=RemoveBuffRealArrayField
 RemoveBuffRealArrayField="RemoveBuffRealArrayField(","buff ",,~whichBuff,", ","abilityrealfield ",,~whichField,", ","real ",,~value,")"
 RemoveBuffRealArrayFieldHint="[UjAPI]  boolean RemoveBuffRealArrayField (buff whichBuff, abilityrealfield whichField, real value)"
-
-
-SetBuffStringArrayField=SetBuffStringArrayField
-SetBuffStringArrayField="SetBuffStringArrayField(","buff ",,~whichBuff,", ","abilitystringfield ",,~whichField,", ","integer ",,~index,", ","string ",,~value,")"
-SetBuffStringArrayFieldHint="[UjAPI]  boolean SetBuffStringArrayField (buff whichBuff, abilitystringfield whichField, integer index, string value)"
-
-
-AddBuffStringArrayField=AddBuffStringArrayField
-AddBuffStringArrayField="AddBuffStringArrayField(","buff ",,~whichBuff,", ","abilitystringfield ",,~whichField,", ","string ",,~value,")"
-AddBuffStringArrayFieldHint="[UjAPI]  boolean AddBuffStringArrayField (buff whichBuff, abilitystringfield whichField, string value)"
-
-
-RemoveBuffStringArrayField=RemoveBuffStringArrayField
-RemoveBuffStringArrayField="RemoveBuffStringArrayField(","buff ",,~whichBuff,", ","abilitystringfield ",,~whichField,", ","string ",,~value,")"
-RemoveBuffStringArrayFieldHint="[UjAPI]  boolean RemoveBuffStringArrayField (buff whichBuff, abilitystringfield whichField, string value)"
 
 
 ResetBuffFieldData=ResetBuffFieldData
@@ -5677,16 +5362,6 @@ SetWar3ImageAnimationOffsetPercentHint="[UjAPI]  nothing SetWar3ImageAnimationOf
 CreateSprite=CreateSprite
 CreateSprite="CreateSprite(","boolean ",,~isUber,")"
 CreateSpriteHint="[UjAPI]  sprite CreateSprite (boolean isUber)"
-
-
-AttachSpriteToTarget=AttachSpriteToTarget
-AttachSpriteToTarget="AttachSpriteToTarget(","sprite ",,~whichSprite,", ","sprite ",,~targetSprite,", ","string ",,~attachPointName,")"
-AttachSpriteToTargetHint="[UjAPI]  sprite AttachSpriteToTarget (sprite whichSprite, sprite targetSprite, string attachPointName)"
-
-
-AddSpriteToTarget=AddSpriteToTarget
-AddSpriteToTarget="AddSpriteToTarget(","string ",,~modelName,", ","sprite ",,~targetSprite,", ","string ",,~attachPointName,")"
-AddSpriteToTargetHint="[UjAPI]  sprite AddSpriteToTarget (string modelName, sprite targetSprite, string attachPointName)"
 
 
 DetachSprite=DetachSprite
@@ -6394,11 +6069,6 @@ TriggerRegisterWidgetEvent="TriggerRegisterWidgetEvent(","trigger ",,~whichTrigg
 TriggerRegisterWidgetEventHint="[UjAPI]  event TriggerRegisterWidgetEvent (trigger whichTrigger, widget whichWidget, widgetevent whichWidgetEvent)"
 
 
-SetDestructableStringField=SetDestructableStringField
-SetDestructableStringField="SetDestructableStringField(","destructable ",,~whichDestructable,", ","destructablestringfield ",,~whichField,", ","string ",,~value,")"
-SetDestructableStringFieldHint="[UjAPI]  boolean SetDestructableStringField (destructable whichDestructable, destructablestringfield whichField, string value)"
-
-
 SetDestructableVariation=SetDestructableVariation
 SetDestructableVariation="SetDestructableVariation(","destructable ",,~whichDestructable,", ","integer ",,~variation,")"
 SetDestructableVariationHint="[UjAPI]  nothing SetDestructableVariation (destructable whichDestructable, integer variation)"
@@ -6584,11 +6254,6 @@ SetBaseItemRealFieldById="SetBaseItemRealFieldById(","integer ",,~itemId,", ","i
 SetBaseItemRealFieldByIdHint="[UjAPI]  boolean SetBaseItemRealFieldById (integer itemId, itemrealfield whichField, real value)"
 
 
-SetBaseItemStringFieldById=SetBaseItemStringFieldById
-SetBaseItemStringFieldById="SetBaseItemStringFieldById(","integer ",,~itemId,", ","itemstringfield ",,~whichField,", ","string ",,~value,")"
-SetBaseItemStringFieldByIdHint="[UjAPI]  boolean SetBaseItemStringFieldById (integer itemId, itemstringfield whichField, string value)"
-
-
 SetItemIntegerField=SetItemIntegerField
 SetItemIntegerField="SetItemIntegerField(","item ",,~whichItem,", ","itemintegerfield ",,~whichField,", ","integer ",,~value,")"
 SetItemIntegerFieldHint="[UjAPI]  boolean SetItemIntegerField (item whichItem, itemintegerfield whichField, integer value)"
@@ -6602,11 +6267,6 @@ SetItemBooleanFieldHint="[UjAPI]  boolean SetItemBooleanField (item whichItem, i
 SetItemRealField=SetItemRealField
 SetItemRealField="SetItemRealField(","item ",,~whichItem,", ","itemrealfield ",,~whichField,", ","real ",,~value,")"
 SetItemRealFieldHint="[UjAPI]  boolean SetItemRealField (item whichItem, itemrealfield whichField, real value)"
-
-
-SetItemStringField=SetItemStringField
-SetItemStringField="SetItemStringField(","item ",,~whichItem,", ","itemstringfield ",,~whichField,", ","string ",,~value,")"
-SetItemStringFieldHint="[UjAPI]  boolean SetItemStringField (item whichItem, itemstringfield whichField, string value)"
 
 
 SetItemPositionWithZ=SetItemPositionWithZ
@@ -6824,11 +6484,6 @@ SetUnitBaseRealFieldById="SetUnitBaseRealFieldById(","integer ",,~unitTypeId,", 
 SetUnitBaseRealFieldByIdHint="[UjAPI]  boolean SetUnitBaseRealFieldById (integer unitTypeId, unitrealfield whichField, real value)"
 
 
-SetUnitBaseStringFieldById=SetUnitBaseStringFieldById
-SetUnitBaseStringFieldById="SetUnitBaseStringFieldById(","integer ",,~unitTypeId,", ","unitstringfield ",,~whichField,", ","string ",,~value,")"
-SetUnitBaseStringFieldByIdHint="[UjAPI]  boolean SetUnitBaseStringFieldById (integer unitTypeId, unitstringfield whichField, string value)"
-
-
 SetUnitBaseWeaponIntegerFieldById=SetUnitBaseWeaponIntegerFieldById
 SetUnitBaseWeaponIntegerFieldById="SetUnitBaseWeaponIntegerFieldById(","integer ",,~unitTypeId,", ","unitweaponintegerfield ",,~whichField,", ","integer ",,~index,", ","integer ",,~value,")"
 SetUnitBaseWeaponIntegerFieldByIdHint="[UjAPI]  boolean SetUnitBaseWeaponIntegerFieldById (integer unitTypeId, unitweaponintegerfield whichField, integer index, integer value)"
@@ -6842,11 +6497,6 @@ SetUnitBaseWeaponBooleanFieldByIdHint="[UjAPI]  boolean SetUnitBaseWeaponBoolean
 SetUnitBaseWeaponRealFieldById=SetUnitBaseWeaponRealFieldById
 SetUnitBaseWeaponRealFieldById="SetUnitBaseWeaponRealFieldById(","integer ",,~unitTypeId,", ","unitweaponrealfield ",,~whichField,", ","integer ",,~index,", ","real ",,~value,")"
 SetUnitBaseWeaponRealFieldByIdHint="[UjAPI]  boolean SetUnitBaseWeaponRealFieldById (integer unitTypeId, unitweaponrealfield whichField, integer index, real value)"
-
-
-SetUnitBaseWeaponStringFieldById=SetUnitBaseWeaponStringFieldById
-SetUnitBaseWeaponStringFieldById="SetUnitBaseWeaponStringFieldById(","integer ",,~unitTypeId,", ","unitweaponstringfield ",,~whichField,", ","integer ",,~index,", ","string ",,~value,")"
-SetUnitBaseWeaponStringFieldByIdHint="[UjAPI]  boolean SetUnitBaseWeaponStringFieldById (integer unitTypeId, unitweaponstringfield whichField, integer index, string value)"
 
 
 SetUnitIntegerField=SetUnitIntegerField
@@ -6864,11 +6514,6 @@ SetUnitRealField="SetUnitRealField(","unit ",,~whichUnit,", ","unitrealfield ",,
 SetUnitRealFieldHint="[UjAPI]  boolean SetUnitRealField (unit whichUnit, unitrealfield whichField, real value)"
 
 
-SetUnitStringField=SetUnitStringField
-SetUnitStringField="SetUnitStringField(","unit ",,~whichUnit,", ","unitstringfield ",,~whichField,", ","string ",,~value,")"
-SetUnitStringFieldHint="[UjAPI]  boolean SetUnitStringField (unit whichUnit, unitstringfield whichField, string value)"
-
-
 SetUnitWeaponIntegerField=SetUnitWeaponIntegerField
 SetUnitWeaponIntegerField="SetUnitWeaponIntegerField(","unit ",,~whichUnit,", ","unitweaponintegerfield ",,~whichField,", ","integer ",,~index,", ","integer ",,~value,")"
 SetUnitWeaponIntegerFieldHint="[UjAPI]  boolean SetUnitWeaponIntegerField (unit whichUnit, unitweaponintegerfield whichField, integer index, integer value)"
@@ -6882,11 +6527,6 @@ SetUnitWeaponBooleanFieldHint="[UjAPI]  boolean SetUnitWeaponBooleanField (unit 
 SetUnitWeaponRealField=SetUnitWeaponRealField
 SetUnitWeaponRealField="SetUnitWeaponRealField(","unit ",,~whichUnit,", ","unitweaponrealfield ",,~whichField,", ","integer ",,~index,", ","real ",,~value,")"
 SetUnitWeaponRealFieldHint="[UjAPI]  boolean SetUnitWeaponRealField (unit whichUnit, unitweaponrealfield whichField, integer index, real value)"
-
-
-SetUnitWeaponStringField=SetUnitWeaponStringField
-SetUnitWeaponStringField="SetUnitWeaponStringField(","unit ",,~whichUnit,", ","unitweaponstringfield ",,~whichField,", ","integer ",,~index,", ","string ",,~value,")"
-SetUnitWeaponStringFieldHint="[UjAPI]  boolean SetUnitWeaponStringField (unit whichUnit, unitweaponstringfield whichField, integer index, string value)"
 
 
 SetUnitPositionEx=SetUnitPositionEx
@@ -7229,11 +6869,6 @@ SetUnitPlayerColour="SetUnitPlayerColour(","unit ",,~whichUnit,", ","playercolor
 SetUnitPlayerColourHint="[UjAPI]  nothing SetUnitPlayerColour (unit whichUnit, playercolor color)"
 
 
-UnitAddItemToSlot=UnitAddItemToSlot
-UnitAddItemToSlot="UnitAddItemToSlot(","unit ",,~whichUnit,", ","item ",,~whichItem,", ","integer ",,~itemSlot,")"
-UnitAddItemToSlotHint="[UjAPI]  boolean UnitAddItemToSlot (unit whichUnit, item whichItem, integer itemSlot)"
-
-
 ReviveUnit=ReviveUnit
 ReviveUnit="ReviveUnit(","unit ",,~whichUnit,", ","real ",,~x,", ","real ",,~y,")"
 ReviveUnitHint="[UjAPI]  boolean ReviveUnit (unit whichUnit, real x, real y)"
@@ -7367,16 +7002,6 @@ SetUnitKillerHint="[UjAPI]  nothing SetUnitKiller (unit whichUnit, unit killer)"
 KillUnitEx=KillUnitEx
 KillUnitEx="KillUnitEx(","unit ",,~whichUnit,", ","unit ",,~killer,")"
 KillUnitExHint="[UjAPI]  nothing KillUnitEx (unit whichUnit, unit killer)"
-
-
-MorphUnitToTypeIdEx=MorphUnitToTypeIdEx
-MorphUnitToTypeIdEx="MorphUnitToTypeIdEx(","unit ",,~whichUnit,", ","integer ",,~uid,", ","integer ",,~unitFlags,", ","boolean ",,~updateHealthState,", ","boolean ",,~updateManaState,", ","integer ",,~healthStateId,", ","integer ",,~manaStateId,", ","boolean ",,~updateScale,", ","boolean ",,~replaceAbilities,", ","ability ",,~whichAbility,", ","boolean ",,~resetBuildingAnimation,")"
-MorphUnitToTypeIdExHint="[UjAPI]  nothing MorphUnitToTypeIdEx (unit whichUnit, integer uid, integer unitFlags, boolean updateHealthState, boolean updateManaState, integer healthStateId, integer manaStateId, boolean updateScale, boolean replaceAbilities, ability whichAbility, boolean resetBuildingAnimation)"
-
-
-MorphUnitToTypeId=MorphUnitToTypeId
-MorphUnitToTypeId="MorphUnitToTypeId(","unit ",,~whichUnit,", ","integer ",,~uid,")"
-MorphUnitToTypeIdHint="[UjAPI]  nothing MorphUnitToTypeId (unit whichUnit, integer uid)"
 
 
 SetUnitAnimationOffsetPercent=SetUnitAnimationOffsetPercent
@@ -8209,11 +7834,6 @@ SetFrameBlendMode="SetFrameBlendMode(","framehandle ",,~whichFrame,", ","integer
 SetFrameBlendModeHint="[UjAPI]  nothing SetFrameBlendMode (framehandle whichFrame, integer textureId, blendmode whichMode)"
 
 
-SetFrameTooltip=SetFrameTooltip
-SetFrameTooltip="SetFrameTooltip(","framehandle ",,~whichFrame,", ","framehandle ",,~tooltipFrame,")"
-SetFrameTooltipHint="[UjAPI]  nothing SetFrameTooltip (framehandle whichFrame, framehandle tooltipFrame)"
-
-
 SetFrameMouseCaged=SetFrameMouseCaged
 SetFrameMouseCaged="SetFrameMouseCaged(","framehandle ",,~whichFrame,", ","boolean ",,~enable,")"
 SetFrameMouseCagedHint="[UjAPI]  nothing SetFrameMouseCaged (framehandle whichFrame, boolean enable)"
@@ -8554,11 +8174,6 @@ SyncReal="SyncReal(","string ",,~variableName,")"
 SyncRealHint="[UjAPI]  nothing SyncReal (string variableName)"
 
 
-SyncString=SyncString
-SyncString="SyncString(","string ",,~variableName,")"
-SyncStringHint="[UjAPI]  nothing SyncString (string variableName)"
-
-
 SyncHandle=SyncHandle
 SyncHandle="SyncHandle(","string ",,~variableName,")"
 SyncHandleHint="[UjAPI]  nothing SyncHandle (string variableName)"
@@ -8582,11 +8197,6 @@ SyncSavedIntegerHint="[UjAPI]  nothing SyncSavedInteger (hashtable table, intege
 SyncSavedReal=SyncSavedReal
 SyncSavedReal="SyncSavedReal(","hashtable ",,~table,", ","integer ",,~parentKey,", ","integer ",,~childKey,")"
 SyncSavedRealHint="[UjAPI]  nothing SyncSavedReal (hashtable table, integer parentKey, integer childKey)"
-
-
-SyncSavedString=SyncSavedString
-SyncSavedString="SyncSavedString(","hashtable ",,~table,", ","integer ",,~parentKey,", ","integer ",,~childKey,")"
-SyncSavedStringHint="[UjAPI]  nothing SyncSavedString (hashtable table, integer parentKey, integer childKey)"
 
 
 SyncSavedHandle=SyncSavedHandle
@@ -12004,6 +11614,16 @@ GroupTargetOrderById="GroupTargetOrderById(","group ",,~whichGroup,", ","integer
 GroupTargetOrderByIdHint="[NATIVE]  boolean GroupTargetOrderById (group whichGroup, integer order, widget targetWidget)"
 
 
+MoveRectTo=MoveRectTo
+MoveRectTo="MoveRectTo(","rect ",,~whichRect,", ","real ",,~newCenterX,", ","real ",,~newCenterY,")"
+MoveRectToHint="[NATIVE]  nothing MoveRectTo (rect whichRect, real newCenterX, real newCenterY)"
+
+
+MoveRectToLoc=MoveRectToLoc
+MoveRectToLoc="MoveRectToLoc(","rect ",,~whichRect,", ","location ",,~newCenterLoc,")"
+MoveRectToLocHint="[NATIVE]  nothing MoveRectToLoc (rect whichRect, location newCenterLoc)"
+
+
 GetLocationZ=GetLocationZ
 GetLocationZ="GetLocationZ(","location ",,~whichLocation,")"
 GetLocationZHint="[NATIVE]  real GetLocationZ (location whichLocation)"
@@ -12554,6 +12174,26 @@ WaygateIsActive="WaygateIsActive(","unit ",,~waygate,")"
 WaygateIsActiveHint="[NATIVE]  boolean WaygateIsActive (unit waygate)"
 
 
+AddItemToAllStock=AddItemToAllStock
+AddItemToAllStock="AddItemToAllStock(","integer ",,~itemId,", ","integer ",,~currentStock,", ","integer ",,~stockMax,")"
+AddItemToAllStockHint="[NATIVE]  nothing AddItemToAllStock (integer itemId, integer currentStock, integer stockMax)"
+
+
+AddItemToStock=AddItemToStock
+AddItemToStock="AddItemToStock(","unit ",,~whichUnit,", ","integer ",,~itemId,", ","integer ",,~currentStock,", ","integer ",,~stockMax,")"
+AddItemToStockHint="[NATIVE]  nothing AddItemToStock (unit whichUnit, integer itemId, integer currentStock, integer stockMax)"
+
+
+AddUnitToAllStock=AddUnitToAllStock
+AddUnitToAllStock="AddUnitToAllStock(","integer ",,~unitId,", ","integer ",,~currentStock,", ","integer ",,~stockMax,")"
+AddUnitToAllStockHint="[NATIVE]  nothing AddUnitToAllStock (integer unitId, integer currentStock, integer stockMax)"
+
+
+AddUnitToStock=AddUnitToStock
+AddUnitToStock="AddUnitToStock(","unit ",,~whichUnit,", ","integer ",,~unitId,", ","integer ",,~currentStock,", ","integer ",,~stockMax,")"
+AddUnitToStockHint="[NATIVE]  nothing AddUnitToStock (unit whichUnit, integer unitId, integer currentStock, integer stockMax)"
+
+
 Player=Player
 Player="Player(","integer ",,~number,")"
 PlayerHint="[NATIVE]  player Player (integer number)"
@@ -12692,6 +12332,16 @@ StoreUnitHint="[NATIVE]  boolean StoreUnit (gamecache cache, string missionKey, 
 StoreString=StoreString
 StoreString="StoreString(","gamecache ",,~cache,", ","string ",,~missionKey,", ","string ",,~key,", ","string ",,~value,")"
 StoreStringHint="[NATIVE]  boolean StoreString (gamecache cache, string missionKey, string key, string value)"
+
+
+SyncStoredString=SyncStoredString
+SyncStoredString="SyncStoredString(","gamecache ",,~cache,", ","string ",,~missionKey,", ","string ",,~key,")"
+SyncStoredStringHint="[NATIVE]  nothing SyncStoredString (gamecache cache, string missionKey, string key)"
+
+
+FlushStoredString=FlushStoredString
+FlushStoredString="FlushStoredString(","gamecache ",,~cache,", ","string ",,~missionKey,", ","string ",,~key,")"
+FlushStoredStringHint="[NATIVE]  nothing FlushStoredString (gamecache cache, string missionKey, string key)"
 
 
 GetStoredInteger=GetStoredInteger
@@ -13159,6 +12809,11 @@ HaveSavedHandle="HaveSavedHandle(","hashtable ",,~table,", ","integer ",,~parent
 HaveSavedHandleHint="[NATIVE]  boolean HaveSavedHandle (hashtable table, integer parentKey, integer childKey)"
 
 
+RemoveSavedString=RemoveSavedString
+RemoveSavedString="RemoveSavedString(","hashtable ",,~table,", ","integer ",,~parentKey,", ","integer ",,~childKey,")"
+RemoveSavedStringHint="[NATIVE]  nothing RemoveSavedString (hashtable table, integer parentKey, integer childKey)"
+
+
 CreateUnitPool=CreateUnitPool
 CreateUnitPool="CreateUnitPool(",")"
 CreateUnitPoolHint="[NATIVE]  unitpool CreateUnitPool ()"
@@ -13197,6 +12852,16 @@ ChooseRandomItemHint="[NATIVE]  integer ChooseRandomItem (integer level)"
 ChooseRandomItemEx=ChooseRandomItemEx
 ChooseRandomItemEx="ChooseRandomItemEx(","itemtype ",,~whichType,", ","integer ",,~level,")"
 ChooseRandomItemExHint="[NATIVE]  integer ChooseRandomItemEx (itemtype whichType, integer level)"
+
+
+DisplayTextToPlayer=DisplayTextToPlayer
+DisplayTextToPlayer="DisplayTextToPlayer(","player ",,~toPlayer,", ","real ",,~x,", ","real ",,~y,", ","string ",,~message,")"
+DisplayTextToPlayerHint="[NATIVE]  nothing DisplayTextToPlayer (player toPlayer, real x, real y, string message)"
+
+
+DisplayTimedTextToPlayer=DisplayTimedTextToPlayer
+DisplayTimedTextToPlayer="DisplayTimedTextToPlayer(","player ",,~toPlayer,", ","real ",,~x,", ","real ",,~y,", ","real ",,~duration,", ","string ",,~message,")"
+DisplayTimedTextToPlayerHint="[NATIVE]  nothing DisplayTimedTextToPlayer (player toPlayer, real x, real y, real duration, string message)"
 
 
 GetTimeOfDayScale=GetTimeOfDayScale
@@ -13247,6 +12912,31 @@ LeaderboardGetPlayerIndexHint="[NATIVE]  integer LeaderboardGetPlayerIndex (lead
 PlayerGetLeaderboard=PlayerGetLeaderboard
 PlayerGetLeaderboard="PlayerGetLeaderboard(","player ",,~toPlayer,")"
 PlayerGetLeaderboardHint="[NATIVE]  leaderboard PlayerGetLeaderboard (player toPlayer)"
+
+
+ResetToGameCamera=ResetToGameCamera
+ResetToGameCamera="ResetToGameCamera(","real ",,~duration,")"
+ResetToGameCameraHint="[NATIVE]  nothing ResetToGameCamera (real duration)"
+
+
+PanCameraTo=PanCameraTo
+PanCameraTo="PanCameraTo(","real ",,~x,", ","real ",,~y,")"
+PanCameraToHint="[NATIVE]  nothing PanCameraTo (real x, real y)"
+
+
+PanCameraToTimed=PanCameraToTimed
+PanCameraToTimed="PanCameraToTimed(","real ",,~x,", ","real ",,~y,", ","real ",,~duration,")"
+PanCameraToTimedHint="[NATIVE]  nothing PanCameraToTimed (real x, real y, real duration)"
+
+
+PanCameraToWithZ=PanCameraToWithZ
+PanCameraToWithZ="PanCameraToWithZ(","real ",,~x,", ","real ",,~y,", ","real ",,~zOffsetDest,")"
+PanCameraToWithZHint="[NATIVE]  nothing PanCameraToWithZ (real x, real y, real zOffsetDest)"
+
+
+PanCameraToTimedWithZ=PanCameraToTimedWithZ
+PanCameraToTimedWithZ="PanCameraToTimedWithZ(","real ",,~x,", ","real ",,~y,", ","real ",,~zOffsetDest,", ","real ",,~duration,")"
+PanCameraToTimedWithZHint="[NATIVE]  nothing PanCameraToTimedWithZ (real x, real y, real zOffsetDest, real duration)"
 
 
 CreateCameraSetup=CreateCameraSetup
@@ -13317,6 +13007,11 @@ CreateSoundFromLabelHint="[NATIVE]  sound CreateSoundFromLabel (string soundLabe
 CreateMIDISound=CreateMIDISound
 CreateMIDISound="CreateMIDISound(","string ",,~soundLabel,", ","integer ",,~fadeInRate,", ","integer ",,~fadeOutRate,")"
 CreateMIDISoundHint="[NATIVE]  sound CreateMIDISound (string soundLabel, integer fadeInRate, integer fadeOutRate)"
+
+
+AttachSoundToUnit=AttachSoundToUnit
+AttachSoundToUnit="AttachSoundToUnit(","sound ",,~soundHandle,", ","unit ",,~whichUnit,")"
+AttachSoundToUnitHint="[NATIVE]  nothing AttachSoundToUnit (sound soundHandle, unit whichUnit)"
 
 
 GetSoundDuration=GetSoundDuration
@@ -14524,14 +14219,29 @@ GetMiscDataString="GetMiscDataString(","string ",,~sectionName,", ","string ",,~
 GetMiscDataStringHint="[UjAPI]  string GetMiscDataString (string sectionName, string optionName, integer index)"
 
 
+SetMiscDataString=SetMiscDataString
+SetMiscDataString="SetMiscDataString(","string ",,~sectionName,", ","string ",,~optionName,", ","integer ",,~index,", ","string ",,~value,")"
+SetMiscDataStringHint="[UjAPI]  nothing SetMiscDataString (string sectionName, string optionName, integer index, string value)"
+
+
 GetSkinDataString=GetSkinDataString
 GetSkinDataString="GetSkinDataString(","string ",,~raceName,", ","string ",,~sectionName,", ","string ",,~optionName,", ","integer ",,~index,")"
 GetSkinDataStringHint="[UjAPI]  string GetSkinDataString (string raceName, string sectionName, string optionName, integer index)"
 
 
+SetSkinDataString=SetSkinDataString
+SetSkinDataString="SetSkinDataString(","string ",,~raceName,", ","string ",,~sectionName,", ","string ",,~optionName,", ","integer ",,~index,", ","string ",,~value,")"
+SetSkinDataStringHint="[UjAPI]  nothing SetSkinDataString (string raceName, string sectionName, string optionName, integer index, string value)"
+
+
 GetFDFDataString=GetFDFDataString
 GetFDFDataString="GetFDFDataString(","string ",,~sectionName,")"
 GetFDFDataStringHint="[UjAPI]  string GetFDFDataString (string sectionName)"
+
+
+SetFDFDataString=SetFDFDataString
+SetFDFDataString="SetFDFDataString(","string ",,~sectionName,", ","string ",,~value,")"
+SetFDFDataStringHint="[UjAPI]  nothing SetFDFDataString (string sectionName, string value)"
 
 
 GetWheelDelta=GetWheelDelta
@@ -14757,6 +14467,16 @@ GetMouseWorldYHint="[UjAPI]  real GetMouseWorldY ()"
 GetMouseWorldZ=GetMouseWorldZ
 GetMouseWorldZ="GetMouseWorldZ(",")"
 GetMouseWorldZHint="[UjAPI]  real GetMouseWorldZ ()"
+
+
+DisplayTopMessage=DisplayTopMessage
+DisplayTopMessage="DisplayTopMessage(","player ",,~toPlayer,", ","string ",,~message,")"
+DisplayTopMessageHint="[UjAPI]  nothing DisplayTopMessage (player toPlayer, string message)"
+
+
+DisplayTimedTopMessage=DisplayTimedTopMessage
+DisplayTimedTopMessage="DisplayTimedTopMessage(","player ",,~toPlayer,", ","real ",,~duration,", ","string ",,~message,")"
+DisplayTimedTopMessageHint="[UjAPI]  nothing DisplayTimedTopMessage (player toPlayer, real duration, string message)"
 
 
 IsHandleDestroyed=IsHandleDestroyed
@@ -18424,6 +18144,16 @@ GetUnitTargetDestructable="GetUnitTargetDestructable(","unit ",,~whichUnit,")"
 GetUnitTargetDestructableHint="[UjAPI]  destructable GetUnitTargetDestructable (unit whichUnit)"
 
 
+MorphUnitToTypeIdEx=MorphUnitToTypeIdEx
+MorphUnitToTypeIdEx="MorphUnitToTypeIdEx(","unit ",,~whichUnit,", ","integer ",,~uid,", ","integer ",,~unitFlags,", ","boolean ",,~updateHealthState,", ","boolean ",,~updateManaState,", ","integer ",,~healthStateId,", ","integer ",,~manaStateId,", ","boolean ",,~updateScale,", ","boolean ",,~replaceAbilities,", ","ability ",,~whichAbility,", ","boolean ",,~resetBuildingAnimation,")"
+MorphUnitToTypeIdExHint="[UjAPI]  nothing MorphUnitToTypeIdEx (unit whichUnit, integer uid, integer unitFlags, boolean updateHealthState, boolean updateManaState, integer healthStateId, integer manaStateId, boolean updateScale, boolean replaceAbilities, ability whichAbility, boolean resetBuildingAnimation)"
+
+
+MorphUnitToTypeId=MorphUnitToTypeId
+MorphUnitToTypeId="MorphUnitToTypeId(","unit ",,~whichUnit,", ","integer ",,~uid,")"
+MorphUnitToTypeIdHint="[UjAPI]  nothing MorphUnitToTypeId (unit whichUnit, integer uid)"
+
+
 GetUnitModelObjectX=GetUnitModelObjectX
 GetUnitModelObjectX="GetUnitModelObjectX(","unit ",,~whichUnit,", ","string ",,~whichObject,")"
 GetUnitModelObjectXHint="[UjAPI]  real GetUnitModelObjectX (unit whichUnit, string whichObject)"
@@ -19259,6 +18989,11 @@ GetFrameBlendMode="GetFrameBlendMode(","framehandle ",,~whichFrame,", ","integer
 GetFrameBlendModeHint="[UjAPI]  blendmode GetFrameBlendMode (framehandle whichFrame, integer textureId)"
 
 
+SetFrameTooltip=SetFrameTooltip
+SetFrameTooltip="SetFrameTooltip(","framehandle ",,~whichFrame,", ","framehandle ",,~tooltipFrame,")"
+SetFrameTooltipHint="[UjAPI]  nothing SetFrameTooltip (framehandle whichFrame, framehandle tooltipFrame)"
+
+
 GetFrameValue=GetFrameValue
 GetFrameValue="GetFrameValue(","framehandle ",,~whichFrame,")"
 GetFrameValueHint="[UjAPI]  real GetFrameValue (framehandle whichFrame)"
@@ -19619,6 +19354,11 @@ GetSyncedBoolean="GetSyncedBoolean(",")"
 GetSyncedBooleanHint="[UjAPI]  boolean GetSyncedBoolean ()"
 
 
+SyncString=SyncString
+SyncString="SyncString(","string ",,~variableName,")"
+SyncStringHint="[UjAPI]  nothing SyncString (string variableName)"
+
+
 TriggerRegisterPlayerVariableSyncEvent=TriggerRegisterPlayerVariableSyncEvent
 TriggerRegisterPlayerVariableSyncEvent="TriggerRegisterPlayerVariableSyncEvent(","trigger ",,~whichTrigger,", ","player ",,~whichPlayer,", ","string ",,~variableName,")"
 TriggerRegisterPlayerVariableSyncEventHint="[UjAPI]  event TriggerRegisterPlayerVariableSyncEvent (trigger whichTrigger, player whichPlayer, string variableName)"
@@ -19642,6 +19382,11 @@ GetSyncSavedParentKeyHint="[UjAPI]  integer GetSyncSavedParentKey ()"
 GetSyncSavedChildKey=GetSyncSavedChildKey
 GetSyncSavedChildKey="GetSyncSavedChildKey(",")"
 GetSyncSavedChildKeyHint="[UjAPI]  integer GetSyncSavedChildKey ()"
+
+
+SyncSavedString=SyncSavedString
+SyncSavedString="SyncSavedString(","hashtable ",,~table,", ","integer ",,~parentKey,", ","integer ",,~childKey,")"
+SyncSavedStringHint="[UjAPI]  nothing SyncSavedString (hashtable table, integer parentKey, integer childKey)"
 
 
 TriggerRegisterPlayerHashtableDataSyncEvent=TriggerRegisterPlayerHashtableDataSyncEvent
