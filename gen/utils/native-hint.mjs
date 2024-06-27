@@ -1,3 +1,5 @@
+import nativeIsVanilla from './native-is-vanilla.mjs'
+
 /**
  * @param {import('jass-to-ast').Native} native
  * @return {string}
@@ -8,5 +10,5 @@ export default native => {
         param.push(`${p.type} ${p.name}`)
     }
 
-    return `${native.returns ?? 'nothing'} ${native.name} (${param.join(', ')})`
+    return `[${nativeIsVanilla(native) ? 'NATIVE' : 'UjAPI'}]  ${native.returns ?? 'nothing'} ${native.name} (${param.join(', ')})`
 }

@@ -66,4 +66,6 @@ fileDataAppend(TriggerStrings, TriggerCallStrings.join('\n'), 'TriggerCallString
 
 WorldEditStringsList.sort((a, b) => a.localeCompare(b))
 fileDataAppend(path.join(UI, 'WorldEditStrings.txt'), WorldEditStringsList.join('\n'), 'WorldEditStrings')
+
+TriggerCategories.sort((a, b) => a.localeCompare(b))
 fileDataAppend(TriggerData, TriggerCategories.join('\n'), 'TriggerCategories')
