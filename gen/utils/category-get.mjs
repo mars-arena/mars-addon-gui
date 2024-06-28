@@ -1,4 +1,4 @@
-import {WorldEditStringsList} from './edit-strings.mjs'
+import {WorldEditStrings} from './edit-strings.mjs'
 
 const TriggerCategories = []
 
@@ -9,9 +9,9 @@ const TriggerCategories = []
  */
 const add = (name, data = 'Nothing') => {
     let id = `UjAPI_${name}`
-    name = `UjAPI - ${name}`
+    name = `${name} [UjAPI]`
 
-    WorldEditStringsList.push(`WESTRING_TRIGCAT_${id}=${name}`)
+    WorldEditStrings.push(`WESTRING_TRIGCAT_${id}=${name}`)
     TriggerCategories.push(`TC_${id}=WESTRING_TRIGCAT_${id},ReplaceableTextures\\WorldEditUI\\Actions-${data}`)
 
     return id
@@ -66,7 +66,15 @@ const Terrain = add('Terrain')
 const Preload = add('Preload')
 const Region = add('Region')
 const Rect = add('Rect')
-const FogModifier = add('FogModifier')
+const Fog = add('Fog')
+const Game = add('Game')
+const GameCache = add('GameCache')
+const Boolean = add('Boolean')
+const Location = add('Location')
+const Weather = add('Weather')
+const Minimap = add('Minimap')
+const Version = add('Version')
+const Music = add('Music')
 
 /**
  * @param {import('jass-to-ast').Native} native
@@ -97,8 +105,20 @@ export default native => {
         return false
     }
 
+    /**
+     * @param {...string} names
+     * @return {boolean}
+     */
+    const e = (...names) => {
+        for (const n of names) {
+            if (name === n) return true
+        }
+        return false
+    }
 
     if (categoryIsMath(native)) return Math
+    if (categoryIsBoolean(native)) return Boolean
+
     if (s('Convert')) return Convert
     if (s('Save', 'Load', 'HaveSaved', 'RemoveSaved') || c('Hashtable')) return Hashtable
     if (c('HandleList')) return HandleList
@@ -112,6 +132,9 @@ export default native => {
 
     if (c('Dialog')) return Dialog
     if (c('Message')) return Message
+
+    if (c('Cache') || s('Store', 'HaveStored')) return GameCache
+    if (c('Game')) return Game
 
     if (c('Unit', 'Corpse', 'Illusion', 'Building', 'Goldmine', 'ResourceAmount', 'EventAttack', 'EventDamage')) return Unit
     if (c('Ability', 'SpellEffect')) return Ability
@@ -144,7 +167,7 @@ export default native => {
     if (c('Hero')) return Hero
     if (c('String')) return String
     if (c('Sprite')) return Sprite
-    if (c('SpecialEffect')) return SpecialEffect
+    if (c('SpecialEffect') || e('DestroyEffect')) return SpecialEffect
     if (c('AntiHack', 'Cheat')) return AntiHack
     if (c('Automation', 'Benchmark', 'Console')) return Test
     if (c('Group')) return Group
@@ -152,7 +175,12 @@ export default native => {
     if (c('Preload')) return Preload
     if (c('Region')) return Region
     if (c('Rect')) return Rect
-    if (c('FogModifier')) return FogModifier
+    if (c('Fog')) return Fog
+    if (c('Location')) return Location
+    if (c('Weather')) return Weather
+    if (c('Minimap')) return Minimap
+    if (c('Version')) return Version
+    if (c('Music')) return Music
 
     return Misc
 }
@@ -166,4 +194,11 @@ const categoryIsMath = native =>
     native.name.indexOf('Bitwise') >= 0 ||
     ['SquareRoot', 'Sin', 'Asin', 'Cos', 'Acos', 'Tan', 'Atan', 'Pow'].indexOf(native.name) >= 0
 
-export {TriggerCategories, categoryIsMath}
+/**
+ * @param {import('jass-to-ast').Native} native
+ * @return {boolean}
+ */
+const categoryIsBoolean = native =>
+    ['And', 'Or', 'Condition', 'Filter', 'Not'].indexOf(native.name) >= 0
+
+export {TriggerCategories, categoryIsMath, categoryIsBoolean}

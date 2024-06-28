@@ -1,4 +1,4 @@
-import {WorldEditStringsList} from './edit-strings.mjs'
+import {WorldEditStrings} from './edit-strings.mjs'
 
 const TriggerTypes = []
 const TriggerTypesMap = {}
@@ -9,8 +9,8 @@ const TriggerTypesMap = {}
  */
 export default type => {
     if (TriggerTypesMap[type.base]) return
-    TriggerTypes.push(`${type.base}=1,1,1,WESTRING_TRIGTYPE_${type.base}`)
-    WorldEditStringsList.push(`WESTRING_TRIGTYPE_${type.base}=${type.base}`)
+    TriggerTypes.push(`${type.base}=0,1,1,WESTRING_TRIGTYPE_${type.base}`)
+    WorldEditStrings.push(`WESTRING_TRIGTYPE_${type.base}=${type.base}`)
 }
 
 export {TriggerTypes, TriggerTypesMap}

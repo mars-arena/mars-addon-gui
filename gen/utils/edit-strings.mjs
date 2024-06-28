@@ -1,3 +1,3 @@
-const WorldEditStringsList = []
+const WorldEditStrings = []
 
-export  {WorldEditStringsList}
+export  {WorldEditStrings}

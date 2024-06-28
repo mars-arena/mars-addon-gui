@@ -52,7 +52,7 @@ export default (native, actions) => {
             const [type, def] = param(p)
             pa.push(type)
             pb.push(def)
-            pc.push(`"${p.type} ",`, `~${p.name}`, '", "')
+            pc.push(`~${p.name}`, '", "')
         }
         pc.splice(-1)
     } else {

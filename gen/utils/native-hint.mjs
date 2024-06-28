@@ -10,5 +10,5 @@ export default native => {
         param.push(`${p.type} ${p.name}`)
     }
 
-    return `[${nativeIsVanilla(native) ? 'NATIVE' : 'UjAPI'}]  ${native.returns ?? 'nothing'} ${native.name} (${param.join(', ')})`
+    return `[${nativeIsVanilla(native) ? 'NATIVE' : 'UjAPI'}]  ${native.name} takes ${param.length ? param.join(', ') : 'nothing'} returns ${native.returns ?? 'nothing'}`
 }

@@ -1,4 +1,4 @@
-import {categoryIsMath} from './category-get.mjs'
+import {categoryIsBoolean, categoryIsMath} from './category-get.mjs'
 
 /**
  *  @param {import('jass-to-ast').Native} native
@@ -30,11 +30,14 @@ export default native => {
         return false
     }
 
+    if (s('Create', 'Destroy') && r === '') return 1
+
     if (
         s('Get', 'Is', 'Convert', 'HandleTo') ||
-        c('2', 'To', 'String') ||
+        c('2', 'To', 'String', 'Version') ||
         c('Id') && r === 'integer' ||
-        categoryIsMath(native)
+        categoryIsMath(native) ||
+        categoryIsBoolean(native)
     ) return 2
 
     if (!native.returns) return 1
