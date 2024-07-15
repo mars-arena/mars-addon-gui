@@ -10,13 +10,22 @@ const TriggerCalls = []
 const TriggerCallStrings = []
 
 /**
+ * @param {import('jass-to-ast').Native} n
  * @param {import('jass-to-ast').Param} p
  * @return {[string]}
  */
-const param = p => {
+const param = (n, p) => {
     switch (p.type) {
         case 'integer':
-            return p.name.toLowerCase().indexOf('unit') >= 0 ? ['unitcode', 'hfoo'] : [p.type, '0']
+            if (p.name.toLowerCase().indexOf('unit') >= 0) {
+                return ['unitcode', 'hfoo']
+            }
+            if (n.name.toLowerCase().indexOf('ability') >= 0) {
+                if (['aid', 'abilid', 'abilcode'].indexOf(p.name.toLowerCase()) >= 0) {
+                    return ['abilcode', '_']
+                }
+            }
+            return [p.type, '0']
         case 'real':
             return [p.type, '0']
         case 'boolean':
@@ -49,7 +58,7 @@ export default (native, actions) => {
 
     if (native.params) {
         for (const p of native.params) {
-            const [type, def] = param(p)
+            const [type, def] = param(native, p)
             pa.push(type)
             pb.push(def)
             pc.push(`~${p.name}`, '", "')

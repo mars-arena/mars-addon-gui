@@ -6048,18 +6048,18 @@ _OperatorCompareMultiboardItem_Category=TC_COMPATIBILITY
 
 [TriggerActions]
 
-AddAbilityBaseBooleanLevelArrayFieldById=1,integer,abilitybooleanlevelarrayfield,integer,boolean
-_AddAbilityBaseBooleanLevelArrayFieldById_Defaults=0,_,0,true
+AddAbilityBaseBooleanLevelArrayFieldById=1,abilcode,abilitybooleanlevelarrayfield,integer,boolean
+_AddAbilityBaseBooleanLevelArrayFieldById_Defaults=_,_,0,true
 _AddAbilityBaseBooleanLevelArrayFieldById_Category=TC_UjAPI_Ability
 
 
-AddAbilityBaseIntegerLevelArrayFieldById=1,integer,abilityintegerlevelarrayfield,integer,integer
-_AddAbilityBaseIntegerLevelArrayFieldById_Defaults=0,_,0,0
+AddAbilityBaseIntegerLevelArrayFieldById=1,abilcode,abilityintegerlevelarrayfield,integer,integer
+_AddAbilityBaseIntegerLevelArrayFieldById_Defaults=_,_,0,0
 _AddAbilityBaseIntegerLevelArrayFieldById_Category=TC_UjAPI_Ability
 
 
-AddAbilityBaseRealLevelArrayFieldById=1,integer,abilityreallevelarrayfield,integer,real
-_AddAbilityBaseRealLevelArrayFieldById_Defaults=0,_,0,0
+AddAbilityBaseRealLevelArrayFieldById=1,abilcode,abilityreallevelarrayfield,integer,real
+_AddAbilityBaseRealLevelArrayFieldById_Defaults=_,_,0,0
 _AddAbilityBaseRealLevelArrayFieldById_Category=TC_UjAPI_Ability
 
 
@@ -6448,8 +6448,8 @@ _CountUnitBuffs_Defaults=_
 _CountUnitBuffs_Category=TC_UjAPI_Unit
 
 
-CreateAbility=1,integer
-_CreateAbility_Defaults=0
+CreateAbility=1,abilcode
+_CreateAbility_Defaults=_
 _CreateAbility_Category=TC_UjAPI_Ability
 
 
@@ -6743,8 +6743,8 @@ _CripplePlayer_Defaults=Player00,_,true
 _CripplePlayer_Category=TC_UjAPI_Player
 
 
-DecUnitAbilityLevel=1,unit,integer
-_DecUnitAbilityLevel_Defaults=_,0
+DecUnitAbilityLevel=1,unit,abilcode
+_DecUnitAbilityLevel_Defaults=_,_
 _DecUnitAbilityLevel_Category=TC_UjAPI_Unit
 
 
@@ -6873,13 +6873,13 @@ _DisableAbility_Defaults=_,true,true
 _DisableAbility_Category=TC_UjAPI_Ability
 
 
-DisableUnitAbility=1,unit,integer,boolean,boolean
-_DisableUnitAbility_Defaults=_,0,true,true
+DisableUnitAbility=1,unit,abilcode,boolean,boolean
+_DisableUnitAbility_Defaults=_,_,true,true
 _DisableUnitAbility_Category=TC_UjAPI_Unit
 
 
-DisableUnitAbilityEx=1,unit,integer,boolean,boolean,boolean
-_DisableUnitAbilityEx_Defaults=_,0,true,true,true
+DisableUnitAbilityEx=1,unit,abilcode,boolean,boolean,boolean
+_DisableUnitAbilityEx_Defaults=_,_,true,true,true
 _DisableUnitAbilityEx_Category=TC_UjAPI_Unit
 
 
@@ -6968,13 +6968,13 @@ _EnableTargetIndicator_Defaults=true
 _EnableTargetIndicator_Category=TC_UjAPI_Widget
 
 
-EnableUnitAbility=1,unit,integer,boolean,boolean
-_EnableUnitAbility_Defaults=_,0,true,true
+EnableUnitAbility=1,unit,abilcode,boolean,boolean
+_EnableUnitAbility_Defaults=_,_,true,true
 _EnableUnitAbility_Category=TC_UjAPI_Unit
 
 
-EnableUnitAbilityEx=1,unit,integer,boolean,boolean,boolean
-_EnableUnitAbilityEx_Defaults=_,0,true,true,true
+EnableUnitAbilityEx=1,unit,abilcode,boolean,boolean,boolean
+_EnableUnitAbilityEx_Defaults=_,_,true,true,true
 _EnableUnitAbilityEx_Category=TC_UjAPI_Unit
 
 
@@ -7828,8 +7828,8 @@ _HideOriginFrames_Defaults=true
 _HideOriginFrames_Category=TC_UjAPI_Frame
 
 
-IncUnitAbilityLevel=1,unit,integer
-_IncUnitAbilityLevel_Defaults=_,0
+IncUnitAbilityLevel=1,unit,abilcode
+_IncUnitAbilityLevel_Defaults=_,_
 _IncUnitAbilityLevel_Category=TC_UjAPI_Unit
 
 
@@ -7848,8 +7848,8 @@ _ItemAddAbility_Defaults=_,_
 _ItemAddAbility_Category=TC_UjAPI_Ability
 
 
-ItemAddAbilityById=1,item,integer
-_ItemAddAbilityById_Defaults=_,0
+ItemAddAbilityById=1,item,abilcode
+_ItemAddAbilityById_Defaults=_,_
 _ItemAddAbilityById_Category=TC_UjAPI_Ability
 
 
@@ -7868,8 +7868,8 @@ _ItemRemoveAbility_Defaults=_,_
 _ItemRemoveAbility_Category=TC_UjAPI_Ability
 
 
-ItemRemoveAbilityById=1,item,integer
-_ItemRemoveAbilityById_Defaults=_,0
+ItemRemoveAbilityById=1,item,abilcode
+_ItemRemoveAbilityById_Defaults=_,_
 _ItemRemoveAbilityById_Category=TC_UjAPI_Ability
 
 
@@ -8758,18 +8758,18 @@ _ReloadGame_Defaults=
 _ReloadGame_Category=TC_UjAPI_Game
 
 
-RemoveAbilityBaseBooleanLevelArrayFieldById=1,integer,abilitybooleanlevelarrayfield,integer,boolean
-_RemoveAbilityBaseBooleanLevelArrayFieldById_Defaults=0,_,0,true
+RemoveAbilityBaseBooleanLevelArrayFieldById=1,abilcode,abilitybooleanlevelarrayfield,integer,boolean
+_RemoveAbilityBaseBooleanLevelArrayFieldById_Defaults=_,_,0,true
 _RemoveAbilityBaseBooleanLevelArrayFieldById_Category=TC_UjAPI_Ability
 
 
-RemoveAbilityBaseIntegerLevelArrayFieldById=1,integer,abilityintegerlevelarrayfield,integer,integer
-_RemoveAbilityBaseIntegerLevelArrayFieldById_Defaults=0,_,0,0
+RemoveAbilityBaseIntegerLevelArrayFieldById=1,abilcode,abilityintegerlevelarrayfield,integer,integer
+_RemoveAbilityBaseIntegerLevelArrayFieldById_Defaults=_,_,0,0
 _RemoveAbilityBaseIntegerLevelArrayFieldById_Category=TC_UjAPI_Ability
 
 
-RemoveAbilityBaseRealLevelArrayFieldById=1,integer,abilityreallevelarrayfield,integer,real
-_RemoveAbilityBaseRealLevelArrayFieldById_Defaults=0,_,0,0
+RemoveAbilityBaseRealLevelArrayFieldById=1,abilcode,abilityreallevelarrayfield,integer,real
+_RemoveAbilityBaseRealLevelArrayFieldById_Defaults=_,_,0,0
 _RemoveAbilityBaseRealLevelArrayFieldById_Category=TC_UjAPI_Ability
 
 
@@ -9383,48 +9383,48 @@ _SetAbilityBackswing_Defaults=_,0
 _SetAbilityBackswing_Category=TC_UjAPI_Ability
 
 
-SetAbilityBaseBooleanFieldById=1,integer,abilitybooleanfield,boolean
-_SetAbilityBaseBooleanFieldById_Defaults=0,_,true
+SetAbilityBaseBooleanFieldById=1,abilcode,abilitybooleanfield,boolean
+_SetAbilityBaseBooleanFieldById_Defaults=_,_,true
 _SetAbilityBaseBooleanFieldById_Category=TC_UjAPI_Ability
 
 
-SetAbilityBaseBooleanLevelArrayFieldById=1,integer,abilitybooleanlevelarrayfield,integer,integer,boolean
-_SetAbilityBaseBooleanLevelArrayFieldById_Defaults=0,_,0,0,true
+SetAbilityBaseBooleanLevelArrayFieldById=1,abilcode,abilitybooleanlevelarrayfield,integer,integer,boolean
+_SetAbilityBaseBooleanLevelArrayFieldById_Defaults=_,_,0,0,true
 _SetAbilityBaseBooleanLevelArrayFieldById_Category=TC_UjAPI_Ability
 
 
-SetAbilityBaseBooleanLevelFieldById=1,integer,abilitybooleanlevelfield,integer,boolean
-_SetAbilityBaseBooleanLevelFieldById_Defaults=0,_,0,true
+SetAbilityBaseBooleanLevelFieldById=1,abilcode,abilitybooleanlevelfield,integer,boolean
+_SetAbilityBaseBooleanLevelFieldById_Defaults=_,_,0,true
 _SetAbilityBaseBooleanLevelFieldById_Category=TC_UjAPI_Ability
 
 
-SetAbilityBaseIntegerFieldById=1,integer,abilityintegerfield,integer
-_SetAbilityBaseIntegerFieldById_Defaults=0,_,0
+SetAbilityBaseIntegerFieldById=1,abilcode,abilityintegerfield,integer
+_SetAbilityBaseIntegerFieldById_Defaults=_,_,0
 _SetAbilityBaseIntegerFieldById_Category=TC_UjAPI_Ability
 
 
-SetAbilityBaseIntegerLevelArrayFieldById=1,integer,abilityintegerlevelarrayfield,integer,integer,integer
-_SetAbilityBaseIntegerLevelArrayFieldById_Defaults=0,_,0,0,0
+SetAbilityBaseIntegerLevelArrayFieldById=1,abilcode,abilityintegerlevelarrayfield,integer,integer,integer
+_SetAbilityBaseIntegerLevelArrayFieldById_Defaults=_,_,0,0,0
 _SetAbilityBaseIntegerLevelArrayFieldById_Category=TC_UjAPI_Ability
 
 
-SetAbilityBaseIntegerLevelFieldById=1,integer,abilityintegerlevelfield,integer,integer
-_SetAbilityBaseIntegerLevelFieldById_Defaults=0,_,0,0
+SetAbilityBaseIntegerLevelFieldById=1,abilcode,abilityintegerlevelfield,integer,integer
+_SetAbilityBaseIntegerLevelFieldById_Defaults=_,_,0,0
 _SetAbilityBaseIntegerLevelFieldById_Category=TC_UjAPI_Ability
 
 
-SetAbilityBaseRealFieldById=1,integer,abilityrealfield,real
-_SetAbilityBaseRealFieldById_Defaults=0,_,0
+SetAbilityBaseRealFieldById=1,abilcode,abilityrealfield,real
+_SetAbilityBaseRealFieldById_Defaults=_,_,0
 _SetAbilityBaseRealFieldById_Category=TC_UjAPI_Ability
 
 
-SetAbilityBaseRealLevelArrayFieldById=1,integer,abilityreallevelarrayfield,integer,integer,real
-_SetAbilityBaseRealLevelArrayFieldById_Defaults=0,_,0,0,0
+SetAbilityBaseRealLevelArrayFieldById=1,abilcode,abilityreallevelarrayfield,integer,integer,real
+_SetAbilityBaseRealLevelArrayFieldById_Defaults=_,_,0,0,0
 _SetAbilityBaseRealLevelArrayFieldById_Category=TC_UjAPI_Ability
 
 
-SetAbilityBaseRealLevelFieldById=1,integer,abilityreallevelfield,integer,real
-_SetAbilityBaseRealLevelFieldById_Defaults=0,_,0,0
+SetAbilityBaseRealLevelFieldById=1,abilcode,abilityreallevelfield,integer,real
+_SetAbilityBaseRealLevelFieldById_Defaults=_,_,0,0
 _SetAbilityBaseRealLevelFieldById_Category=TC_UjAPI_Ability
 
 
@@ -11228,8 +11228,8 @@ _SetOperationLimit_Defaults=0
 _SetOperationLimit_Category=TC_UjAPI_Misc
 
 
-SetPlayerAbilityAvailable=1,player,integer,boolean
-_SetPlayerAbilityAvailable_Defaults=Player00,0,true
+SetPlayerAbilityAvailable=1,player,abilcode,boolean
+_SetPlayerAbilityAvailable_Defaults=Player00,_,true
 _SetPlayerAbilityAvailable_Category=TC_UjAPI_Ability
 
 
@@ -12328,8 +12328,8 @@ _SetTutorialCleared_Defaults=true
 _SetTutorialCleared_Category=TC_UjAPI_Misc
 
 
-SetUnitAbilityLevel=1,unit,integer,integer
-_SetUnitAbilityLevel_Defaults=_,0,0
+SetUnitAbilityLevel=1,unit,abilcode,integer
+_SetUnitAbilityLevel_Defaults=_,_,0
 _SetUnitAbilityLevel_Category=TC_UjAPI_Unit
 
 
@@ -13178,13 +13178,13 @@ _ShowUnit_Defaults=_,true
 _ShowUnit_Category=TC_UjAPI_Unit
 
 
-ShowUnitAbility=1,unit,integer,boolean
-_ShowUnitAbility_Defaults=_,0,true
+ShowUnitAbility=1,unit,abilcode,boolean
+_ShowUnitAbility_Defaults=_,_,true
 _ShowUnitAbility_Category=TC_UjAPI_Unit
 
 
-ShowUnitAbilityEx=1,unit,integer,boolean,boolean
-_ShowUnitAbilityEx_Defaults=_,0,true,true
+ShowUnitAbilityEx=1,unit,abilcode,boolean,boolean
+_ShowUnitAbilityEx_Defaults=_,_,true,true
 _ShowUnitAbilityEx_Category=TC_UjAPI_Unit
 
 
@@ -13713,13 +13713,13 @@ _TriggerWaitOnSleeps_Defaults=_,true
 _TriggerWaitOnSleeps_Category=TC_UjAPI_Trigger
 
 
-UnitAddAbility=1,unit,integer
-_UnitAddAbility_Defaults=_,0
+UnitAddAbility=1,unit,abilcode
+_UnitAddAbility_Defaults=_,_
 _UnitAddAbility_Category=TC_UjAPI_Unit
 
 
-UnitAddAbilityEx=1,unit,integer,boolean
-_UnitAddAbilityEx_Defaults=_,0,true
+UnitAddAbilityEx=1,unit,abilcode,boolean
+_UnitAddAbilityEx_Defaults=_,_,true
 _UnitAddAbilityEx_Category=TC_UjAPI_Unit
 
 
@@ -13968,8 +13968,8 @@ _UnitItemInSlot_Defaults=_,0
 _UnitItemInSlot_Category=TC_UjAPI_Unit
 
 
-UnitMakeAbilityPermanent=1,unit,boolean,integer
-_UnitMakeAbilityPermanent_Defaults=_,true,0
+UnitMakeAbilityPermanent=1,unit,boolean,abilcode
+_UnitMakeAbilityPermanent_Defaults=_,true,_
 _UnitMakeAbilityPermanent_Category=TC_UjAPI_Unit
 
 
@@ -13993,13 +13993,13 @@ _UnitPoolRemoveUnitType_Defaults=_,hfoo
 _UnitPoolRemoveUnitType_Category=TC_UjAPI_Unit
 
 
-UnitRemoveAbility=1,unit,integer
-_UnitRemoveAbility_Defaults=_,0
+UnitRemoveAbility=1,unit,abilcode
+_UnitRemoveAbility_Defaults=_,_
 _UnitRemoveAbility_Category=TC_UjAPI_Unit
 
 
-UnitRemoveAbilityEx=1,unit,integer,boolean
-_UnitRemoveAbilityEx_Defaults=_,0,true
+UnitRemoveAbilityEx=1,unit,abilcode,boolean
+_UnitRemoveAbilityEx_Defaults=_,_,true
 _UnitRemoveAbilityEx_Category=TC_UjAPI_Unit
 
 
@@ -16865,8 +16865,8 @@ _AbilityId_Defaults=_
 _AbilityId_Category=TC_UjAPI_Ability
 
 
-AbilityId2String=1,1,string,integer
-_AbilityId2String_Defaults=0
+AbilityId2String=1,1,string,abilcode
+_AbilityId2String_Defaults=_
 _AbilityId2String_Category=TC_UjAPI_Ability
 
 
@@ -16875,23 +16875,23 @@ _Acos_Defaults=0
 _Acos_Category=TC_UjAPI_Math
 
 
-AddAbilityBaseBooleanLevelArrayFieldById=1,1,boolean,integer,abilitybooleanlevelarrayfield,integer,boolean
-_AddAbilityBaseBooleanLevelArrayFieldById_Defaults=0,_,0,true
+AddAbilityBaseBooleanLevelArrayFieldById=1,1,boolean,abilcode,abilitybooleanlevelarrayfield,integer,boolean
+_AddAbilityBaseBooleanLevelArrayFieldById_Defaults=_,_,0,true
 _AddAbilityBaseBooleanLevelArrayFieldById_Category=TC_UjAPI_Ability
 
 
-AddAbilityBaseIntegerLevelArrayFieldById=1,1,boolean,integer,abilityintegerlevelarrayfield,integer,integer
-_AddAbilityBaseIntegerLevelArrayFieldById_Defaults=0,_,0,0
+AddAbilityBaseIntegerLevelArrayFieldById=1,1,boolean,abilcode,abilityintegerlevelarrayfield,integer,integer
+_AddAbilityBaseIntegerLevelArrayFieldById_Defaults=_,_,0,0
 _AddAbilityBaseIntegerLevelArrayFieldById_Category=TC_UjAPI_Ability
 
 
-AddAbilityBaseRealLevelArrayFieldById=1,1,boolean,integer,abilityreallevelarrayfield,integer,real
-_AddAbilityBaseRealLevelArrayFieldById_Defaults=0,_,0,0
+AddAbilityBaseRealLevelArrayFieldById=1,1,boolean,abilcode,abilityreallevelarrayfield,integer,real
+_AddAbilityBaseRealLevelArrayFieldById_Defaults=_,_,0,0
 _AddAbilityBaseRealLevelArrayFieldById_Category=TC_UjAPI_Ability
 
 
-AddAbilityBaseStringLevelArrayFieldById=1,1,boolean,integer,abilitystringlevelarrayfield,integer,string
-_AddAbilityBaseStringLevelArrayFieldById_Defaults=0,_,0,_
+AddAbilityBaseStringLevelArrayFieldById=1,1,boolean,abilcode,abilitystringlevelarrayfield,integer,string
+_AddAbilityBaseStringLevelArrayFieldById_Defaults=_,_,0,_
 _AddAbilityBaseStringLevelArrayFieldById_Category=TC_UjAPI_Ability
 
 
@@ -17725,8 +17725,8 @@ _CountUnitBuffs_Defaults=_
 _CountUnitBuffs_Category=TC_UjAPI_Unit
 
 
-CreateAbility=1,1,ability,integer
-_CreateAbility_Defaults=0
+CreateAbility=1,1,ability,abilcode
+_CreateAbility_Defaults=_
 _CreateAbility_Category=TC_UjAPI_Ability
 
 
@@ -17965,8 +17965,8 @@ _CreateUpgradeCommandButtonEffect_Defaults=0
 _CreateUpgradeCommandButtonEffect_Category=TC_UjAPI_Misc
 
 
-DecUnitAbilityLevel=1,1,integer,unit,integer
-_DecUnitAbilityLevel_Defaults=_,0
+DecUnitAbilityLevel=1,1,integer,unit,abilcode
+_DecUnitAbilityLevel_Defaults=_,_
 _DecUnitAbilityLevel_Category=TC_UjAPI_Unit
 
 
@@ -18035,63 +18035,63 @@ _GetAbilityBackswing_Defaults=_
 _GetAbilityBackswing_Category=TC_UjAPI_Ability
 
 
-GetAbilityBaseBooleanFieldById=1,1,boolean,integer,abilitybooleanfield
-_GetAbilityBaseBooleanFieldById_Defaults=0,_
+GetAbilityBaseBooleanFieldById=1,1,boolean,abilcode,abilitybooleanfield
+_GetAbilityBaseBooleanFieldById_Defaults=_,_
 _GetAbilityBaseBooleanFieldById_Category=TC_UjAPI_Ability
 
 
-GetAbilityBaseBooleanLevelArrayFieldById=1,1,boolean,integer,abilitybooleanlevelarrayfield,integer,integer
-_GetAbilityBaseBooleanLevelArrayFieldById_Defaults=0,_,0,0
+GetAbilityBaseBooleanLevelArrayFieldById=1,1,boolean,abilcode,abilitybooleanlevelarrayfield,integer,integer
+_GetAbilityBaseBooleanLevelArrayFieldById_Defaults=_,_,0,0
 _GetAbilityBaseBooleanLevelArrayFieldById_Category=TC_UjAPI_Ability
 
 
-GetAbilityBaseBooleanLevelFieldById=1,1,boolean,integer,abilitybooleanlevelfield,integer
-_GetAbilityBaseBooleanLevelFieldById_Defaults=0,_,0
+GetAbilityBaseBooleanLevelFieldById=1,1,boolean,abilcode,abilitybooleanlevelfield,integer
+_GetAbilityBaseBooleanLevelFieldById_Defaults=_,_,0
 _GetAbilityBaseBooleanLevelFieldById_Category=TC_UjAPI_Ability
 
 
-GetAbilityBaseIntegerFieldById=1,1,integer,integer,abilityintegerfield
-_GetAbilityBaseIntegerFieldById_Defaults=0,_
+GetAbilityBaseIntegerFieldById=1,1,integer,abilcode,abilityintegerfield
+_GetAbilityBaseIntegerFieldById_Defaults=_,_
 _GetAbilityBaseIntegerFieldById_Category=TC_UjAPI_Ability
 
 
-GetAbilityBaseIntegerLevelArrayFieldById=1,1,integer,integer,abilityintegerlevelarrayfield,integer,integer
-_GetAbilityBaseIntegerLevelArrayFieldById_Defaults=0,_,0,0
+GetAbilityBaseIntegerLevelArrayFieldById=1,1,integer,abilcode,abilityintegerlevelarrayfield,integer,integer
+_GetAbilityBaseIntegerLevelArrayFieldById_Defaults=_,_,0,0
 _GetAbilityBaseIntegerLevelArrayFieldById_Category=TC_UjAPI_Ability
 
 
-GetAbilityBaseIntegerLevelFieldById=1,1,integer,integer,abilityintegerlevelfield,integer
-_GetAbilityBaseIntegerLevelFieldById_Defaults=0,_,0
+GetAbilityBaseIntegerLevelFieldById=1,1,integer,abilcode,abilityintegerlevelfield,integer
+_GetAbilityBaseIntegerLevelFieldById_Defaults=_,_,0
 _GetAbilityBaseIntegerLevelFieldById_Category=TC_UjAPI_Ability
 
 
-GetAbilityBaseRealFieldById=1,1,real,integer,abilityrealfield
-_GetAbilityBaseRealFieldById_Defaults=0,_
+GetAbilityBaseRealFieldById=1,1,real,abilcode,abilityrealfield
+_GetAbilityBaseRealFieldById_Defaults=_,_
 _GetAbilityBaseRealFieldById_Category=TC_UjAPI_Ability
 
 
-GetAbilityBaseRealLevelArrayFieldById=1,1,real,integer,abilityreallevelarrayfield,integer,integer
-_GetAbilityBaseRealLevelArrayFieldById_Defaults=0,_,0,0
+GetAbilityBaseRealLevelArrayFieldById=1,1,real,abilcode,abilityreallevelarrayfield,integer,integer
+_GetAbilityBaseRealLevelArrayFieldById_Defaults=_,_,0,0
 _GetAbilityBaseRealLevelArrayFieldById_Category=TC_UjAPI_Ability
 
 
-GetAbilityBaseRealLevelFieldById=1,1,real,integer,abilityreallevelfield,integer
-_GetAbilityBaseRealLevelFieldById_Defaults=0,_,0
+GetAbilityBaseRealLevelFieldById=1,1,real,abilcode,abilityreallevelfield,integer
+_GetAbilityBaseRealLevelFieldById_Defaults=_,_,0
 _GetAbilityBaseRealLevelFieldById_Category=TC_UjAPI_Ability
 
 
-GetAbilityBaseStringFieldById=1,1,string,integer,abilitystringfield
-_GetAbilityBaseStringFieldById_Defaults=0,_
+GetAbilityBaseStringFieldById=1,1,string,abilcode,abilitystringfield
+_GetAbilityBaseStringFieldById_Defaults=_,_
 _GetAbilityBaseStringFieldById_Category=TC_UjAPI_Ability
 
 
-GetAbilityBaseStringLevelArrayFieldById=1,1,string,integer,abilitystringlevelarrayfield,integer,integer
-_GetAbilityBaseStringLevelArrayFieldById_Defaults=0,_,0,0
+GetAbilityBaseStringLevelArrayFieldById=1,1,string,abilcode,abilitystringlevelarrayfield,integer,integer
+_GetAbilityBaseStringLevelArrayFieldById_Defaults=_,_,0,0
 _GetAbilityBaseStringLevelArrayFieldById_Category=TC_UjAPI_Ability
 
 
-GetAbilityBaseStringLevelFieldById=1,1,string,integer,abilitystringlevelfield,integer
-_GetAbilityBaseStringLevelFieldById_Defaults=0,_,0
+GetAbilityBaseStringLevelFieldById=1,1,string,abilcode,abilitystringlevelfield,integer
+_GetAbilityBaseStringLevelFieldById_Defaults=_,_,0
 _GetAbilityBaseStringLevelFieldById_Category=TC_UjAPI_Ability
 
 
@@ -19410,8 +19410,8 @@ _GetIssuedOrderId_Defaults=
 _GetIssuedOrderId_Category=TC_UjAPI_Order
 
 
-GetItemAbilityById=1,1,ability,item,integer
-_GetItemAbilityById_Defaults=_,0
+GetItemAbilityById=1,1,ability,item,abilcode
+_GetItemAbilityById_Defaults=_,_
 _GetItemAbilityById_Category=TC_UjAPI_Ability
 
 
@@ -21115,8 +21115,8 @@ _GetUjAPIVersion_Defaults=
 _GetUjAPIVersion_Category=TC_UjAPI_Version
 
 
-GetUnitAbility=1,1,ability,unit,integer
-_GetUnitAbility_Defaults=_,0
+GetUnitAbility=1,1,ability,unit,abilcode
+_GetUnitAbility_Defaults=_,_
 _GetUnitAbility_Category=TC_UjAPI_Unit
 
 
@@ -21125,8 +21125,8 @@ _GetUnitAbilityByIndex_Defaults=_,0
 _GetUnitAbilityByIndex_Category=TC_UjAPI_Unit
 
 
-GetUnitAbilityEx=1,1,ability,unit,integer,integer
-_GetUnitAbilityEx_Defaults=_,0,0
+GetUnitAbilityEx=1,1,ability,unit,abilcode,integer
+_GetUnitAbilityEx_Defaults=_,_,0
 _GetUnitAbilityEx_Category=TC_UjAPI_Unit
 
 
@@ -22840,8 +22840,8 @@ _Id2String_Defaults=0
 _Id2String_Category=TC_UjAPI_String
 
 
-IncUnitAbilityLevel=1,1,integer,unit,integer
-_IncUnitAbilityLevel_Defaults=_,0
+IncUnitAbilityLevel=1,1,integer,unit,abilcode
+_IncUnitAbilityLevel_Defaults=_,_
 _IncUnitAbilityLevel_Category=TC_UjAPI_Unit
 
 
@@ -22875,8 +22875,8 @@ _IsAbilityAutocastEnabled_Defaults=_
 _IsAbilityAutocastEnabled_Category=TC_UjAPI_Ability
 
 
-IsAbilityBaseTargetAllowed=1,1,boolean,integer,widget,widget
-_IsAbilityBaseTargetAllowed_Defaults=0,_,_
+IsAbilityBaseTargetAllowed=1,1,boolean,abilcode,widget,widget
+_IsAbilityBaseTargetAllowed_Defaults=_,_,_
 _IsAbilityBaseTargetAllowed_Category=TC_UjAPI_Ability
 
 
@@ -23310,8 +23310,8 @@ _IsUnit_Defaults=_,_
 _IsUnit_Category=TC_UjAPI_Unit
 
 
-IsUnitAbilityVisible=1,1,boolean,unit,integer
-_IsUnitAbilityVisible_Defaults=_,0
+IsUnitAbilityVisible=1,1,boolean,unit,abilcode
+_IsUnitAbilityVisible_Defaults=_,_
 _IsUnitAbilityVisible_Category=TC_UjAPI_Unit
 
 
@@ -23485,8 +23485,8 @@ _ItemAddAbility_Defaults=_,_
 _ItemAddAbility_Category=TC_UjAPI_Ability
 
 
-ItemAddAbilityById=1,1,boolean,item,integer
-_ItemAddAbilityById_Defaults=_,0
+ItemAddAbilityById=1,1,boolean,item,abilcode
+_ItemAddAbilityById_Defaults=_,_
 _ItemAddAbilityById_Category=TC_UjAPI_Ability
 
 
@@ -23495,8 +23495,8 @@ _ItemRemoveAbility_Defaults=_,_
 _ItemRemoveAbility_Category=TC_UjAPI_Ability
 
 
-ItemRemoveAbilityById=1,1,boolean,item,integer
-_ItemRemoveAbilityById_Defaults=_,0
+ItemRemoveAbilityById=1,1,boolean,item,abilcode
+_ItemRemoveAbilityById_Defaults=_,_
 _ItemRemoveAbilityById_Category=TC_UjAPI_Ability
 
 
@@ -24150,23 +24150,23 @@ _ReloadGameCachesFromDisk_Defaults=
 _ReloadGameCachesFromDisk_Category=TC_UjAPI_GameCache
 
 
-RemoveAbilityBaseBooleanLevelArrayFieldById=1,1,boolean,integer,abilitybooleanlevelarrayfield,integer,boolean
-_RemoveAbilityBaseBooleanLevelArrayFieldById_Defaults=0,_,0,true
+RemoveAbilityBaseBooleanLevelArrayFieldById=1,1,boolean,abilcode,abilitybooleanlevelarrayfield,integer,boolean
+_RemoveAbilityBaseBooleanLevelArrayFieldById_Defaults=_,_,0,true
 _RemoveAbilityBaseBooleanLevelArrayFieldById_Category=TC_UjAPI_Ability
 
 
-RemoveAbilityBaseIntegerLevelArrayFieldById=1,1,boolean,integer,abilityintegerlevelarrayfield,integer,integer
-_RemoveAbilityBaseIntegerLevelArrayFieldById_Defaults=0,_,0,0
+RemoveAbilityBaseIntegerLevelArrayFieldById=1,1,boolean,abilcode,abilityintegerlevelarrayfield,integer,integer
+_RemoveAbilityBaseIntegerLevelArrayFieldById_Defaults=_,_,0,0
 _RemoveAbilityBaseIntegerLevelArrayFieldById_Category=TC_UjAPI_Ability
 
 
-RemoveAbilityBaseRealLevelArrayFieldById=1,1,boolean,integer,abilityreallevelarrayfield,integer,real
-_RemoveAbilityBaseRealLevelArrayFieldById_Defaults=0,_,0,0
+RemoveAbilityBaseRealLevelArrayFieldById=1,1,boolean,abilcode,abilityreallevelarrayfield,integer,real
+_RemoveAbilityBaseRealLevelArrayFieldById_Defaults=_,_,0,0
 _RemoveAbilityBaseRealLevelArrayFieldById_Category=TC_UjAPI_Ability
 
 
-RemoveAbilityBaseStringLevelArrayFieldById=1,1,boolean,integer,abilitystringlevelarrayfield,integer,string
-_RemoveAbilityBaseStringLevelArrayFieldById_Defaults=0,_,0,_
+RemoveAbilityBaseStringLevelArrayFieldById=1,1,boolean,abilcode,abilitystringlevelarrayfield,integer,string
+_RemoveAbilityBaseStringLevelArrayFieldById_Defaults=_,_,0,_
 _RemoveAbilityBaseStringLevelArrayFieldById_Category=TC_UjAPI_Ability
 
 
@@ -24590,63 +24590,63 @@ _SendSyncData_Defaults=_,_
 _SendSyncData_Category=TC_UjAPI_Sync
 
 
-SetAbilityBaseBooleanFieldById=1,1,boolean,integer,abilitybooleanfield,boolean
-_SetAbilityBaseBooleanFieldById_Defaults=0,_,true
+SetAbilityBaseBooleanFieldById=1,1,boolean,abilcode,abilitybooleanfield,boolean
+_SetAbilityBaseBooleanFieldById_Defaults=_,_,true
 _SetAbilityBaseBooleanFieldById_Category=TC_UjAPI_Ability
 
 
-SetAbilityBaseBooleanLevelArrayFieldById=1,1,boolean,integer,abilitybooleanlevelarrayfield,integer,integer,boolean
-_SetAbilityBaseBooleanLevelArrayFieldById_Defaults=0,_,0,0,true
+SetAbilityBaseBooleanLevelArrayFieldById=1,1,boolean,abilcode,abilitybooleanlevelarrayfield,integer,integer,boolean
+_SetAbilityBaseBooleanLevelArrayFieldById_Defaults=_,_,0,0,true
 _SetAbilityBaseBooleanLevelArrayFieldById_Category=TC_UjAPI_Ability
 
 
-SetAbilityBaseBooleanLevelFieldById=1,1,boolean,integer,abilitybooleanlevelfield,integer,boolean
-_SetAbilityBaseBooleanLevelFieldById_Defaults=0,_,0,true
+SetAbilityBaseBooleanLevelFieldById=1,1,boolean,abilcode,abilitybooleanlevelfield,integer,boolean
+_SetAbilityBaseBooleanLevelFieldById_Defaults=_,_,0,true
 _SetAbilityBaseBooleanLevelFieldById_Category=TC_UjAPI_Ability
 
 
-SetAbilityBaseIntegerFieldById=1,1,boolean,integer,abilityintegerfield,integer
-_SetAbilityBaseIntegerFieldById_Defaults=0,_,0
+SetAbilityBaseIntegerFieldById=1,1,boolean,abilcode,abilityintegerfield,integer
+_SetAbilityBaseIntegerFieldById_Defaults=_,_,0
 _SetAbilityBaseIntegerFieldById_Category=TC_UjAPI_Ability
 
 
-SetAbilityBaseIntegerLevelArrayFieldById=1,1,boolean,integer,abilityintegerlevelarrayfield,integer,integer,integer
-_SetAbilityBaseIntegerLevelArrayFieldById_Defaults=0,_,0,0,0
+SetAbilityBaseIntegerLevelArrayFieldById=1,1,boolean,abilcode,abilityintegerlevelarrayfield,integer,integer,integer
+_SetAbilityBaseIntegerLevelArrayFieldById_Defaults=_,_,0,0,0
 _SetAbilityBaseIntegerLevelArrayFieldById_Category=TC_UjAPI_Ability
 
 
-SetAbilityBaseIntegerLevelFieldById=1,1,boolean,integer,abilityintegerlevelfield,integer,integer
-_SetAbilityBaseIntegerLevelFieldById_Defaults=0,_,0,0
+SetAbilityBaseIntegerLevelFieldById=1,1,boolean,abilcode,abilityintegerlevelfield,integer,integer
+_SetAbilityBaseIntegerLevelFieldById_Defaults=_,_,0,0
 _SetAbilityBaseIntegerLevelFieldById_Category=TC_UjAPI_Ability
 
 
-SetAbilityBaseRealFieldById=1,1,boolean,integer,abilityrealfield,real
-_SetAbilityBaseRealFieldById_Defaults=0,_,0
+SetAbilityBaseRealFieldById=1,1,boolean,abilcode,abilityrealfield,real
+_SetAbilityBaseRealFieldById_Defaults=_,_,0
 _SetAbilityBaseRealFieldById_Category=TC_UjAPI_Ability
 
 
-SetAbilityBaseRealLevelArrayFieldById=1,1,boolean,integer,abilityreallevelarrayfield,integer,integer,real
-_SetAbilityBaseRealLevelArrayFieldById_Defaults=0,_,0,0,0
+SetAbilityBaseRealLevelArrayFieldById=1,1,boolean,abilcode,abilityreallevelarrayfield,integer,integer,real
+_SetAbilityBaseRealLevelArrayFieldById_Defaults=_,_,0,0,0
 _SetAbilityBaseRealLevelArrayFieldById_Category=TC_UjAPI_Ability
 
 
-SetAbilityBaseRealLevelFieldById=1,1,boolean,integer,abilityreallevelfield,integer,real
-_SetAbilityBaseRealLevelFieldById_Defaults=0,_,0,0
+SetAbilityBaseRealLevelFieldById=1,1,boolean,abilcode,abilityreallevelfield,integer,real
+_SetAbilityBaseRealLevelFieldById_Defaults=_,_,0,0
 _SetAbilityBaseRealLevelFieldById_Category=TC_UjAPI_Ability
 
 
-SetAbilityBaseStringFieldById=1,1,boolean,integer,abilitystringfield,string
-_SetAbilityBaseStringFieldById_Defaults=0,_,_
+SetAbilityBaseStringFieldById=1,1,boolean,abilcode,abilitystringfield,string
+_SetAbilityBaseStringFieldById_Defaults=_,_,_
 _SetAbilityBaseStringFieldById_Category=TC_UjAPI_Ability
 
 
-SetAbilityBaseStringLevelArrayFieldById=1,1,boolean,integer,abilitystringlevelarrayfield,integer,integer,string
-_SetAbilityBaseStringLevelArrayFieldById_Defaults=0,_,0,0,_
+SetAbilityBaseStringLevelArrayFieldById=1,1,boolean,abilcode,abilitystringlevelarrayfield,integer,integer,string
+_SetAbilityBaseStringLevelArrayFieldById_Defaults=_,_,0,0,_
 _SetAbilityBaseStringLevelArrayFieldById_Category=TC_UjAPI_Ability
 
 
-SetAbilityBaseStringLevelFieldById=1,1,boolean,integer,abilitystringlevelfield,integer,string
-_SetAbilityBaseStringLevelFieldById_Defaults=0,_,0,_
+SetAbilityBaseStringLevelFieldById=1,1,boolean,abilcode,abilitystringlevelfield,integer,string
+_SetAbilityBaseStringLevelFieldById_Defaults=_,_,0,_
 _SetAbilityBaseStringLevelFieldById_Category=TC_UjAPI_Ability
 
 
@@ -25030,8 +25030,8 @@ _SetSoundFacialAnimationSetFilepath_Defaults=_,_
 _SetSoundFacialAnimationSetFilepath_Category=TC_UjAPI_Sound
 
 
-SetUnitAbilityLevel=1,1,integer,unit,integer,integer
-_SetUnitAbilityLevel_Defaults=_,0,0
+SetUnitAbilityLevel=1,1,integer,unit,abilcode,integer
+_SetUnitAbilityLevel_Defaults=_,_,0
 _SetUnitAbilityLevel_Category=TC_UjAPI_Unit
 
 
@@ -25410,13 +25410,13 @@ _TriggerRegisterWidgetEvent_Defaults=_,_,_
 _TriggerRegisterWidgetEvent_Category=TC_UjAPI_Trigger
 
 
-UnitAddAbility=1,1,boolean,unit,integer
-_UnitAddAbility_Defaults=_,0
+UnitAddAbility=1,1,boolean,unit,abilcode
+_UnitAddAbility_Defaults=_,_
 _UnitAddAbility_Category=TC_UjAPI_Unit
 
 
-UnitAddAbilityEx=1,1,boolean,unit,integer,boolean
-_UnitAddAbilityEx_Defaults=_,0,true
+UnitAddAbilityEx=1,1,boolean,unit,abilcode,boolean
+_UnitAddAbilityEx_Defaults=_,_,true
 _UnitAddAbilityEx_Category=TC_UjAPI_Unit
 
 
@@ -25600,13 +25600,13 @@ _UnitModifySkillPoints_Defaults=_,0
 _UnitModifySkillPoints_Category=TC_UjAPI_Unit
 
 
-UnitRemoveAbility=1,1,boolean,unit,integer
-_UnitRemoveAbility_Defaults=_,0
+UnitRemoveAbility=1,1,boolean,unit,abilcode
+_UnitRemoveAbility_Defaults=_,_
 _UnitRemoveAbility_Category=TC_UjAPI_Unit
 
 
-UnitRemoveAbilityEx=1,1,boolean,unit,integer,boolean
-_UnitRemoveAbilityEx_Defaults=_,0,true
+UnitRemoveAbilityEx=1,1,boolean,unit,abilcode,boolean
+_UnitRemoveAbilityEx_Defaults=_,_,true
 _UnitRemoveAbilityEx_Category=TC_UjAPI_Unit
 
 

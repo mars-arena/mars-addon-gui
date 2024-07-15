@@ -21,6 +21,8 @@ const UI = path.join(root, 'src', 'UI')
 
 rmdir(UI)
 cpdir(path.join(root, 'src', 'umswe', 'UI'), UI)
+const read = p => fs.readFileSync(p, {encoding: 'utf8', flag: 'r'}).replace(/\r\n/g, '\n')
+
 
 const TriggerData = path.join(UI, 'TriggerData.txt')
 const TriggerStrings = path.join(UI, 'TriggerStrings.txt')
@@ -41,7 +43,7 @@ for (const s of fs.readFileSync(TriggerData, {encoding: 'utf8', flag: 'r'}).spli
 
 const TriggerParams = []
 
-for (const node of parse(fs.readFileSync(path.join('..', 'src', 'common.j'), {encoding: 'utf8', flag: 'r'}))) {
+for (const node of parse(read(path.join('..', 'src', 'common.j')))) {
     if (node instanceof Native) {
         /** @type {number} */ const part = nativeSection(node)
         if (part & 1) nativeAdd(node, true)

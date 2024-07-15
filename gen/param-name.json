@@ -1,0 +1,1198 @@
+{
+    "integer": [
+        "i",
+        "orderId",
+        "unitId",
+        "abilCode",
+        "objectId",
+        "width",
+        "precision",
+        "start",
+        "end",
+        "teamcount",
+        "playercount",
+        "whichStartLoc",
+        "prioSlotCount",
+        "prioSlotIndex",
+        "otherStartLocIndex",
+        "whichStartLocation",
+        "whichTeam",
+        "startLocIndex",
+        "rate",
+        "countLimit",
+        "order",
+        "objectid",
+        "variation",
+        "itemid",
+        "itemId",
+        "charges",
+        "data",
+        "unitid",
+        "red",
+        "green",
+        "blue",
+        "alpha",
+        "whichAnimation",
+        "newStr",
+        "newAgi",
+        "newInt",
+        "howManyLevels",
+        "newXpVal",
+        "skillPointDelta",
+        "xpToAdd",
+        "level",
+        "abilcode",
+        "unitType",
+        "newPointValue",
+        "itemSlot",
+        "slot",
+        "buffId",
+        "constructionPercentage",
+        "upgradePercentage",
+        "amount",
+        "currentStock",
+        "stockMax",
+        "slots",
+        "number",
+        "techid",
+        "maximum",
+        "levels",
+        "setToLevel",
+        "newOwner",
+        "abilid",
+        "value",
+        "campaignIndex",
+        "campaignNumber",
+        "missionNumber",
+        "whichButton",
+        "hotkey",
+        "parentKey",
+        "childKey",
+        "lowBound",
+        "highBound",
+        "seed",
+        "style",
+        "reserved",
+        "state",
+        "count",
+        "index",
+        "whichItem",
+        "val",
+        "row",
+        "column",
+        "portraitUnitId",
+        "whichMargin",
+        "fadeInRate",
+        "fadeOutRate",
+        "channel",
+        "volume",
+        "millisecs",
+        "outsideVolume",
+        "frommsecs",
+        "fadeinmsecs",
+        "duration",
+        "effectID",
+        "trailTime",
+        "updateInterval",
+        "terrainType",
+        "area",
+        "shape",
+        "imageType",
+        "doodadID",
+        "command",
+        "bitIndex",
+        "bitValue",
+        "byteIndex",
+        "byteValue",
+        "a",
+        "b",
+        "bitsToShift",
+        "byte1",
+        "byte2",
+        "byte3",
+        "byte4",
+        "opLimit",
+        "dividend",
+        "divisor",
+        "min",
+        "max",
+        "whichPosition",
+        "lineNumber",
+        "colour",
+        "isMiliseconds",
+        "benchType",
+        "x",
+        "y",
+        "recipient",
+        "handleBaseTypeId",
+        "gold",
+        "lumber",
+        "typeId",
+        "handleTypeId",
+        "eulerOrder",
+        "playerId",
+        "materialId",
+        "textureIndex",
+        "animIndex",
+        "aid",
+        "bid",
+        "playerColour",
+        "playerColourId",
+        "unitTypeId",
+        "newId",
+        "id",
+        "resistType",
+        "resourceType",
+        "attackIndex",
+        "weaponSound",
+        "damage",
+        "bonusDamage",
+        "dicesSides",
+        "dices",
+        "playercolourId",
+        "itemSlots",
+        "forLevel",
+        "stunCounter",
+        "uid",
+        "unitFlags",
+        "healthStateId",
+        "manaStateId",
+        "trainingPercentage",
+        "projectileTypeId",
+        "flags",
+        "priority",
+        "createContext",
+        "listId",
+        "textSize",
+        "stateId",
+        "cameraIndex",
+        "textureId",
+        "borderFlags",
+        "valueId",
+        "highlightId",
+        "backdropId",
+        "borderFlag",
+        "insetId",
+        "whichMetaKey",
+        "delay",
+        "flag",
+        "damageFlags",
+        "whichAbility",
+        "whichUpgrade",
+        "maxCheckpointSaves",
+        "hp",
+        "mana",
+        "weaponIndex",
+        "baseDamage",
+        "diceNumber",
+        "diceSides",
+        "r",
+        "g",
+        "abilId",
+        "manaCost",
+        "fps",
+        "size",
+        "color",
+        "primaryProp",
+        "metaKey",
+        "whichUprgade",
+        "skinId"
+    ],
+    "string": [
+        "orderIdString",
+        "unitIdString",
+        "abilityIdString",
+        "s",
+        "source",
+        "name",
+        "description",
+        "unitname",
+        "order",
+        "funcName",
+        "varName",
+        "chatMessageToDetect",
+        "whichAnimation",
+        "animProperties",
+        "whichBone",
+        "unitToBuild",
+        "unitName",
+        "newLevel",
+        "saveFileName",
+        "sourceDirName",
+        "destDirName",
+        "sourceSaveName",
+        "destSaveName",
+        "saveName",
+        "messageText",
+        "buttonText",
+        "campaignFile",
+        "missionKey",
+        "key",
+        "value",
+        "message",
+        "terrainDNCFile",
+        "unitDNCFile",
+        "skyModelFile",
+        "introText",
+        "introModelPath",
+        "modelName",
+        "movieName",
+        "iconPath",
+        "trackableModelPath",
+        "title",
+        "label",
+        "val",
+        "iconFileName",
+        "cameraModelFile",
+        "filename",
+        "speakerTitle",
+        "text",
+        "environmentName",
+        "fileName",
+        "eaxSetting",
+        "SLKEntryName",
+        "soundLabel",
+        "musicName",
+        "musicFileName",
+        "attachPointName",
+        "abilityString",
+        "attachPoint",
+        "codeName",
+        "file",
+        "animName",
+        "script",
+        "cheatStr",
+        "idString",
+        "hex",
+        "parentScriptFile",
+        "helperScriptFile",
+        "jassScriptFile",
+        "variableName",
+        "whichString",
+        "replaceWith",
+        "filePath",
+        "sectionName",
+        "optionName",
+        "raceName",
+        "textureName",
+        "imagePath",
+        "modelFile",
+        "animationName",
+        "whichObject",
+        "TOCFile",
+        "templateName",
+        "frameType",
+        "contextName",
+        "frameName",
+        "model",
+        "backgroundTextureFile",
+        "borderTextureFile",
+        "textureFile",
+        "fontName",
+        "texturePath",
+        "prefix",
+        "data",
+        "taggedString",
+        "portraitDNCFile",
+        "pingPath",
+        "animationLabel",
+        "groupLabel",
+        "animationSetFilepath",
+        "speakerName",
+        "dialogueText",
+        "testType",
+        "testName",
+        "tooltip",
+        "extendedTooltip",
+        "researchTooltip",
+        "researchExtendedTooltip",
+        "heroProperName",
+        "typeName",
+        "inherits",
+        "texFile"
+    ],
+    "real": [
+        "degrees",
+        "radians",
+        "y",
+        "x",
+        "power",
+        "r",
+        "timeout",
+        "radius",
+        "minx",
+        "miny",
+        "maxx",
+        "maxy",
+        "newCenterX",
+        "newCenterY",
+        "newX",
+        "newY",
+        "limitval",
+        "range",
+        "offset",
+        "newLife",
+        "facing",
+        "scale",
+        "z",
+        "life",
+        "max",
+        "speedFactor",
+        "height",
+        "newVal",
+        "facingAngle",
+        "duration",
+        "newSpeed",
+        "newHeight",
+        "rate",
+        "newTurnSpeed",
+        "newPropWindowAngle",
+        "newAcquireRange",
+        "scaleX",
+        "scaleY",
+        "scaleZ",
+        "timeScale",
+        "blendTime",
+        "offsetX",
+        "offsetY",
+        "offsetZ",
+        "distance",
+        "delay",
+        "amount",
+        "handicap",
+        "centerX",
+        "centerY",
+        "value",
+        "lowBound",
+        "highBound",
+        "weight",
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "zstart",
+        "zend",
+        "density",
+        "red",
+        "green",
+        "blue",
+        "fadeDuration",
+        "heightOffset",
+        "xvel",
+        "yvel",
+        "age",
+        "lifespan",
+        "fadepoint",
+        "speedMultFactor",
+        "timeRemaining",
+        "width",
+        "x1",
+        "y1",
+        "x2",
+        "y2",
+        "x3",
+        "y3",
+        "x4",
+        "y4",
+        "zOffsetDest",
+        "radiansToSweep",
+        "xoffset",
+        "yoffset",
+        "zDestOffset",
+        "forceDuration",
+        "mag",
+        "velocity",
+        "factor",
+        "minu",
+        "minv",
+        "maxu",
+        "maxv",
+        "sceneDuration",
+        "voiceoverDuration",
+        "cutoff",
+        "pitch",
+        "minDist",
+        "maxDist",
+        "inside",
+        "outside",
+        "rectwidth",
+        "rectheight",
+        "depth",
+        "spaceWaves",
+        "timeWaves",
+        "radiusStartPct",
+        "dirX",
+        "dirY",
+        "speed",
+        "minDelta",
+        "maxDelta",
+        "z1",
+        "z2",
+        "g",
+        "sizeX",
+        "sizeY",
+        "sizeZ",
+        "posX",
+        "posY",
+        "posZ",
+        "originX",
+        "originY",
+        "originZ",
+        "dividend",
+        "divisor",
+        "min",
+        "t",
+        "angle",
+        "fromX",
+        "fromY",
+        "toX",
+        "toY",
+        "fov",
+        "minX",
+        "minY",
+        "maxX",
+        "maxY",
+        "velX",
+        "velY",
+        "velZ",
+        "origin",
+        "size",
+        "remaining",
+        "yaw",
+        "roll",
+        "percent",
+        "castTime",
+        "castPoint",
+        "backswing",
+        "cooldown",
+        "targX",
+        "targY",
+        "timescale",
+        "maxLife",
+        "transitionTime",
+        "interval",
+        "realValue",
+        "time",
+        "attackSpeed",
+        "attackCooldown",
+        "damagePoint",
+        "armour",
+        "baseMoveSpeed",
+        "bonusMoveSpeedPercent",
+        "lifeRegen",
+        "mana",
+        "maxMana",
+        "manaRegen",
+        "multiplier",
+        "damage",
+        "area",
+        "arc",
+        "upperHeight",
+        "bottomHeight",
+        "minVal",
+        "maxVal",
+        "stepSize",
+        "armorAmount",
+        "forcedDuration",
+        "easeInDuration",
+        "easeOutDuration",
+        "smoothFactor",
+        "minValue",
+        "maxValue"
+    ],
+    "handle": [
+        "h",
+        "value",
+        "whichHandle"
+    ],
+    "boolean": [
+        "upper",
+        "value",
+        "flag",
+        "periodic",
+        "exactMatchOnly",
+        "birth",
+        "changeColor",
+        "show",
+        "creepGuard",
+        "add",
+        "permanent",
+        "includeBonuses",
+        "showEyeCandy",
+        "doEyecandy",
+        "exploded",
+        "useFood",
+        "share",
+        "suspend",
+        "removePositive",
+        "removeNegative",
+        "magic",
+        "physical",
+        "timedLife",
+        "aura",
+        "autoDispel",
+        "attack",
+        "ranged",
+        "activate",
+        "includeIncomplete",
+        "includeUpgrades",
+        "specificonly",
+        "avail",
+        "useSharedVision",
+        "enable",
+        "afterUnits",
+        "doScoreScreen",
+        "cleared",
+        "available",
+        "visible",
+        "b",
+        "extraEffects",
+        "state",
+        "enableAlly",
+        "enableCreep",
+        "ui",
+        "required",
+        "completed",
+        "discovered",
+        "failed",
+        "enabled",
+        "display",
+        "ascending",
+        "showLabel",
+        "showNames",
+        "showValues",
+        "showIcons",
+        "showValue",
+        "showIcon",
+        "minimize",
+        "inheritOrientation",
+        "doPan",
+        "panTimed",
+        "vertOnly",
+        "looping",
+        "is3D",
+        "stopwhenoutofrange",
+        "killWhenDone",
+        "fadeOut",
+        "random",
+        "byPosition",
+        "limitNeg",
+        "checkVisibility",
+        "val",
+        "useWaterAlpha",
+        "forcePaused",
+        "noBirthTime",
+        "addBlight",
+        "nearestOnly",
+        "animRandom",
+        "pause",
+        "caseSensitive",
+        "removeAllOccurences",
+        "isLocalTime",
+        "isLock",
+        "addToLog",
+        "isModuleCheck",
+        "isProcessCheck",
+        "isSet",
+        "isPeriodic",
+        "isShow",
+        "hide",
+        "disable",
+        "invulnerable",
+        "isInstant",
+        "isUber",
+        "visibility",
+        "ignoreStateCheck",
+        "breakOrder",
+        "checkPathing",
+        "ignoreErrorMessages",
+        "fullDisable",
+        "extraFlag",
+        "additionalCheck",
+        "checkForDuplicates",
+        "removeDuplicates",
+        "alsoCountBuffs",
+        "checkDuplicates",
+        "selectable",
+        "targetable",
+        "ignoreDistance",
+        "updateHealthState",
+        "updateManaState",
+        "updateScale",
+        "replaceAbilities",
+        "resetBuildingAnimation",
+        "isAutoBuild",
+        "workersCanAssist",
+        "copyPassives",
+        "eraseAllSimilar",
+        "onlyQueued",
+        "clearQueue",
+        "isFocus",
+        "allowTransparency",
+        "blend",
+        "isControlBackdrop",
+        "isFireEvent",
+        "isCheck",
+        "isEnable",
+        "allow",
+        "isAdd",
+        "fromServer",
+        "isKeyDown",
+        "showWindow",
+        "doDestroy",
+        "cinematicAudio",
+        "fadeIn",
+        "hideUI",
+        "enableSelection",
+        "enableSelectionCircle",
+        "keyDown"
+    ],
+    "location": [
+        "whichLocation",
+        "min",
+        "max",
+        "newCenterLoc",
+        "loc",
+        "center",
+        "where",
+        "fromLoc",
+        "toLoc"
+    ],
+    "startlocprio": [
+        "priority"
+    ],
+    "gametype": [
+        "whichGameType"
+    ],
+    "mapflag": [
+        "whichMapFlag"
+    ],
+    "placement": [
+        "whichPlacementType"
+    ],
+    "gamespeed": [
+        "whichspeed"
+    ],
+    "gamedifficulty": [
+        "whichdifficulty",
+        "g"
+    ],
+    "mapdensity": [
+        "whichdensity"
+    ],
+    "player": [
+        "whichPlayer",
+        "sourcePlayer",
+        "otherPlayer",
+        "byWhichPlayer",
+        "toPlayer",
+        "fromPlayer"
+    ],
+    "playercolor": [
+        "color",
+        "whichColor"
+    ],
+    "alliancetype": [
+        "whichAllianceSetting",
+        "whichAlliance"
+    ],
+    "playerstate": [
+        "whichResource",
+        "whichState",
+        "whichPlayerState"
+    ],
+    "racepreference": [
+        "whichRacePreference",
+        "pref"
+    ],
+    "mapcontrol": [
+        "controlType"
+    ],
+    "timer": [
+        "whichTimer"
+    ],
+    "code": [
+        "handlerFunc",
+        "callback",
+        "func",
+        "actionFunc",
+        "c",
+        "whichCode",
+        "whichFunction"
+    ],
+    "group": [
+        "whichGroup",
+        "destGroup",
+        "sourceGroup",
+        "addGroup",
+        "removeGroup"
+    ],
+    "unit": [
+        "whichUnit",
+        "lookAtTarget",
+        "whichHero",
+        "whichSpecifiedUnit",
+        "otherUnit",
+        "whichTransport",
+        "whichPeon",
+        "neutralStructure",
+        "waygate",
+        "killer",
+        "owner"
+    ],
+    "boolexpr": [
+        "filter",
+        "operandA",
+        "operandB",
+        "operand",
+        "e",
+        "condition",
+        "whichBoolexpr"
+    ],
+    "rect": [
+        "whichRect"
+    ],
+    "widget": [
+        "targetWidget",
+        "whichWidget",
+        "target",
+        "instantTargetWidget",
+        "source",
+        "whichTarget"
+    ],
+    "force": [
+        "whichForce",
+        "toWhichPlayers"
+    ],
+    "region": [
+        "whichRegion"
+    ],
+    "trigger": [
+        "whichTrigger"
+    ],
+    "conditionfunc": [
+        "c"
+    ],
+    "filterfunc": [
+        "f"
+    ],
+    "limitop": [
+        "opcode"
+    ],
+    "gamestate": [
+        "whichState"
+    ],
+    "dialog": [
+        "whichDialog"
+    ],
+    "button": [
+        "whichButton"
+    ],
+    "gameevent": [
+        "whichGameEvent"
+    ],
+    "trackable": [
+        "whichTrackable"
+    ],
+    "playerevent": [
+        "whichPlayerEvent"
+    ],
+    "playerunitevent": [
+        "whichPlayerUnitEvent"
+    ],
+    "unitstate": [
+        "whichState",
+        "whichUnitState"
+    ],
+    "unitevent": [
+        "whichEvent"
+    ],
+    "triggercondition": [
+        "whichCondition",
+        "whichTriggercondition"
+    ],
+    "triggeraction": [
+        "whichAction",
+        "whichTriggeraction"
+    ],
+    "sound": [
+        "whichSound",
+        "soundHandle"
+    ],
+    "destructable": [
+        "whichDestructable"
+    ],
+    "item": [
+        "whichItem"
+    ],
+    "raritycontrol": [
+        "rarity"
+    ],
+    "race": [
+        "whichRace"
+    ],
+    "unittype": [
+        "whichUnitType"
+    ],
+    "attacktype": [
+        "attackType",
+        "whichAttackType"
+    ],
+    "damagetype": [
+        "damageType",
+        "whichDamageType"
+    ],
+    "weapontype": [
+        "weaponType",
+        "whichWeaponType"
+    ],
+    "playerscore": [
+        "whichPlayerScore"
+    ],
+    "playergameresult": [
+        "gameResult"
+    ],
+    "fogstate": [
+        "whichState",
+        "whichFogState",
+        "fogVisibility"
+    ],
+    "fogmodifier": [
+        "whichFogModifier"
+    ],
+    "version": [
+        "whichVersion"
+    ],
+    "fgamestate": [
+        "whichFloatGameState"
+    ],
+    "igamestate": [
+        "whichIntegerGameState"
+    ],
+    "gamecache": [
+        "whichCache",
+        "whichGamecache"
+    ],
+    "hashtable": [
+        "whichHashtable"
+    ],
+    "ability": [
+        "whichAbility",
+        "whichSpellbook"
+    ],
+    "event": [
+        "whichEvent"
+    ],
+    "effect": [
+        "whichEffect"
+    ],
+    "unitpool": [
+        "whichUnitpool",
+        "whichPool"
+    ],
+    "itempool": [
+        "whichItempool",
+        "whichItemPool"
+    ],
+    "quest": [
+        "whichQuest"
+    ],
+    "questitem": [
+        "whichQuestitem",
+        "whichQuestItem"
+    ],
+    "defeatcondition": [
+        "whichDefeatcondition",
+        "whichCondition"
+    ],
+    "timerdialog": [
+        "whichTimerdialog",
+        "whichDialog"
+    ],
+    "leaderboard": [
+        "whichLeaderboard"
+    ],
+    "multiboard": [
+        "whichMultiboard"
+    ],
+    "multiboarditem": [
+        "whichMultiboarditem",
+        "whichMultiboardItem"
+    ],
+    "texttag": [
+        "whichTexttag",
+        "whichTextTag"
+    ],
+    "lightning": [
+        "whichLightning",
+        "whichBolt"
+    ],
+    "image": [
+        "whichImage"
+    ],
+    "ubersplat": [
+        "whichUbersplat",
+        "whichSplat"
+    ],
+    "agent": [
+        "whichAgent"
+    ],
+    "itemtype": [
+        "whichType"
+    ],
+    "camerafield": [
+        "whichField"
+    ],
+    "camerasetup": [
+        "whichCameraSetup"
+    ],
+    "blendmode": [
+        "whichMode",
+        "blendMode"
+    ],
+    "texmapflags": [
+        "whichFlags"
+    ],
+    "volumegroup": [
+        "vgroup"
+    ],
+    "weathereffect": [
+        "whichEffect"
+    ],
+    "terraindeformation": [
+        "deformation"
+    ],
+    "effecttype": [
+        "whichEffectType"
+    ],
+    "soundtype": [
+        "whichSoundType"
+    ],
+    "pathingtype": [
+        "t",
+        "pathingType"
+    ],
+    "jassthread": [
+        "thread"
+    ],
+    "textfilehandle": [
+        "whichTextFile",
+        "whichFile"
+    ],
+    "mappedfield": [
+        "whichField"
+    ],
+    "mappedtype": [
+        "whichMapType"
+    ],
+    "renderstage": [
+        "renderStage"
+    ],
+    "eventid": [
+        "whichEventId"
+    ],
+    "timetype": [
+        "whichTimeType"
+    ],
+    "buff": [
+        "whichBuff",
+        "whichbuff"
+    ],
+    "sprite": [
+        "whichsprite",
+        "whichSprite",
+        "targetSprite"
+    ],
+    "war3image": [
+        "whichWar3Image"
+    ],
+    "doodad": [
+        "whichDoodad"
+    ],
+    "projectile": [
+        "whichProjectile"
+    ],
+    "framehandle": [
+        "whichFrame",
+        "whichParent",
+        "whichSimpleParent",
+        "whichSpriteFrame",
+        "relativeFrame",
+        "tooltipFrame",
+        "frameToAdd",
+        "listBoxItem",
+        "frameToFind",
+        "grid",
+        "owner",
+        "frame",
+        "relative",
+        "tooltip",
+        "parent"
+    ],
+    "handlelist": [
+        "whichHandleList",
+        "destHandleList",
+        "sourceHandleList"
+    ],
+    "tradestate": [
+        "whichTradeState"
+    ],
+    "abilityintegerfield": [
+        "whichField"
+    ],
+    "abilitybooleanfield": [
+        "whichField"
+    ],
+    "abilityrealfield": [
+        "whichField"
+    ],
+    "abilitystringfield": [
+        "whichField"
+    ],
+    "abilityintegerlevelfield": [
+        "whichField"
+    ],
+    "abilitybooleanlevelfield": [
+        "whichField"
+    ],
+    "abilityreallevelfield": [
+        "whichField"
+    ],
+    "abilitystringlevelfield": [
+        "whichField"
+    ],
+    "abilityintegerlevelarrayfield": [
+        "whichField"
+    ],
+    "abilitybooleanlevelarrayfield": [
+        "whichField"
+    ],
+    "abilityreallevelarrayfield": [
+        "whichField"
+    ],
+    "abilitystringlevelarrayfield": [
+        "whichField"
+    ],
+    "abilitytype": [
+        "whichAbilityType"
+    ],
+    "targetflag": [
+        "whichFlags"
+    ],
+    "widgetevent": [
+        "whichWidgetEvent"
+    ],
+    "destructablestringfield": [
+        "whichField"
+    ],
+    "itemintegerfield": [
+        "whichField"
+    ],
+    "itembooleanfield": [
+        "whichField"
+    ],
+    "itemrealfield": [
+        "whichField"
+    ],
+    "itemstringfield": [
+        "whichField"
+    ],
+    "unitintegerfield": [
+        "whichField"
+    ],
+    "unitbooleanfield": [
+        "whichField"
+    ],
+    "unitrealfield": [
+        "whichField"
+    ],
+    "unitstringfield": [
+        "whichField"
+    ],
+    "unitweaponintegerfield": [
+        "whichField"
+    ],
+    "unitweaponbooleanfield": [
+        "whichField"
+    ],
+    "unitweaponrealfield": [
+        "whichField"
+    ],
+    "unitweaponstringfield": [
+        "whichField"
+    ],
+    "defensetype": [
+        "whichArmour"
+    ],
+    "heroattribute": [
+        "whichHeroAttribute"
+    ],
+    "collisiontype": [
+        "collisionType"
+    ],
+    "pathingaitype": [
+        "pathingAIType"
+    ],
+    "orderhandle": [
+        "whichOrder"
+    ],
+    "projectiletype": [
+        "whichType"
+    ],
+    "originframetype": [
+        "whichType",
+        "frameType"
+    ],
+    "framepointtype": [
+        "point",
+        "relativePoint"
+    ],
+    "mousebuttontype": [
+        "whichMouseButton",
+        "whichButton",
+        "mouseKey"
+    ],
+    "framestate": [
+        "whichFrameState"
+    ],
+    "layoutstyleflag": [
+        "whichLayoutStyle"
+    ],
+    "gridstyleflag": [
+        "whichGridStyle"
+    ],
+    "layerstyleflag": [
+        "whichLayerStyle"
+    ],
+    "controlstyleflag": [
+        "whichControlStyle"
+    ],
+    "textaligntype": [
+        "verticalAlign",
+        "horizontalAlign",
+        "vert",
+        "horz"
+    ],
+    "frameeventtype": [
+        "frameEvent",
+        "eventId"
+    ],
+    "oskeytype": [
+        "key",
+        "whichKey"
+    ],
+    "minimapicon": [
+        "pingId",
+        "whichMinimapIcon"
+    ],
+    "subanimtype": [
+        "whichSubAnim"
+    ],
+    "animtype": [
+        "whichAnim"
+    ],
+    "commandbuttoneffect": [
+        "whichEffect"
+    ]
+}
