@@ -15,6 +15,7 @@ import nativeSection from './utils/native-section.mjs'
 import fileDataAppend from './utils/file-data-append.mjs'
 import {WorldEditStrings} from './utils/edit-strings.mjs'
 import typeAdd, {TriggerTypes, TriggerTypesMap} from './utils/type-add.mjs'
+import nativeDeclaration from './utils/native-declaration.mjs'
 
 const root = path.join('..')
 const UI = path.join(root, 'src', 'UI')
@@ -48,6 +49,14 @@ for (const node of parse(read(path.join('..', 'src', 'common.j')))) {
         /** @type {number} */ const part = nativeSection(node)
         if (part & 1) nativeAdd(node, true)
         if (part & 2) nativeAdd(node, false)
+
+        if (node.params){
+            for (const p of node.params) {
+                if (p.type === 'widget'){
+                    console.log(nativeDeclaration(node))
+                }
+            }
+        }
     }
 
     if (node instanceof Type) {
