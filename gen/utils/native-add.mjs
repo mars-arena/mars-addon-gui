@@ -17,13 +17,12 @@ const TriggerCallStrings = []
 const param = (n, p) => {
     switch (p.type) {
         case 'integer':
-            if (p.name.toLowerCase().indexOf('unit') >= 0) {
+            if (p.name === 'unitTypeId' || p.name.toLowerCase().indexOf('unit') >= 0) {
                 return ['unitcode', 'hfoo']
             }
-            if (n.name.toLowerCase().indexOf('ability') >= 0) {
-                if (['aid', 'abilid', 'abilcode'].indexOf(p.name.toLowerCase()) >= 0) {
-                    return ['abilcode', '_']
-                }
+
+            if (['abilityTypeId'].indexOf(p.name) >= 0) {
+                return ['abilcode', '_']
             }
             return [p.type, '0']
         case 'real':
@@ -37,14 +36,16 @@ const param = (n, p) => {
 }
 
 /**
- * @param {import('jass-to-ast').Native} native
+ * @param {import('jass-to-ast').Native & {alias?: string[]}}  native
  * @param {boolean} actions
  */
 export default (native, actions) => {
-    if (native.name.startsWith('Blz')) return
+    const name = `${native.name}${(native.alias ?? []).join('')}`
 
-    if (actions && TriggerActionsMap[native.name]) return
-    if (!actions && TriggerCallsMap[native.name]) return
+    if (name.startsWith('Blz')) return
+
+    if (actions && TriggerActionsMap[name]) return
+    if (!actions && TriggerCallsMap[name]) return
 
     const hint = nativeHint(native)
 
@@ -54,7 +55,7 @@ export default (native, actions) => {
     if (!actions) pa.push('1', r)
 
     const pb = []
-    const pc = [`"${native.name}("`]
+    const pc = [`"${name}("`]
 
     if (native.params) {
         for (const p of native.params) {
@@ -69,16 +70,22 @@ export default (native, actions) => {
     }
     pc.push('")"')
 
-    const d = `
-${native.name}=${pa.join(',')}
-_${native.name}_Defaults=${pb.join(',')}
-_${native.name}_Category=TC_${categoryGet(native)}
-`
-    const s = `
-${native.name}=${native.name}
-${native.name}=${pc.join(',')}
-${native.name}Hint="${hint}"
-`
+    const dlist = [
+        `${name}=${pa.join(',')}`,
+        `_${name}_Defaults=${pb.join(',')}`,
+        `_${name}_Category=TC_${categoryGet(native)}`
+    ]
+    if (native.alias) dlist.push(`_${name}_ScriptName=${native.name}`)
+    let d = dlist.join('\n') + '\n'
+
+    const slist = [
+        `${name}=${native.name}`,
+        `${name}=${pc.join(',')}`,
+        `${name}Hint="${hint}"`
+    ]
+    if (native.alias) slist[0] += ` (${native.alias.join(', ')})`
+    const s = slist.join('\n') + '\n'
+
     if (actions) {
         TriggerActions.push(d)
         TriggerActionStrings.push(s)

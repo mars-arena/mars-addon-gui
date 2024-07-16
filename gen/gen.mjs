@@ -15,7 +15,7 @@ import nativeSection from './utils/native-section.mjs'
 import fileDataAppend from './utils/file-data-append.mjs'
 import {WorldEditStrings} from './utils/edit-strings.mjs'
 import typeAdd, {TriggerTypes, TriggerTypesMap} from './utils/type-add.mjs'
-import nativeDeclaration from './utils/native-declaration.mjs'
+import capitalize from './utils/capitalize.mjs'
 
 const root = path.join('..')
 const UI = path.join(root, 'src', 'UI')
@@ -44,19 +44,63 @@ for (const s of fs.readFileSync(TriggerData, {encoding: 'utf8', flag: 'r'}).spli
 
 const TriggerParams = []
 
+/**
+ * @param {number} part
+ * @param {Native} native
+ */
+const nativeAddWrapper = (part, native) => {
+    if (part & 1) nativeAdd(native, true)
+    if (part & 2) nativeAdd(native, false)
+}
+
+const i2a = i => {
+    switch (i) {
+        case 0 :
+            return 'unit'
+        case 1:
+            return 'item'
+        case 2:
+            return 'destructable'
+    }
+}
+
 for (const node of parse(read(path.join('..', 'src', 'common.j')))) {
     if (node instanceof Native) {
-        /** @type {number} */ const part = nativeSection(node)
-        if (part & 1) nativeAdd(node, true)
-        if (part & 2) nativeAdd(node, false)
-
-        if (node.params){
+        const section = nativeSection(node)
+        if (node.params) {
+            const list = []
             for (const p of node.params) {
-                if (p.type === 'widget'){
-                    console.log(nativeDeclaration(node))
+                if (p.type === 'widget') list.push(0)
+            }
+
+            if (list.length > 0) {
+                for (let j = 0; j < Math.pow(3, list.length); j++) {
+                    const native = structuredClone(node)
+
+                    let w = -1
+                    native.alias = []
+                    for (const p of native.params) {
+                        if (p.type === 'widget') {
+                            p.type = i2a(list[++w])
+                            native.alias.push(capitalize(p.type))
+                        }
+                    }
+
+                    nativeAddWrapper(section, native)
+
+                    for (let i = 0; i < list.length; i++) {
+                        if (list[i] < 2) {
+                            list[i] += 1
+                            break
+                        }
+                        list[i] = 0
+                    }
                 }
+                continue
             }
         }
+
+        nativeAddWrapper(section, node)
     }
 
     if (node instanceof Type) {
