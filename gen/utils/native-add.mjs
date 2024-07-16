@@ -17,6 +17,10 @@ const TriggerCallStrings = []
 const param = (n, p) => {
     switch (p.type) {
         case 'integer':
+            if (p.name === 'projectileTypeId') {
+                return ['projectiletype', 'Param_PROJECTILE_TYPE_BULLET']
+            }
+
             if (p.name === 'unitTypeId' || p.name.toLowerCase().indexOf('unit') >= 0) {
                 return ['unitcode', 'hfoo']
             }

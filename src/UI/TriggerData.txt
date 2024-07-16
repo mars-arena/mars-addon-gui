@@ -6574,12 +6574,12 @@ CreateMultiboard=1,nothing
 _CreateMultiboard_Defaults=
 _CreateMultiboard_Category=TC_UjAPI_Multiboard
 
-CreateProjectile=1,integer
-_CreateProjectile_Defaults=0
+CreateProjectile=1,projectiletype
+_CreateProjectile_Defaults=Param_PROJECTILE_TYPE_BULLET
 _CreateProjectile_Category=TC_UjAPI_Projectile
 
-CreateProjectileEx=1,unit,integer,integer
-_CreateProjectileEx_Defaults=_,0,0
+CreateProjectileEx=1,unit,projectiletype,integer
+_CreateProjectileEx_Defaults=_,Param_PROJECTILE_TYPE_BULLET,0
 _CreateProjectileEx_Category=TC_UjAPI_Projectile
 
 CreateQuest=1,nothing
@@ -16759,12 +16759,12 @@ CreateMinimapIconOnUnit=1,1,minimapicon,unit,integer,integer,integer,string,fogs
 _CreateMinimapIconOnUnit_Defaults=_,0,0,0,_,_
 _CreateMinimapIconOnUnit_Category=TC_UjAPI_Unit
 
-CreateProjectile=1,1,projectile,integer
-_CreateProjectile_Defaults=0
+CreateProjectile=1,1,projectile,projectiletype
+_CreateProjectile_Defaults=Param_PROJECTILE_TYPE_BULLET
 _CreateProjectile_Category=TC_UjAPI_Projectile
 
-CreateProjectileEx=1,1,projectile,unit,integer,integer
-_CreateProjectileEx_Defaults=_,0,0
+CreateProjectileEx=1,1,projectile,unit,projectiletype,integer
+_CreateProjectileEx_Defaults=_,Param_PROJECTILE_TYPE_BULLET,0
 _CreateProjectileEx_Category=TC_UjAPI_Projectile
 
 CreateQuest=1,1,quest,nothing
