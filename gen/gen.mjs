@@ -16,6 +16,7 @@ import fileDataAppend from './utils/file-data-append.mjs'
 import {WorldEditStrings} from './utils/edit-strings.mjs'
 import typeAdd, {TriggerTypes, TriggerTypesMap} from './utils/type-add.mjs'
 import capitalize from './utils/capitalize.mjs'
+import {paramAdd, TriggerParams} from './utils/param.mjs'
 
 const root = path.join('..')
 const UI = path.join(root, 'src', 'UI')
@@ -41,8 +42,6 @@ for (const s of fs.readFileSync(TriggerData, {encoding: 'utf8', flag: 'r'}).spli
     if (cat === 'TriggerCalls') TriggerCallsMap[name] = true
     if (cat === 'TriggerTypes') TriggerTypesMap[name] = true
 }
-
-const TriggerParams = []
 
 /**
  * @param {number} part
@@ -104,19 +103,18 @@ for (const node of parse(read(path.join('..', 'src', 'common.j')))) {
     }
 
     if (node instanceof Type) {
-        typeAdd(node)
+        typeAdd(node.base)
     }
 
     if (node instanceof Globals) {
         for (const v of node.globals) {
             if (v instanceof Variable) {
-                const s = `WESTRING_PARAM_${v.name}`
-                WorldEditStrings.push(`${s}=${v.name}`)
-                TriggerParams.push(`Param_${v.name}=1,${v.type},${v.name},${s}`)
+                paramAdd(v.name, v.type, v.name)
             }
         }
     }
 }
+
 
 TriggerActions.sort((a, b) => a.localeCompare(b))
 fileDataAppend(TriggerData, TriggerActions.join('\n'), 'TriggerActions')

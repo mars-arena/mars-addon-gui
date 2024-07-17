@@ -4,13 +4,15 @@ const TriggerTypes = []
 const TriggerTypesMap = {}
 
 /**
- * @param {import('jass-to-ast').Type} type
- * @param type
+ * @param {string} name
+ * @param {string} base
  */
-export default type => {
-    if (TriggerTypesMap[type.base]) return
-    TriggerTypes.push(`${type.base}=0,1,1,WESTRING_TRIGTYPE_${type.base}`)
-    WorldEditStrings.push(`WESTRING_TRIGTYPE_${type.base}=${type.base}`)
+export default (name, base = '') => {
+    if (TriggerTypesMap[name]) return
+    let t = `${name}=0,1,1,WESTRING_TRIGTYPE_${name}`
+    if (base.length > 0) t += `,${base}`
+    TriggerTypes.push(t)
+    WorldEditStrings.push(`WESTRING_TRIGTYPE_${name}=${name}`)
 }
 
 export {TriggerTypes, TriggerTypesMap}
