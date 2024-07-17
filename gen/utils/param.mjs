@@ -110,8 +110,6 @@ const projectile = [
     ['B-Al', 'ArtilleryLine'],
 ]
 
-projectile.sort((a, b) => a[1].localeCompare(b[1]))
-
 const base = 'projectilecode'
 
 typeAdd(base, 'integer')
