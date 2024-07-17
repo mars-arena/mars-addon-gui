@@ -109,7 +109,7 @@ for (const node of parse(read(path.join('..', 'src', 'common.j')))) {
     if (node instanceof Globals) {
         for (const v of node.globals) {
             if (v instanceof Variable) {
-                paramAdd(v.name, v.type, v.name)
+                paramAdd(v.name, null, v.type, v.name)
             }
         }
     }

@@ -4,14 +4,15 @@ import typeAdd from './type-add.mjs'
 const TriggerParams = []
 
 /**
- * @param {string} name
+ * @param {string} id
+ * @param {?string} name
  * @param {string} type
  * @param {string} value
  */
-const paramAdd = (name, type, value) => {
-    const s = `WESTRING_PARAM_${name}`
-    WorldEditStrings.push(`${s}=${name}`)
-    TriggerParams.push(`Param_${name}=1,${type},${value},${s}`)
+const paramAdd = (id, name, type, value) => {
+    const s = `WESTRING_PARAM_${id}`
+    WorldEditStrings.push(`${s}=${name ?? id}`)
+    TriggerParams.push(`Param_${id}=1,${type},${value},${s}`)
 }
 
 // Projectile API
@@ -115,7 +116,7 @@ const base = 'projectilecode'
 typeAdd(base, 'integer')
 
 for (const [id, name] of projectile) {
-    paramAdd(name, base, `'${id}'`)
+    paramAdd(`ProjectileType${name}`, name, base, `'${id}'`)
 }
 
 
