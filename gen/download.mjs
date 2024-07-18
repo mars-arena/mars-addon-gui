@@ -29,4 +29,12 @@ const download = (url, dest, trim = false) => {
 }
 
 // https://github.com/UnryzeC/UjAPI/tree/main/uJAPIFiles
-download('https://raw.githubusercontent.com/UnryzeC/UjAPI/main/uJAPIFiles/common.j', path.join('..', 'src', 'common.j'), true)
+
+const dest = path.join('..', 'src', 'common.j')
+download('https://raw.githubusercontent.com/UnryzeC/UjAPI/main/uJAPIFiles/common.j', dest, true)
+
+const out = '../../IntelliJASS/src/main/resources/sdk/common.j'
+if (fs.existsSync(out)) {
+    fs.copyFileSync(dest, out)
+}
+

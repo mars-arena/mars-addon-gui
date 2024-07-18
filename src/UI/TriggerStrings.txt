@@ -879,8 +879,8 @@ SelectUnit="SelectUnit(",~whichUnit,", ",~flag,")"
 SelectUnitHint="[NATIVE] native SelectUnit takes unit whichUnit, boolean flag returns nothing"
 
 SetUnitPointValueByType=SetUnitPointValueByType
-SetUnitPointValueByType="SetUnitPointValueByType(",~unitType,", ",~newPointValue,")"
-SetUnitPointValueByTypeHint="[UjAPI] native SetUnitPointValueByType takes integer unitType, integer newPointValue returns nothing"
+SetUnitPointValueByType="SetUnitPointValueByType(",~unitTypeId,", ",~newPointValue,")"
+SetUnitPointValueByTypeHint="[UjAPI] native SetUnitPointValueByType takes integer unitTypeId, integer newPointValue returns nothing"
 
 UnitAddItem=UnitAddItem
 UnitAddItem="UnitAddItem(",~whichUnit,", ",~whichItem,")"
@@ -2279,8 +2279,8 @@ DisplayCineFilter="DisplayCineFilter(",~flag,")"
 DisplayCineFilterHint="[NATIVE] native DisplayCineFilter takes boolean flag returns nothing"
 
 SetCinematicScene=SetCinematicScene
-SetCinematicScene="SetCinematicScene(",~portraitUnitId,", ",~color,", ",~speakerTitle,", ",~text,", ",~sceneDuration,", ",~voiceoverDuration,")"
-SetCinematicSceneHint="[NATIVE] native SetCinematicScene takes integer portraitUnitId, playercolor color, string speakerTitle, string text, real sceneDuration, real voiceoverDuration returns nothing"
+SetCinematicScene="SetCinematicScene(",~unitTypeId,", ",~color,", ",~speakerTitle,", ",~text,", ",~sceneDuration,", ",~voiceoverDuration,")"
+SetCinematicSceneHint="[NATIVE] native SetCinematicScene takes integer unitTypeId, playercolor color, string speakerTitle, string text, real sceneDuration, real voiceoverDuration returns nothing"
 
 EndCinematicScene=EndCinematicScene
 EndCinematicScene="EndCinematicScene(",")"
@@ -4070,6 +4070,10 @@ CreateAbility=CreateAbility
 CreateAbility="CreateAbility(",~abilityTypeId,")"
 CreateAbilityHint="[UjAPI] native CreateAbility takes integer abilityTypeId returns ability"
 
+RemoveAbility=RemoveAbility
+RemoveAbility="RemoveAbility(",~whichAbility,")"
+RemoveAbilityHint="[UjAPI] native RemoveAbility takes ability whichAbility returns nothing"
+
 SetAbilityOwner=SetAbilityOwner
 SetAbilityOwner="SetAbilityOwner(",~whichAbility,", ",~whichUnit,")"
 SetAbilityOwnerHint="[UjAPI] native SetAbilityOwner takes ability whichAbility, unit whichUnit returns nothing"
@@ -4265,6 +4269,10 @@ ResetBuffFieldDataHint="[UjAPI] native ResetBuffFieldData takes buff whichBuff r
 CreateBuff=CreateBuff
 CreateBuff="CreateBuff(",~buffTypeId,")"
 CreateBuffHint="[UjAPI] native CreateBuff takes integer buffTypeId returns buff"
+
+RemoveBuff=RemoveBuff
+RemoveBuff="RemoveBuff(",~whichBuff,")"
+RemoveBuffHint="[UjAPI] native RemoveBuff takes buff whichBuff returns nothing"
 
 SetBuffOwner=SetBuffOwner
 SetBuffOwner="SetBuffOwner(",~whichBuff,", ",~whichUnit,")"

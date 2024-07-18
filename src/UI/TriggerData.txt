@@ -8499,6 +8499,10 @@ ReloadGame=1,nothing
 _ReloadGame_Defaults=
 _ReloadGame_Category=TC_UjAPI_Game
 
+RemoveAbility=1,ability
+_RemoveAbility_Defaults=_
+_RemoveAbility_Category=TC_UjAPI_Ability
+
 RemoveAbilityBaseBooleanLevelArrayFieldById=1,abilcode,abilitybooleanlevelarrayfield,integer,boolean
 _RemoveAbilityBaseBooleanLevelArrayFieldById_Defaults=_,_,0,true
 _RemoveAbilityBaseBooleanLevelArrayFieldById_Category=TC_UjAPI_Ability
@@ -8522,6 +8526,10 @@ _RemoveAbilityIntegerLevelArrayField_Category=TC_UjAPI_Ability
 RemoveAbilityRealLevelArrayField=1,ability,abilityreallevelarrayfield,integer,real
 _RemoveAbilityRealLevelArrayField_Defaults=_,_,0,0
 _RemoveAbilityRealLevelArrayField_Category=TC_UjAPI_Ability
+
+RemoveBuff=1,buff
+_RemoveBuff_Defaults=_
+_RemoveBuff_Category=TC_UjAPI_Buff
 
 RemoveBuffBaseBooleanArrayFieldById=1,integer,abilitybooleanfield,boolean
 _RemoveBuffBaseBooleanArrayFieldById_Defaults=0,_,true
