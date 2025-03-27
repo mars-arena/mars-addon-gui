@@ -4,7 +4,7 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/System Volume Information" />
-      <excludeFolder url="file://$MODULE_DIR$/src/umswe" />
+      <excludeFolder url="file://$MODULE_DIR$/data/umswe" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
