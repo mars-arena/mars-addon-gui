@@ -13,7 +13,7 @@ fun main() {
 
     val mpq = MPQ4J(umswe)
 
-    val folder = Paths.get("data", "umswe", "UI").toFile()
+    val folder = Paths.get("data", "UI").toFile()
     for (file in folder.listFiles()!!) {
         mpq.insertFile("UI/${file.name}", file, true)
     }

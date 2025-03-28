@@ -19,10 +19,10 @@ import capitalize from './utils/capitalize.mjs'
 import {paramAdd, TriggerParams} from './utils/param.mjs'
 
 const root = path.join('..')
-const UI = path.join(root, 'src', 'UI')
+const UI = path.join(root, 'data', 'UI')
 
 rmdir(UI)
-cpdir(path.join(root, 'src', 'umswe', 'UI'), UI)
+cpdir(path.join(root, 'data', 'umswe', 'UI'), UI)
 const read = p => fs.readFileSync(p, {encoding: 'utf8', flag: 'r'}).replace(/\r\n/g, '\n')
 
 
@@ -63,7 +63,7 @@ const i2a = i => {
     }
 }
 
-for (const node of parse(read(path.join('..', 'src', 'common.j')))) {
+for (const node of parse(read(path.join('..', 'data', 'common.j')))) {
     if (node instanceof Native) {
         const section = nativeSection(node)
         if (node.params) {
