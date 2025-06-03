@@ -1,3 +1,3 @@
 includeBuild("../MPQ4J")
 
-rootProject.name = "ujapi-gui"
+rootProject.name = "mars-addon-gui"

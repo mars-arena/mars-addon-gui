@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ujapi-gui.test.iml" filepath="$PROJECT_DIR$/.idea/modules/ujapi-gui.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mars-addon-gui.test.iml" filepath="$PROJECT_DIR$/.idea/modules/mars-addon-gui.test.iml" />
     </modules>
   </component>
 </project>
