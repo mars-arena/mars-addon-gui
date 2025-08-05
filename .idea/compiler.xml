@@ -4,6 +4,11 @@
     <bytecodeTargetLevel>
       <module name="main.main" target="21" />
       <module name="main.test" target="21" />
+      <module name="mpq4j" target="21" />
+      <module name="mpq4j.main" target="21" />
+      <module name="mpq4j.test" target="21" />
+      <module name="ujapi-gui.main" target="21" />
+      <module name="ujapi-gui.test" target="21" />
     </bytecodeTargetLevel>
   </component>
 </project>
