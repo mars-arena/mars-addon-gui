@@ -18,11 +18,10 @@ import typeAdd, {TriggerTypes, TriggerTypesMap} from './utils/type-add.mjs'
 import capitalize from './utils/capitalize.mjs'
 import {paramAdd, TriggerParams} from './utils/param.mjs'
 
-const root = path.join('.')
-const UI = path.join(root, 'data', 'UI')
+const UI = path.join('.', 'dist', 'UI')
 
 rmdir(UI)
-cpdir(path.join(root, 'data', 'umswe', 'UI'), UI)
+cpdir(path.join('.', 'data', 'umswe', 'UI'), UI)
 const read = p => fs.readFileSync(p, {encoding: 'utf8', flag: 'r'}).replace(/\r\n/g, '\n')
 
 
