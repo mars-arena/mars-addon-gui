@@ -8,8 +8,8 @@ const TriggerCategories = []
  * @return {string}
  */
 const add = (name, data = 'Nothing') => {
-    let id = `UjAPI_${name}`
-    name = `${name} [UjAPI]`
+    let id = `MARS_${name}`
+    name = `${name} [MARS]`
 
     WorldEditStrings.push(`WESTRING_TRIGCAT_${id}=${name}`)
     TriggerCategories.push(`TC_${id}=WESTRING_TRIGCAT_${id},ReplaceableTextures\\WorldEditUI\\Actions-${data}`)
