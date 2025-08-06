@@ -2,13 +2,26 @@
   "name": "mars-addon-gui",
   "version": "1.0.0",
   "private": true,
-  "keywords": [],
+  "keywords": [
+    "warcraft3",
+    "jass",
+    "vjass",
+    "zinc",
+    "gui",
+    "generator"
+  ],
   "author": "nazarpunk",
-  "contributors": ["illiakorzhov"],
+  "contributors": [
+    "Illia Korzhov"
+  ],
   "license": "MIT",
   "type": "module",
-  "devDependencies": {
+  "dependencies": {
     "jass-to-ast": "^2.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^9.0.0",
+    "globals": "^16.3.0"
   },
   "scripts": {
     "generate": "node ./gen/gen.mjs"
