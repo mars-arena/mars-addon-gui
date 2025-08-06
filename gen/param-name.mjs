@@ -4,7 +4,7 @@ import path from 'path'
 
 const map = {}
 
-for (const native of parse(fs.readFileSync(path.join('..', 'data', 'common.j'), {
+for (const native of parse(fs.readFileSync(path.join('.', 'data', 'common.j'), {
     encoding: 'utf8',
     flag: 'r'
 }).replace(/\r\n/g, '\n'))) {

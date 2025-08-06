@@ -4,10 +4,13 @@
   "private": true,
   "keywords": [],
   "author": "nazarpunk",
-  "contributors": [],
+  "contributors": ["illiakorzhov"],
   "license": "MIT",
   "type": "module",
   "devDependencies": {
     "jass-to-ast": "^2.0.2"
+  },
+  "scripts": {
+    "generate": "node ./gen/gen.mjs"
   }
 }

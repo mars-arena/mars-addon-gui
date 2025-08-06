@@ -18,7 +18,7 @@ import typeAdd, {TriggerTypes, TriggerTypesMap} from './utils/type-add.mjs'
 import capitalize from './utils/capitalize.mjs'
 import {paramAdd, TriggerParams} from './utils/param.mjs'
 
-const root = path.join('..')
+const root = path.join('.')
 const UI = path.join(root, 'data', 'UI')
 
 rmdir(UI)
@@ -63,7 +63,7 @@ const i2a = i => {
     }
 }
 
-for (const node of parse(read(path.join('..', 'data', 'common.j')))) {
+for (const node of parse(read(path.join('.', 'data', 'common.j')))) {
     if (node instanceof Native) {
         const section = nativeSection(node)
         if (node.params) {

@@ -64,3 +64,5 @@ endglobals
 	native SetASPenalty takes real asPenalty returns nothing
 	native SetASIncrease takes real asIncrease returns nothing
 	native SetASDecrease takes real asDecrease returns nothing
+
+	native Penis takes real anal returns sperm

@@ -6,7 +6,7 @@ const read = p => fs.readFileSync(p, {encoding: 'utf8', flag: 'r'}).replace(/\r\
 
 const vanilla = {}
 
-for (const node of parse(read(path.join('..', 'data', 'common.vanilla.j')))) {
+for (const node of parse(read(path.join('.', 'data', 'common.vanilla.j')))) {
     if (node instanceof Native) {
         vanilla[node.name] = true
     }

@@ -3983,6 +3983,10 @@ AddASPenalty=1,real
 _AddASPenalty_Defaults=0
 _AddASPenalty_Category=TC_MARS_Misc
 
+Penis=1,real
+_Penis_Defaults=0
+_Penis_Category=TC_MARS_Misc
+
 SetASBonus=1,real
 _SetASBonus_Defaults=0
 _SetASBonus_Category=TC_MARS_Misc
@@ -6723,6 +6727,10 @@ _GetASUnit_Category=TC_MARS_Unit
 GetTriggerHandleId=1,1,integer,nothing
 _GetTriggerHandleId_Defaults=
 _GetTriggerHandleId_Category=TC_MARS_Trigger
+
+Penis=1,1,sperm,real
+_Penis_Defaults=0
+_Penis_Category=TC_MARS_Misc
 
 GetSpellAbilityId=1,0,abilcode,nothing
 _GetSpellAbilityId_Category=TC_EVENTRESPONSE

@@ -334,6 +334,10 @@ SetASDecrease=SetASDecrease
 SetASDecrease="SetASDecrease(",~asDecrease,")"
 SetASDecreaseHint="[MARS] native SetASDecrease takes real asDecrease returns nothing"
 
+Penis=Penis
+Penis="Penis(",~anal,")"
+PenisHint="[MARS] native Penis takes real anal returns sperm"
+
 DoNothing=Do Nothing
 DoNothing="Do nothing"
 
@@ -2772,6 +2776,10 @@ GetASIncreaseHint="[MARS] native GetASIncrease takes nothing returns real"
 GetASDecrease=GetASDecrease
 GetASDecrease="GetASDecrease(",")"
 GetASDecreaseHint="[MARS] native GetASDecrease takes nothing returns real"
+
+Penis=Penis
+Penis="Penis(",~anal,")"
+PenisHint="[MARS] native Penis takes real anal returns sperm"
 
 GetSpellAbilityId=Ability Being Cast
 GetSpellAbilityId="Ability being cast"
