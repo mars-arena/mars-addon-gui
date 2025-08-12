@@ -1,4 +1,8 @@
 [TriggerEventStrings]
+EventRegisterTrigger=EventRegisterTrigger
+EventRegisterTrigger="EventRegisterTrigger(",~trg,", ",~eventId,")"
+EventRegisterTriggerHint="[MARS] native EventRegisterTrigger takes trigger trg, integer eventId returns nothing"
+
 MapInitializationEvent=Map Initialization
 MapInitializationEvent="Map initialization"
 
@@ -302,41 +306,9 @@ SetUnitPositionSmooth=SetUnitPositionSmooth
 SetUnitPositionSmooth="SetUnitPositionSmooth(",~source,", ",~x,", ",~y,")"
 SetUnitPositionSmoothHint="[MARS] native SetUnitPositionSmooth takes unit source, real x, real y returns nothing"
 
-AddASBonus=AddASBonus
-AddASBonus="AddASBonus(",~asBonus,")"
-AddASBonusHint="[MARS] native AddASBonus takes real asBonus returns nothing"
-
-AddASPenalty=AddASPenalty
-AddASPenalty="AddASPenalty(",~asPenalty,")"
-AddASPenaltyHint="[MARS] native AddASPenalty takes real asPenalty returns nothing"
-
-AddASIncrease=AddASIncrease
-AddASIncrease="AddASIncrease(",~asIncrease,")"
-AddASIncreaseHint="[MARS] native AddASIncrease takes real asIncrease returns nothing"
-
-AddASDecrease=AddASDecrease
-AddASDecrease="AddASDecrease(",~asDecrease,")"
-AddASDecreaseHint="[MARS] native AddASDecrease takes real asDecrease returns nothing"
-
-SetASBonus=SetASBonus
-SetASBonus="SetASBonus(",~asBonus,")"
-SetASBonusHint="[MARS] native SetASBonus takes real asBonus returns nothing"
-
-SetASPenalty=SetASPenalty
-SetASPenalty="SetASPenalty(",~asPenalty,")"
-SetASPenaltyHint="[MARS] native SetASPenalty takes real asPenalty returns nothing"
-
-SetASIncrease=SetASIncrease
-SetASIncrease="SetASIncrease(",~asIncrease,")"
-SetASIncreaseHint="[MARS] native SetASIncrease takes real asIncrease returns nothing"
-
-SetASDecrease=SetASDecrease
-SetASDecrease="SetASDecrease(",~asDecrease,")"
-SetASDecreaseHint="[MARS] native SetASDecrease takes real asDecrease returns nothing"
-
-Penis=Penis
-Penis="Penis(",~anal,")"
-PenisHint="[MARS] native Penis takes real anal returns sperm"
+EventRegisterAction=EventRegisterAction
+EventRegisterAction="EventRegisterAction(",~eventId,", ",~action,")"
+EventRegisterActionHint="[MARS] native EventRegisterAction takes integer eventId, code action returns triggeraction"
 
 DoNothing=Do Nothing
 DoNothing="Do nothing"
@@ -2777,9 +2749,41 @@ GetASDecrease=GetASDecrease
 GetASDecrease="GetASDecrease(",")"
 GetASDecreaseHint="[MARS] native GetASDecrease takes nothing returns real"
 
-Penis=Penis
-Penis="Penis(",~anal,")"
-PenisHint="[MARS] native Penis takes real anal returns sperm"
+AddASBonus=AddASBonus
+AddASBonus="AddASBonus(",~asBonus,")"
+AddASBonusHint="[MARS] native AddASBonus takes real asBonus returns nothing"
+
+AddASPenalty=AddASPenalty
+AddASPenalty="AddASPenalty(",~asPenalty,")"
+AddASPenaltyHint="[MARS] native AddASPenalty takes real asPenalty returns nothing"
+
+AddASIncrease=AddASIncrease
+AddASIncrease="AddASIncrease(",~asIncrease,")"
+AddASIncreaseHint="[MARS] native AddASIncrease takes real asIncrease returns nothing"
+
+AddASDecrease=AddASDecrease
+AddASDecrease="AddASDecrease(",~asDecrease,")"
+AddASDecreaseHint="[MARS] native AddASDecrease takes real asDecrease returns nothing"
+
+SetASBonus=SetASBonus
+SetASBonus="SetASBonus(",~asBonus,")"
+SetASBonusHint="[MARS] native SetASBonus takes real asBonus returns nothing"
+
+SetASPenalty=SetASPenalty
+SetASPenalty="SetASPenalty(",~asPenalty,")"
+SetASPenaltyHint="[MARS] native SetASPenalty takes real asPenalty returns nothing"
+
+SetASIncrease=SetASIncrease
+SetASIncrease="SetASIncrease(",~asIncrease,")"
+SetASIncreaseHint="[MARS] native SetASIncrease takes real asIncrease returns nothing"
+
+SetASDecrease=SetASDecrease
+SetASDecrease="SetASDecrease(",~asDecrease,")"
+SetASDecreaseHint="[MARS] native SetASDecrease takes real asDecrease returns nothing"
+
+EventRegisterAction=EventRegisterAction
+EventRegisterAction="EventRegisterAction(",~eventId,", ",~action,")"
+EventRegisterActionHint="[MARS] native EventRegisterAction takes integer eventId, code action returns triggeraction"
 
 GetSpellAbilityId=Ability Being Cast
 GetSpellAbilityId="Ability being cast"

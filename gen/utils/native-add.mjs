@@ -9,6 +9,10 @@ const TriggerCallsMap = {}
 const TriggerCalls = []
 const TriggerCallStrings = []
 
+const TriggerEventsMap = {}
+const TriggerEvents = []
+const TriggerEventStrings = []
+
 /**
  * @param {import('jass-to-ast').Native} n
  * @param {import('jass-to-ast').Param} p
@@ -40,23 +44,24 @@ const param = (n, p) => {
 }
 
 /**
- * @param {import('jass-to-ast').Native & {alias?: string[]}}  native
- * @param {boolean} actions
+ * @param {import('jass-to-ast').Native & {alias?: string[]}} native
+ * @param {'TriggerActions'|'TriggerCalls'|'TriggerEvents'} section
  */
-export default (native, actions) => {
+export default (native, section) => {
     const name = `${native.name}${(native.alias ?? []).join('')}`
 
     if (name.startsWith('Blz')) return
 
-    if (actions && TriggerActionsMap[name]) return
-    if (!actions && TriggerCallsMap[name]) return
+    if (section === 'TriggerActions' && TriggerActionsMap[name]) return
+    if (section === 'TriggerCalls' && TriggerCallsMap[name]) return
+    if (section === 'TriggerEvents' && TriggerEventsMap[name]) return
 
     const hint = nativeHint(native)
 
     const r = native.returns ?? 'nothing'
 
     const pa = ['1']
-    if (!actions) pa.push('1', r)
+    if (section === 'TriggerCalls') pa.push('1', r)
 
     const pb = []
     const pc = [`"${name}("`]
@@ -80,7 +85,7 @@ export default (native, actions) => {
         `_${name}_Category=TC_${categoryGet(native)}`
     ]
     if (native.alias) dlist.push(`_${name}_ScriptName=${native.name}`)
-    let d = dlist.join('\n') + '\n'
+    const d = dlist.join('\n') + '\n'
 
     const slist = [
         `${name}=${native.name}`,
@@ -90,13 +95,23 @@ export default (native, actions) => {
     if (native.alias) slist[0] += ` (${native.alias.join(', ')})`
     const s = slist.join('\n') + '\n'
 
-    if (actions) {
+    if (section === 'TriggerActions') {
+        TriggerActionsMap[name] = true
         TriggerActions.push(d)
         TriggerActionStrings.push(s)
-    } else {
+    } else if (section === 'TriggerCalls') {
+        TriggerCallsMap[name] = true
         TriggerCalls.push(d)
         TriggerCallStrings.push(s)
+    } else {
+        TriggerEventsMap[name] = true
+        TriggerEvents.push(d)
+        TriggerEventStrings.push(s)
     }
 }
 
-export {TriggerActionsMap, TriggerActions, TriggerActionStrings, TriggerCallsMap, TriggerCalls, TriggerCallStrings}
+export {
+    TriggerActionsMap, TriggerActions, TriggerActionStrings,
+    TriggerCallsMap, TriggerCalls, TriggerCallStrings,
+    TriggerEventsMap, TriggerEvents, TriggerEventStrings
+}

@@ -4,11 +4,9 @@ import {cpdir} from './utils/cpdir.mjs'
 import fs from 'fs'
 import parse, {Globals, Native, Type, Variable} from 'jass-to-ast'
 import nativeAdd, {
-    TriggerActions,
-    TriggerActionsMap,
-    TriggerActionStrings,
-    TriggerCalls,
-    TriggerCallsMap, TriggerCallStrings
+    TriggerActions, TriggerActionsMap, TriggerActionStrings,
+    TriggerCalls, TriggerCallsMap, TriggerCallStrings,
+    TriggerEvents, TriggerEventsMap, TriggerEventStrings
 } from './utils/native-add.mjs'
 import {TriggerCategories} from './utils/category-get.mjs'
 import nativeSection from './utils/native-section.mjs'
@@ -40,15 +38,16 @@ for (const s of fs.readFileSync(TriggerData, {encoding: 'utf8', flag: 'r'}).spli
     if (cat === 'TriggerActions') TriggerActionsMap[name] = true
     if (cat === 'TriggerCalls') TriggerCallsMap[name] = true
     if (cat === 'TriggerTypes') TriggerTypesMap[name] = true
+    if (cat === 'TriggerEvents') TriggerEventsMap[name] = true
 }
 
 /**
  * @param {number} part
  * @param {Native} native
  */
-const nativeAddWrapper = (part, native) => {
-    if (part & 1) nativeAdd(native, true)
-    if (part & 2) nativeAdd(native, false)
+/** @param {string[]} sections @param {import('jass-to-ast').Native} native */
+const nativeAddWrapper = (sections, native) => {
+	for (const sec of sections) nativeAdd(native, sec)
 }
 
 const i2a = i => {
@@ -64,7 +63,7 @@ const i2a = i => {
 
 for (const node of parse(read(path.join('.', 'data', 'common.j')))) {
     if (node instanceof Native) {
-        const section = nativeSection(node)
+        const sections = nativeSection(node)
         if (node.params) {
             const list = []
             for (const p of node.params) {
@@ -84,7 +83,7 @@ for (const node of parse(read(path.join('.', 'data', 'common.j')))) {
                         }
                     }
 
-                    nativeAddWrapper(section, native)
+                    nativeAddWrapper(sections, native)
 
                     for (let i = 0; i < list.length; i++) {
                         if (list[i] < 2) {
@@ -98,7 +97,7 @@ for (const node of parse(read(path.join('.', 'data', 'common.j')))) {
             }
         }
 
-        nativeAddWrapper(section, node)
+        nativeAddWrapper(sections, node)
     }
 
     if (node instanceof Type) {
@@ -130,9 +129,12 @@ fileDataAppend(TriggerData, TriggerCategories.join('\n'), 'TriggerCategories')
 TriggerParams.sort((a, b) => a.localeCompare(b))
 fileDataAppend(TriggerData, TriggerParams.join('\n'), 'TriggerParams')
 
+TriggerEvents.sort((a, b) => a.localeCompare(b))
+fileDataAppend(TriggerData, TriggerEvents.join('\n'), 'TriggerEvents')
 
 fileDataAppend(TriggerStrings, TriggerActionStrings.join('\n'), 'TriggerActionStrings')
 fileDataAppend(TriggerStrings, TriggerCallStrings.join('\n'), 'TriggerCallStrings')
+fileDataAppend(TriggerStrings, TriggerEventStrings.join('\n'), 'TriggerEventStrings')
 
 WorldEditStrings.sort((a, b) => a.localeCompare(b))
 fileDataAppend(path.join(UI, 'WorldEditStrings.txt'), WorldEditStrings.join('\n'), 'WorldEditStrings')
