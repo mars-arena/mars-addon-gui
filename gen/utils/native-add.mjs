@@ -67,13 +67,20 @@ export default (native, section) => {
     const pc = [`"${name}("`]
 
     if (native.params) {
+        let first = true
         for (const p of native.params) {
+            if (section === 'TriggerEvents' && first) {
+                first = false
+                continue
+            }
+            first = false
+
             const [type, def] = param(native, p)
             pa.push(type)
             pb.push(def)
             pc.push(`~${p.name}`, '", "')
         }
-        pc.splice(-1)
+        if (pb.length > 0) pc.splice(-1)
     } else {
         pa.push('nothing')
     }

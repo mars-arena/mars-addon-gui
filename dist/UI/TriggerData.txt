@@ -1,7 +1,7 @@
 [TriggerCategories]
 TC_EventHandlers_MARS=WESTRING_TRIGCAT_EventHandlers_MARS,ReplaceableTextures\WorldEditUI\Actions-Nothing
+TC_EventRequest_MARS=WESTRING_TRIGCAT_EventRequest_MARS,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_EventResponse_MARS=WESTRING_TRIGCAT_EventResponse_MARS,ReplaceableTextures\WorldEditUI\Actions-Nothing
-TC_Misc_MARS=WESTRING_TRIGCAT_Misc_MARS,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_Trigger_MARS=WESTRING_TRIGCAT_Trigger_MARS,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_Unit_MARS=WESTRING_TRIGCAT_Unit_MARS,ReplaceableTextures\WorldEditUI\Actions-Unit
 TC_ARITHMETIC=WESTRING_TRIGCAT_ARITHMETIC,ReplaceableTextures\WorldEditUI\Actions-AI,1
@@ -3581,8 +3581,8 @@ VisibilityVisible=0,visibilityoption,true,WESTRING_VISIBILITY_VISIBLE
 VisibilityInvisible=0,visibilityoption,false,WESTRING_VISIBILITY_INVISIBLE
 
 [TriggerEvents]
-EventRegisterTrigger=1,trigger,integer
-_EventRegisterTrigger_Defaults=_,0
+EventRegisterTrigger=1,integer
+_EventRegisterTrigger_Defaults=0
 _EventRegisterTrigger_Category=TC_EventHandlers_MARS
 
 MapInitializationEvent=0,nothing
@@ -3917,9 +3917,41 @@ _OperatorCompareMultiboardItem_Category=TC_COMPATIBILITY
 
 
 [TriggerActions]
+AddASBonus=1,real
+_AddASBonus_Defaults=0
+_AddASBonus_Category=TC_EventRequest_MARS
+
+AddASDecrease=1,real
+_AddASDecrease_Defaults=0
+_AddASDecrease_Category=TC_EventRequest_MARS
+
+AddASIncrease=1,real
+_AddASIncrease_Defaults=0
+_AddASIncrease_Category=TC_EventRequest_MARS
+
+AddASPenalty=1,real
+_AddASPenalty_Defaults=0
+_AddASPenalty_Category=TC_EventRequest_MARS
+
 EventRegisterAction=1,integer,code
 _EventRegisterAction_Defaults=0,_
-_EventRegisterAction_Category=TC_Misc_MARS
+_EventRegisterAction_Category=TC_EventHandlers_MARS
+
+SetASBonus=1,real
+_SetASBonus_Defaults=0
+_SetASBonus_Category=TC_EventRequest_MARS
+
+SetASDecrease=1,real
+_SetASDecrease_Defaults=0
+_SetASDecrease_Category=TC_EventRequest_MARS
+
+SetASIncrease=1,real
+_SetASIncrease_Defaults=0
+_SetASIncrease_Category=TC_EventRequest_MARS
+
+SetASPenalty=1,real
+_SetASPenalty_Defaults=0
+_SetASPenalty_Category=TC_EventRequest_MARS
 
 SetUnitPositionSmooth=1,unit,real,real
 _SetUnitPositionSmooth_Defaults=_,0,0
@@ -6624,23 +6656,23 @@ _GroupItemTargetOrder_Category=TC_COMPATIBILITY
 [TriggerCalls]
 AddASBonus=1,1,nothing,real
 _AddASBonus_Defaults=0
-_AddASBonus_Category=TC_EventResponse_MARS
+_AddASBonus_Category=TC_EventRequest_MARS
 
 AddASDecrease=1,1,nothing,real
 _AddASDecrease_Defaults=0
-_AddASDecrease_Category=TC_EventResponse_MARS
+_AddASDecrease_Category=TC_EventRequest_MARS
 
 AddASIncrease=1,1,nothing,real
 _AddASIncrease_Defaults=0
-_AddASIncrease_Category=TC_EventResponse_MARS
+_AddASIncrease_Category=TC_EventRequest_MARS
 
 AddASPenalty=1,1,nothing,real
 _AddASPenalty_Defaults=0
-_AddASPenalty_Category=TC_EventResponse_MARS
+_AddASPenalty_Category=TC_EventRequest_MARS
 
 EventRegisterAction=1,1,triggeraction,integer,code
 _EventRegisterAction_Defaults=0,_
-_EventRegisterAction_Category=TC_Misc_MARS
+_EventRegisterAction_Category=TC_EventHandlers_MARS
 
 GetASBonus=1,1,real,nothing
 _GetASBonus_Defaults=
@@ -6668,19 +6700,19 @@ _GetTriggerHandleId_Category=TC_Trigger_MARS
 
 SetASBonus=1,1,nothing,real
 _SetASBonus_Defaults=0
-_SetASBonus_Category=TC_EventResponse_MARS
+_SetASBonus_Category=TC_EventRequest_MARS
 
 SetASDecrease=1,1,nothing,real
 _SetASDecrease_Defaults=0
-_SetASDecrease_Category=TC_EventResponse_MARS
+_SetASDecrease_Category=TC_EventRequest_MARS
 
 SetASIncrease=1,1,nothing,real
 _SetASIncrease_Defaults=0
-_SetASIncrease_Category=TC_EventResponse_MARS
+_SetASIncrease_Category=TC_EventRequest_MARS
 
 SetASPenalty=1,1,nothing,real
 _SetASPenalty_Defaults=0
-_SetASPenalty_Category=TC_EventResponse_MARS
+_SetASPenalty_Category=TC_EventRequest_MARS
 
 GetSpellAbilityId=1,0,abilcode,nothing
 _GetSpellAbilityId_Category=TC_EVENTRESPONSE

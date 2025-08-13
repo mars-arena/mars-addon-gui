@@ -56,14 +56,14 @@ endglobals
 	native GetASPenalty takes nothing returns real //! [EventResponse], TriggerCalls
 	native GetASIncrease takes nothing returns real //! [EventResponse], TriggerCalls
 	native GetASDecrease takes nothing returns real //! [EventResponse], TriggerCalls
-	native AddASBonus takes real asBonus returns nothing //! [EventResponse], TriggerCalls
-	native AddASPenalty takes real asPenalty returns nothing //! [EventResponse], TriggerCalls
-	native AddASIncrease takes real asIncrease returns nothing //! [EventResponse], TriggerCalls
-	native AddASDecrease takes real asDecrease returns nothing //! [EventResponse], TriggerCalls
-	native SetASBonus takes real asBonus returns nothing //! [EventResponse], TriggerCalls
-	native SetASPenalty takes real asPenalty returns nothing //! [EventResponse], TriggerCalls
-	native SetASIncrease takes real asIncrease returns nothing //! [EventResponse], TriggerCalls
-	native SetASDecrease takes real asDecrease returns nothing //! [EventResponse], TriggerCalls
+	native AddASBonus takes real asBonus returns nothing //! [EventRequest], TriggerActions, TriggerCalls
+	native AddASPenalty takes real asPenalty returns nothing //! [EventRequest], TriggerActions, TriggerCalls
+	native AddASIncrease takes real asIncrease returns nothing //! [EventRequest], TriggerActions, TriggerCalls
+	native AddASDecrease takes real asDecrease returns nothing //! [EventRequest], TriggerActions, TriggerCalls
+	native SetASBonus takes real asBonus returns nothing //! [EventRequest], TriggerActions, TriggerCalls
+	native SetASPenalty takes real asPenalty returns nothing //! [EventRequest], TriggerActions, TriggerCalls
+	native SetASIncrease takes real asIncrease returns nothing //! [EventRequest], TriggerActions, TriggerCalls
+	native SetASDecrease takes real asDecrease returns nothing //! [EventRequest], TriggerActions, TriggerCalls
 
 	//==============================
 	//=========== EVENTS ===========
@@ -73,7 +73,7 @@ endglobals
 	// @arg integer eventId - ID события (GetHandleId(EVENT_PLAYER_...) или кастомный ивент (EVENT_AURA_...))
 	// @arg code action - функция, которую нужно выполнят при срабатывании события
 	// @return triggeraction - ссылка на зарегистрированное действие
-	native EventRegisterAction takes integer eventId, code action returns triggeraction
+	native EventRegisterAction takes integer eventId, code action returns triggeraction //! [EventHandlers], TriggerActions, TriggerCalls
 
 	// Регистрирует GUI-триггер на указанное событие (со всеми его условиями/действиями).
 	// Работает и для системных EVENT_GAME/PLAYER/PLAYER_UNIT, и для кастомных CreateEvent().
