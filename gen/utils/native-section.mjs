@@ -10,7 +10,7 @@ const normSection = s => {
 
 const getCommentText = native => {
     const c = native.comment
-    if (c == null) return null
+    if (c === null) return null
     const s = typeof c === 'string' ? c : (c && c.value) ? c.value : String(c)
     const bang = s.indexOf('!')
     if (bang < 0) return null

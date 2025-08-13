@@ -52,7 +52,7 @@ const categoryIsBoolean = native =>
  */
 const categoryFromComment = native => {
     const c = native.comment
-    if (c == null) return null
+    if (c === null) return null
 
     let text = typeof c === 'string'
         ? c
