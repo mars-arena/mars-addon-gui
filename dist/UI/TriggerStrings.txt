@@ -1,6 +1,6 @@
 [TriggerEventStrings]
-EventRegisterTrigger=EventRegisterTrigger
-EventRegisterTrigger="EventRegisterTrigger(",~eventId,")"
+EventRegisterTrigger=Event Register Trigger
+EventRegisterTrigger="Event Register Trigger (",~eventId,")"
 EventRegisterTriggerHint="[MARS] native EventRegisterTrigger takes trigger trg, integer eventId returns nothing"
 
 MapInitializationEvent=Map Initialization
@@ -302,45 +302,49 @@ OperatorCompareMultiboardItemHint=Just here for COMPATIBILITY reasons. Multiboar
 
 
 [TriggerActionStrings]
-SetUnitPositionSmooth=SetUnitPositionSmooth
-SetUnitPositionSmooth="SetUnitPositionSmooth(",~source,", ",~x,", ",~y,")"
+SetUnitPositionSmooth=Set Unit Position Smooth
+SetUnitPositionSmooth="Set Unit Position Smooth (",~source,", ",~x,", ",~y,")"
 SetUnitPositionSmoothHint="[MARS] native SetUnitPositionSmooth takes unit source, real x, real y returns nothing"
 
-AddASBonus=AddASBonus
-AddASBonus="AddASBonus(",~asBonus,")"
+AddASBonus=Add AS Bonus
+AddASBonus="Add AS Bonus (",~asBonus,")"
 AddASBonusHint="[MARS] native AddASBonus takes real asBonus returns nothing"
 
-AddASPenalty=AddASPenalty
-AddASPenalty="AddASPenalty(",~asPenalty,")"
+AddASPenalty=Add AS Penalty
+AddASPenalty="Add AS Penalty (",~asPenalty,")"
 AddASPenaltyHint="[MARS] native AddASPenalty takes real asPenalty returns nothing"
 
-AddASIncrease=AddASIncrease
-AddASIncrease="AddASIncrease(",~asIncrease,")"
+AddASIncrease=Add AS Increase
+AddASIncrease="Add AS Increase (",~asIncrease,")"
 AddASIncreaseHint="[MARS] native AddASIncrease takes real asIncrease returns nothing"
 
-AddASDecrease=AddASDecrease
-AddASDecrease="AddASDecrease(",~asDecrease,")"
+AddASDecrease=Add AS Decrease
+AddASDecrease="Add AS Decrease (",~asDecrease,")"
 AddASDecreaseHint="[MARS] native AddASDecrease takes real asDecrease returns nothing"
 
-SetASBonus=SetASBonus
-SetASBonus="SetASBonus(",~asBonus,")"
+SetASBonus=Set AS Bonus
+SetASBonus="Set AS Bonus (",~asBonus,")"
 SetASBonusHint="[MARS] native SetASBonus takes real asBonus returns nothing"
 
-SetASPenalty=SetASPenalty
-SetASPenalty="SetASPenalty(",~asPenalty,")"
+SetASPenalty=Set AS Penalty
+SetASPenalty="Set AS Penalty (",~asPenalty,")"
 SetASPenaltyHint="[MARS] native SetASPenalty takes real asPenalty returns nothing"
 
-SetASIncrease=SetASIncrease
-SetASIncrease="SetASIncrease(",~asIncrease,")"
+SetASIncrease=Set AS Increase
+SetASIncrease="Set AS Increase (",~asIncrease,")"
 SetASIncreaseHint="[MARS] native SetASIncrease takes real asIncrease returns nothing"
 
-SetASDecrease=SetASDecrease
-SetASDecrease="SetASDecrease(",~asDecrease,")"
+SetASDecrease=Set AS Decrease
+SetASDecrease="Set AS Decrease (",~asDecrease,")"
 SetASDecreaseHint="[MARS] native SetASDecrease takes real asDecrease returns nothing"
 
-EventRegisterAction=EventRegisterAction
-EventRegisterAction="EventRegisterAction(",~eventId,", ",~action,")"
+EventRegisterAction=Event Register Action
+EventRegisterAction="Event Register Action (",~eventId,", ",~action,")"
 EventRegisterActionHint="[MARS] native EventRegisterAction takes integer eventId, code action returns triggeraction"
+
+EventRegisterTrigger=Event Register Trigger
+EventRegisterTrigger="Event Register Trigger (",~trg,", ",~eventId,")"
+EventRegisterTriggerHint="[MARS] native EventRegisterTrigger takes trigger trg, integer eventId returns nothing"
 
 DoNothing=Do Nothing
 DoNothing="Do nothing"
@@ -2757,64 +2761,64 @@ GroupItemTargetOrderHint=Just here for COMPATIBILITY reasons. You may still use 
 
 
 [TriggerCallStrings]
-GetTriggerHandleId=GetTriggerHandleId
-GetTriggerHandleId="GetTriggerHandleId(",")"
+GetTriggerHandleId=Get Trigger Handle Id
+GetTriggerHandleId="Get Trigger Handle Id"
 GetTriggerHandleIdHint="[MARS] native GetTriggerHandleId takes nothing returns integer"
 
-GetASUnit=GetASUnit
-GetASUnit="GetASUnit(",")"
+GetASUnit=Get AS Unit
+GetASUnit="Get AS Unit"
 GetASUnitHint="[MARS] native GetASUnit takes nothing returns unit"
 
-GetASBonus=GetASBonus
-GetASBonus="GetASBonus(",")"
+GetASBonus=Get AS Bonus
+GetASBonus="Get AS Bonus"
 GetASBonusHint="[MARS] native GetASBonus takes nothing returns real"
 
-GetASPenalty=GetASPenalty
-GetASPenalty="GetASPenalty(",")"
+GetASPenalty=Get AS Penalty
+GetASPenalty="Get AS Penalty"
 GetASPenaltyHint="[MARS] native GetASPenalty takes nothing returns real"
 
-GetASIncrease=GetASIncrease
-GetASIncrease="GetASIncrease(",")"
+GetASIncrease=Get AS Increase
+GetASIncrease="Get AS Increase"
 GetASIncreaseHint="[MARS] native GetASIncrease takes nothing returns real"
 
-GetASDecrease=GetASDecrease
-GetASDecrease="GetASDecrease(",")"
+GetASDecrease=Get AS Decrease
+GetASDecrease="Get AS Decrease"
 GetASDecreaseHint="[MARS] native GetASDecrease takes nothing returns real"
 
-AddASBonus=AddASBonus
-AddASBonus="AddASBonus(",~asBonus,")"
+AddASBonus=Add AS Bonus
+AddASBonus="Add AS Bonus (",~asBonus,")"
 AddASBonusHint="[MARS] native AddASBonus takes real asBonus returns nothing"
 
-AddASPenalty=AddASPenalty
-AddASPenalty="AddASPenalty(",~asPenalty,")"
+AddASPenalty=Add AS Penalty
+AddASPenalty="Add AS Penalty (",~asPenalty,")"
 AddASPenaltyHint="[MARS] native AddASPenalty takes real asPenalty returns nothing"
 
-AddASIncrease=AddASIncrease
-AddASIncrease="AddASIncrease(",~asIncrease,")"
+AddASIncrease=Add AS Increase
+AddASIncrease="Add AS Increase (",~asIncrease,")"
 AddASIncreaseHint="[MARS] native AddASIncrease takes real asIncrease returns nothing"
 
-AddASDecrease=AddASDecrease
-AddASDecrease="AddASDecrease(",~asDecrease,")"
+AddASDecrease=Add AS Decrease
+AddASDecrease="Add AS Decrease (",~asDecrease,")"
 AddASDecreaseHint="[MARS] native AddASDecrease takes real asDecrease returns nothing"
 
-SetASBonus=SetASBonus
-SetASBonus="SetASBonus(",~asBonus,")"
+SetASBonus=Set AS Bonus
+SetASBonus="Set AS Bonus (",~asBonus,")"
 SetASBonusHint="[MARS] native SetASBonus takes real asBonus returns nothing"
 
-SetASPenalty=SetASPenalty
-SetASPenalty="SetASPenalty(",~asPenalty,")"
+SetASPenalty=Set AS Penalty
+SetASPenalty="Set AS Penalty (",~asPenalty,")"
 SetASPenaltyHint="[MARS] native SetASPenalty takes real asPenalty returns nothing"
 
-SetASIncrease=SetASIncrease
-SetASIncrease="SetASIncrease(",~asIncrease,")"
+SetASIncrease=Set AS Increase
+SetASIncrease="Set AS Increase (",~asIncrease,")"
 SetASIncreaseHint="[MARS] native SetASIncrease takes real asIncrease returns nothing"
 
-SetASDecrease=SetASDecrease
-SetASDecrease="SetASDecrease(",~asDecrease,")"
+SetASDecrease=Set AS Decrease
+SetASDecrease="Set AS Decrease (",~asDecrease,")"
 SetASDecreaseHint="[MARS] native SetASDecrease takes real asDecrease returns nothing"
 
-EventRegisterAction=EventRegisterAction
-EventRegisterAction="EventRegisterAction(",~eventId,", ",~action,")"
+EventRegisterAction=Event Register Action
+EventRegisterAction="Event Register Action (",~eventId,", ",~action,")"
 EventRegisterActionHint="[MARS] native EventRegisterAction takes integer eventId, code action returns triggeraction"
 
 GetSpellAbilityId=Ability Being Cast

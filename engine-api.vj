@@ -73,10 +73,10 @@ endglobals
 	// @arg integer eventId - ID события (GetHandleId(EVENT_PLAYER_...) или кастомный ивент (EVENT_AURA_...))
 	// @arg code action - функция, которую нужно выполнят при срабатывании события
 	// @return triggeraction - ссылка на зарегистрированное действие
-	native EventRegisterAction takes integer eventId, code action returns triggeraction //! [EventHandlers], TriggerActions, TriggerCalls
+	native EventRegisterAction takes integer eventId, code action returns triggeraction //! [EventHandler], TriggerActions, TriggerCalls
 
 	// Регистрирует GUI-триггер на указанное событие (со всеми его условиями/действиями).
 	// Работает и для системных EVENT_GAME/PLAYER/PLAYER_UNIT, и для кастомных CreateEvent().
 	// @arg trigger trg триггер из GUI (или созданный кодом), который должен срабатывать на eventId
 	// @arg integer eventId ID события
-	native EventRegisterTrigger takes trigger trg, integer eventId returns nothing //! [EventHandlers], TriggerEvents
+	native EventRegisterTrigger takes trigger trg, integer eventId returns nothing //! [EventHandler], TriggerEvents, TriggerActions

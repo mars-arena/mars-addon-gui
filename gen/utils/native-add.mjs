@@ -1,5 +1,6 @@
 import nativeHint from './native-hint.mjs'
 import categoryGet from './category-get.mjs'
+import prettyName from './pretty-name.mjs'
 
 const TriggerActionsMap = {}
 const TriggerActions = []
@@ -14,33 +15,32 @@ const TriggerEvents = []
 const TriggerEventStrings = []
 
 /**
- * @param {import('jass-to-ast').Native} n
- * @param {import('jass-to-ast').Param} p
+ * @param {import('jass-to-ast').Native} native
+ * @param {import('jass-to-ast').Param} param
  * @return {[string]}
  */
-const param = (n, p) => {
-    switch (p.type) {
+const getParam = (native, param) => {
+    switch (param.type) {
         case 'integer':
-            if (p.name === 'projectileTypeId') {
-                return ['projectilecode', 'Missile']
+            if (param.name === 'eventId') {
+                return [param.type, '_']
             }
-
-            if (p.name === 'unitTypeId' || p.name.toLowerCase().indexOf('unit') >= 0) {
+            if (param.name === 'unitTypeId' || param.name.toLowerCase().includes('unit')) {
                 return ['unitcode', 'hfoo']
             }
-
-            if (['abilityTypeId'].indexOf(p.name) >= 0) {
+            if (['abilityTypeId'].includes(param.name)) {
                 return ['abilcode', '_']
             }
-            return [p.type, '0']
+            return [param.type, '0']
         case 'real':
-            return [p.type, '0']
+            return [param.type, '0']
         case 'boolean':
-            return [p.type, 'true']
+            return [param.type, 'true']
         case 'player':
-            return [p.type, 'Player00']
+            return [param.type, 'Player00']
+        default:
+            return [param.type, '_']
     }
-    return [p.type, '_']
 }
 
 /**
@@ -57,63 +57,75 @@ export default (native, section) => {
     if (section === 'TriggerEvents' && TriggerEventsMap[name]) return
 
     const hint = nativeHint(native)
+    const returnType = native.returns ?? 'nothing'
 
-    const r = native.returns ?? 'nothing'
+    const argTypes = ['1']
+    if (section === 'TriggerCalls') argTypes.push('1', returnType)
 
-    const pa = ['1']
-    if (section === 'TriggerCalls') pa.push('1', r)
+    const argDefaults = []
 
-    const pb = []
-    const pc = [`"${name}("`]
-
-    if (native.params) {
-        let first = true
-        for (const p of native.params) {
-            if (section === 'TriggerEvents' && first) {
-                first = false
-                continue
-            }
+    const params = []
+    let first = true
+    for (const param of (native.params ?? [])) {
+        if (section === 'TriggerEvents' && first) {
             first = false
-
-            const [type, def] = param(native, p)
-            pa.push(type)
-            pb.push(def)
-            pc.push(`~${p.name}`, '", "')
+            continue
         }
-        if (pb.length > 0) pc.splice(-1)
-    } else {
-        pa.push('nothing')
+        first = false
+        params.push(param)
     }
-    pc.push('")"')
+    for (const param of params) {
+        const [type, def] = getParam(native, param)
+        argTypes.push(type)
+        argDefaults.push(def)
+    }
 
-    const dlist = [
-        `${name}=${pa.join(',')}`,
-        `_${name}_Defaults=${pb.join(',')}`,
+    if (params.length === 0) {
+        argTypes.push('nothing')
+    }
+
+    const pretty = prettyName(name)
+
+    const displayPieces = []
+    if (params.length === 0) {
+        displayPieces.push(`"${pretty}"`)
+    } else {
+        displayPieces.push(`"${pretty} ("`)
+        for (let i = 0; i < params.length; i++) {
+            displayPieces.push(`~${params[i].name}`)
+            if (i < params.length - 1) displayPieces.push('", "')
+        }
+        displayPieces.push('")"')
+    }
+
+    const declarationList = [
+        `${name}=${argTypes.join(',')}`,
+        `_${name}_Defaults=${argDefaults.join(',')}`,
         `_${name}_Category=TC_${categoryGet(native)}`
     ]
-    if (native.alias) dlist.push(`_${name}_ScriptName=${native.name}`)
-    const d = dlist.join('\n') + '\n'
+    if (native.alias) declarationList.push(`_${name}_ScriptName=${native.name}`)
+    const declarations = declarationList.join('\n') + '\n'
 
-    const slist = [
-        `${name}=${native.name}`,
-        `${name}=${pc.join(',')}`,
+    const stringList = [
+        `${name}=${prettyName(native.name)}`,
+        `${name}=${displayPieces.join(',')}`,
         `${name}Hint="${hint}"`
     ]
-    if (native.alias) slist[0] += ` (${native.alias.join(', ')})`
-    const s = slist.join('\n') + '\n'
+    if (native.alias) stringList[0] += ` (${native.alias.join(', ')})`
+    const strings = stringList.join('\n') + '\n'
 
     if (section === 'TriggerActions') {
         TriggerActionsMap[name] = true
-        TriggerActions.push(d)
-        TriggerActionStrings.push(s)
+        TriggerActions.push(declarations)
+        TriggerActionStrings.push(strings)
     } else if (section === 'TriggerCalls') {
         TriggerCallsMap[name] = true
-        TriggerCalls.push(d)
-        TriggerCallStrings.push(s)
+        TriggerCalls.push(declarations)
+        TriggerCallStrings.push(strings)
     } else {
         TriggerEventsMap[name] = true
-        TriggerEvents.push(d)
-        TriggerEventStrings.push(s)
+        TriggerEvents.push(declarations)
+        TriggerEventStrings.push(strings)
     }
 }
 

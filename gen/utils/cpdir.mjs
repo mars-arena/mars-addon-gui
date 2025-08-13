@@ -2,21 +2,18 @@ import fs from 'fs'
 import path from 'path'
 
 /**
- * Look ma, it's cp -R.
- * @param {string} src  The path to the thing to copy.
- * @param {string} dest The path to the new copy.
+ * @param {string} src
+ * @param {string} dest
  */
 export const cpdir = (src, dest) => {
-    const exists = fs.existsSync(src)
-    const stats = exists && fs.statSync(src)
-    const isDirectory = exists && stats.isDirectory()
-    if (isDirectory) {
-        fs.mkdirSync(dest)
-        fs.readdirSync(src).forEach(childItemName => {
-            cpdir(path.join(src, childItemName),
-                path.join(dest, childItemName))
-        })
-    } else {
-        fs.copyFileSync(src, dest)
+    const stats = fs.statSync(src, { throwIfNoEntry: true })
+    if (stats.isDirectory()) {
+        fs.mkdirSync(dest, { recursive: true })
+        for (const name of fs.readdirSync(src)) {
+            cpdir(path.join(src, name), path.join(dest, name))
+        }
+        return
     }
+    fs.mkdirSync(path.dirname(dest), { recursive: true })
+    fs.copyFileSync(src, dest)
 }

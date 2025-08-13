@@ -1,16 +1,8 @@
 import {WorldEditStrings} from './edit-strings.mjs'
+import prettyName from './pretty-name.mjs'
 
 const TriggerCategories = []
-
-
-const prettyName = s => String(s)
-	.replace(/[_\-]+/g, ' ')
-	.replace(/([A-Z]+)([A-Z][a-z])/g, '$1 $2')	// HTMLParser -> HTML Parser
-	.replace(/([a-z0-9])([A-Z])/g, '$1 $2')		// camelCase -> camel Case
-	.replace(/([A-Za-z])([0-9])/g, '$1 $2')		// X9 -> X 9
-	.replace(/([0-9])([A-Za-z])/g, '$1 $2')		// 9X -> 9 X
-	.replace(/\s+/g, ' ')
-	.trim()
+const CatCache = {}
 
 /**
  * @param {string} name
@@ -18,16 +10,14 @@ const prettyName = s => String(s)
  * @return {string}
  */
 const add = (name, data = 'Nothing') => {
-	let id = `${name}_MARS`
-	const display = `${prettyName(name)} [MARS]`
+    const id = `${name}_MARS`
+    const display = `${prettyName(name)} [MARS]`
 
-	WorldEditStrings.push(`WESTRING_TRIGCAT_${id}=${display}`)
-	TriggerCategories.push(`TC_${id}=WESTRING_TRIGCAT_${id},ReplaceableTextures\\WorldEditUI\\Actions-${data}`)
+    WorldEditStrings.push(`WESTRING_TRIGCAT_${id}=${display}`)
+    TriggerCategories.push(`TC_${id}=WESTRING_TRIGCAT_${id},ReplaceableTextures\\WorldEditUI\\Actions-${data}`)
 
-	return id
+    return id
 }
-
-const CatCache = Object.create(null)
 
 /**
  * @param {string} name
@@ -42,43 +32,52 @@ const getCat = (name, data = 'Nothing') => {
 
 /**
  * @param {import('jass-to-ast').Native} native
+ * @return {boolean}
+ */
+const categoryIsMath = native =>
+    native.name.includes('Math') ||
+    native.name.includes('Bitwise') ||
+    ['SquareRoot', 'Sin', 'Asin', 'Cos', 'Acos', 'Tan', 'Atan', 'Pow'].includes(native.name)
+
+/**
+ * @param {import('jass-to-ast').Native} native
+ * @return {boolean}
+ */
+const categoryIsBoolean = native =>
+    ['And', 'Or', 'Condition', 'Filter', 'Not'].includes(native.name)
+
+/**
+ * @param {import('jass-to-ast').Native} native
+ * @return {string|null}
+ */
+const categoryFromComment = native => {
+    const c = native.comment
+    if (c == null) return null
+
+    let text = typeof c === 'string'
+        ? c
+        : (c && c.value) ? c.value : String(c)
+
+    const bang = text.indexOf('!')
+    if (bang < 0) return null
+
+    text = text.slice(bang).trim()
+    if (!text.startsWith('!')) return null
+
+    const m = text.match(/\[([^\]]+)\]/)
+    return m ? m[1].trim() : null
+}
+
+/**
+ * @param {import('jass-to-ast').Native} native
  * @return {string}
  */
 export default native => {
     const name = native.name
 
-    /**
-     * @param {...string} names
-     * @return {boolean}
-     */
-    const c = (...names) => {
-        for (const n of names) {
-            if (name.indexOf(n) >= 0) return true
-        }
-        return false
-    }
-
-    /**
-     * @param {...string} names
-     * @return {boolean}
-     */
-    const s = (...names) => {
-        for (const n of names) {
-            if (name.startsWith(n)) return true
-        }
-        return false
-    }
-
-    /**
-     * @param {...string} names
-     * @return {boolean}
-     */
-    const e = (...names) => {
-        for (const n of names) {
-            if (name === n) return true
-        }
-        return false
-    }
+    const has = (...names) => names.some(n => name.includes(n))
+    const starts = (...names) => names.some(n => name.startsWith(n))
+    const eq = (...names) => names.some(n => name === n)
 
     const catComment = categoryFromComment(native)
     if (catComment) return getCat(catComment)
@@ -86,108 +85,70 @@ export default native => {
     if (categoryIsMath(native)) return getCat('Math')
     if (categoryIsBoolean(native)) return getCat('Boolean')
 
-    if (s('Convert')) return getCat('Convert')
-    if (s('Save', 'Load', 'HaveSaved', 'RemoveSaved') || c('Hashtable')) return getCat('Hashtable')
-    if (c('HandleList')) return getCat('HandleList')
-    if (s('HandleTo')) return getCat('Handle')
-    if (c('To')) return getCat('Convert')
+    if (starts('Convert')) return getCat('Convert')
+    if (starts('Save', 'Load', 'HaveSaved', 'RemoveSaved') || has('Hashtable')) return getCat('Hashtable')
+    if (has('HandleList')) return getCat('HandleList')
+    if (starts('HandleTo')) return getCat('Handle')
+    if (has('To')) return getCat('Convert')
 
-    if (c('Order')) return getCat('Order')
+    if (has('Order')) return getCat('Order')
 
-    if (c('War3Image')) return getCat('War3Image')
-    if (c('Image')) return getCat('Image')
+    if (has('War3Image')) return getCat('War3Image')
+    if (has('Image')) return getCat('Image')
 
-    if (c('Dialog')) return getCat('Dialog')
-    if (c('Message')) return getCat('Message')
+    if (has('Dialog')) return getCat('Dialog')
+    if (has('Message')) return getCat('Message')
 
-    if (c('Cache') || s('Store', 'HaveStored')) return getCat('GameCache')
-    if (c('Game')) return getCat('Game')
+    if (has('Cache') || starts('Store', 'HaveStored')) return getCat('GameCache')
+    if (has('Game')) return getCat('Game')
 
-    if (c('Unit', 'Corpse', 'Illusion', 'Building', 'Goldmine', 'ResourceAmount', 'EventAttack', 'EventDamage')) return getCat('Unit', 'Unit')
-    if (c('Ability', 'SpellEffect')) return getCat('Ability')
-    if (c('Buff')) return getCat('Buff')
-    if (c('Frame')) return getCat('Frame')
-    if (c('Waygate')) return getCat('Waygate')
-    if (c('Trigger')) return getCat('Trigger')
-    if (c('Timer')) return getCat('Timer')
-    if (c('Sync')) return getCat('Sync')
-    if (c('Widget', 'Indicator')) return getCat('Widget')
-    if (c('Trackable')) return getCat('Trackable')
-    if (c('Item')) return getCat('Item')
-    if (c('Projectile')) return getCat('Projectile')
-    if (c('Camera')) return getCat('Camera')
-    if (c('Destructable')) return getCat('Destructable')
-    if (c('Doodad')) return getCat('Doodad')
-    if (c('Force')) return getCat('Force')
-    if (c('Leaderboard')) return getCat('Leaderboard')
-    if (c('Multiboard')) return getCat('Multiboard')
-    if (c('Quest')) return getCat('Quest')
-    if (c('Sound')) return getCat('Sound')
-    if (c('Jass', 'Execute')) return getCat('Jass')
-    if (c('Lightning')) return getCat('Lightning')
-    if (c('CineFilter', 'Cinematic')) return getCat('Cinematic')
-    if (c('TextFile')) return getCat('TextFile')
-    if (c('TextTag')) return getCat('TextTag')
-    if (c('Blight')) return getCat('Blight')
-    if (c('Player')) return getCat('Player')
-    if (c('Mouse')) return getCat('Mouse')
-    if (c('Hero')) return getCat('Hero')
-    if (c('String')) return getCat('String')
-    if (c('Sprite')) return getCat('Sprite')
-    if (c('SpecialEffect') || e('DestroyEffect')) return getCat('SpecialEffect')
-    if (c('AntiHack', 'Cheat')) return getCat('AntiHack')
-    if (c('Automation', 'Benchmark', 'Console')) return getCat('Test')
-    if (c('Group')) return getCat('Group')
-    if (c('Terrain')) return getCat('Terrain')
-    if (c('Preload')) return getCat('Preload')
-    if (c('Region')) return getCat('Region')
-    if (c('Rect')) return getCat('Rect')
-    if (c('Fog')) return getCat('Fog')
-    if (c('Location')) return getCat('Location')
-    if (c('Weather')) return getCat('Weather')
-    if (c('Minimap')) return getCat('Minimap')
-    if (c('Version')) return getCat('Version')
-    if (c('Music')) return getCat('Music')
+    if (has('Unit', 'Corpse', 'Illusion', 'Building', 'Goldmine', 'ResourceAmount', 'EventAttack', 'EventDamage')) return getCat('Unit', 'Unit')
+    if (has('Ability', 'SpellEffect')) return getCat('Ability')
+    if (has('Buff')) return getCat('Buff')
+    if (has('Frame')) return getCat('Frame')
+    if (has('Waygate')) return getCat('Waygate')
+    if (has('Trigger')) return getCat('Trigger')
+    if (has('Timer')) return getCat('Timer')
+    if (has('Sync')) return getCat('Sync')
+    if (has('Widget', 'Indicator')) return getCat('Widget')
+    if (has('Trackable')) return getCat('Trackable')
+    if (has('Item')) return getCat('Item')
+    if (has('Projectile')) return getCat('Projectile')
+    if (has('Camera')) return getCat('Camera')
+    if (has('Destructable')) return getCat('Destructable')
+    if (has('Doodad')) return getCat('Doodad')
+    if (has('Force')) return getCat('Force')
+    if (has('Leaderboard')) return getCat('Leaderboard')
+    if (has('Multiboard')) return getCat('Multiboard')
+    if (has('Quest')) return getCat('Quest')
+    if (has('Sound')) return getCat('Sound')
+    if (has('Jass', 'Execute')) return getCat('Jass')
+    if (has('Lightning')) return getCat('Lightning')
+    if (has('CineFilter', 'Cinematic')) return getCat('Cinematic')
+    if (has('TextFile')) return getCat('TextFile')
+    if (has('TextTag')) return getCat('TextTag')
+    if (has('Blight')) return getCat('Blight')
+    if (has('Player')) return getCat('Player')
+    if (has('Mouse')) return getCat('Mouse')
+    if (has('Hero')) return getCat('Hero')
+    if (has('String')) return getCat('String')
+    if (has('Sprite')) return getCat('Sprite')
+    if (has('SpecialEffect') || eq('DestroyEffect')) return getCat('SpecialEffect')
+    if (has('AntiHack', 'Cheat')) return getCat('AntiHack')
+    if (has('Automation', 'Benchmark', 'Console')) return getCat('Test')
+    if (has('Group')) return getCat('Group')
+    if (has('Terrain')) return getCat('Terrain')
+    if (has('Preload')) return getCat('Preload')
+    if (has('Region')) return getCat('Region')
+    if (has('Rect')) return getCat('Rect')
+    if (has('Fog')) return getCat('Fog')
+    if (has('Location')) return getCat('Location')
+    if (has('Weather')) return getCat('Weather')
+    if (has('Minimap')) return getCat('Minimap')
+    if (has('Version')) return getCat('Version')
+    if (has('Music')) return getCat('Music')
 
     return getCat('Misc')
-}
-
-/**
- * @param {import('jass-to-ast').Native} native
- * @return {boolean}
- */
-const categoryIsMath = native =>
-    native.name.indexOf('Math') >= 0 ||
-    native.name.indexOf('Bitwise') >= 0 ||
-    ['SquareRoot', 'Sin', 'Asin', 'Cos', 'Acos', 'Tan', 'Atan', 'Pow'].indexOf(native.name) >= 0
-
-/**
- * @param {import('jass-to-ast').Native} native
- * @return {boolean}
- */
-const categoryIsBoolean = native =>
-    ['And', 'Or', 'Condition', 'Filter', 'Not'].indexOf(native.name) >= 0
-
-/**
- * @param {import('jass-to-ast').Native} native
- * @return {string|null}
- */
-const categoryFromComment = native => {
-	const c = native.comment
-	if (c == null) return null
-
-	let text = typeof c === 'string'
-		? c
-		: (c && c.value) ? c.value : String(c)
-
-	const bang = text.indexOf('!')
-	if (bang < 0) return null
-
-	text = text.slice(bang).trim()
-	if (!text.startsWith('!')) return null
-
-	const m = text.match(/\[([^\]]+)\]/)
-	return m ? m[1].trim() : null
 }
 
 export {TriggerCategories, categoryIsMath, categoryIsBoolean}

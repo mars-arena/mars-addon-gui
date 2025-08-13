@@ -1,3 +1,3 @@
 const WorldEditStrings = []
 
-export  {WorldEditStrings}
+export { WorldEditStrings }
