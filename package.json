@@ -24,7 +24,7 @@
     "globals": "^16.3.0"
   },
   "scripts": {
-    "generate": "node ./gen/gen.mjs",
+    "build": "node ./gen/build-gui.mjs",
     "lint": "eslint .",
 		"lint:fix": "eslint . --fix"
   }
