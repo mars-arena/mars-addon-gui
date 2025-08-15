@@ -1,7 +1,7 @@
 [TriggerEventStrings]
 EventRegisterTrigger=Event Register Trigger
 EventRegisterTrigger="Event Register Trigger (",~eventId,")"
-EventRegisterTriggerHint="[MARS] native EventRegisterTrigger takes trigger trg, integer eventId returns nothing"
+EventRegisterTriggerHint="[MARS] native EventRegisterTrigger takes trigger trg, Event eventId returns nothing"
 
 MapInitializationEvent=Map Initialization
 MapInitializationEvent="Map initialization"
@@ -712,19 +712,19 @@ SetModifierDamageMaxHint="[MARS] native SetModifierDamageMax takes real dmgMax r
 
 ExecuteEvent=Execute Event
 ExecuteEvent="Execute Event (",~eventId,")"
-ExecuteEventHint="[MARS] native ExecuteEvent takes integer eventId returns nothing"
+ExecuteEventHint="[MARS] native ExecuteEvent takes Event eventId returns nothing"
 
 EventRegisterAction=Event Register Action
 EventRegisterAction="Event Register Action (",~eventId,", ",~action,")"
-EventRegisterActionHint="[MARS] native EventRegisterAction takes integer eventId, code action returns triggeraction"
+EventRegisterActionHint="[MARS] native EventRegisterAction takes Event eventId, code action returns triggeraction"
 
 EventUnregisterAction=Event Unregister Action
 EventUnregisterAction="Event Unregister Action (",~eventId,", ",~action,")"
-EventUnregisterActionHint="[MARS] native EventUnregisterAction takes integer eventId, triggeraction action returns nothing"
+EventUnregisterActionHint="[MARS] native EventUnregisterAction takes Event eventId, triggeraction action returns nothing"
 
 EventRegisterTrigger=Event Register Trigger
 EventRegisterTrigger="Event Register Trigger (",~trg,", ",~eventId,")"
-EventRegisterTriggerHint="[MARS] native EventRegisterTrigger takes trigger trg, integer eventId returns nothing"
+EventRegisterTriggerHint="[MARS] native EventRegisterTrigger takes trigger trg, Event eventId returns nothing"
 
 SetUnitFatigue=Set Unit Fatigue
 SetUnitFatigue="Set Unit Fatigue (",~whichUnit,", ",~fatigue,")"
@@ -4011,19 +4011,19 @@ GetDeathKilledUnitHint="[MARS] native GetDeathKilledUnit takes nothing returns u
 
 CreateEvent=Create Event
 CreateEvent="Create Event (",~name,")"
-CreateEventHint="[MARS] native CreateEvent takes string name returns integer"
+CreateEventHint="[MARS] native CreateEvent takes string name returns Event"
 
 IsEventRun=Is Event Run
 IsEventRun="Is Event Run (",~eventId,")"
-IsEventRunHint="[MARS] native IsEventRun takes integer eventId returns boolean"
+IsEventRunHint="[MARS] native IsEventRun takes Event eventId returns boolean"
 
 GetEventName=Get Event Name
 GetEventName="Get Event Name (",~eventId,")"
-GetEventNameHint="[MARS] native GetEventName takes integer eventId returns string"
+GetEventNameHint="[MARS] native GetEventName takes Event eventId returns string"
 
 EventRegisterAction=Event Register Action
 EventRegisterAction="Event Register Action (",~eventId,", ",~action,")"
-EventRegisterActionHint="[MARS] native EventRegisterAction takes integer eventId, code action returns triggeraction"
+EventRegisterActionHint="[MARS] native EventRegisterAction takes Event eventId, code action returns triggeraction"
 
 GetFatigueUnit=Get Fatigue Unit
 GetFatigueUnit="Get Fatigue Unit"

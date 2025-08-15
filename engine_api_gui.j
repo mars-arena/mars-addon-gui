@@ -1,3 +1,32 @@
+	//===================================
+	//=========== AREA SPELLS ===========
+	type AreaSpell extends integer
+
+	//=============================
+	//=========== AURAS ===========
+	type Aura extends integer
+
+	//=============================
+	//=========== BUFFS ===========
+	type Buff extends integer
+
+	//==============================
+	//=========== EVENTS ===========
+
+	// NOTE: Event - array struct (индекс = event id). Можно использовать GetHandleId(EVENT_...) как значение Event.
+	type Event extends integer
+
+	//=================================
+	//=========== ILLUSIONS ===========
+
+	// Instance Structure
+	type Illusion extends integer
+
+	//==========================================
+	//=========== STATIC PROJECTILES ===========
+	type StaticProjectile extends integer
+
+
 globals
 	//====================================
 	//=========== HASH CLEANER ===========
@@ -5,7 +34,7 @@ globals
 	// Событие при очистке хэш-таблицы для юнита
 	//
 	// GetTriggerHandleId() -> integer
-	constant integer EVENT_CLEAR_HASH = undefined
+	constant Event EVENT_CLEAR_HASH = undefined
 
 	//====================================
 	//=========== ATTACK SPEED ===========
@@ -25,7 +54,7 @@ globals
 	// SetASPenalty(real asPenalty)
 	// SetASIncrease(real asIncrease)
 	// SetASDecrease(real asDecrease)
-	constant integer EVENT_ATTACK_SPEED = undefined
+	constant Event EVENT_ATTACK_SPEED = undefined
 
 	//=============================
 	//=========== AURAS ===========
@@ -38,7 +67,7 @@ globals
 	// IsAuraOut() -> boolean
 	// IsAuraActions() -> boolean
 	// GetAuraActionsId() -> integer
-	constant integer EVENT_AURA = undefined
+	constant Event EVENT_AURA = undefined
 
 	//=============================
 	//=========== BUFFS ===========
@@ -54,7 +83,7 @@ globals
 	// GetTriggerBuffActionsId() -> integer
 	// GetTriggerBuffId() -> integer
 	// GetTriggerBuffStack() -> timer
-	constant integer EVENT_BUFF = undefined
+	constant Event EVENT_BUFF = undefined
 
 	//==============================
 	//=========== COMBAT ===========
@@ -64,7 +93,7 @@ globals
 	// GetCombatUnit() -> unit
 	// IsCombatEntering() -> boolean
 	// IsCombatLeaving() -> boolean
-	constant integer EVENT_COMBAT = undefined
+	constant Event EVENT_COMBAT = undefined
 
 	//==============================
 	//=========== DAMAGE ===========
@@ -88,7 +117,7 @@ globals
 	// SetModifierDodgeChance(real dodgeChance)
 	// SetModifierMissChance(real missChance)
 	// SetModifierTrueStrikeChance(real trueStrikeChance)
-	constant integer EVENT_DODGE_MODIFIER = undefined
+	constant Event EVENT_DODGE_MODIFIER = undefined
 
 	// Событие предществующего модификатора урона
 	//
@@ -116,7 +145,7 @@ globals
 	// AddModifierDMGAmplifier(integer typeAmplifier, real dmgAmplifier)
 	// GetModifierDMGAmplifier(integer typeAmplifier) -> real
 	// SetModifierDMGAmplifier(integer typeAmplifier, real dmgAmplifier)
-	constant integer EVENT_PRECEDING_MODIFIER = undefined
+	constant Event EVENT_PRECEDING_MODIFIER = undefined
 
 	// Событие уникальных модификаторов (работает один из)
 	//
@@ -137,7 +166,7 @@ globals
 	// AddModifierCriticalRate(integer typeId, real criticalRate)
 	// GetModifierCriticalType() -> integer
 	// PlusModifierCriticalRate(real criticalRate)
-	constant integer EVENT_UNIQUE_MODIFIER = undefined
+	constant Event EVENT_UNIQUE_MODIFIER = undefined
 
 	// Событие пост модификатора урона
 	//
@@ -167,10 +196,10 @@ globals
 	// SetModifierDamageMax(real dmgMax)
 	//
 	// GetModifierArmorReduction();
-	constant integer EVENT_POST_MODIFIER_INDEX_DAMAGE = undefined
-	constant integer EVENT_POST_MODIFIER_INDEX_PERCENT = undefined
-	constant integer EVENT_POST_MODIFIER_INDEX_AMOUNT = undefined
-	constant integer EVENT_POST_MODIFIER_INDEX_PASS = undefined
+	constant Event EVENT_POST_MODIFIER_INDEX_DAMAGE = undefined
+	constant Event EVENT_POST_MODIFIER_INDEX_PERCENT = undefined
+	constant Event EVENT_POST_MODIFIER_INDEX_AMOUNT = undefined
+	constant Event EVENT_POST_MODIFIER_INDEX_PASS = undefined
 
 	// Событие любого урона
 	//
@@ -193,92 +222,92 @@ globals
 	// GetDamageIsSimulate() -> boolean
 	// GetDamageIsSpecAttack() -> boolean
 	// GetDamageLifeAttackedUnit() -> real
-	constant integer EVENT_DAMAGE = undefined
+	constant Event EVENT_DAMAGE = undefined
 
 	// Событие смерти юнита
 	//
 	// GetDeathKillingUnit() -> unit
 	// GetDeathKilledUnit() -> unit
-	constant integer EVENT_DEATH = undefined
+	constant Event EVENT_DEATH = undefined
 
 	//==============================
 	//=========== EVENTS ===========
-	constant integer EVENT_NATIVE_GAME_VICTORY = GetHandleId(EVENT_GAME_VICTORY)
-	constant integer EVENT_NATIVE_GAME_END_LEVEL = GetHandleId(EVENT_GAME_END_LEVEL)
-	constant integer EVENT_NATIVE_GAME_STATE_LIMIT = GetHandleId(EVENT_GAME_STATE_LIMIT)
-	constant integer EVENT_NATIVE_GAME_TIMER_EXPIRED = GetHandleId(EVENT_GAME_TIMER_EXPIRED)
-	constant integer EVENT_NATIVE_GAME_ENTER_REGION = GetHandleId(EVENT_GAME_ENTER_REGION)
-	constant integer EVENT_NATIVE_GAME_LEAVE_REGION = GetHandleId(EVENT_GAME_LEAVE_REGION)
-	constant integer EVENT_NATIVE_GAME_TRACKABLE_HIT = GetHandleId(EVENT_GAME_TRACKABLE_HIT)
-	constant integer EVENT_NATIVE_GAME_TRACKABLE_TRACK = GetHandleId(EVENT_GAME_TRACKABLE_TRACK)
-	constant integer EVENT_NATIVE_GAME_SHOW_SKILL = GetHandleId(EVENT_GAME_SHOW_SKILL)
-	constant integer EVENT_NATIVE_GAME_BUILD_SUBMENU = GetHandleId(EVENT_GAME_BUILD_SUBMENU)
-	constant integer EVENT_NATIVE_ALLIANCE_CHANGED = GetHandleId(EVENT_PLAYER_ALLIANCE_CHANGED)
-	constant integer EVENT_NATIVE_DEFEAT = GetHandleId(EVENT_PLAYER_DEFEAT)
-	constant integer EVENT_NATIVE_VICTORY = GetHandleId(EVENT_PLAYER_VICTORY)
-	constant integer EVENT_NATIVE_LEAVE = GetHandleId(EVENT_PLAYER_LEAVE)
-	constant integer EVENT_NATIVE_END_CINEMATIC = GetHandleId(EVENT_PLAYER_END_CINEMATIC)
-	constant integer EVENT_NATIVE_UNIT_ATTACKED = GetHandleId(EVENT_PLAYER_UNIT_ATTACKED)
-	constant integer EVENT_NATIVE_UNIT_RESCUED = GetHandleId(EVENT_PLAYER_UNIT_RESCUED)
-	constant integer EVENT_NATIVE_UNIT_DEATH = GetHandleId(EVENT_PLAYER_UNIT_DEATH)
-	constant integer EVENT_NATIVE_UNIT_DECAY = GetHandleId(EVENT_PLAYER_UNIT_DECAY)
-	constant integer EVENT_NATIVE_UNIT_DETECTED = GetHandleId(EVENT_PLAYER_UNIT_DETECTED)
-	constant integer EVENT_NATIVE_UNIT_HIDDEN = GetHandleId(EVENT_PLAYER_UNIT_HIDDEN)
-	constant integer EVENT_NATIVE_UNIT_SELECTED = GetHandleId(EVENT_PLAYER_UNIT_SELECTED)
-	constant integer EVENT_NATIVE_UNIT_DESELECTED = GetHandleId(EVENT_PLAYER_UNIT_DESELECTED)
-	constant integer EVENT_NATIVE_UNIT_CONSTRUCT_START = GetHandleId(EVENT_PLAYER_UNIT_CONSTRUCT_START)
-	constant integer EVENT_NATIVE_UNIT_CONSTRUCT_CANCEL = GetHandleId(EVENT_PLAYER_UNIT_CONSTRUCT_CANCEL)
-	constant integer EVENT_NATIVE_UNIT_CONSTRUCT_FINISH = GetHandleId(EVENT_PLAYER_UNIT_CONSTRUCT_FINISH)
-	constant integer EVENT_NATIVE_UNIT_UPGRADE_START = GetHandleId(EVENT_PLAYER_UNIT_UPGRADE_START)
-	constant integer EVENT_NATIVE_UNIT_UPGRADE_CANCEL = GetHandleId(EVENT_PLAYER_UNIT_UPGRADE_CANCEL)
-	constant integer EVENT_NATIVE_UNIT_UPGRADE_FINISH = GetHandleId(EVENT_PLAYER_UNIT_UPGRADE_FINISH)
-	constant integer EVENT_NATIVE_UNIT_TRAIN_START = GetHandleId(EVENT_PLAYER_UNIT_TRAIN_START)
-	constant integer EVENT_NATIVE_UNIT_TRAIN_CANCEL = GetHandleId(EVENT_PLAYER_UNIT_TRAIN_CANCEL)
-	constant integer EVENT_NATIVE_UNIT_TRAIN_FINISH = GetHandleId(EVENT_PLAYER_UNIT_TRAIN_FINISH)
-	constant integer EVENT_NATIVE_UNIT_RESEARCH_START = GetHandleId(EVENT_PLAYER_UNIT_RESEARCH_START)
-	constant integer EVENT_NATIVE_UNIT_RESEARCH_CANCEL = GetHandleId(EVENT_PLAYER_UNIT_RESEARCH_CANCEL)
-	constant integer EVENT_NATIVE_UNIT_RESEARCH_FINISH = GetHandleId(EVENT_PLAYER_UNIT_RESEARCH_FINISH)
-	constant integer EVENT_NATIVE_UNIT_ISSUED_ORDER = GetHandleId(EVENT_PLAYER_UNIT_ISSUED_ORDER)
-	constant integer EVENT_NATIVE_UNIT_ISSUED_POINT_ORDER = GetHandleId(EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER)
-	constant integer EVENT_NATIVE_UNIT_ISSUED_TARGET_ORDER = GetHandleId(EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER)
-	constant integer EVENT_NATIVE_UNIT_ISSUED_UNIT_ORDER = GetHandleId(EVENT_PLAYER_UNIT_ISSUED_UNIT_ORDER)
-	constant integer EVENT_NATIVE_HERO_LEVEL = GetHandleId(EVENT_PLAYER_HERO_LEVEL)
-	constant integer EVENT_NATIVE_HERO_SKILL = GetHandleId(EVENT_PLAYER_HERO_SKILL)
-	constant integer EVENT_NATIVE_HERO_REVIVABLE = GetHandleId(EVENT_PLAYER_HERO_REVIVABLE)
-	constant integer EVENT_NATIVE_HERO_REVIVE_START = GetHandleId(EVENT_PLAYER_HERO_REVIVE_START)
-	constant integer EVENT_NATIVE_HERO_REVIVE_CANCEL = GetHandleId(EVENT_PLAYER_HERO_REVIVE_CANCEL)
-	constant integer EVENT_NATIVE_HERO_REVIVE_FINISH = GetHandleId(EVENT_PLAYER_HERO_REVIVE_FINISH)
-	constant integer EVENT_NATIVE_UNIT_SUMMON = GetHandleId(EVENT_PLAYER_UNIT_SUMMON)
-	constant integer EVENT_NATIVE_UNIT_DROP_ITEM = GetHandleId(EVENT_PLAYER_UNIT_DROP_ITEM)
-	constant integer EVENT_NATIVE_UNIT_PICKUP_ITEM = GetHandleId(EVENT_PLAYER_UNIT_PICKUP_ITEM)
-	constant integer EVENT_NATIVE_UNIT_USE_ITEM = GetHandleId(EVENT_PLAYER_UNIT_USE_ITEM)
-	constant integer EVENT_NATIVE_UNIT_LOADED = GetHandleId(EVENT_PLAYER_UNIT_LOADED)
-	constant integer EVENT_NATIVE_GAME_LOADED = GetHandleId(EVENT_GAME_LOADED)
-	constant integer EVENT_NATIVE_GAME_TOURNAMENT_FINISH_SOON = GetHandleId(EVENT_GAME_TOURNAMENT_FINISH_SOON)
-	constant integer EVENT_NATIVE_GAME_TOURNAMENT_FINISH_NOW = GetHandleId(EVENT_GAME_TOURNAMENT_FINISH_NOW)
-	constant integer EVENT_NATIVE_GAME_SAVE = GetHandleId(EVENT_GAME_SAVE)
-	constant integer EVENT_NATIVE_ARROW_LEFT_DOWN = GetHandleId(EVENT_PLAYER_ARROW_LEFT_DOWN)
-	constant integer EVENT_NATIVE_ARROW_LEFT_UP = GetHandleId(EVENT_PLAYER_ARROW_LEFT_UP)
-	constant integer EVENT_NATIVE_ARROW_RIGHT_DOWN = GetHandleId(EVENT_PLAYER_ARROW_RIGHT_DOWN)
-	constant integer EVENT_NATIVE_ARROW_RIGHT_UP = GetHandleId(EVENT_PLAYER_ARROW_RIGHT_UP)
-	constant integer EVENT_NATIVE_ARROW_DOWN_DOWN = GetHandleId(EVENT_PLAYER_ARROW_DOWN_DOWN)
-	constant integer EVENT_NATIVE_ARROW_DOWN_UP = GetHandleId(EVENT_PLAYER_ARROW_DOWN_UP)
-	constant integer EVENT_NATIVE_ARROW_UP_DOWN = GetHandleId(EVENT_PLAYER_ARROW_UP_DOWN)
-	constant integer EVENT_NATIVE_ARROW_UP_UP = GetHandleId(EVENT_PLAYER_ARROW_UP_UP)
-	constant integer EVENT_NATIVE_UNIT_SELL = GetHandleId(EVENT_PLAYER_UNIT_SELL)
-	constant integer EVENT_NATIVE_UNIT_CHANGE_OWNER = GetHandleId(EVENT_PLAYER_UNIT_CHANGE_OWNER)
-	constant integer EVENT_NATIVE_UNIT_SELL_ITEM = GetHandleId(EVENT_PLAYER_UNIT_SELL_ITEM)
-	constant integer EVENT_NATIVE_UNIT_SPELL_CHANNEL = GetHandleId(EVENT_PLAYER_UNIT_SPELL_CHANNEL)
-	constant integer EVENT_NATIVE_UNIT_SPELL_CAST = GetHandleId(EVENT_PLAYER_UNIT_SPELL_CAST)
-	constant integer EVENT_NATIVE_UNIT_SPELL_EFFECT = GetHandleId(EVENT_PLAYER_UNIT_SPELL_EFFECT)
-	constant integer EVENT_NATIVE_UNIT_SPELL_FINISH = GetHandleId(EVENT_PLAYER_UNIT_SPELL_FINISH)
-	constant integer EVENT_NATIVE_UNIT_SPELL_ENDCAST = GetHandleId(EVENT_PLAYER_UNIT_SPELL_ENDCAST)
-	constant integer EVENT_NATIVE_UNIT_PAWN_ITEM = GetHandleId(EVENT_PLAYER_UNIT_PAWN_ITEM)
+	constant Event EVENT_NATIVE_GAME_VICTORY = GetHandleId(EVENT_GAME_VICTORY)
+	constant Event EVENT_NATIVE_GAME_END_LEVEL = GetHandleId(EVENT_GAME_END_LEVEL)
+	constant Event EVENT_NATIVE_GAME_STATE_LIMIT = GetHandleId(EVENT_GAME_STATE_LIMIT)
+	constant Event EVENT_NATIVE_GAME_TIMER_EXPIRED = GetHandleId(EVENT_GAME_TIMER_EXPIRED)
+	constant Event EVENT_NATIVE_GAME_ENTER_REGION = GetHandleId(EVENT_GAME_ENTER_REGION)
+	constant Event EVENT_NATIVE_GAME_LEAVE_REGION = GetHandleId(EVENT_GAME_LEAVE_REGION)
+	constant Event EVENT_NATIVE_GAME_TRACKABLE_HIT = GetHandleId(EVENT_GAME_TRACKABLE_HIT)
+	constant Event EVENT_NATIVE_GAME_TRACKABLE_TRACK = GetHandleId(EVENT_GAME_TRACKABLE_TRACK)
+	constant Event EVENT_NATIVE_GAME_SHOW_SKILL = GetHandleId(EVENT_GAME_SHOW_SKILL)
+	constant Event EVENT_NATIVE_GAME_BUILD_SUBMENU = GetHandleId(EVENT_GAME_BUILD_SUBMENU)
+	constant Event EVENT_NATIVE_ALLIANCE_CHANGED = GetHandleId(EVENT_PLAYER_ALLIANCE_CHANGED)
+	constant Event EVENT_NATIVE_DEFEAT = GetHandleId(EVENT_PLAYER_DEFEAT)
+	constant Event EVENT_NATIVE_VICTORY = GetHandleId(EVENT_PLAYER_VICTORY)
+	constant Event EVENT_NATIVE_LEAVE = GetHandleId(EVENT_PLAYER_LEAVE)
+	constant Event EVENT_NATIVE_END_CINEMATIC = GetHandleId(EVENT_PLAYER_END_CINEMATIC)
+	constant Event EVENT_NATIVE_UNIT_ATTACKED = GetHandleId(EVENT_PLAYER_UNIT_ATTACKED)
+	constant Event EVENT_NATIVE_UNIT_RESCUED = GetHandleId(EVENT_PLAYER_UNIT_RESCUED)
+	constant Event EVENT_NATIVE_UNIT_DEATH = GetHandleId(EVENT_PLAYER_UNIT_DEATH)
+	constant Event EVENT_NATIVE_UNIT_DECAY = GetHandleId(EVENT_PLAYER_UNIT_DECAY)
+	constant Event EVENT_NATIVE_UNIT_DETECTED = GetHandleId(EVENT_PLAYER_UNIT_DETECTED)
+	constant Event EVENT_NATIVE_UNIT_HIDDEN = GetHandleId(EVENT_PLAYER_UNIT_HIDDEN)
+	constant Event EVENT_NATIVE_UNIT_SELECTED = GetHandleId(EVENT_PLAYER_UNIT_SELECTED)
+	constant Event EVENT_NATIVE_UNIT_DESELECTED = GetHandleId(EVENT_PLAYER_UNIT_DESELECTED)
+	constant Event EVENT_NATIVE_UNIT_CONSTRUCT_START = GetHandleId(EVENT_PLAYER_UNIT_CONSTRUCT_START)
+	constant Event EVENT_NATIVE_UNIT_CONSTRUCT_CANCEL = GetHandleId(EVENT_PLAYER_UNIT_CONSTRUCT_CANCEL)
+	constant Event EVENT_NATIVE_UNIT_CONSTRUCT_FINISH = GetHandleId(EVENT_PLAYER_UNIT_CONSTRUCT_FINISH)
+	constant Event EVENT_NATIVE_UNIT_UPGRADE_START = GetHandleId(EVENT_PLAYER_UNIT_UPGRADE_START)
+	constant Event EVENT_NATIVE_UNIT_UPGRADE_CANCEL = GetHandleId(EVENT_PLAYER_UNIT_UPGRADE_CANCEL)
+	constant Event EVENT_NATIVE_UNIT_UPGRADE_FINISH = GetHandleId(EVENT_PLAYER_UNIT_UPGRADE_FINISH)
+	constant Event EVENT_NATIVE_UNIT_TRAIN_START = GetHandleId(EVENT_PLAYER_UNIT_TRAIN_START)
+	constant Event EVENT_NATIVE_UNIT_TRAIN_CANCEL = GetHandleId(EVENT_PLAYER_UNIT_TRAIN_CANCEL)
+	constant Event EVENT_NATIVE_UNIT_TRAIN_FINISH = GetHandleId(EVENT_PLAYER_UNIT_TRAIN_FINISH)
+	constant Event EVENT_NATIVE_UNIT_RESEARCH_START = GetHandleId(EVENT_PLAYER_UNIT_RESEARCH_START)
+	constant Event EVENT_NATIVE_UNIT_RESEARCH_CANCEL = GetHandleId(EVENT_PLAYER_UNIT_RESEARCH_CANCEL)
+	constant Event EVENT_NATIVE_UNIT_RESEARCH_FINISH = GetHandleId(EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+	constant Event EVENT_NATIVE_UNIT_ISSUED_ORDER = GetHandleId(EVENT_PLAYER_UNIT_ISSUED_ORDER)
+	constant Event EVENT_NATIVE_UNIT_ISSUED_POINT_ORDER = GetHandleId(EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER)
+	constant Event EVENT_NATIVE_UNIT_ISSUED_TARGET_ORDER = GetHandleId(EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER)
+	constant Event EVENT_NATIVE_UNIT_ISSUED_UNIT_ORDER = GetHandleId(EVENT_PLAYER_UNIT_ISSUED_UNIT_ORDER)
+	constant Event EVENT_NATIVE_HERO_LEVEL = GetHandleId(EVENT_PLAYER_HERO_LEVEL)
+	constant Event EVENT_NATIVE_HERO_SKILL = GetHandleId(EVENT_PLAYER_HERO_SKILL)
+	constant Event EVENT_NATIVE_HERO_REVIVABLE = GetHandleId(EVENT_PLAYER_HERO_REVIVABLE)
+	constant Event EVENT_NATIVE_HERO_REVIVE_START = GetHandleId(EVENT_PLAYER_HERO_REVIVE_START)
+	constant Event EVENT_NATIVE_HERO_REVIVE_CANCEL = GetHandleId(EVENT_PLAYER_HERO_REVIVE_CANCEL)
+	constant Event EVENT_NATIVE_HERO_REVIVE_FINISH = GetHandleId(EVENT_PLAYER_HERO_REVIVE_FINISH)
+	constant Event EVENT_NATIVE_UNIT_SUMMON = GetHandleId(EVENT_PLAYER_UNIT_SUMMON)
+	constant Event EVENT_NATIVE_UNIT_DROP_ITEM = GetHandleId(EVENT_PLAYER_UNIT_DROP_ITEM)
+	constant Event EVENT_NATIVE_UNIT_PICKUP_ITEM = GetHandleId(EVENT_PLAYER_UNIT_PICKUP_ITEM)
+	constant Event EVENT_NATIVE_UNIT_USE_ITEM = GetHandleId(EVENT_PLAYER_UNIT_USE_ITEM)
+	constant Event EVENT_NATIVE_UNIT_LOADED = GetHandleId(EVENT_PLAYER_UNIT_LOADED)
+	constant Event EVENT_NATIVE_GAME_LOADED = GetHandleId(EVENT_GAME_LOADED)
+	constant Event EVENT_NATIVE_GAME_TOURNAMENT_FINISH_SOON = GetHandleId(EVENT_GAME_TOURNAMENT_FINISH_SOON)
+	constant Event EVENT_NATIVE_GAME_TOURNAMENT_FINISH_NOW = GetHandleId(EVENT_GAME_TOURNAMENT_FINISH_NOW)
+	constant Event EVENT_NATIVE_GAME_SAVE = GetHandleId(EVENT_GAME_SAVE)
+	constant Event EVENT_NATIVE_ARROW_LEFT_DOWN = GetHandleId(EVENT_PLAYER_ARROW_LEFT_DOWN)
+	constant Event EVENT_NATIVE_ARROW_LEFT_UP = GetHandleId(EVENT_PLAYER_ARROW_LEFT_UP)
+	constant Event EVENT_NATIVE_ARROW_RIGHT_DOWN = GetHandleId(EVENT_PLAYER_ARROW_RIGHT_DOWN)
+	constant Event EVENT_NATIVE_ARROW_RIGHT_UP = GetHandleId(EVENT_PLAYER_ARROW_RIGHT_UP)
+	constant Event EVENT_NATIVE_ARROW_DOWN_DOWN = GetHandleId(EVENT_PLAYER_ARROW_DOWN_DOWN)
+	constant Event EVENT_NATIVE_ARROW_DOWN_UP = GetHandleId(EVENT_PLAYER_ARROW_DOWN_UP)
+	constant Event EVENT_NATIVE_ARROW_UP_DOWN = GetHandleId(EVENT_PLAYER_ARROW_UP_DOWN)
+	constant Event EVENT_NATIVE_ARROW_UP_UP = GetHandleId(EVENT_PLAYER_ARROW_UP_UP)
+	constant Event EVENT_NATIVE_UNIT_SELL = GetHandleId(EVENT_PLAYER_UNIT_SELL)
+	constant Event EVENT_NATIVE_UNIT_CHANGE_OWNER = GetHandleId(EVENT_PLAYER_UNIT_CHANGE_OWNER)
+	constant Event EVENT_NATIVE_UNIT_SELL_ITEM = GetHandleId(EVENT_PLAYER_UNIT_SELL_ITEM)
+	constant Event EVENT_NATIVE_UNIT_SPELL_CHANNEL = GetHandleId(EVENT_PLAYER_UNIT_SPELL_CHANNEL)
+	constant Event EVENT_NATIVE_UNIT_SPELL_CAST = GetHandleId(EVENT_PLAYER_UNIT_SPELL_CAST)
+	constant Event EVENT_NATIVE_UNIT_SPELL_EFFECT = GetHandleId(EVENT_PLAYER_UNIT_SPELL_EFFECT)
+	constant Event EVENT_NATIVE_UNIT_SPELL_FINISH = GetHandleId(EVENT_PLAYER_UNIT_SPELL_FINISH)
+	constant Event EVENT_NATIVE_UNIT_SPELL_ENDCAST = GetHandleId(EVENT_PLAYER_UNIT_SPELL_ENDCAST)
+	constant Event EVENT_NATIVE_UNIT_PAWN_ITEM = GetHandleId(EVENT_PLAYER_UNIT_PAWN_ITEM)
 
 	// Cобытие входа в карту (игнорирует дамми-юниты)
 	//
 	// GetTriggerUnit() -> unit
-	constant integer EVENT_ENTER = undefined
+	constant Event EVENT_ENTER = undefined
 
 	//===============================
 	//=========== FATIGUE ===========
@@ -286,7 +315,7 @@ globals
 	// Событие при изменении уровня усталости юнита
 	//
 	// GetFatigueUnit() -> unit
-	constant integer EVENT_FATIGUE_CHANGE = undefined
+	constant Event EVENT_FATIGUE_CHANGE = undefined
 
 	//============================
 	//=========== GOLD ===========
@@ -302,21 +331,21 @@ globals
 	// AddGoldModifierDecrease(real goldDecrease)
 	// GetGoldPlayer() -> player
 	// GetGoldSourceUnit() -> unit
-	constant integer EVENT_GOLD_MODIFIER = undefined
+	constant Event EVENT_GOLD_MODIFIER = undefined
 
 	// GetGoldPlayer() -> player
 	// GetGoldSourceUnit() -> unit
 	// GetGoldAmount() -> real
-	constant integer EVENT_GOLD = undefined
+	constant Event EVENT_GOLD = undefined
 
 	//==============================================
 	//=========== HEAL LIFESTEAL RESTORE ===========
-	constant integer EVENT_HEAL_MODIFIER = undefined
-	constant integer EVENT_HEAL = undefined
-	constant integer EVENT_LIFESTEAL_MODIFIER = undefined
-	constant integer EVENT_LIFESTEAL = undefined
-	constant integer EVENT_RESTORE_MODIFIER = undefined
-	constant integer EVENT_RESTORE = undefined
+	constant Event EVENT_HEAL_MODIFIER = undefined
+	constant Event EVENT_HEAL = undefined
+	constant Event EVENT_LIFESTEAL_MODIFIER = undefined
+	constant Event EVENT_LIFESTEAL = undefined
+	constant Event EVENT_RESTORE_MODIFIER = undefined
+	constant Event EVENT_RESTORE = undefined
 
 	//==================================
 	//=========== MOVE SPEED ===========
@@ -337,7 +366,7 @@ globals
 	// AddMSDecrease(real v)
 	// AddMSSlowResist(real v)
 	// AddMSCap(real cap, boolean isMin)
-	constant integer EVENT_MOVE_SPEED = undefined
+	constant Event EVENT_MOVE_SPEED = undefined
 
 	//==============================
 	//=========== PICKUP ===========
@@ -346,7 +375,7 @@ globals
 	//
 	// GetPickedUpUnit() -> unit
 	// GetPickingUnit() -> unit
-	constant integer EVENT_PICK_UP = undefined
+	constant Event EVENT_PICK_UP = undefined
 
 	//====================================
 	//=========== REGENERATION ===========
@@ -366,13 +395,13 @@ globals
 	// SetRegenModifierPenalty(real regenPenalty)
 	// SetRegenModifierIncrease(real regenIncrease)
 	// SetRegenModifierDecrease(real regenDecrease)
-	constant integer EVENT_HP_REGENERATION_MODIFIER = undefined
+	constant Event EVENT_HP_REGENERATION_MODIFIER = undefined
 
 	// Событие регенерации здоровья
 	//
 	// GetRegenUnit() -> unit
 	// GetRegenValue() -> real
-	constant integer EVENT_HP_REGENERATION = undefined
+	constant Event EVENT_HP_REGENERATION = undefined
 
 	// Событие модификатора регенерации маны
 	//
@@ -389,13 +418,13 @@ globals
 	// SetRegenModifierPenalty(real regenPenalty)
 	// SetRegenModifierIncrease(real regenIncrease)
 	// SetRegenModifierDecrease(real regenDecrease)
-	constant integer EVENT_MP_REGENERATION_MODIFIER = undefined
+	constant Event EVENT_MP_REGENERATION_MODIFIER = undefined
 
 	// Событие регенерации маны
 	//
 	// GetRegenUnit() -> unit
 	// GetRegenValue() -> real
-	constant integer EVENT_MP_REGENERATION = undefined
+	constant Event EVENT_MP_REGENERATION = undefined
 
 	//=============================
 	//=========== STUNS ===========
@@ -410,7 +439,7 @@ globals
 	// GetStunIsEnter() -> boolean
 	// GetStunIsOut() -> boolean
 	// GetStunIsFirst() -> boolean
-	constant integer EVENT_STUN = undefined
+	constant Event EVENT_STUN = undefined
 
 	// @const идентификаторы типов оглушения
 	constant integer NORMAL_STUN = 1
@@ -426,7 +455,7 @@ globals
 
 	//==============================
 	//=========== TALENT ===========
-	constant integer EVENT_TALENT_CHOSEN = undefined
+	constant Event EVENT_TALENT_CHOSEN = undefined
 
 endglobals
 
@@ -1361,40 +1390,40 @@ endglobals
 
 	// Создаёт новое пользовательское событие и возвращает его ID
 	// @arg string name - название события (для отладки и логов)
-	// @return integer - уникальный идентификатор события
-	native CreateEvent takes string name returns integer //! [Event], TriggerCalls
+	// @return Event новое событие
+	native CreateEvent takes string name returns Event //! [Event], TriggerCalls
 
 	// Проверяет, активно ли сейчас выполнение данного события
-	// @arg integer eventId - ID события
-	// @return boolean - true, если событие в процессе выполнения
-	native IsEventRun takes integer eventId returns boolean //! [Event], TriggerCalls
+	// @arg Event eventId событие
+	// @return boolean true если сейчас выполняется
+	native IsEventRun takes Event eventId returns boolean //! [Event], TriggerCalls
 
 	// Возвращает имя события по его ID
-	// @arg integer eventId - ID события
+	// @arg Event eventId - ID события
 	// @return string - имя события (устанавливается в CreateEvent)
-	native GetEventName takes integer eventId returns string //! [Event], TriggerCalls
+	native GetEventName takes Event eventId returns string //! [Event], TriggerCalls
 
 	// Принудительно выполняет событие (вызов всех его обработчиков)
-	// @arg integer eventId - ID события для выполнения
-	native ExecuteEvent takes integer eventId returns nothing //! [Event], TriggerActions
+	// @arg Event eventId событие
+	native ExecuteEvent takes Event eventId returns nothing //! [Event], TriggerActions
 
 	// Регистрирует действие на указанное событие
 	// Автоматически вешает `code` на единый триггер для всех игроков
-	// @arg integer eventId - ID события (GetHandleId(EVENT_PLAYER_...) или кастомный ивент (EVENT_AURA_...))
+	// @arg Event eventId - ID события (GetHandleId(EVENT_PLAYER_...) или кастомный событие (EVENT_AURA_...))
 	// @arg code action - функция, которую нужно выполнят при срабатывании события
 	// @return triggeraction - ссылка на зарегистрированное действие
-	native EventRegisterAction takes integer eventId, code action returns triggeraction //! [EventHandler], TriggerActions, TriggerCalls
+	native EventRegisterAction takes Event eventId, code action returns triggeraction //! [EventHandler], TriggerActions, TriggerCalls
 
-	// Удаляет ранее зарегистрированное действие с события
-	// @arg integer eventId - ID события
+	// Удаляет ранее зарегистрированное действие
+	// @arg Event eventId - ID события
 	// @arg triggeraction action - ссылка на действие, полученное из EventRegisterAction
-	native EventUnregisterAction takes integer eventId, triggeraction action returns nothing //! [EventHandler], TriggerActions
+	native EventUnregisterAction takes Event eventId, triggeraction action returns nothing //! [EventHandler], TriggerActions
 
 	// Регистрирует GUI-триггер на указанное событие (со всеми его условиями/действиями).
 	// Работает и для системных EVENT_GAME/PLAYER/PLAYER_UNIT, и для кастомных CreateEvent().
 	// @arg trigger trg триггер из GUI (или созданный кодом), который должен срабатывать на eventId
-	// @arg integer eventId ID события
-	native EventRegisterTrigger takes trigger trg, integer eventId returns nothing //! [EventHandler], TriggerEvents, TriggerActions
+	// @arg Event eventId ID события
+	native EventRegisterTrigger takes trigger trg, Event eventId returns nothing //! [EventHandler], TriggerEvents, TriggerActions
 
 	//===============================
 	//=========== FATIGUE ===========
