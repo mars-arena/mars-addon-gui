@@ -302,162 +302,6 @@ OperatorCompareMultiboardItemHint=Just here for COMPATIBILITY reasons. Multiboar
 
 
 [TriggerActionStrings]
-AttachUnitToUnit=Attach Unit To Unit
-AttachUnitToUnit="Attach Unit To Unit (",~attached,", ",~target,", ",~offsetX,", ",~offsetY,", ",~offsetZ,")"
-AttachUnitToUnitHint="[MARS] native AttachUnitToUnit takes unit attached, unit target, real offsetX, real offsetY, real offsetZ returns Attachment"
-
-DetachUnit=Detach Unit
-DetachUnit="Detach Unit (",~attached,")"
-DetachUnitHint="[MARS] native DetachUnit takes unit attached returns nothing"
-
-SetUnitPositionSmooth=Set Unit Position Smooth
-SetUnitPositionSmooth="Set Unit Position Smooth (",~source,", ",~x,", ",~y,")"
-SetUnitPositionSmoothHint="[MARS] native SetUnitPositionSmooth takes unit source, real x, real y returns nothing"
-
-MoveLocationPolar=Move Location Polar
-MoveLocationPolar="Move Location Polar (",~target,", ",~distance,", ",~angle,")"
-MoveLocationPolarHint="[MARS] native MoveLocationPolar takes location target, real distance, real angle returns nothing"
-
-SetUnitPositionPolar=Set Unit Position Polar
-SetUnitPositionPolar="Set Unit Position Polar (",~target,", ",~distance,", ",~angle,")"
-SetUnitPositionPolarHint="[MARS] native SetUnitPositionPolar takes unit target, real distance, real angle returns nothing"
-
-SetUnitZ=Set Unit Z
-SetUnitZ="Set Unit Z (",~target,", ",~z,")"
-SetUnitZHint="[MARS] native SetUnitZ takes unit target, real z returns unit"
-
-SetUnitXY=Set Unit XY
-SetUnitXY="Set Unit XY (",~target,", ",~x,", ",~y,")"
-SetUnitXYHint="[MARS] native SetUnitXY takes unit target, real x, real y returns unit"
-
-SetUnitXYZ=Set Unit XYZ
-SetUnitXYZ="Set Unit XYZ (",~target,", ",~x,", ",~y,", ",~z,")"
-SetUnitXYZHint="[MARS] native SetUnitXYZ takes unit target, real x, real y, real z returns unit"
-
-SetUnitXYZF=Set Unit XYZF
-SetUnitXYZF="Set Unit XYZF (",~target,", ",~x,", ",~y,", ",~z,", ",~f,")"
-SetUnitXYZFHint="[MARS] native SetUnitXYZF takes unit target, real x, real y, real z, real f returns unit"
-
-Debug=Debug
-Debug="Debug (",~msg,")"
-DebugHint="[MARS] native Debug takes string msg returns nothing"
-
-DebugXY=Debug XY
-DebugXY="Debug XY (",~s,", ",~x,", ",~y,")"
-DebugXYHint="[MARS] native DebugXY takes string s, real x, real y returns nothing"
-
-Warning=Warning
-Warning="Warning (",~id,", ",~msg,")"
-WarningHint="[MARS] native Warning takes string id, string msg returns nothing"
-
-Error=Error
-Error="Error (",~id,", ",~msg,")"
-ErrorHint="[MARS] native Error takes string id, string msg returns nothing"
-
-JumpUnitToXY=Jump Unit To XY
-JumpUnitToXY="Jump Unit To XY (",~caster,", ",~x,", ",~y,")"
-JumpUnitToXYHint="[MARS] native JumpUnitToXY takes unit caster, real x, real y returns nothing"
-
-JumpUnitToPoint=Jump Unit To Point
-JumpUnitToPoint="Jump Unit To Point (",~caster,", ",~end,")"
-JumpUnitToPointHint="[MARS] native JumpUnitToPoint takes unit caster, Point2D end returns nothing"
-
-CreateUnitLightningTarget=Create Unit Lightning Target
-CreateUnitLightningTarget="Create Unit Lightning Target (",~caster,", ",~target,", ",~lightningType,", ",~effectCasterModel,", ",~effectCasterAttach,", ",~effectTargetModel,", ",~effectTargetAttach,", ",~duration,", ",~maxDistance,", ",~lightningZ,", ",~decayTime,", ",~destroyEffects,")"
-CreateUnitLightningTargetHint="[MARS] native CreateUnitLightningTarget takes unit caster, unit target, string lightningType, string effectCasterModel, string effectCasterAttach, string effectTargetModel, string effectTargetAttach, real duration, real maxDistance, real lightningZ, real decayTime, boolean destroyEffects returns integer"
-
-GroupEnumUnitsInRectangleCollision=Group Enum Units In Rectangle Collision
-GroupEnumUnitsInRectangleCollision="Group Enum Units In Rectangle Collision (",~whichGroup,", ",~centerX,", ",~centerY,", ",~width,", ",~height,", ",~radians,", ",~filter,")"
-GroupEnumUnitsInRectangleCollisionHint="[MARS] native GroupEnumUnitsInRectangleCollision takes group whichGroup, real centerX, real centerY, real width, real height, real radians, boolexpr filter returns nothing"
-
-SetUnitMaxState=Set Unit Max State
-SetUnitMaxState="Set Unit Max State (",~whichUnit,", ",~whichUnitState,", ",~newVal,")"
-SetUnitMaxStateHint="[MARS] native SetUnitMaxState takes unit whichUnit, unitstate whichUnitState, integer newVal returns boolean"
-
-AddUnitSight=Add Unit Sight
-AddUnitSight="Add Unit Sight (",~whichUnit,", ",~newVal,")"
-AddUnitSightHint="[MARS] native AddUnitSight takes unit whichUnit, integer newVal returns boolean"
-
-InitSmartLoop=Init Smart Loop
-InitSmartLoop="Init Smart Loop (",~start,", ",~end,")"
-InitSmartLoopHint="[MARS] native InitSmartLoop takes integer start, integer end returns nothing"
-
-PlusSmartLoopIndex=Plus Smart Loop Index
-PlusSmartLoopIndex="Plus Smart Loop Index (",~step,")"
-PlusSmartLoopIndexHint="[MARS] native PlusSmartLoopIndex takes integer step returns nothing"
-
-EndSmartLoop=End Smart Loop
-EndSmartLoop="End Smart Loop"
-EndSmartLoopHint="[MARS] native EndSmartLoop takes nothing returns nothing"
-
-AddSummativeTextToUnitForPlayer=Add Summative Text To Unit For Player
-AddSummativeTextToUnitForPlayer="Add Summative Text To Unit For Player (",~owner,", ",~target,", ",~textType,", ",~value,", ",~prefix,")"
-AddSummativeTextToUnitForPlayerHint="[MARS] native AddSummativeTextToUnitForPlayer takes player owner, unit target, integer textType, real value, string prefix returns SummativeText"
-
-ShowSummativeTextToPlayer=Show Summative Text To Player
-ShowSummativeTextToPlayer="Show Summative Text To Player (",~summativeText,", ",~participant,")"
-ShowSummativeTextToPlayerHint="[MARS] native ShowSummativeTextToPlayer takes SummativeText summativeText, player participant returns nothing"
-
-MakeUnitFly=Make Unit Fly
-MakeUnitFly="Make Unit Fly (",~u,")"
-MakeUnitFlyHint="[MARS] native MakeUnitFly takes unit u returns unit"
-
-GroupEnumUnitsInRangeFiz=Group Enum Units In Range Fiz
-GroupEnumUnitsInRangeFiz="Group Enum Units In Range Fiz (",~whichGroup,", ",~x,", ",~y,", ",~r,", ",~filter,")"
-GroupEnumUnitsInRangeFizHint="[MARS] native GroupEnumUnitsInRangeFiz takes group whichGroup, real x, real y, real r, boolexpr filter returns nothing"
-
-EffectApplyTimedLife=Effect Apply Timed Life
-EffectApplyTimedLife="Effect Apply Timed Life (",~eff,", ",~endTime,")"
-EffectApplyTimedLifeHint="[MARS] native EffectApplyTimedLife takes effect eff, real endTime returns nothing"
-
-UnitApplyTimeLife=Unit Apply Time Life
-UnitApplyTimeLife="Unit Apply Time Life (",~u,", ",~endTime,")"
-UnitApplyTimeLifeHint="[MARS] native UnitApplyTimeLife takes unit u, real endTime returns unit"
-
-UnitApplyTimeLifeHide=Unit Apply Time Life Hide
-UnitApplyTimeLifeHide="Unit Apply Time Life Hide (",~u,", ",~endTime,")"
-UnitApplyTimeLifeHideHint="[MARS] native UnitApplyTimeLifeHide takes unit u, real endTime returns nothing"
-
-ApplyAbility=Apply Ability
-ApplyAbility="Apply Ability (",~whichUnit,", ",~x,", ",~y,", ",~abilityId,", ",~abilityLvl,", ",~order,")"
-ApplyAbilityHint="[MARS] native ApplyAbility takes unit whichUnit, real x, real y, integer abilityId, integer abilityLvl, string order returns nothing"
-
-ApplyAbilityToUnit=Apply Ability To Unit
-ApplyAbilityToUnit="Apply Ability To Unit (",~whichUnit,", ",~targetUnit,", ",~abilityId,", ",~abilityLvl,", ",~order,")"
-ApplyAbilityToUnitHint="[MARS] native ApplyAbilityToUnit takes unit whichUnit, unit targetUnit, integer abilityId, integer abilityLvl, string order returns nothing"
-
-DummyAttackUnit=Dummy Attack Unit
-DummyAttackUnit="Dummy Attack Unit (",~whichPlayer,", ",~targetUnit,", ",~abilityId,", ",~abilityLvl,")"
-DummyAttackUnitHint="[MARS] native DummyAttackUnit takes player whichPlayer, unit targetUnit, integer abilityId, integer abilityLvl returns unit"
-
-StartSoundToPlayer=Start Sound To Player
-StartSoundToPlayer="Start Sound To Player (",~snd,", ",~pl,")"
-StartSoundToPlayerHint="[MARS] native StartSoundToPlayer takes sound snd, player pl returns nothing"
-
-UnitAddAbilityPermanent=Unit Add Ability Permanent
-UnitAddAbilityPermanent="Unit Add Ability Permanent (",~u,", ",~aId,")"
-UnitAddAbilityPermanentHint="[MARS] native UnitAddAbilityPermanent takes unit u, integer aId returns nothing"
-
-UnitAddPowerUpItem=Unit Add Power Up Item
-UnitAddPowerUpItem="Unit Add Power Up Item (",~u,", ",~id,")"
-UnitAddPowerUpItemHint="[MARS] native UnitAddPowerUpItem takes unit u, integer id returns boolean"
-
-MakeUnitInvulnerable=Make Unit Invulnerable
-MakeUnitInvulnerable="Make Unit Invulnerable (",~whichUnit,", ",~flag,")"
-MakeUnitInvulnerableHint="[MARS] native MakeUnitInvulnerable takes unit whichUnit, boolean flag returns nothing"
-
-CreateFlyingTextToUnit=Create Flying Text To Unit
-CreateFlyingTextToUnit="Create Flying Text To Unit (",~u,", ",~s,", ",~sizeMin,", ",~sizeBonus,", ",~timeLife,", ",~timeFade,", ",~zOffset,", ",~lowSpeed,", ",~maxSpeed,", ",~lowAngle,", ",~maxAngle,")"
-CreateFlyingTextToUnitHint="[MARS] native CreateFlyingTextToUnit takes unit u, string s, real sizeMin, real sizeBonus, real timeLife, real timeFade, real zOffset, real lowSpeed, real maxSpeed, real lowAngle, real maxAngle returns nothing"
-
-CreateCustomVelTextToUnit=Create Custom Vel Text To Unit
-CreateCustomVelTextToUnit="Create Custom Vel Text To Unit (",~target,", ",~text,", ",~lifespan,", ",~size,", ",~fadepoint,", ",~velocity,", ",~OffsetX,", ",~OffsetY,", ",~OffsetZ,")"
-CreateCustomVelTextToUnitHint="[MARS] native CreateCustomVelTextToUnit takes unit target, string text, real lifespan, real size, real fadepoint, real velocity, real OffsetX, real OffsetY, real OffsetZ returns nothing"
-
-CheckAndFreeUnit=Check And Free Unit
-CheckAndFreeUnit="Check And Free Unit (",~u,")"
-CheckAndFreeUnitHint="[MARS] native CheckAndFreeUnit takes unit u returns nothing"
-
 AttachEffectToAreaSpell=Attach Effect To Area Spell
 AttachEffectToAreaSpell="Attach Effect To Area Spell (",~whichEffect,", ",~whichSpell,")"
 AttachEffectToAreaSpellHint="[MARS] native AttachEffectToAreaSpell takes effect whichEffect, AreaSpell whichSpell returns nothing"
@@ -465,6 +309,14 @@ AttachEffectToAreaSpellHint="[MARS] native AttachEffectToAreaSpell takes effect 
 AddAreaSpellToUnit=Add Area Spell To Unit
 AddAreaSpellToUnit="Add Area Spell To Unit (",~ownerUnit,", ",~dummyUnit,", ",~actionsId,", ",~duration,", ",~pierceDeath,", ",~filter,", ",~rangeStart,", ",~rangeEnd,", ",~interval,")"
 AddAreaSpellToUnitHint="[MARS] native AddAreaSpellToUnit takes unit ownerUnit, unit dummyUnit, integer actionsId, real duration, boolean pierceDeath, boolexpr filter, real rangeStart, real rangeEnd, real interval returns AreaSpell"
+
+AttachUnitToUnit=Attach Unit To Unit
+AttachUnitToUnit="Attach Unit To Unit (",~attached,", ",~target,", ",~offsetX,", ",~offsetY,", ",~offsetZ,")"
+AttachUnitToUnitHint="[MARS] native AttachUnitToUnit takes unit attached, unit target, real offsetX, real offsetY, real offsetZ returns Attachment"
+
+DetachUnit=Detach Unit
+DetachUnit="Detach Unit (",~attached,")"
+DetachUnitHint="[MARS] native DetachUnit takes unit attached returns nothing"
 
 AddASBonus=Add AS Bonus
 AddASBonus="Add AS Bonus (",~asBonus,")"
@@ -802,6 +654,18 @@ SetIllusionDamageGiven=Set Illusion Damage Given
 SetIllusionDamageGiven="Set Illusion Damage Given (",~illusion,", ",~damageGiven,")"
 SetIllusionDamageGivenHint="[MARS] native SetIllusionDamageGiven takes Illusion illusion, real damageGiven returns boolean"
 
+JumpUnitToXY=Jump Unit To XY
+JumpUnitToXY="Jump Unit To XY (",~caster,", ",~x,", ",~y,")"
+JumpUnitToXYHint="[MARS] native JumpUnitToXY takes unit caster, real x, real y returns nothing"
+
+JumpUnitToPoint=Jump Unit To Point
+JumpUnitToPoint="Jump Unit To Point (",~caster,", ",~end,")"
+JumpUnitToPointHint="[MARS] native JumpUnitToPoint takes unit caster, Point2D end returns nothing"
+
+CreateUnitLightningTarget=Create Unit Lightning Target
+CreateUnitLightningTarget="Create Unit Lightning Target (",~caster,", ",~target,", ",~lightningType,", ",~effectCasterModel,", ",~effectCasterAttach,", ",~effectTargetModel,", ",~effectTargetAttach,", ",~duration,", ",~maxDistance,", ",~lightningZ,", ",~decayTime,", ",~destroyEffects,")"
+CreateUnitLightningTargetHint="[MARS] native CreateUnitLightningTarget takes unit caster, unit target, string lightningType, string effectCasterModel, string effectCasterAttach, string effectTargetModel, string effectTargetAttach, real duration, real maxDistance, real lightningZ, real decayTime, boolean destroyEffects returns integer"
+
 AddMSBonus=Add MS Bonus
 AddMSBonus="Add MS Bonus (",~v,")"
 AddMSBonusHint="[MARS] native AddMSBonus takes real v returns nothing"
@@ -901,6 +765,142 @@ RemoveUnitStunHint="[MARS] native RemoveUnitStun takes unit stunned returns noth
 StunUnit=Stun Unit
 StunUnit="Stun Unit (",~stunningUnit,", ",~stunnedUnit,", ",~typeId,", ",~duration,")"
 StunUnitHint="[MARS] native StunUnit takes unit stunningUnit, unit stunnedUnit, integer typeId, real duration returns Stun"
+
+AddSummativeTextToUnitForPlayer=Add Summative Text To Unit For Player
+AddSummativeTextToUnitForPlayer="Add Summative Text To Unit For Player (",~owner,", ",~target,", ",~textType,", ",~value,", ",~prefix,")"
+AddSummativeTextToUnitForPlayerHint="[MARS] native AddSummativeTextToUnitForPlayer takes player owner, unit target, integer textType, real value, string prefix returns SummativeText"
+
+ShowSummativeTextToPlayer=Show Summative Text To Player
+ShowSummativeTextToPlayer="Show Summative Text To Player (",~summativeText,", ",~participant,")"
+ShowSummativeTextToPlayerHint="[MARS] native ShowSummativeTextToPlayer takes SummativeText summativeText, player participant returns nothing"
+
+MakeUnitFly=Make Unit Fly
+MakeUnitFly="Make Unit Fly (",~u,")"
+MakeUnitFlyHint="[MARS] native MakeUnitFly takes unit u returns unit"
+
+GroupEnumUnitsInRangeFiz=Group Enum Units In Range Fiz
+GroupEnumUnitsInRangeFiz="Group Enum Units In Range Fiz (",~whichGroup,", ",~x,", ",~y,", ",~r,", ",~filter,")"
+GroupEnumUnitsInRangeFizHint="[MARS] native GroupEnumUnitsInRangeFiz takes group whichGroup, real x, real y, real r, boolexpr filter returns nothing"
+
+EffectApplyTimedLife=Effect Apply Timed Life
+EffectApplyTimedLife="Effect Apply Timed Life (",~eff,", ",~endTime,")"
+EffectApplyTimedLifeHint="[MARS] native EffectApplyTimedLife takes effect eff, real endTime returns nothing"
+
+UnitApplyTimeLife=Unit Apply Time Life
+UnitApplyTimeLife="Unit Apply Time Life (",~u,", ",~endTime,")"
+UnitApplyTimeLifeHint="[MARS] native UnitApplyTimeLife takes unit u, real endTime returns unit"
+
+UnitApplyTimeLifeHide=Unit Apply Time Life Hide
+UnitApplyTimeLifeHide="Unit Apply Time Life Hide (",~u,", ",~endTime,")"
+UnitApplyTimeLifeHideHint="[MARS] native UnitApplyTimeLifeHide takes unit u, real endTime returns nothing"
+
+ApplyAbility=Apply Ability
+ApplyAbility="Apply Ability (",~whichUnit,", ",~x,", ",~y,", ",~abilityId,", ",~abilityLvl,", ",~order,")"
+ApplyAbilityHint="[MARS] native ApplyAbility takes unit whichUnit, real x, real y, integer abilityId, integer abilityLvl, string order returns nothing"
+
+ApplyAbilityToUnit=Apply Ability To Unit
+ApplyAbilityToUnit="Apply Ability To Unit (",~whichUnit,", ",~targetUnit,", ",~abilityId,", ",~abilityLvl,", ",~order,")"
+ApplyAbilityToUnitHint="[MARS] native ApplyAbilityToUnit takes unit whichUnit, unit targetUnit, integer abilityId, integer abilityLvl, string order returns nothing"
+
+DummyAttackUnit=Dummy Attack Unit
+DummyAttackUnit="Dummy Attack Unit (",~whichPlayer,", ",~targetUnit,", ",~abilityId,", ",~abilityLvl,")"
+DummyAttackUnitHint="[MARS] native DummyAttackUnit takes player whichPlayer, unit targetUnit, integer abilityId, integer abilityLvl returns unit"
+
+StartSoundToPlayer=Start Sound To Player
+StartSoundToPlayer="Start Sound To Player (",~snd,", ",~pl,")"
+StartSoundToPlayerHint="[MARS] native StartSoundToPlayer takes sound snd, player pl returns nothing"
+
+UnitAddAbilityPermanent=Unit Add Ability Permanent
+UnitAddAbilityPermanent="Unit Add Ability Permanent (",~u,", ",~aId,")"
+UnitAddAbilityPermanentHint="[MARS] native UnitAddAbilityPermanent takes unit u, integer aId returns nothing"
+
+UnitAddPowerUpItem=Unit Add Power Up Item
+UnitAddPowerUpItem="Unit Add Power Up Item (",~u,", ",~id,")"
+UnitAddPowerUpItemHint="[MARS] native UnitAddPowerUpItem takes unit u, integer id returns boolean"
+
+MakeUnitInvulnerable=Make Unit Invulnerable
+MakeUnitInvulnerable="Make Unit Invulnerable (",~whichUnit,", ",~flag,")"
+MakeUnitInvulnerableHint="[MARS] native MakeUnitInvulnerable takes unit whichUnit, boolean flag returns nothing"
+
+CreateFlyingTextToUnit=Create Flying Text To Unit
+CreateFlyingTextToUnit="Create Flying Text To Unit (",~u,", ",~s,", ",~sizeMin,", ",~sizeBonus,", ",~timeLife,", ",~timeFade,", ",~zOffset,", ",~lowSpeed,", ",~maxSpeed,", ",~lowAngle,", ",~maxAngle,")"
+CreateFlyingTextToUnitHint="[MARS] native CreateFlyingTextToUnit takes unit u, string s, real sizeMin, real sizeBonus, real timeLife, real timeFade, real zOffset, real lowSpeed, real maxSpeed, real lowAngle, real maxAngle returns nothing"
+
+CreateCustomVelTextToUnit=Create Custom Vel Text To Unit
+CreateCustomVelTextToUnit="Create Custom Vel Text To Unit (",~target,", ",~text,", ",~lifespan,", ",~size,", ",~fadepoint,", ",~velocity,", ",~OffsetX,", ",~OffsetY,", ",~OffsetZ,")"
+CreateCustomVelTextToUnitHint="[MARS] native CreateCustomVelTextToUnit takes unit target, string text, real lifespan, real size, real fadepoint, real velocity, real OffsetX, real OffsetY, real OffsetZ returns nothing"
+
+CheckAndFreeUnit=Check And Free Unit
+CheckAndFreeUnit="Check And Free Unit (",~u,")"
+CheckAndFreeUnitHint="[MARS] native CheckAndFreeUnit takes unit u returns nothing"
+
+SetUnitPositionSmooth=Set Unit Position Smooth
+SetUnitPositionSmooth="Set Unit Position Smooth (",~source,", ",~x,", ",~y,")"
+SetUnitPositionSmoothHint="[MARS] native SetUnitPositionSmooth takes unit source, real x, real y returns nothing"
+
+MoveLocationPolar=Move Location Polar
+MoveLocationPolar="Move Location Polar (",~target,", ",~distance,", ",~angle,")"
+MoveLocationPolarHint="[MARS] native MoveLocationPolar takes location target, real distance, real angle returns nothing"
+
+SetUnitPositionPolar=Set Unit Position Polar
+SetUnitPositionPolar="Set Unit Position Polar (",~target,", ",~distance,", ",~angle,")"
+SetUnitPositionPolarHint="[MARS] native SetUnitPositionPolar takes unit target, real distance, real angle returns nothing"
+
+SetUnitZ=Set Unit Z
+SetUnitZ="Set Unit Z (",~target,", ",~z,")"
+SetUnitZHint="[MARS] native SetUnitZ takes unit target, real z returns unit"
+
+SetUnitXY=Set Unit XY
+SetUnitXY="Set Unit XY (",~target,", ",~x,", ",~y,")"
+SetUnitXYHint="[MARS] native SetUnitXY takes unit target, real x, real y returns unit"
+
+SetUnitXYZ=Set Unit XYZ
+SetUnitXYZ="Set Unit XYZ (",~target,", ",~x,", ",~y,", ",~z,")"
+SetUnitXYZHint="[MARS] native SetUnitXYZ takes unit target, real x, real y, real z returns unit"
+
+SetUnitXYZF=Set Unit XYZF
+SetUnitXYZF="Set Unit XYZF (",~target,", ",~x,", ",~y,", ",~z,", ",~f,")"
+SetUnitXYZFHint="[MARS] native SetUnitXYZF takes unit target, real x, real y, real z, real f returns unit"
+
+Debug=Debug
+Debug="Debug (",~msg,")"
+DebugHint="[MARS] native Debug takes string msg returns nothing"
+
+DebugXY=Debug XY
+DebugXY="Debug XY (",~s,", ",~x,", ",~y,")"
+DebugXYHint="[MARS] native DebugXY takes string s, real x, real y returns nothing"
+
+Warning=Warning
+Warning="Warning (",~id,", ",~msg,")"
+WarningHint="[MARS] native Warning takes string id, string msg returns nothing"
+
+Error=Error
+Error="Error (",~id,", ",~msg,")"
+ErrorHint="[MARS] native Error takes string id, string msg returns nothing"
+
+GroupEnumUnitsInRectangleCollision=Group Enum Units In Rectangle Collision
+GroupEnumUnitsInRectangleCollision="Group Enum Units In Rectangle Collision (",~whichGroup,", ",~centerX,", ",~centerY,", ",~width,", ",~height,", ",~radians,", ",~filter,")"
+GroupEnumUnitsInRectangleCollisionHint="[MARS] native GroupEnumUnitsInRectangleCollision takes group whichGroup, real centerX, real centerY, real width, real height, real radians, boolexpr filter returns nothing"
+
+SetUnitMaxState=Set Unit Max State
+SetUnitMaxState="Set Unit Max State (",~whichUnit,", ",~whichUnitState,", ",~newVal,")"
+SetUnitMaxStateHint="[MARS] native SetUnitMaxState takes unit whichUnit, unitstate whichUnitState, integer newVal returns boolean"
+
+AddUnitSight=Add Unit Sight
+AddUnitSight="Add Unit Sight (",~whichUnit,", ",~newVal,")"
+AddUnitSightHint="[MARS] native AddUnitSight takes unit whichUnit, integer newVal returns boolean"
+
+InitSmartLoop=Init Smart Loop
+InitSmartLoop="Init Smart Loop (",~start,", ",~end,")"
+InitSmartLoopHint="[MARS] native InitSmartLoop takes integer start, integer end returns nothing"
+
+PlusSmartLoopIndex=Plus Smart Loop Index
+PlusSmartLoopIndex="Plus Smart Loop Index (",~step,")"
+PlusSmartLoopIndexHint="[MARS] native PlusSmartLoopIndex takes integer step returns nothing"
+
+EndSmartLoop=End Smart Loop
+EndSmartLoop="End Smart Loop"
+EndSmartLoopHint="[MARS] native EndSmartLoop takes nothing returns nothing"
 
 DoNothing=Do Nothing
 DoNothing="Do nothing"
@@ -3317,245 +3317,13 @@ GroupItemTargetOrderHint=Just here for COMPATIBILITY reasons. You may still use 
 
 
 [TriggerCallStrings]
-GetTriggerHandleId=Get Trigger Handle Id
-GetTriggerHandleId="Get Trigger Handle Id"
-GetTriggerHandleIdHint="[MARS] native GetTriggerHandleId takes nothing returns integer"
+AddAreaSpellToUnit=Add Area Spell To Unit
+AddAreaSpellToUnit="Add Area Spell To Unit (",~ownerUnit,", ",~dummyUnit,", ",~actionsId,", ",~duration,", ",~pierceDeath,", ",~filter,", ",~rangeStart,", ",~rangeEnd,", ",~interval,")"
+AddAreaSpellToUnitHint="[MARS] native AddAreaSpellToUnit takes unit ownerUnit, unit dummyUnit, integer actionsId, real duration, boolean pierceDeath, boolexpr filter, real rangeStart, real rangeEnd, real interval returns AreaSpell"
 
 AttachUnitToUnit=Attach Unit To Unit
 AttachUnitToUnit="Attach Unit To Unit (",~attached,", ",~target,", ",~offsetX,", ",~offsetY,", ",~offsetZ,")"
 AttachUnitToUnitHint="[MARS] native AttachUnitToUnit takes unit attached, unit target, real offsetX, real offsetY, real offsetZ returns Attachment"
-
-GetFilterOwnerUnit=Get Filter Owner Unit
-GetFilterOwnerUnit="Get Filter Owner Unit"
-GetFilterOwnerUnitHint="[MARS] native GetFilterOwnerUnit takes nothing returns unit"
-
-GetFilterTargetUnit=Get Filter Target Unit
-GetFilterTargetUnit="Get Filter Target Unit"
-GetFilterTargetUnitHint="[MARS] native GetFilterTargetUnit takes nothing returns unit"
-
-GetFilterReal=Get Filter Real
-GetFilterReal="Get Filter Real"
-GetFilterRealHint="[MARS] native GetFilterReal takes nothing returns real"
-
-ConditionWithOwner=Condition With Owner
-ConditionWithOwner="Condition With Owner (",~func,", ",~ownerUnit,")"
-ConditionWithOwnerHint="[MARS] native ConditionWithOwner takes code func, unit ownerUnit returns conditionfunc"
-
-ConditionParameters=Condition Parameters
-ConditionParameters="Condition Parameters (",~func,", ",~ownerUnit,", ",~targetUnit,", ",~filterReal,")"
-ConditionParametersHint="[MARS] native ConditionParameters takes code func, unit ownerUnit, unit targetUnit, real filterReal returns conditionfunc"
-
-IsUnitCanBeMoved=Is Unit Can Be Moved
-IsUnitCanBeMoved="Is Unit Can Be Moved (",~initiator,", ",~target,")"
-IsUnitCanBeMovedHint="[MARS] native IsUnitCanBeMoved takes unit initiator, unit target returns boolean"
-
-IsUnitDisarmed=Is Unit Disarmed
-IsUnitDisarmed="Is Unit Disarmed (",~whichUnit,")"
-IsUnitDisarmedHint="[MARS] native IsUnitDisarmed takes unit whichUnit returns boolean"
-
-IsUnitCanDoActions=Is Unit Can Do Actions
-IsUnitCanDoActions="Is Unit Can Do Actions (",~whichUnit,")"
-IsUnitCanDoActionsHint="[MARS] native IsUnitCanDoActions takes unit whichUnit returns boolean"
-
-IsUnitCanAttack=Is Unit Can Attack
-IsUnitCanAttack="Is Unit Can Attack (",~whichUnit,")"
-IsUnitCanAttackHint="[MARS] native IsUnitCanAttack takes unit whichUnit returns boolean"
-
-IsUnitHasAttack=Is Unit Has Attack
-IsUnitHasAttack="Is Unit Has Attack (",~whichUnit,")"
-IsUnitHasAttackHint="[MARS] native IsUnitHasAttack takes unit whichUnit returns boolean"
-
-IsUnitStructure=Is Unit Structure
-IsUnitStructure="Is Unit Structure (",~whichUnit,")"
-IsUnitStructureHint="[MARS] native IsUnitStructure takes unit whichUnit returns boolean"
-
-GetPolarOffsetX=Get Polar Offset X
-GetPolarOffsetX="Get Polar Offset X (",~x,", ",~distance,", ",~angle,")"
-GetPolarOffsetXHint="[MARS] native GetPolarOffsetX takes real x, real distance, real angle returns real"
-
-GetPolarOffsetY=Get Polar Offset Y
-GetPolarOffsetY="Get Polar Offset Y (",~y,", ",~distance,", ",~angle,")"
-GetPolarOffsetYHint="[MARS] native GetPolarOffsetY takes real y, real distance, real angle returns real"
-
-AngleBetweenCoords=Angle Between Coords
-AngleBetweenCoords="Angle Between Coords (",~x1,", ",~y1,", ",~x2,", ",~y2,")"
-AngleBetweenCoordsHint="[MARS] native AngleBetweenCoords takes real x1, real y1, real x2, real y2 returns real"
-
-DistanceBetweenCoords=Distance Between Coords
-DistanceBetweenCoords="Distance Between Coords (",~x1,", ",~y1,", ",~x2,", ",~y2,")"
-DistanceBetweenCoordsHint="[MARS] native DistanceBetweenCoords takes real x1, real y1, real x2, real y2 returns real"
-
-DistanceBetweenCoords3D=Distance Between Coords 3 D
-DistanceBetweenCoords3D="Distance Between Coords 3 D (",~x1,", ",~y1,", ",~z1,", ",~x2,", ",~y2,", ",~z2,")"
-DistanceBetweenCoords3DHint="[MARS] native DistanceBetweenCoords3D takes real x1, real y1, real z1, real x2, real y2, real z2 returns real"
-
-DistanceBetweenUnits=Distance Between Units
-DistanceBetweenUnits="Distance Between Units (",~target1,", ",~target2,")"
-DistanceBetweenUnitsHint="[MARS] native DistanceBetweenUnits takes unit target1, unit target2 returns real"
-
-AngleBetweenUnits=Angle Between Units
-AngleBetweenUnits="Angle Between Units (",~target1,", ",~target2,")"
-AngleBetweenUnitsHint="[MARS] native AngleBetweenUnits takes unit target1, unit target2 returns real"
-
-GetTerrainZ=Get Terrain Z
-GetTerrainZ="Get Terrain Z (",~x,", ",~y,")"
-GetTerrainZHint="[MARS] native GetTerrainZ takes real x, real y returns real"
-
-GetUnitTerrainCliffLevel=Get Unit Terrain Cliff Level
-GetUnitTerrainCliffLevel="Get Unit Terrain Cliff Level (",~target,")"
-GetUnitTerrainCliffLevelHint="[MARS] native GetUnitTerrainCliffLevel takes unit target returns integer"
-
-GetUnitZ=Get Unit Z
-GetUnitZ="Get Unit Z (",~target,")"
-GetUnitZHint="[MARS] native GetUnitZ takes unit target returns real"
-
-Perpendicular=Perpendicular
-Perpendicular="Perpendicular (",~Xa,", ",~Ya,", ",~Xb,", ",~Yb,", ",~Xc,", ",~Yc,")"
-PerpendicularHint="[MARS] native Perpendicular takes real Xa, real Ya, real Xb, real Yb, real Xc, real Yc returns real"
-
-AngleDifference=Angle Difference
-AngleDifference="Angle Difference (",~a1,", ",~a2,")"
-AngleDifferenceHint="[MARS] native AngleDifference takes real a1, real a2 returns real"
-
-AngleNormalize=Angle Normalize
-AngleNormalize="Angle Normalize (",~angle,")"
-AngleNormalizeHint="[MARS] native AngleNormalize takes real angle returns real"
-
-AngleTowards=Angle Towards
-AngleTowards="Angle Towards (",~angle,", ",~toAngel,", ",~angleOffset,")"
-AngleTowardsHint="[MARS] native AngleTowards takes real angle, real toAngel, real angleOffset returns real"
-
-IsCoordsInTriangle=Is Coords In Triangle
-IsCoordsInTriangle="Is Coords In Triangle (",~x,", ",~y,", ",~x1,", ",~y1,", ",~x2,", ",~y2,", ",~x3,", ",~y3,")"
-IsCoordsInTriangleHint="[MARS] native IsCoordsInTriangle takes real x, real y, real x1, real y1, real x2, real y2, real x3, real y3 returns boolean"
-
-IsCoordsIn4GonSimple=Is Coords In 4 Gon Simple
-IsCoordsIn4GonSimple="Is Coords In 4 Gon Simple (",~x,", ",~y,", ",~x1,", ",~y1,", ",~x2,", ",~y2,", ",~x3,", ",~y3,", ",~x4,", ",~y4,")"
-IsCoordsIn4GonSimpleHint="[MARS] native IsCoordsIn4GonSimple takes real x, real y, real x1, real y1, real x2, real y2, real x3, real y3, real x4, real y4 returns boolean"
-
-IsCoordsIn4Gon=Is Coords In 4 Gon
-IsCoordsIn4Gon="Is Coords In 4 Gon (",~x,", ",~y,", ",~x1,", ",~y1,", ",~x2,", ",~y2,", ",~x3,", ",~y3,", ",~x4,", ",~y4,")"
-IsCoordsIn4GonHint="[MARS] native IsCoordsIn4Gon takes real x, real y, real x1, real y1, real x2, real y2, real x3, real y3, real x4, real y4 returns boolean"
-
-CreateUnitLightningTarget=Create Unit Lightning Target
-CreateUnitLightningTarget="Create Unit Lightning Target (",~caster,", ",~target,", ",~lightningType,", ",~effectCasterModel,", ",~effectCasterAttach,", ",~effectTargetModel,", ",~effectTargetAttach,", ",~duration,", ",~maxDistance,", ",~lightningZ,", ",~decayTime,", ",~destroyEffects,")"
-CreateUnitLightningTargetHint="[MARS] native CreateUnitLightningTarget takes unit caster, unit target, string lightningType, string effectCasterModel, string effectCasterAttach, string effectTargetModel, string effectTargetAttach, real duration, real maxDistance, real lightningZ, real decayTime, boolean destroyEffects returns integer"
-
-GetUnitMaxLife=Get Unit Max Life
-GetUnitMaxLife="Get Unit Max Life (",~u,")"
-GetUnitMaxLifeHint="[MARS] native GetUnitMaxLife takes unit u returns real"
-
-GetUnitStateHook=Get Unit State Hook
-GetUnitStateHook="Get Unit State Hook (",~u,", ",~state,")"
-GetUnitStateHookHint="[MARS] native GetUnitStateHook takes unit u, unitstate state returns real"
-
-GetUnitStatePercentHook=Get Unit State Percent Hook
-GetUnitStatePercentHook="Get Unit State Percent Hook (",~whichUnit,", ",~whichState,", ",~whichMaxState,")"
-GetUnitStatePercentHookHint="[MARS] native GetUnitStatePercentHook takes unit whichUnit, unitstate whichState, unitstate whichMaxState returns real"
-
-GetUnitLifePercentHook=Get Unit Life Percent Hook
-GetUnitLifePercentHook="Get Unit Life Percent Hook (",~whichUnit,")"
-GetUnitLifePercentHookHint="[MARS] native GetUnitLifePercentHook takes unit whichUnit returns real"
-
-SetUnitMaxState=Set Unit Max State
-SetUnitMaxState="Set Unit Max State (",~whichUnit,", ",~whichUnitState,", ",~newVal,")"
-SetUnitMaxStateHint="[MARS] native SetUnitMaxState takes unit whichUnit, unitstate whichUnitState, integer newVal returns boolean"
-
-AddUnitSight=Add Unit Sight
-AddUnitSight="Add Unit Sight (",~whichUnit,", ",~newVal,")"
-AddUnitSightHint="[MARS] native AddUnitSight takes unit whichUnit, integer newVal returns boolean"
-
-GetSmartLoopIndex=Get Smart Loop Index
-GetSmartLoopIndex="Get Smart Loop Index"
-GetSmartLoopIndexHint="[MARS] native GetSmartLoopIndex takes nothing returns integer"
-
-GetSmartLoopIndexEnd=Get Smart Loop Index End
-GetSmartLoopIndexEnd="Get Smart Loop Index End"
-GetSmartLoopIndexEndHint="[MARS] native GetSmartLoopIndexEnd takes nothing returns integer"
-
-AddSummativeTextToUnitForPlayer=Add Summative Text To Unit For Player
-AddSummativeTextToUnitForPlayer="Add Summative Text To Unit For Player (",~owner,", ",~target,", ",~textType,", ",~value,", ",~prefix,")"
-AddSummativeTextToUnitForPlayerHint="[MARS] native AddSummativeTextToUnitForPlayer takes player owner, unit target, integer textType, real value, string prefix returns SummativeText"
-
-MakeUnitFly=Make Unit Fly
-MakeUnitFly="Make Unit Fly (",~u,")"
-MakeUnitFlyHint="[MARS] native MakeUnitFly takes unit u returns unit"
-
-IsCoordsOut=Is Coords Out
-IsCoordsOut="Is Coords Out (",~x,", ",~y,")"
-IsCoordsOutHint="[MARS] native IsCoordsOut takes real x, real y returns boolean"
-
-IsUnitInvulnerable=Is Unit Invulnerable
-IsUnitInvulnerable="Is Unit Invulnerable (",~u,")"
-IsUnitInvulnerableHint="[MARS] native IsUnitInvulnerable takes unit u returns boolean"
-
-DummyAttackUnit=Dummy Attack Unit
-DummyAttackUnit="Dummy Attack Unit (",~whichPlayer,", ",~targetUnit,", ",~abilityId,", ",~abilityLvl,")"
-DummyAttackUnitHint="[MARS] native DummyAttackUnit takes player whichPlayer, unit targetUnit, integer abilityId, integer abilityLvl returns unit"
-
-UnitHasItemType=Unit Has Item Type
-UnitHasItemType="Unit Has Item Type (",~whichUnit,", ",~itemId,")"
-UnitHasItemTypeHint="[MARS] native UnitHasItemType takes unit whichUnit, integer itemId returns boolean"
-
-CountUnitItemType=Count Unit Item Type
-CountUnitItemType="Count Unit Item Type (",~whichUnit,", ",~itemId,")"
-CountUnitItemTypeHint="[MARS] native CountUnitItemType takes unit whichUnit, integer itemId returns integer"
-
-GetPlayerTextColor=Get Player Text Color
-GetPlayerTextColor="Get Player Text Color (",~whichplayer,")"
-GetPlayerTextColorHint="[MARS] native GetPlayerTextColor takes player whichplayer returns string"
-
-UnitHasAbility=Unit Has Ability
-UnitHasAbility="Unit Has Ability (",~whichUnit,", ",~abilityId,")"
-UnitHasAbilityHint="[MARS] native UnitHasAbility takes unit whichUnit, integer abilityId returns boolean"
-
-IsUnitHexed=Is Unit Hexed
-IsUnitHexed="Is Unit Hexed (",~u,")"
-IsUnitHexedHint="[MARS] native IsUnitHexed takes unit u returns boolean"
-
-UnitHasTalent=Unit Has Talent
-UnitHasTalent="Unit Has Talent (",~whichUnit,", ",~talentId,")"
-UnitHasTalentHint="[MARS] native UnitHasTalent takes unit whichUnit, integer talentId returns boolean"
-
-GetUnitTalentLvl=Get Unit Talent Lvl
-GetUnitTalentLvl="Get Unit Talent Lvl (",~whichUnit,", ",~talentId,")"
-GetUnitTalentLvlHint="[MARS] native GetUnitTalentLvl takes unit whichUnit, integer talentId returns integer"
-
-UnitHasMefisto=Unit Has Mefisto
-UnitHasMefisto="Unit Has Mefisto (",~whichUnit,")"
-UnitHasMefistoHint="[MARS] native UnitHasMefisto takes unit whichUnit returns boolean"
-
-GetUnitLifePerc=Get Unit Life Perc
-GetUnitLifePerc="Get Unit Life Perc (",~whichUnit,")"
-GetUnitLifePercHint="[MARS] native GetUnitLifePerc takes unit whichUnit returns real"
-
-IsTeamMode=Is Team Mode
-IsTeamMode="Is Team Mode"
-IsTeamModeHint="[MARS] native IsTeamMode takes nothing returns boolean"
-
-GetTeamMasterPlayer=Get Team Master Player
-GetTeamMasterPlayer="Get Team Master Player (",~whichPlayer,")"
-GetTeamMasterPlayerHint="[MARS] native GetTeamMasterPlayer takes player whichPlayer returns player"
-
-IsMapPaused=Is Map Paused
-IsMapPaused="Is Map Paused"
-IsMapPausedHint="[MARS] native IsMapPaused takes nothing returns boolean"
-
-IsMapDuel=Is Map Duel
-IsMapDuel="Is Map Duel"
-IsMapDuelHint="[MARS] native IsMapDuel takes nothing returns boolean"
-
-IsUnitDummy=Is Unit Dummy
-IsUnitDummy="Is Unit Dummy (",~whichUnit,")"
-IsUnitDummyHint="[MARS] native IsUnitDummy takes unit whichUnit returns boolean"
-
-GetObserverForce=Get Observer Force
-GetObserverForce="Get Observer Force"
-GetObserverForceHint="[MARS] native GetObserverForce takes nothing returns force"
-
-AddAreaSpellToUnit=Add Area Spell To Unit
-AddAreaSpellToUnit="Add Area Spell To Unit (",~ownerUnit,", ",~dummyUnit,", ",~actionsId,", ",~duration,", ",~pierceDeath,", ",~filter,", ",~rangeStart,", ",~rangeEnd,", ",~interval,")"
-AddAreaSpellToUnitHint="[MARS] native AddAreaSpellToUnit takes unit ownerUnit, unit dummyUnit, integer actionsId, real duration, boolean pierceDeath, boolexpr filter, real rangeStart, real rangeEnd, real interval returns AreaSpell"
 
 GetASUnit=Get AS Unit
 GetASUnit="Get AS Unit"
@@ -3804,6 +3572,50 @@ IsCombatLeavingHint="[MARS] native IsCombatLeaving takes nothing returns boolean
 IsUnitInCombat=Is Unit In Combat
 IsUnitInCombat="Is Unit In Combat (",~whichUnit,")"
 IsUnitInCombatHint="[MARS] native IsUnitInCombat takes unit whichUnit returns boolean"
+
+GetFilterOwnerUnit=Get Filter Owner Unit
+GetFilterOwnerUnit="Get Filter Owner Unit"
+GetFilterOwnerUnitHint="[MARS] native GetFilterOwnerUnit takes nothing returns unit"
+
+GetFilterTargetUnit=Get Filter Target Unit
+GetFilterTargetUnit="Get Filter Target Unit"
+GetFilterTargetUnitHint="[MARS] native GetFilterTargetUnit takes nothing returns unit"
+
+GetFilterReal=Get Filter Real
+GetFilterReal="Get Filter Real"
+GetFilterRealHint="[MARS] native GetFilterReal takes nothing returns real"
+
+ConditionWithOwner=Condition With Owner
+ConditionWithOwner="Condition With Owner (",~func,", ",~ownerUnit,")"
+ConditionWithOwnerHint="[MARS] native ConditionWithOwner takes code func, unit ownerUnit returns conditionfunc"
+
+ConditionParameters=Condition Parameters
+ConditionParameters="Condition Parameters (",~func,", ",~ownerUnit,", ",~targetUnit,", ",~filterReal,")"
+ConditionParametersHint="[MARS] native ConditionParameters takes code func, unit ownerUnit, unit targetUnit, real filterReal returns conditionfunc"
+
+IsUnitCanBeMoved=Is Unit Can Be Moved
+IsUnitCanBeMoved="Is Unit Can Be Moved (",~initiator,", ",~target,")"
+IsUnitCanBeMovedHint="[MARS] native IsUnitCanBeMoved takes unit initiator, unit target returns boolean"
+
+IsUnitDisarmed=Is Unit Disarmed
+IsUnitDisarmed="Is Unit Disarmed (",~whichUnit,")"
+IsUnitDisarmedHint="[MARS] native IsUnitDisarmed takes unit whichUnit returns boolean"
+
+IsUnitCanDoActions=Is Unit Can Do Actions
+IsUnitCanDoActions="Is Unit Can Do Actions (",~whichUnit,")"
+IsUnitCanDoActionsHint="[MARS] native IsUnitCanDoActions takes unit whichUnit returns boolean"
+
+IsUnitCanAttack=Is Unit Can Attack
+IsUnitCanAttack="Is Unit Can Attack (",~whichUnit,")"
+IsUnitCanAttackHint="[MARS] native IsUnitCanAttack takes unit whichUnit returns boolean"
+
+IsUnitHasAttack=Is Unit Has Attack
+IsUnitHasAttack="Is Unit Has Attack (",~whichUnit,")"
+IsUnitHasAttackHint="[MARS] native IsUnitHasAttack takes unit whichUnit returns boolean"
+
+IsUnitStructure=Is Unit Structure
+IsUnitStructure="Is Unit Structure (",~whichUnit,")"
+IsUnitStructureHint="[MARS] native IsUnitStructure takes unit whichUnit returns boolean"
 
 GetCapturingPlayer=Get Capturing Player
 GetCapturingPlayer="Get Capturing Player"
@@ -4161,6 +3973,10 @@ GetHeroStatHook=Get Hero Stat Hook
 GetHeroStatHook="Get Hero Stat Hook (",~whichStat,", ",~whichHero,", ",~includeBonuses,")"
 GetHeroStatHookHint="[MARS] native GetHeroStatHook takes integer whichStat, unit whichHero, boolean includeBonuses returns integer"
 
+CreateUnitLightningTarget=Create Unit Lightning Target
+CreateUnitLightningTarget="Create Unit Lightning Target (",~caster,", ",~target,", ",~lightningType,", ",~effectCasterModel,", ",~effectCasterAttach,", ",~effectTargetModel,", ",~effectTargetAttach,", ",~duration,", ",~maxDistance,", ",~lightningZ,", ",~decayTime,", ",~destroyEffects,")"
+CreateUnitLightningTargetHint="[MARS] native CreateUnitLightningTarget takes unit caster, unit target, string lightningType, string effectCasterModel, string effectCasterAttach, string effectTargetModel, string effectTargetAttach, real duration, real maxDistance, real lightningZ, real decayTime, boolean destroyEffects returns integer"
+
 GetMSUnit=Get MS Unit
 GetMSUnit="Get MS Unit"
 GetMSUnitHint="[MARS] native GetMSUnit takes nothing returns unit"
@@ -4393,13 +4209,197 @@ StunUnit=Stun Unit
 StunUnit="Stun Unit (",~stunningUnit,", ",~stunnedUnit,", ",~typeId,", ",~duration,")"
 StunUnitHint="[MARS] native StunUnit takes unit stunningUnit, unit stunnedUnit, integer typeId, real duration returns Stun"
 
+AddSummativeTextToUnitForPlayer=Add Summative Text To Unit For Player
+AddSummativeTextToUnitForPlayer="Add Summative Text To Unit For Player (",~owner,", ",~target,", ",~textType,", ",~value,", ",~prefix,")"
+AddSummativeTextToUnitForPlayerHint="[MARS] native AddSummativeTextToUnitForPlayer takes player owner, unit target, integer textType, real value, string prefix returns SummativeText"
+
 GetTalentHero=Get Talent Hero
 GetTalentHero="Get Talent Hero"
 GetTalentHeroHint="[MARS] native GetTalentHero takes nothing returns unit"
 
+MakeUnitFly=Make Unit Fly
+MakeUnitFly="Make Unit Fly (",~u,")"
+MakeUnitFlyHint="[MARS] native MakeUnitFly takes unit u returns unit"
+
+IsCoordsOut=Is Coords Out
+IsCoordsOut="Is Coords Out (",~x,", ",~y,")"
+IsCoordsOutHint="[MARS] native IsCoordsOut takes real x, real y returns boolean"
+
+IsUnitInvulnerable=Is Unit Invulnerable
+IsUnitInvulnerable="Is Unit Invulnerable (",~u,")"
+IsUnitInvulnerableHint="[MARS] native IsUnitInvulnerable takes unit u returns boolean"
+
+DummyAttackUnit=Dummy Attack Unit
+DummyAttackUnit="Dummy Attack Unit (",~whichPlayer,", ",~targetUnit,", ",~abilityId,", ",~abilityLvl,")"
+DummyAttackUnitHint="[MARS] native DummyAttackUnit takes player whichPlayer, unit targetUnit, integer abilityId, integer abilityLvl returns unit"
+
+UnitHasItemType=Unit Has Item Type
+UnitHasItemType="Unit Has Item Type (",~whichUnit,", ",~itemId,")"
+UnitHasItemTypeHint="[MARS] native UnitHasItemType takes unit whichUnit, integer itemId returns boolean"
+
+CountUnitItemType=Count Unit Item Type
+CountUnitItemType="Count Unit Item Type (",~whichUnit,", ",~itemId,")"
+CountUnitItemTypeHint="[MARS] native CountUnitItemType takes unit whichUnit, integer itemId returns integer"
+
+GetPlayerTextColor=Get Player Text Color
+GetPlayerTextColor="Get Player Text Color (",~whichplayer,")"
+GetPlayerTextColorHint="[MARS] native GetPlayerTextColor takes player whichplayer returns string"
+
+UnitHasAbility=Unit Has Ability
+UnitHasAbility="Unit Has Ability (",~whichUnit,", ",~abilityId,")"
+UnitHasAbilityHint="[MARS] native UnitHasAbility takes unit whichUnit, integer abilityId returns boolean"
+
+IsUnitHexed=Is Unit Hexed
+IsUnitHexed="Is Unit Hexed (",~u,")"
+IsUnitHexedHint="[MARS] native IsUnitHexed takes unit u returns boolean"
+
+UnitHasTalent=Unit Has Talent
+UnitHasTalent="Unit Has Talent (",~whichUnit,", ",~talentId,")"
+UnitHasTalentHint="[MARS] native UnitHasTalent takes unit whichUnit, integer talentId returns boolean"
+
+GetUnitTalentLvl=Get Unit Talent Lvl
+GetUnitTalentLvl="Get Unit Talent Lvl (",~whichUnit,", ",~talentId,")"
+GetUnitTalentLvlHint="[MARS] native GetUnitTalentLvl takes unit whichUnit, integer talentId returns integer"
+
+UnitHasMefisto=Unit Has Mefisto
+UnitHasMefisto="Unit Has Mefisto (",~whichUnit,")"
+UnitHasMefistoHint="[MARS] native UnitHasMefisto takes unit whichUnit returns boolean"
+
+GetUnitLifePerc=Get Unit Life Perc
+GetUnitLifePerc="Get Unit Life Perc (",~whichUnit,")"
+GetUnitLifePercHint="[MARS] native GetUnitLifePerc takes unit whichUnit returns real"
+
+IsTeamMode=Is Team Mode
+IsTeamMode="Is Team Mode"
+IsTeamModeHint="[MARS] native IsTeamMode takes nothing returns boolean"
+
+GetTeamMasterPlayer=Get Team Master Player
+GetTeamMasterPlayer="Get Team Master Player (",~whichPlayer,")"
+GetTeamMasterPlayerHint="[MARS] native GetTeamMasterPlayer takes player whichPlayer returns player"
+
+IsMapPaused=Is Map Paused
+IsMapPaused="Is Map Paused"
+IsMapPausedHint="[MARS] native IsMapPaused takes nothing returns boolean"
+
+IsMapDuel=Is Map Duel
+IsMapDuel="Is Map Duel"
+IsMapDuelHint="[MARS] native IsMapDuel takes nothing returns boolean"
+
+IsUnitDummy=Is Unit Dummy
+IsUnitDummy="Is Unit Dummy (",~whichUnit,")"
+IsUnitDummyHint="[MARS] native IsUnitDummy takes unit whichUnit returns boolean"
+
+GetObserverForce=Get Observer Force
+GetObserverForce="Get Observer Force"
+GetObserverForceHint="[MARS] native GetObserverForce takes nothing returns force"
+
 Unit=Unit
 Unit="Unit (",~whichUnit,")"
 UnitHint="[MARS] native Unit takes unit whichUnit returns UnitData"
+
+GetTriggerHandleId=Get Trigger Handle Id
+GetTriggerHandleId="Get Trigger Handle Id"
+GetTriggerHandleIdHint="[MARS] native GetTriggerHandleId takes nothing returns integer"
+
+GetPolarOffsetX=Get Polar Offset X
+GetPolarOffsetX="Get Polar Offset X (",~x,", ",~distance,", ",~angle,")"
+GetPolarOffsetXHint="[MARS] native GetPolarOffsetX takes real x, real distance, real angle returns real"
+
+GetPolarOffsetY=Get Polar Offset Y
+GetPolarOffsetY="Get Polar Offset Y (",~y,", ",~distance,", ",~angle,")"
+GetPolarOffsetYHint="[MARS] native GetPolarOffsetY takes real y, real distance, real angle returns real"
+
+AngleBetweenCoords=Angle Between Coords
+AngleBetweenCoords="Angle Between Coords (",~x1,", ",~y1,", ",~x2,", ",~y2,")"
+AngleBetweenCoordsHint="[MARS] native AngleBetweenCoords takes real x1, real y1, real x2, real y2 returns real"
+
+DistanceBetweenCoords=Distance Between Coords
+DistanceBetweenCoords="Distance Between Coords (",~x1,", ",~y1,", ",~x2,", ",~y2,")"
+DistanceBetweenCoordsHint="[MARS] native DistanceBetweenCoords takes real x1, real y1, real x2, real y2 returns real"
+
+DistanceBetweenCoords3D=Distance Between Coords 3 D
+DistanceBetweenCoords3D="Distance Between Coords 3 D (",~x1,", ",~y1,", ",~z1,", ",~x2,", ",~y2,", ",~z2,")"
+DistanceBetweenCoords3DHint="[MARS] native DistanceBetweenCoords3D takes real x1, real y1, real z1, real x2, real y2, real z2 returns real"
+
+DistanceBetweenUnits=Distance Between Units
+DistanceBetweenUnits="Distance Between Units (",~target1,", ",~target2,")"
+DistanceBetweenUnitsHint="[MARS] native DistanceBetweenUnits takes unit target1, unit target2 returns real"
+
+AngleBetweenUnits=Angle Between Units
+AngleBetweenUnits="Angle Between Units (",~target1,", ",~target2,")"
+AngleBetweenUnitsHint="[MARS] native AngleBetweenUnits takes unit target1, unit target2 returns real"
+
+GetTerrainZ=Get Terrain Z
+GetTerrainZ="Get Terrain Z (",~x,", ",~y,")"
+GetTerrainZHint="[MARS] native GetTerrainZ takes real x, real y returns real"
+
+GetUnitTerrainCliffLevel=Get Unit Terrain Cliff Level
+GetUnitTerrainCliffLevel="Get Unit Terrain Cliff Level (",~target,")"
+GetUnitTerrainCliffLevelHint="[MARS] native GetUnitTerrainCliffLevel takes unit target returns integer"
+
+GetUnitZ=Get Unit Z
+GetUnitZ="Get Unit Z (",~target,")"
+GetUnitZHint="[MARS] native GetUnitZ takes unit target returns real"
+
+Perpendicular=Perpendicular
+Perpendicular="Perpendicular (",~Xa,", ",~Ya,", ",~Xb,", ",~Yb,", ",~Xc,", ",~Yc,")"
+PerpendicularHint="[MARS] native Perpendicular takes real Xa, real Ya, real Xb, real Yb, real Xc, real Yc returns real"
+
+AngleDifference=Angle Difference
+AngleDifference="Angle Difference (",~a1,", ",~a2,")"
+AngleDifferenceHint="[MARS] native AngleDifference takes real a1, real a2 returns real"
+
+AngleNormalize=Angle Normalize
+AngleNormalize="Angle Normalize (",~angle,")"
+AngleNormalizeHint="[MARS] native AngleNormalize takes real angle returns real"
+
+AngleTowards=Angle Towards
+AngleTowards="Angle Towards (",~angle,", ",~toAngel,", ",~angleOffset,")"
+AngleTowardsHint="[MARS] native AngleTowards takes real angle, real toAngel, real angleOffset returns real"
+
+IsCoordsInTriangle=Is Coords In Triangle
+IsCoordsInTriangle="Is Coords In Triangle (",~x,", ",~y,", ",~x1,", ",~y1,", ",~x2,", ",~y2,", ",~x3,", ",~y3,")"
+IsCoordsInTriangleHint="[MARS] native IsCoordsInTriangle takes real x, real y, real x1, real y1, real x2, real y2, real x3, real y3 returns boolean"
+
+IsCoordsIn4GonSimple=Is Coords In 4 Gon Simple
+IsCoordsIn4GonSimple="Is Coords In 4 Gon Simple (",~x,", ",~y,", ",~x1,", ",~y1,", ",~x2,", ",~y2,", ",~x3,", ",~y3,", ",~x4,", ",~y4,")"
+IsCoordsIn4GonSimpleHint="[MARS] native IsCoordsIn4GonSimple takes real x, real y, real x1, real y1, real x2, real y2, real x3, real y3, real x4, real y4 returns boolean"
+
+IsCoordsIn4Gon=Is Coords In 4 Gon
+IsCoordsIn4Gon="Is Coords In 4 Gon (",~x,", ",~y,", ",~x1,", ",~y1,", ",~x2,", ",~y2,", ",~x3,", ",~y3,", ",~x4,", ",~y4,")"
+IsCoordsIn4GonHint="[MARS] native IsCoordsIn4Gon takes real x, real y, real x1, real y1, real x2, real y2, real x3, real y3, real x4, real y4 returns boolean"
+
+GetUnitMaxLife=Get Unit Max Life
+GetUnitMaxLife="Get Unit Max Life (",~u,")"
+GetUnitMaxLifeHint="[MARS] native GetUnitMaxLife takes unit u returns real"
+
+GetUnitStateHook=Get Unit State Hook
+GetUnitStateHook="Get Unit State Hook (",~u,", ",~state,")"
+GetUnitStateHookHint="[MARS] native GetUnitStateHook takes unit u, unitstate state returns real"
+
+GetUnitStatePercentHook=Get Unit State Percent Hook
+GetUnitStatePercentHook="Get Unit State Percent Hook (",~whichUnit,", ",~whichState,", ",~whichMaxState,")"
+GetUnitStatePercentHookHint="[MARS] native GetUnitStatePercentHook takes unit whichUnit, unitstate whichState, unitstate whichMaxState returns real"
+
+GetUnitLifePercentHook=Get Unit Life Percent Hook
+GetUnitLifePercentHook="Get Unit Life Percent Hook (",~whichUnit,")"
+GetUnitLifePercentHookHint="[MARS] native GetUnitLifePercentHook takes unit whichUnit returns real"
+
+SetUnitMaxState=Set Unit Max State
+SetUnitMaxState="Set Unit Max State (",~whichUnit,", ",~whichUnitState,", ",~newVal,")"
+SetUnitMaxStateHint="[MARS] native SetUnitMaxState takes unit whichUnit, unitstate whichUnitState, integer newVal returns boolean"
+
+AddUnitSight=Add Unit Sight
+AddUnitSight="Add Unit Sight (",~whichUnit,", ",~newVal,")"
+AddUnitSightHint="[MARS] native AddUnitSight takes unit whichUnit, integer newVal returns boolean"
+
+GetSmartLoopIndex=Get Smart Loop Index
+GetSmartLoopIndex="Get Smart Loop Index"
+GetSmartLoopIndexHint="[MARS] native GetSmartLoopIndex takes nothing returns integer"
+
+GetSmartLoopIndexEnd=Get Smart Loop Index End
+GetSmartLoopIndexEnd="Get Smart Loop Index End"
+GetSmartLoopIndexEndHint="[MARS] native GetSmartLoopIndexEnd takes nothing returns integer"
 
 GetSpellAbilityId=Ability Being Cast
 GetSpellAbilityId="Ability being cast"

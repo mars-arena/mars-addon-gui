@@ -12,8 +12,6 @@
 
 	//==============================
 	//=========== EVENTS ===========
-
-	// NOTE: Event - array struct (индекс = event id). Можно использовать GetHandleId(EVENT_...) как значение Event.
 	type Event extends integer
 
 	//=================================
@@ -28,14 +26,6 @@
 
 
 globals
-	//====================================
-	//=========== HASH CLEANER ===========
-
-	// Событие при очистке хэш-таблицы для юнита
-	//
-	// GetTriggerHandleId() -> integer
-	constant Event EVENT_CLEAR_HASH = undefined
-
 	//====================================
 	//=========== ATTACK SPEED ===========
 
@@ -457,556 +447,15 @@ globals
 	//=========== TALENT ===========
 	constant Event EVENT_TALENT_CHOSEN = undefined
 
-endglobals
-
 	//====================================
 	//=========== HASH CLEANER ===========
-	native GetTriggerHandleId takes nothing returns integer //! [ResponseHash], TriggerCalls
 
-	//==================================
-	//=========== ATTACHMENT ===========
-	native AttachUnitToUnit takes unit attached, unit target, real offsetX, real offsetY, real offsetZ returns Attachment //! [Unit], TriggerActions, TriggerCalls
-	native DetachUnit takes unit attached returns nothing //! [Unit], TriggerActions
-
-	//==================================
-	//=========== CONDITIONS ===========
-	native GetFilterOwnerUnit takes nothing returns unit //! [ResponseCondition], TriggerCalls
-	native GetFilterTargetUnit takes nothing returns unit //! [ResponseCondition], TriggerCalls
-	native GetFilterReal takes nothing returns real //! [ResponseCondition], TriggerCalls
-
-	// Инициализирует условие вместе с передачей параметров
-	// @arg code func код фильтрации
-	// @arg unit ownerUnit юнит-владелец условия
-	// @return conditionfunc
-	native ConditionWithOwner takes code func, unit ownerUnit returns conditionfunc //! [Condition], TriggerCalls
-
-	// Инициализирует условие вместе с передачей параметров
-	// @arg code func код фильтрации
-	// @arg unit ownerUnit юнит-владелец условия
-	// @arg unit targetUnit юнит-цель условия
-	// @return conditionfunc
-	native ConditionParameters takes code func, unit ownerUnit, unit targetUnit, real filterReal returns conditionfunc //! [Condition], TriggerCalls
-
-	// Проверяет, может ли юнит быть перемещён
-	// @arg unit initiator инициатор проверки
-	// @arg unit target целевой юнит
-	// @return boolean
-	native IsUnitCanBeMoved takes unit initiator, unit target returns boolean //! [Unit], TriggerCalls
-
-	// Проверяет, является ли юнит разоружённым
-	// @arg unit whichUnit целевой юнит
-	// @return boolean
-	native IsUnitDisarmed takes unit whichUnit returns boolean //! [Unit], TriggerCalls
-
-	// Проверяет, может ли юнит выполнять действия
-	// @arg unit whichUnit целевой юнит
-	// @return boolean
-	native IsUnitCanDoActions takes unit whichUnit returns boolean //! [Unit], TriggerCalls
-
-	// Проверяет, может ли юнит атаковать
-	// @arg unit whichUnit целевой юнит
-	// @return boolean
-	native IsUnitCanAttack takes unit whichUnit returns boolean //! [Unit], TriggerCalls
-
-	// Проверяет, есть ли у юнита атака
-	// @arg unit whichUnit целевой юнит
-	// @return boolean
-	native IsUnitHasAttack takes unit whichUnit returns boolean //! [Unit], TriggerCalls
-
-	// Проверяет, является ли юнит строением
-	// @arg unit whichUnit целевой юнит
-	// @return boolean
-	native IsUnitStructure takes unit whichUnit returns boolean //! [Unit], TriggerCalls
-
-	//===================================
-	//=========== COORD UTILS ===========
-
-	// Устанавливает позицию юнита с учетом возможных смещений, чтобы избежать резких скачков.
+	// Событие при очистке хэш-таблицы для юнита
 	//
-	// @arg unit `source` юнит, позицию которого нужно установить.
-	// @arg real `x` новая координата X.
-	// @arg real `y` новая координата Y.
-	native SetUnitPositionSmooth takes unit source, real x, real y returns nothing //! [Unit], TriggerActions
+	// GetTriggerHandleId() -> integer
+	constant Event EVENT_CLEAR_HASH = undefined
 
-	// Вычисляет смещение координаты X на основе заданного расстояния и угла от точки.
-	//
-	// @arg real `x` начальная координата x.
-	// @arg real `distance` расстояние от начальной точки.
-	// @arg real `angle` угол в градусах.
-	// @return real - результирующая координата x после применения полярного смещения.
-	native GetPolarOffsetX takes real x, real distance, real angle returns real //! [Geometry], TriggerCalls
-
-	// Вычисляет смещение координаты Y на основе заданного расстояния и угла от точки.
-	//
-	// @arg real `y` начальная координата y.
-	// @arg real `distance` расстояние от начальной точки.
-	// @arg real `angle` угол в градусах.
-	// @return real - результирующая координата y после применения полярного смещения.
-	native GetPolarOffsetY takes real y, real distance, real angle returns real //! [Geometry], TriggerCalls
-
-	// Перемещает локацию на новую позицию на основе полярного смещения от ее текущей позиции.
-	//
-	// @arg location `target` локация для перемещения.
-	// @arg real `distance` расстояние для перемещения локации.
-	// @arg real `angle` угол в градусах для перемещения локации.
-	native MoveLocationPolar takes location target, real distance, real angle returns nothing //! [Geometry], TriggerActions
-
-	// Перемещает юнита на новую позицию на основе полярного смещения от его текущей позиции.
-	//
-	// @arg unit `target` юнит для перемещения.
-	// @arg real `distance` расстояние для перемещения юнита.
-	// @arg real `angle` угол в градусах для перемещения юнита.
-	native SetUnitPositionPolar takes unit target, real distance, real angle returns nothing //! [Unit], TriggerActions
-
-	// Вычисляет угол между двумя наборами координат.
-	//
-	// @arg real `x1`, `y1` координаты первой точки.
-	// @arg real `x2`, `y2` координаты второй точки.
-	// @return real - угол в градусах между двумя точками.
-	native AngleBetweenCoords takes real x1, real y1, real x2, real y2 returns real //! [Geometry], TriggerCalls
-
-	// Вычисляет 2D расстояние между двумя наборами координат.
-	//
-	// @arg real `x1`, `y1` координаты первой точки.
-	// @arg real `x2`, `y2` координаты второй точки.
-	// @return real - расстояние между двумя наборами координат.
-	native DistanceBetweenCoords takes real x1, real y1, real x2, real y2 returns real //! [Geometry], TriggerCalls
-
-	// Вычисляет 3D расстояние между двумя наборами координат.
-	//
-	// @arg real `x1`, `y1`, `z1` координаты первой точки.
-	// @arg real `x2`, `y2`, `z2` координаты второй точки.
-	// @return real - 3D расстояние между двумя наборами координат.
-	native DistanceBetweenCoords3D takes real x1, real y1, real z1, real x2, real y2, real z2 returns real //! [Geometry], TriggerCalls
-
-	// Вычисляет расстояние между двумя юнитами.
-	//
-	// @arg unit `target1` первый юнит.
-	// @arg unit `target2` второй юнит.
-	// @return real - расстояние между двумя юнитами.
-	native DistanceBetweenUnits takes unit target1, unit target2 returns real //! [Geometry], TriggerCalls
-
-	// Вычисляет угол между двумя юнитами.
-	//
-	// @arg unit `target1` первый юнит.
-	// @arg unit `target2` второй юнит.
-	// @return real - угол в градусах между двумя юнитами.
-	native AngleBetweenUnits takes unit target1, unit target2 returns real //! [Geometry], TriggerCalls
-
-	// Получает высоту местности по заданным координатам.
-	//
-	// @arg real `x`, `y` координаты, для которых нужно получить высоту местности.
-	// @return real - высота местности по заданным координатам.
-	native GetTerrainZ takes real x, real y returns real //! [Geometry], TriggerCalls
-	native GetUnitTerrainCliffLevel takes unit target returns integer //! [Geometry], TriggerCalls
-
-	// Получает общую высоту (высота местности + высота полета) юнита.
-	//
-	// @arg unit `target` целевой юнит.
-	// @return real - общая высота юнита на его текущей позиции.
-	native GetUnitZ takes unit target returns real //! [Unit], TriggerCalls
-
-	// Устанавливает высоту полета для указанного юнита.
-	//
-	// @arg unit `target` юнит, которому необходимо установить высоту.
-	// @arg real `z` новая высота полета.
-	// @return unit - возвращает тот же юнит после установки новой высоты.
-	native SetUnitZ takes unit target, real z returns unit //! [Unit], TriggerActions
-
-	// Устанавливает координаты X и Y для указанного юнита.
-	//
-	// @arg unit `target` юнит, которому необходимо установить координаты.
-	// @arg real `x` новая координата X.
-	// @arg real `y` новая координата Y.
-	// @return unit - возвращает тот же юнит после установки новых координат.
-	native SetUnitXY takes unit target, real x, real y returns unit //! [Unit], TriggerActions
-
-	// Устанавливает координаты X, Y и высоту полета Z для указанного юнита.
-	//
-	// @arg unit `target` юнит, которому необходимо установить координаты и высоту.
-	// @arg real `x` новая координата X.
-	// @arg real `y` новая координата Y.
-	// @arg real `z` новая высота полета.
-	// @return unit - возвращает тот же юнит после установки новых параметров.
-	native SetUnitXYZ takes unit target, real x, real y, real z returns unit //! [Unit], TriggerActions
-
-	// Устанавливает координаты X, Y, высоту полета Z и направление (угол поворота) для указанного юнита.
-	//
-	// @arg unit `target` юнит, которому необходимо установить параметры.
-	// @arg real `x` новая координата X.
-	// @arg real `y` новая координата Y.
-	// @arg real `z` новая высота полета.
-	// @arg real `f` новое направление (угол поворота в градусах).
-	// @return unit - возвращает тот же юнит после установки новых параметров.
-	native SetUnitXYZF takes unit target, real x, real y, real z, real f returns unit //! [Unit], TriggerActions
-
-	// Находит длину перпендикуляра от отрезка, заданного Xa, Ya, Xb, Yb к точке, заданной Xc, Yc.
-	// https://xgm.guru/p/wc3/perpendicular
-	//
-	// @arg real `Xa` координата X первой точки отрезка.
-	// @arg real `Ya` координата Y первой точки отрезка.
-	// @arg real `Xb` координата X второй точки отрезка.
-	// @arg real `Yb` координата Y второй точки отрезка.
-	// @arg real `Xc` координата X точки C.
-	// @arg real `Yc` координата Y точки C.
-	// @return real - возвращает длину перпендикуляра от точки C к отрезку AB.
-	native Perpendicular takes real Xa, real Ya, real Xb, real Yb, real Xc, real Yc returns real //! [Geometry], TriggerCalls
-
-	// Вычисляет разницу между двумя углами.
-	// https://xgm.guru/p/wc3/warden-math
-	//
-	// @arg real `a1` первый угол в градусах.
-	// @arg real `a2` второй угол в градусах.
-	// @return real - возвращает абсолютное значение разницы между двумя углами.
-	native AngleDifference takes real a1, real a2 returns real //! [Geometry], TriggerCalls
-
-	// Нормализует угол, приводя его к диапазону [0, 360).
-	//
-	// @arg real `angle` угол для нормализации.
-	// @return real - возвращает нормализованный угол.
-	native AngleNormalize takes real angle returns real //! [Geometry], TriggerCalls
-	native AngleTowards takes real angle, real toAngel, real angleOffset returns real //! [Geometry], TriggerCalls
-
-	// Проверяет, находятся ли координаты внутри треугольника.
-	//
-	// @arg real `x, y` координаты точки для проверки.
-	// @arg real `x1, y1, x2, y2, x3, y3` координаты вершин треугольника.
-	// @return boolean - возвращает true, если точка внутри треугольника, иначе false.
-	native IsCoordsInTriangle takes real x, real y, real x1, real y1, real x2, real y2, real x3, real y3 returns boolean //! [Geometry], TriggerCalls
-
-	// Проверяет, находятся ли координаты внутри четырехугольника с использованием простого метода.
-	//
-	// @arg real `x, y` координаты точки для проверки.
-	// @arg real `x1, y1, x2, y2, x3, y3, x4, y4` координаты вершин четырехугольника.
-	// @return boolean - возвращает true, если точка внутри четырехугольника, иначе false.
-	native IsCoordsIn4GonSimple takes real x, real y, real x1, real y1, real x2, real y2, real x3, real y3, real x4, real y4 returns boolean //! [Geometry], TriggerCalls
-
-	// Проверяет, находятся ли координаты внутри четырехугольника.
-	//
-	// @arg real `x, y` координаты точки для проверки.
-	// @arg real `x1, y1, x2, y2, x3, y3, x4, y4` координаты вершин четырехугольника.
-	// @return boolean - возвращает true, если точка внутри четырехугольника, иначе false.
-	native IsCoordsIn4Gon takes real x, real y, real x1, real y1, real x2, real y2, real x3, real y3, real x4, real y4 returns boolean //! [Geometry], TriggerCalls
-
-	//=============================
-	//=========== DEBUG ===========
-
-	// Отладка на уровне "info": общая информация.
-	// @arg string msg сообщение для логирования
-	native Debug takes string msg returns nothing //! [Debug], TriggerActions
-
-	// Показать текстовую метку в координатах, полезно для отладки
-	// @arg string s текст для отображения
-	// @arg real x позиция по X
-	// @arg real y позиция по Y
-	native DebugXY takes string s, real x, real y returns nothing //! [Debug], TriggerActions
-
-	// Отладка на уровне "warning": потенциальные проблемы.
-	// @arg string id идентификатор предупреждения
-	// @arg string msg сообщение предупреждения
-	native Warning takes string id, string msg returns nothing //! [Debug], TriggerActions
-
-	// Отладка на уровне "error": серьёзные ошибки.
-	// @arg string id идентификатор ошибки
-	// @arg string msg подробное сообщение об ошибке
-	native Error takes string id, string msg returns nothing //! [Debug], TriggerActions
-
-	//=====================================
-	//=========== JUMP TO POINT ===========
-
-	// Перемещает юнита в указанную позицию с помощью прыжка
-	// @arg unit caster юнит, который будет прыгать
-	// @arg real x позиция по X, куда будет прыгать юнит
-	// @arg real y позиция по Y, куда будет прыгать юнит
-	native JumpUnitToXY takes unit caster, real x, real y returns nothing //! [Unit], TriggerActions
-
-	// Перемещает юнита в указанную точку с помощью прыжка
-	// @arg unit caster юнит, который будет прыгать
-	// @arg Point2D end новая позиция, куда будет прыгать юнит
-	native JumpUnitToPoint takes unit caster, Point2D end returns nothing //! [Unit], TriggerActions
-
-	//=================================
-	//=========== LIGHTNING ===========
-
-	// Создаёт графическую молнию между двумя юнитами
-	// @arg unit caster юнит-источник молнии
-	// @arg unit target юнит-цель молнии
-	// @arg string lightningType тип молнии
-	// @arg string effectCasterModel модель эффекта источника молнии
-	// @arg string effectCasterAttach точка прикрепления эффекта источника молнии
-	// @arg string effectTargetModel модель эффекта цели молнии
-	// @arg string effectTargetAttach точка прикрепления эффекта цели молнии
-	// @arg real duration время жизни молнии
-	// @arg real maxDistance максимальная дистанция молнии
-	// @arg real lightningZ высота молнии над землёй
-	// @arg real decayTime время затухания молнии
-	// @arg boolean destroyEffects уничтожать ли эффекты молнии
-	// @return integer идентификатор молнии
-	native CreateUnitLightningTarget takes unit caster, unit target, string lightningType, string effectCasterModel, string effectCasterAttach, string effectTargetModel, string effectTargetAttach, real duration, real maxDistance, real lightningZ, real decayTime, boolean destroyEffects returns integer //! [Unit], TriggerActions, TriggerCalls
-
-	//=====================================
-	//=========== NEGATE DAMAGE ===========
-
-	// Возвращает максимальное здоровье юнита
-	// @arg unit u юнит, для которого нужно получить максимальное здоровье
-	// @return real максимальное здоровье юнита
-	native GetUnitMaxLife takes unit u returns real //! [Unit], TriggerCalls
-
-	// Возвращает значение состояния юнита
-	// @arg unit u юнит, для которого нужно получить значение состояния
-	// @arg unitstate state значение состояния юнита
-	// @return real значение состояния юнита
-	native GetUnitStateHook takes unit u, unitstate state returns real //! [Unit], TriggerCalls
-
-	// Возвращает процент состояния юнита
-	// @arg unit whichUnit юнит, для которого нужно получить процент состояния
-	// @arg unitstate whichState состояние юнита
-	// @arg unitstate whichMaxState максимальное состояние юнита
-	// @return real процент состояния юнита
-	native GetUnitStatePercentHook takes unit whichUnit, unitstate whichState, unitstate whichMaxState returns real //! [Unit], TriggerCalls
-
-	// Возвращает процент здоровья юнита
-	// @arg unit whichUnit юнит, для которого нужно получить процент здоровья
-	// @return real процент здоровья юнита
-	native GetUnitLifePercentHook takes unit whichUnit returns real //! [Unit], TriggerCalls
-
-	//=================================
-	//=========== RECTANGLE ===========
-
-	// Перебирает все юниты в прямоугольнике с учётом коллизии
-	// @arg group whichGroup группа, в которую будут добавлены юниты
-	// @arg real centerX координата центра прямоугольника по X
-	// @arg real centerY координата центра прямоугольника по Y
-	// @arg real width ширина прямоугольника
-	// @arg real height высота прямоугольника
-	// @arg real radians угол поворота прямоугольника в радианах
-	// @arg boolexpr filter фильтр для юнитов, которые будут добавлены в группу
-	native GroupEnumUnitsInRectangleCollision takes group whichGroup, real centerX, real centerY, real width, real height, real radians, boolexpr filter returns nothing //! [Group], TriggerActions
-
-	//==========================================
-	//=========== SET UNIT MAX STATE ===========
-
-	// Устанавливает максимальное значение состояния юнита
-	// @arg unit whichUnit юнит, для которого нужно установить максимальное состояние
-	// @arg unitstate whichUnitState состояние юнита
-	// @arg integer newVal новое значение состояния юнита
-	// @return boolean true, если состояние было успешно установлено
-	native SetUnitMaxState takes unit whichUnit, unitstate whichUnitState, integer newVal returns boolean //! [Unit], TriggerActions, TriggerCalls
-	native AddUnitSight takes unit whichUnit, integer newVal returns boolean //! [Unit], TriggerActions, TriggerCalls
-
-	//==================================
-	//=========== SMART LOOP ===========
-
-	// Инициализирует цикл с заданным начальным и конечным значением
-	// @arg integer start начальное значение цикла
-	// @arg integer end конечное значение цикла
-	native InitSmartLoop takes integer start, integer end returns nothing //! [Common], TriggerActions
-
-	// Возвращает текущий индекс цикла
-	// @return integer текущий индекс цикла
-	native GetSmartLoopIndex takes nothing returns integer //! [ResponseCommon], TriggerCalls
-
-	// Возвращает конечный индекс цикла
-	// @return integer конечный индекс цикла
-	native GetSmartLoopIndexEnd takes nothing returns integer //! [ResponseCommon], TriggerCalls
-
-	// Увеличивает текущий индекс цикла на заданное значение
-	// @arg integer step шаг увеличения индекса
-	native PlusSmartLoopIndex takes integer step returns nothing //! [Common], TriggerActions
-
-	// Конец цикла
-	native EndSmartLoop takes nothing returns nothing //! [Common], TriggerActions
-
-	//======================================
-	//=========== SUMMATIVE TEXT ===========
-
-	// Добавляет суммирующий текст к юниту для игрока
-	// @arg player owner игрок, которому будет показан суммирующий текст
-	// @arg unit target юнит, к которому будет добавлен суммирующий текст
-	// @arg integer textType тип суммирующего текста
-	// @arg real value значение суммирующего текста
-	// @arg string prefix префикс суммирующего текста
-	// @return SummativeText созданный суммирующий текст
-	native AddSummativeTextToUnitForPlayer takes player owner, unit target, integer textType, real value, string prefix returns SummativeText //! [TextTag], TriggerActions, TriggerCalls
-
-	// Показывает суммирующий текст для игрока
-	// @arg SummativeText summativeText суммирующий текст, который нужно показать
-	// @arg player participant игрок, которому нужно показать суммирующий текст
-	// @return SummativeText суммирующий текст, который был показан
-	native ShowSummativeTextToPlayer takes SummativeText summativeText, player participant returns nothing //! [TextTag], TriggerActions
-
-	//==================================
-	//=========== TECH UTILS ===========
-
-	// Делает юнита летающим
-	// @arg unit u
-	// @return unit возвращает юнит, который стал летающим
-	native MakeUnitFly takes unit u returns unit //! [Unit], TriggerActions, TriggerCalls
-
-	// Проверяет, находится ли точка за пределами карты
-	// @arg real x координата X
-	// @arg real y координата Y
-	// @return boolean true, если точка находится за пределами карты
-	native IsCoordsOut takes real x, real y returns boolean //! [Geometry], TriggerCalls
-
-	// Проверяет, неуявзим ли юнит
-	// @arg unit u юнит, который нужно проверить
-	// @return boolean true, если юнит неуязвим
-	native IsUnitInvulnerable takes unit u returns boolean //! [Unit], TriggerCalls
-
-	// Перебирает все юниты в радиусе с учётом их коллизии
-	// @arg group whichGroup группа, в которую будут добавлены юниты
-	// @arg real x координата X
-	// @arg real y координата Y
-	// @arg real r радиус
-	// @arg boolexpr filter фильтр для юнитов
-	native GroupEnumUnitsInRangeFiz takes group whichGroup, real x, real y, real r, boolexpr filter returns nothing //! [Group], TriggerActions
-
-	// Устанавливает время жизни для эффекта
-	// @arg effect eff эффект
-	// @arg real endTime время жизни
-	native EffectApplyTimedLife takes effect eff, real endTime returns nothing //! [Effect], TriggerActions
-
-	// Устанавливает время жизни для юнита
-	// @arg unit u юнит
-	// @arg real endTime время жизни
-	// @return unit
-	native UnitApplyTimeLife takes unit u, real endTime returns unit //! [Unit], TriggerActions
-
-	// Устанавливает время жизни для юнита с скрытием
-	// @arg unit u юнит
-	// @arg real endTime время жизни
-	// @return unit
-	native UnitApplyTimeLifeHide takes unit u, real endTime returns nothing //! [Unit], TriggerActions
-
-	// Применяет способность в точку
-	// @arg unit whichUnit юнит, который применяет способность
-	// @arg real x координата X
-	// @arg real y координата Y
-	// @arg integer abilityId ID способности
-	// @arg integer abilityLvl уровень способности
-	// @arg string order строка с приказом
-	native ApplyAbility takes unit whichUnit, real x, real y, integer abilityId, integer abilityLvl, string order returns nothing //! [Unit], TriggerActions
-
-	// Применяет способность к юниту
-	// @arg unit whichUnit юнит, который применяет способность
-	// @arg unit targetUnit юнит, к которому применяется способность
-	// @arg integer abilityId ID способности
-	// @arg integer abilityLvl уровень способности
-	// @arg string order строка с приказом
-	native ApplyAbilityToUnit takes unit whichUnit, unit targetUnit, integer abilityId, integer abilityLvl, string order returns nothing //! [Unit], TriggerActions
-
-	// Атаковать юнита с помощью дамми-юнита
-	// @arg player whichPlayer игрок, которому принадлежит дамми-юнит
-	// @arg unit targetUnit юнит, которого атакуем
-	// @arg integer abilityId ID способности
-	// @arg integer abilityLvl уровень способности
-	// @return unit возвращает дамми-юнит
-	native DummyAttackUnit takes player whichPlayer, unit targetUnit, integer abilityId, integer abilityLvl returns unit //! [Unit], TriggerActions, TriggerCalls
-
-	// Проверяет, есть ли у юнита предмет с данного типа
-	native UnitHasItemType takes unit whichUnit, integer itemId returns boolean //! [Unit], TriggerCalls
-
-	// Подсчитывает количество предметов данного типа у юнита
-	native CountUnitItemType takes unit whichUnit, integer itemId returns integer //! [Unit], TriggerCalls
-
-	// Запускает звук для игрока
-	// @arg sound snd звук, который нужно запустить
-	// @arg player pl игрок, для которого запускаем звук
-	native StartSoundToPlayer takes sound snd, player pl returns nothing //! [Sound], TriggerActions
-
-	// Возвращает цвет игрока в виде строки
-	// @arg player whichplayer игрок, для которого получаем цвет
-	// @return string цвет игрока в виде шестнадцатеричной строки
-	native GetPlayerTextColor takes player whichplayer returns string //! [Player], TriggerCalls
-
-	// Добавляет способность юниту и делает её постоянной
-	native UnitAddAbilityPermanent takes unit u, integer aId returns nothing //! [Unit], TriggerActions
-
-	// Проверяет, есть ли у юнита способность
-	native UnitHasAbility takes unit whichUnit, integer abilityId returns boolean //! [Unit], TriggerCalls
-
-	// Проверяет, находится ли юнит под хексом
-	native IsUnitHexed takes unit u returns boolean //! [Unit], TriggerCalls
-
-	// Безопасно вручает руну юниту
-	// @arg unit u юнит
-	// @arg integer id ID руны
-	// @return boolean true, если руна успешно вручена
-	native UnitAddPowerUpItem takes unit u, integer id returns boolean //! [Unit], TriggerActions
-
-	// Проверяет, есть ли у юнита талант
-	native UnitHasTalent takes unit whichUnit, integer talentId returns boolean //! [Unit], TriggerCalls
-
-	// Возвращает уровень таланта у юнита
-	native GetUnitTalentLvl takes unit whichUnit, integer talentId returns integer //! [Unit], TriggerCalls
-
-	// Проверяет, есть ли у юнита Мефисто
-	native UnitHasMefisto takes unit whichUnit returns boolean //! [Unit], TriggerCalls
-
-	// Возвращает процент жизни юнита
-	native GetUnitLifePerc takes unit whichUnit returns real //! [Unit], TriggerCalls
-
-	// Делает юнит неуязвимым
-	// @arg unit whichUnit
-	// @arg boolean flag true, если нужно сделать юнит неуязвимым, false - если нужно снять неуязвимость
-	native MakeUnitInvulnerable takes unit whichUnit, boolean flag returns nothing //! [Unit], TriggerActions
-
-	// Проверяет, включен ли командный режим
-	native IsTeamMode takes nothing returns boolean //! [Game], TriggerCalls
-
-	// Возвращает игрока-мастера команды
-	native GetTeamMasterPlayer takes player whichPlayer returns player //! [Player], TriggerCalls
-
-	// Проверяет, находится ли игра в паузе
-	native IsMapPaused takes nothing returns boolean //! [Game], TriggerCalls
-
-	// Проверяет, активна ли дуэль
-	native IsMapDuel takes nothing returns boolean //! [Game], TriggerCalls
-
-	// Проверяет, является ли юнит даммиком
-	// @arg unit whichUnit
-	// @return boolean
-	native IsUnitDummy takes unit whichUnit returns boolean //! [Unit], TriggerCalls
-
-	// Возвращает группу игроков-наблюдателей дуэли
-	native GetObserverForce takes nothing returns force //! [Force], TriggerCalls
-
-	//=====================================
-	//=========== TEXTTAG UTILS ===========
-
-	// Создает тексттаг над юнитом с анимацией по параболе
-	// @arg unit u юнит, к которому привязывается текст
-	// @arg string s текст
-	// @arg real sizeMin минимальный размер
-	// @arg real sizeBonus добавочный размер (влияет на синусоиду)
-	// @arg real timeLife время жизни
-	// @arg real timeFade время затухания
-	// @arg real zOffset высота над юнитом
-	// @arg real lowSpeed минимальная скорость
-	// @arg real maxSpeed максимальная скорость
-	// @arg real lowAngle минимальный угол
-	// @arg real maxAngle максимальный угол
-	native CreateFlyingTextToUnit takes unit u, string s, real sizeMin, real sizeBonus, real timeLife, real timeFade, real zOffset, real lowSpeed, real maxSpeed, real lowAngle, real maxAngle returns nothing //! [TextTag], TriggerActions
-
-	// Создаёт тексттаг с заданной скоростью и смещением, не зависящий от углов и случайностей
-	// @arg unit target юнит, около которого появляется текст
-	// @arg string text текст
-	// @arg real lifespan продолжительность жизни
-	// @arg real size размер
-	// @arg real fadepoint точка начала исчезновения
-	// @arg real velocity вертикальная скорость (вверх)
-	// @arg real OffsetX смещение по X
-	// @arg real OffsetY смещение по Y
-	// @arg real OffsetZ смещение по Z
-	native CreateCustomVelTextToUnit takes unit target, string text, real lifespan, real size, real fadepoint, real velocity, real OffsetX, real OffsetY, real OffsetZ returns nothing //! [TextTag], TriggerActions
-
-	//====================================
-	//=========== UNIT UNSTUCK ===========
-
-	// Проверяет, застрял ли юнит, и пытается его "вытолкнуть" на ближайшую проходимую точку
-	// Проводит круговой обход по растущим радиусам вокруг юнита и телепортирует его в первую подходящую проходимую точку
-	native CheckAndFreeUnit takes unit u returns nothing //! [Unit], TriggerActions
+endglobals
 
 	//===================================
 	//=========== AREA SPELLS ===========
@@ -1031,6 +480,11 @@ endglobals
 	// @arg real `interval` интервал регистрации юнитов в области.
 	// @return object `AreaSpell` - возвращает объект заклинания области.
 	native AddAreaSpellToUnit takes unit ownerUnit, unit dummyUnit, integer actionsId, real duration, boolean pierceDeath, boolexpr filter, real rangeStart, real rangeEnd, real interval returns AreaSpell //! [Unit], TriggerActions, TriggerCalls
+
+	//==================================
+	//=========== ATTACHMENT ===========
+	native AttachUnitToUnit takes unit attached, unit target, real offsetX, real offsetY, real offsetZ returns Attachment //! [Unit], TriggerActions, TriggerCalls
+	native DetachUnit takes unit attached returns nothing //! [Unit], TriggerActions
 
 	//====================================
 	//=========== ATTACK SPEED ===========
@@ -1301,6 +755,56 @@ endglobals
 	// @return boolean true, если юнит в бою
 	native IsUnitInCombat takes unit whichUnit returns boolean //! [Unit], TriggerCalls
 
+	//==================================
+	//=========== CONDITIONS ===========
+	native GetFilterOwnerUnit takes nothing returns unit //! [ResponseCondition], TriggerCalls
+	native GetFilterTargetUnit takes nothing returns unit //! [ResponseCondition], TriggerCalls
+	native GetFilterReal takes nothing returns real //! [ResponseCondition], TriggerCalls
+
+	// Инициализирует условие вместе с передачей параметров
+	// @arg code func код фильтрации
+	// @arg unit ownerUnit юнит-владелец условия
+	// @return conditionfunc
+	native ConditionWithOwner takes code func, unit ownerUnit returns conditionfunc //! [Condition], TriggerCalls
+
+	// Инициализирует условие вместе с передачей параметров
+	// @arg code func код фильтрации
+	// @arg unit ownerUnit юнит-владелец условия
+	// @arg unit targetUnit юнит-цель условия
+	// @return conditionfunc
+	native ConditionParameters takes code func, unit ownerUnit, unit targetUnit, real filterReal returns conditionfunc //! [Condition], TriggerCalls
+
+	// Проверяет, может ли юнит быть перемещён
+	// @arg unit initiator инициатор проверки
+	// @arg unit target целевой юнит
+	// @return boolean
+	native IsUnitCanBeMoved takes unit initiator, unit target returns boolean //! [Unit], TriggerCalls
+
+	// Проверяет, является ли юнит разоружённым
+	// @arg unit whichUnit целевой юнит
+	// @return boolean
+	native IsUnitDisarmed takes unit whichUnit returns boolean //! [Unit], TriggerCalls
+
+	// Проверяет, может ли юнит выполнять действия
+	// @arg unit whichUnit целевой юнит
+	// @return boolean
+	native IsUnitCanDoActions takes unit whichUnit returns boolean //! [Unit], TriggerCalls
+
+	// Проверяет, может ли юнит атаковать
+	// @arg unit whichUnit целевой юнит
+	// @return boolean
+	native IsUnitCanAttack takes unit whichUnit returns boolean //! [Unit], TriggerCalls
+
+	// Проверяет, есть ли у юнита атака
+	// @arg unit whichUnit целевой юнит
+	// @return boolean
+	native IsUnitHasAttack takes unit whichUnit returns boolean //! [Unit], TriggerCalls
+
+	// Проверяет, является ли юнит строением
+	// @arg unit whichUnit целевой юнит
+	// @return boolean
+	native IsUnitStructure takes unit whichUnit returns boolean //! [Unit], TriggerCalls
+
 	//===============================
 	//=========== CRYSTAL ===========
 	native GetCapturingPlayer takes nothing returns player //! [ResponseCrystal], TriggerCalls
@@ -1414,7 +918,7 @@ endglobals
 	// @return triggeraction - ссылка на зарегистрированное действие
 	native EventRegisterAction takes Event eventId, code action returns triggeraction //! [EventHandler], TriggerActions, TriggerCalls
 
-	// Удаляет ранее зарегистрированное действие
+	// Удаляет ранее зарегистрированное действие с события
 	// @arg Event eventId - ID события
 	// @arg triggeraction action - ссылка на действие, полученное из EventRegisterAction
 	native EventUnregisterAction takes Event eventId, triggeraction action returns nothing //! [EventHandler], TriggerActions
@@ -1628,6 +1132,39 @@ endglobals
 	native GetIllusionDamageGiven takes Illusion illusion returns real //! [Unit], TriggerCalls
 	native GetHeroStatHook takes integer whichStat, unit whichHero, boolean includeBonuses returns integer //! [Hero], TriggerCalls
 
+	//=====================================
+	//=========== JUMP TO POINT ===========
+
+	// Перемещает юнита в указанную позицию с помощью прыжка
+	// @arg unit caster юнит, который будет прыгать
+	// @arg real x позиция по X, куда будет прыгать юнит
+	// @arg real y позиция по Y, куда будет прыгать юнит
+	native JumpUnitToXY takes unit caster, real x, real y returns nothing //! [Unit], TriggerActions
+
+	// Перемещает юнита в указанную точку с помощью прыжка
+	// @arg unit caster юнит, который будет прыгать
+	// @arg Point2D end новая позиция, куда будет прыгать юнит
+	native JumpUnitToPoint takes unit caster, Point2D end returns nothing //! [Unit], TriggerActions
+
+	//=================================
+	//=========== LIGHTNING ===========
+
+	// Создаёт графическую молнию между двумя юнитами
+	// @arg unit caster юнит-источник молнии
+	// @arg unit target юнит-цель молнии
+	// @arg string lightningType тип молнии
+	// @arg string effectCasterModel модель эффекта источника молнии
+	// @arg string effectCasterAttach точка прикрепления эффекта источника молнии
+	// @arg string effectTargetModel модель эффекта цели молнии
+	// @arg string effectTargetAttach точка прикрепления эффекта цели молнии
+	// @arg real duration время жизни молнии
+	// @arg real maxDistance максимальная дистанция молнии
+	// @arg real lightningZ высота молнии над землёй
+	// @arg real decayTime время затухания молнии
+	// @arg boolean destroyEffects уничтожать ли эффекты молнии
+	// @return integer идентификатор молнии
+	native CreateUnitLightningTarget takes unit caster, unit target, string lightningType, string effectCasterModel, string effectCasterAttach, string effectTargetModel, string effectTargetAttach, real duration, real maxDistance, real lightningZ, real decayTime, boolean destroyEffects returns integer //! [Unit], TriggerActions, TriggerCalls
+
 	//==================================
 	//=========== MOVE SPEED ===========
 	native GetMSUnit takes nothing returns unit //! [ResponseMoveSpeed], TriggerCalls
@@ -1808,10 +1345,471 @@ endglobals
 	// Функция проверяет жив ли целевой юнит, имеет ли он иммунитет к оглушению и соответствует ли длительность нового оглушения текущему оглушению. Основываясь на этих проверках, функция либо создает новый объект оглушения, либо обновляет существующий.
 	native StunUnit takes unit stunningUnit, unit stunnedUnit, integer typeId, real duration returns Stun //! [Stun], TriggerActions, TriggerCalls
 
+	//======================================
+	//=========== SUMMATIVE TEXT ===========
+
+	// Добавляет суммирующий текст к юниту для игрока
+	// @arg player owner игрок, которому будет показан суммирующий текст
+	// @arg unit target юнит, к которому будет добавлен суммирующий текст
+	// @arg integer textType тип суммирующего текста
+	// @arg real value значение суммирующего текста
+	// @arg string prefix префикс суммирующего текста
+	// @return SummativeText созданный суммирующий текст
+	native AddSummativeTextToUnitForPlayer takes player owner, unit target, integer textType, real value, string prefix returns SummativeText //! [TextTag], TriggerActions, TriggerCalls
+
+	// Показывает суммирующий текст для игрока
+	// @arg SummativeText summativeText суммирующий текст, который нужно показать
+	// @arg player participant игрок, которому нужно показать суммирующий текст
+	// @return SummativeText суммирующий текст, который был показан
+	native ShowSummativeTextToPlayer takes SummativeText summativeText, player participant returns nothing //! [TextTag], TriggerActions
+
 	//==============================
 	//=========== TALENT ===========
 	native GetTalentHero takes nothing returns unit //! [ResponseTalent], TriggerCalls
 
+	//==================================
+	//=========== TECH UTILS ===========
+
+	// Делает юнита летающим
+	// @arg unit u
+	// @return unit возвращает юнит, который стал летающим
+	native MakeUnitFly takes unit u returns unit //! [Unit], TriggerActions, TriggerCalls
+
+	// Проверяет, находится ли точка за пределами карты
+	// @arg real x координата X
+	// @arg real y координата Y
+	// @return boolean true, если точка находится за пределами карты
+	native IsCoordsOut takes real x, real y returns boolean //! [Geometry], TriggerCalls
+
+	// Проверяет, неуявзим ли юнит
+	// @arg unit u юнит, который нужно проверить
+	// @return boolean true, если юнит неуязвим
+	native IsUnitInvulnerable takes unit u returns boolean //! [Unit], TriggerCalls
+
+	// Перебирает все юниты в радиусе с учётом их коллизии
+	// @arg group whichGroup группа, в которую будут добавлены юниты
+	// @arg real x координата X
+	// @arg real y координата Y
+	// @arg real r радиус
+	// @arg boolexpr filter фильтр для юнитов
+	native GroupEnumUnitsInRangeFiz takes group whichGroup, real x, real y, real r, boolexpr filter returns nothing //! [Group], TriggerActions
+
+	// Устанавливает время жизни для эффекта
+	// @arg effect eff эффект
+	// @arg real endTime время жизни
+	native EffectApplyTimedLife takes effect eff, real endTime returns nothing //! [Effect], TriggerActions
+
+	// Устанавливает время жизни для юнита
+	// @arg unit u юнит
+	// @arg real endTime время жизни
+	// @return unit
+	native UnitApplyTimeLife takes unit u, real endTime returns unit //! [Unit], TriggerActions
+
+	// Устанавливает время жизни для юнита с скрытием
+	// @arg unit u юнит
+	// @arg real endTime время жизни
+	// @return unit
+	native UnitApplyTimeLifeHide takes unit u, real endTime returns nothing //! [Unit], TriggerActions
+
+	// Применяет способность в точку
+	// @arg unit whichUnit юнит, который применяет способность
+	// @arg real x координата X
+	// @arg real y координата Y
+	// @arg integer abilityId ID способности
+	// @arg integer abilityLvl уровень способности
+	// @arg string order строка с приказом
+	native ApplyAbility takes unit whichUnit, real x, real y, integer abilityId, integer abilityLvl, string order returns nothing //! [Unit], TriggerActions
+
+	// Применяет способность к юниту
+	// @arg unit whichUnit юнит, который применяет способность
+	// @arg unit targetUnit юнит, к которому применяется способность
+	// @arg integer abilityId ID способности
+	// @arg integer abilityLvl уровень способности
+	// @arg string order строка с приказом
+	native ApplyAbilityToUnit takes unit whichUnit, unit targetUnit, integer abilityId, integer abilityLvl, string order returns nothing //! [Unit], TriggerActions
+
+	// Атаковать юнита с помощью дамми-юнита
+	// @arg player whichPlayer игрок, которому принадлежит дамми-юнит
+	// @arg unit targetUnit юнит, которого атакуем
+	// @arg integer abilityId ID способности
+	// @arg integer abilityLvl уровень способности
+	// @return unit возвращает дамми-юнит
+	native DummyAttackUnit takes player whichPlayer, unit targetUnit, integer abilityId, integer abilityLvl returns unit //! [Unit], TriggerActions, TriggerCalls
+
+	// Проверяет, есть ли у юнита предмет с данного типа
+	native UnitHasItemType takes unit whichUnit, integer itemId returns boolean //! [Unit], TriggerCalls
+
+	// Подсчитывает количество предметов данного типа у юнита
+	native CountUnitItemType takes unit whichUnit, integer itemId returns integer //! [Unit], TriggerCalls
+
+	// Запускает звук для игрока
+	// @arg sound snd звук, который нужно запустить
+	// @arg player pl игрок, для которого запускаем звук
+	native StartSoundToPlayer takes sound snd, player pl returns nothing //! [Sound], TriggerActions
+
+	// Возвращает цвет игрока в виде строки
+	// @arg player whichplayer игрок, для которого получаем цвет
+	// @return string цвет игрока в виде шестнадцатеричной строки
+	native GetPlayerTextColor takes player whichplayer returns string //! [Player], TriggerCalls
+
+	// Добавляет способность юниту и делает её постоянной
+	native UnitAddAbilityPermanent takes unit u, integer aId returns nothing //! [Unit], TriggerActions
+
+	// Проверяет, есть ли у юнита способность
+	native UnitHasAbility takes unit whichUnit, integer abilityId returns boolean //! [Unit], TriggerCalls
+
+	// Проверяет, находится ли юнит под хексом
+	native IsUnitHexed takes unit u returns boolean //! [Unit], TriggerCalls
+
+	// Безопасно вручает руну юниту
+	// @arg unit u юнит
+	// @arg integer id ID руны
+	// @return boolean true, если руна успешно вручена
+	native UnitAddPowerUpItem takes unit u, integer id returns boolean //! [Unit], TriggerActions
+
+	// Проверяет, есть ли у юнита талант
+	native UnitHasTalent takes unit whichUnit, integer talentId returns boolean //! [Unit], TriggerCalls
+
+	// Возвращает уровень таланта у юнита
+	native GetUnitTalentLvl takes unit whichUnit, integer talentId returns integer //! [Unit], TriggerCalls
+
+	// Проверяет, есть ли у юнита Мефисто
+	native UnitHasMefisto takes unit whichUnit returns boolean //! [Unit], TriggerCalls
+
+	// Возвращает процент жизни юнита
+	native GetUnitLifePerc takes unit whichUnit returns real //! [Unit], TriggerCalls
+
+	// Делает юнит неуязвимым
+	// @arg unit whichUnit
+	// @arg boolean flag true, если нужно сделать юнит неуязвимым, false - если нужно снять неуязвимость
+	native MakeUnitInvulnerable takes unit whichUnit, boolean flag returns nothing //! [Unit], TriggerActions
+
+	// Проверяет, включен ли командный режим
+	native IsTeamMode takes nothing returns boolean //! [Game], TriggerCalls
+
+	// Возвращает игрока-мастера команды
+	native GetTeamMasterPlayer takes player whichPlayer returns player //! [Player], TriggerCalls
+
+	// Проверяет, находится ли игра в паузе
+	native IsMapPaused takes nothing returns boolean //! [Game], TriggerCalls
+
+	// Проверяет, активна ли дуэль
+	native IsMapDuel takes nothing returns boolean //! [Game], TriggerCalls
+
+	// Проверяет, является ли юнит даммиком
+	// @arg unit whichUnit
+	// @return boolean
+	native IsUnitDummy takes unit whichUnit returns boolean //! [Unit], TriggerCalls
+
+	// Возвращает группу игроков-наблюдателей дуэли
+	native GetObserverForce takes nothing returns force //! [Force], TriggerCalls
+
+	//=====================================
+	//=========== TEXTTAG UTILS ===========
+
+	// Создает тексттаг над юнитом с анимацией по параболе
+	// @arg unit u юнит, к которому привязывается текст
+	// @arg string s текст
+	// @arg real sizeMin минимальный размер
+	// @arg real sizeBonus добавочный размер (влияет на синусоиду)
+	// @arg real timeLife время жизни
+	// @arg real timeFade время затухания
+	// @arg real zOffset высота над юнитом
+	// @arg real lowSpeed минимальная скорость
+	// @arg real maxSpeed максимальная скорость
+	// @arg real lowAngle минимальный угол
+	// @arg real maxAngle максимальный угол
+	native CreateFlyingTextToUnit takes unit u, string s, real sizeMin, real sizeBonus, real timeLife, real timeFade, real zOffset, real lowSpeed, real maxSpeed, real lowAngle, real maxAngle returns nothing //! [TextTag], TriggerActions
+
+	// Создаёт тексттаг с заданной скоростью и смещением, не зависящий от углов и случайностей
+	// @arg unit target юнит, около которого появляется текст
+	// @arg string text текст
+	// @arg real lifespan продолжительность жизни
+	// @arg real size размер
+	// @arg real fadepoint точка начала исчезновения
+	// @arg real velocity вертикальная скорость (вверх)
+	// @arg real OffsetX смещение по X
+	// @arg real OffsetY смещение по Y
+	// @arg real OffsetZ смещение по Z
+	native CreateCustomVelTextToUnit takes unit target, string text, real lifespan, real size, real fadepoint, real velocity, real OffsetX, real OffsetY, real OffsetZ returns nothing //! [TextTag], TriggerActions
+
 	//=================================
 	//=========== UNIT DATA ===========
 	native Unit takes unit whichUnit returns UnitData //! [UnitData], TriggerCalls
+
+	//====================================
+	//=========== UNIT UNSTUCK ===========
+
+	// Проверяет, застрял ли юнит, и пытается его "вытолкнуть" на ближайшую проходимую точку
+	// Проводит круговой обход по растущим радиусам вокруг юнита и телепортирует его в первую подходящую проходимую точку
+	native CheckAndFreeUnit takes unit u returns nothing //! [Unit], TriggerActions
+
+	//====================================
+	//=========== HASH CLEANER ===========
+	native GetTriggerHandleId takes nothing returns integer //! [ResponseHash], TriggerCalls
+
+	//===================================
+	//=========== COORD UTILS ===========
+
+	// Устанавливает позицию юнита с учетом возможных смещений, чтобы избежать резких скачков.
+	//
+	// @arg unit `source` юнит, позицию которого нужно установить.
+	// @arg real `x` новая координата X.
+	// @arg real `y` новая координата Y.
+	native SetUnitPositionSmooth takes unit source, real x, real y returns nothing //! [Unit], TriggerActions
+
+	// Вычисляет смещение координаты X на основе заданного расстояния и угла от точки.
+	//
+	// @arg real `x` начальная координата x.
+	// @arg real `distance` расстояние от начальной точки.
+	// @arg real `angle` угол в градусах.
+	// @return real - результирующая координата x после применения полярного смещения.
+	native GetPolarOffsetX takes real x, real distance, real angle returns real //! [Geometry], TriggerCalls
+
+	// Вычисляет смещение координаты Y на основе заданного расстояния и угла от точки.
+	//
+	// @arg real `y` начальная координата y.
+	// @arg real `distance` расстояние от начальной точки.
+	// @arg real `angle` угол в градусах.
+	// @return real - результирующая координата y после применения полярного смещения.
+	native GetPolarOffsetY takes real y, real distance, real angle returns real //! [Geometry], TriggerCalls
+
+	// Перемещает локацию на новую позицию на основе полярного смещения от ее текущей позиции.
+	//
+	// @arg location `target` локация для перемещения.
+	// @arg real `distance` расстояние для перемещения локации.
+	// @arg real `angle` угол в градусах для перемещения локации.
+	native MoveLocationPolar takes location target, real distance, real angle returns nothing //! [Geometry], TriggerActions
+
+	// Перемещает юнита на новую позицию на основе полярного смещения от его текущей позиции.
+	//
+	// @arg unit `target` юнит для перемещения.
+	// @arg real `distance` расстояние для перемещения юнита.
+	// @arg real `angle` угол в градусах для перемещения юнита.
+	native SetUnitPositionPolar takes unit target, real distance, real angle returns nothing //! [Unit], TriggerActions
+
+	// Вычисляет угол между двумя наборами координат.
+	//
+	// @arg real `x1`, `y1` координаты первой точки.
+	// @arg real `x2`, `y2` координаты второй точки.
+	// @return real - угол в градусах между двумя точками.
+	native AngleBetweenCoords takes real x1, real y1, real x2, real y2 returns real //! [Geometry], TriggerCalls
+
+	// Вычисляет 2D расстояние между двумя наборами координат.
+	//
+	// @arg real `x1`, `y1` координаты первой точки.
+	// @arg real `x2`, `y2` координаты второй точки.
+	// @return real - расстояние между двумя наборами координат.
+	native DistanceBetweenCoords takes real x1, real y1, real x2, real y2 returns real //! [Geometry], TriggerCalls
+
+	// Вычисляет 3D расстояние между двумя наборами координат.
+	//
+	// @arg real `x1`, `y1`, `z1` координаты первой точки.
+	// @arg real `x2`, `y2`, `z2` координаты второй точки.
+	// @return real - 3D расстояние между двумя наборами координат.
+	native DistanceBetweenCoords3D takes real x1, real y1, real z1, real x2, real y2, real z2 returns real //! [Geometry], TriggerCalls
+
+	// Вычисляет расстояние между двумя юнитами.
+	//
+	// @arg unit `target1` первый юнит.
+	// @arg unit `target2` второй юнит.
+	// @return real - расстояние между двумя юнитами.
+	native DistanceBetweenUnits takes unit target1, unit target2 returns real //! [Geometry], TriggerCalls
+
+	// Вычисляет угол между двумя юнитами.
+	//
+	// @arg unit `target1` первый юнит.
+	// @arg unit `target2` второй юнит.
+	// @return real - угол в градусах между двумя юнитами.
+	native AngleBetweenUnits takes unit target1, unit target2 returns real //! [Geometry], TriggerCalls
+
+	// Получает высоту местности по заданным координатам.
+	//
+	// @arg real `x`, `y` координаты, для которых нужно получить высоту местности.
+	// @return real - высота местности по заданным координатам.
+	native GetTerrainZ takes real x, real y returns real //! [Geometry], TriggerCalls
+	native GetUnitTerrainCliffLevel takes unit target returns integer //! [Geometry], TriggerCalls
+
+	// Получает общую высоту (высота местности + высота полета) юнита.
+	//
+	// @arg unit `target` целевой юнит.
+	// @return real - общая высота юнита на его текущей позиции.
+	native GetUnitZ takes unit target returns real //! [Unit], TriggerCalls
+
+	// Устанавливает высоту полета для указанного юнита.
+	//
+	// @arg unit `target` юнит, которому необходимо установить высоту.
+	// @arg real `z` новая высота полета.
+	// @return unit - возвращает тот же юнит после установки новой высоты.
+	native SetUnitZ takes unit target, real z returns unit //! [Unit], TriggerActions
+
+	// Устанавливает координаты X и Y для указанного юнита.
+	//
+	// @arg unit `target` юнит, которому необходимо установить координаты.
+	// @arg real `x` новая координата X.
+	// @arg real `y` новая координата Y.
+	// @return unit - возвращает тот же юнит после установки новых координат.
+	native SetUnitXY takes unit target, real x, real y returns unit //! [Unit], TriggerActions
+
+	// Устанавливает координаты X, Y и высоту полета Z для указанного юнита.
+	//
+	// @arg unit `target` юнит, которому необходимо установить координаты и высоту.
+	// @arg real `x` новая координата X.
+	// @arg real `y` новая координата Y.
+	// @arg real `z` новая высота полета.
+	// @return unit - возвращает тот же юнит после установки новых параметров.
+	native SetUnitXYZ takes unit target, real x, real y, real z returns unit //! [Unit], TriggerActions
+
+	// Устанавливает координаты X, Y, высоту полета Z и направление (угол поворота) для указанного юнита.
+	//
+	// @arg unit `target` юнит, которому необходимо установить параметры.
+	// @arg real `x` новая координата X.
+	// @arg real `y` новая координата Y.
+	// @arg real `z` новая высота полета.
+	// @arg real `f` новое направление (угол поворота в градусах).
+	// @return unit - возвращает тот же юнит после установки новых параметров.
+	native SetUnitXYZF takes unit target, real x, real y, real z, real f returns unit //! [Unit], TriggerActions
+
+	// Находит длину перпендикуляра от отрезка, заданного Xa, Ya, Xb, Yb к точке, заданной Xc, Yc.
+	// https://xgm.guru/p/wc3/perpendicular
+	//
+	// @arg real `Xa` координата X первой точки отрезка.
+	// @arg real `Ya` координата Y первой точки отрезка.
+	// @arg real `Xb` координата X второй точки отрезка.
+	// @arg real `Yb` координата Y второй точки отрезка.
+	// @arg real `Xc` координата X точки C.
+	// @arg real `Yc` координата Y точки C.
+	// @return real - возвращает длину перпендикуляра от точки C к отрезку AB.
+	native Perpendicular takes real Xa, real Ya, real Xb, real Yb, real Xc, real Yc returns real //! [Geometry], TriggerCalls
+
+	// Вычисляет разницу между двумя углами.
+	// https://xgm.guru/p/wc3/warden-math
+	//
+	// @arg real `a1` первый угол в градусах.
+	// @arg real `a2` второй угол в градусах.
+	// @return real - возвращает абсолютное значение разницы между двумя углами.
+	native AngleDifference takes real a1, real a2 returns real //! [Geometry], TriggerCalls
+
+	// Нормализует угол, приводя его к диапазону [0, 360).
+	//
+	// @arg real `angle` угол для нормализации.
+	// @return real - возвращает нормализованный угол.
+	native AngleNormalize takes real angle returns real //! [Geometry], TriggerCalls
+	native AngleTowards takes real angle, real toAngel, real angleOffset returns real //! [Geometry], TriggerCalls
+
+	// Проверяет, находятся ли координаты внутри треугольника.
+	//
+	// @arg real `x, y` координаты точки для проверки.
+	// @arg real `x1, y1, x2, y2, x3, y3` координаты вершин треугольника.
+	// @return boolean - возвращает true, если точка внутри треугольника, иначе false.
+	native IsCoordsInTriangle takes real x, real y, real x1, real y1, real x2, real y2, real x3, real y3 returns boolean //! [Geometry], TriggerCalls
+
+	// Проверяет, находятся ли координаты внутри четырехугольника с использованием простого метода.
+	//
+	// @arg real `x, y` координаты точки для проверки.
+	// @arg real `x1, y1, x2, y2, x3, y3, x4, y4` координаты вершин четырехугольника.
+	// @return boolean - возвращает true, если точка внутри четырехугольника, иначе false.
+	native IsCoordsIn4GonSimple takes real x, real y, real x1, real y1, real x2, real y2, real x3, real y3, real x4, real y4 returns boolean //! [Geometry], TriggerCalls
+
+	// Проверяет, находятся ли координаты внутри четырехугольника.
+	//
+	// @arg real `x, y` координаты точки для проверки.
+	// @arg real `x1, y1, x2, y2, x3, y3, x4, y4` координаты вершин четырехугольника.
+	// @return boolean - возвращает true, если точка внутри четырехугольника, иначе false.
+	native IsCoordsIn4Gon takes real x, real y, real x1, real y1, real x2, real y2, real x3, real y3, real x4, real y4 returns boolean //! [Geometry], TriggerCalls
+
+	//=============================
+	//=========== DEBUG ===========
+
+	// Отладка на уровне "info": общая информация.
+	// @arg string msg сообщение для логирования
+	native Debug takes string msg returns nothing //! [Debug], TriggerActions
+
+	// Показать текстовую метку в координатах, полезно для отладки
+	// @arg string s текст для отображения
+	// @arg real x позиция по X
+	// @arg real y позиция по Y
+	native DebugXY takes string s, real x, real y returns nothing //! [Debug], TriggerActions
+
+	// Отладка на уровне "warning": потенциальные проблемы.
+	// @arg string id идентификатор предупреждения
+	// @arg string msg сообщение предупреждения
+	native Warning takes string id, string msg returns nothing //! [Debug], TriggerActions
+
+	// Отладка на уровне "error": серьёзные ошибки.
+	// @arg string id идентификатор ошибки
+	// @arg string msg подробное сообщение об ошибке
+	native Error takes string id, string msg returns nothing //! [Debug], TriggerActions
+
+	//=====================================
+	//=========== NEGATE DAMAGE ===========
+
+	// Возвращает максимальное здоровье юнита
+	// @arg unit u юнит, для которого нужно получить максимальное здоровье
+	// @return real максимальное здоровье юнита
+	native GetUnitMaxLife takes unit u returns real //! [Unit], TriggerCalls
+
+	// Возвращает значение состояния юнита
+	// @arg unit u юнит, для которого нужно получить значение состояния
+	// @arg unitstate state значение состояния юнита
+	// @return real значение состояния юнита
+	native GetUnitStateHook takes unit u, unitstate state returns real //! [Unit], TriggerCalls
+
+	// Возвращает процент состояния юнита
+	// @arg unit whichUnit юнит, для которого нужно получить процент состояния
+	// @arg unitstate whichState состояние юнита
+	// @arg unitstate whichMaxState максимальное состояние юнита
+	// @return real процент состояния юнита
+	native GetUnitStatePercentHook takes unit whichUnit, unitstate whichState, unitstate whichMaxState returns real //! [Unit], TriggerCalls
+
+	// Возвращает процент здоровья юнита
+	// @arg unit whichUnit юнит, для которого нужно получить процент здоровья
+	// @return real процент здоровья юнита
+	native GetUnitLifePercentHook takes unit whichUnit returns real //! [Unit], TriggerCalls
+
+	//=================================
+	//=========== RECTANGLE ===========
+
+	// Перебирает все юниты в прямоугольнике с учётом коллизии
+	// @arg group whichGroup группа, в которую будут добавлены юниты
+	// @arg real centerX координата центра прямоугольника по X
+	// @arg real centerY координата центра прямоугольника по Y
+	// @arg real width ширина прямоугольника
+	// @arg real height высота прямоугольника
+	// @arg real radians угол поворота прямоугольника в радианах
+	// @arg boolexpr filter фильтр для юнитов, которые будут добавлены в группу
+	native GroupEnumUnitsInRectangleCollision takes group whichGroup, real centerX, real centerY, real width, real height, real radians, boolexpr filter returns nothing //! [Group], TriggerActions
+
+	//==========================================
+	//=========== SET UNIT MAX STATE ===========
+
+	// Устанавливает максимальное значение состояния юнита
+	// @arg unit whichUnit юнит, для которого нужно установить максимальное состояние
+	// @arg unitstate whichUnitState состояние юнита
+	// @arg integer newVal новое значение состояния юнита
+	// @return boolean true, если состояние было успешно установлено
+	native SetUnitMaxState takes unit whichUnit, unitstate whichUnitState, integer newVal returns boolean //! [Unit], TriggerActions, TriggerCalls
+	native AddUnitSight takes unit whichUnit, integer newVal returns boolean //! [Unit], TriggerActions, TriggerCalls
+
+	//==================================
+	//=========== SMART LOOP ===========
+
+	// Инициализирует цикл с заданным начальным и конечным значением
+	// @arg integer start начальное значение цикла
+	// @arg integer end конечное значение цикла
+	native InitSmartLoop takes integer start, integer end returns nothing //! [Common], TriggerActions
+
+	// Возвращает текущий индекс цикла
+	// @return integer текущий индекс цикла
+	native GetSmartLoopIndex takes nothing returns integer //! [ResponseCommon], TriggerCalls
+
+	// Возвращает конечный индекс цикла
+	// @return integer конечный индекс цикла
+	native GetSmartLoopIndexEnd takes nothing returns integer //! [ResponseCommon], TriggerCalls
+
+	// Увеличивает текущий индекс цикла на заданное значение
+	// @arg integer step шаг увеличения индекса
+	native PlusSmartLoopIndex takes integer step returns nothing //! [Common], TriggerActions
+
+	// Конец цикла
+	native EndSmartLoop takes nothing returns nothing //! [Common], TriggerActions
