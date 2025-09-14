@@ -5994,7 +5994,7 @@ _GroupTrainOrderByIdBJ_ScriptName=GroupImmediateOrderById
 _GroupTrainOrderByIdBJ_Category=TC_UNITGROUP
 
 CreateUbersplatBJ=1,location,ubersplattype,real,real,real,real,enabledisableoption,enabledisableoption
-_CreateUbersplatBJ_Category=TC_NOTHING
+_CreateUbersplatBJ_Category=TC_UBERSPLAT
 
 DestroyUbersplat=1,ubersplat
 _DestroyUbersplat_Defaults=GetLastCreatedUbersplat
@@ -6215,7 +6215,7 @@ _SelectHeroSkill2_Category=TC_HERO
 
 TimerStart=0,timer,real,periodicoption,code
 _TimerStart_Defaults=GetLastCreatedTimerBJ,PeriodicOptionOneTime,30,_
-_TimerStart_Category=TC_NOTHING
+_TimerStart_Category=TC_TIMER
 
 PlayCinematic=1,string
 _PlayCinematic_Defaults=HumanEd
