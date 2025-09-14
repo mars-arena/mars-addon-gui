@@ -362,6 +362,98 @@ AddAuraToUnit=Add Aura To Unit
 AddAuraToUnit="Add Aura To Unit (",~auraUnit,", ",~typeId,", ",~itemAura,", ",~multiAurasToTarget,", ",~priority,", ",~multiAurasForOwner,", ",~refreshOutEnter,", ",~hardRefresh,", ",~actionsId,", ",~filter,", ",~radiusMax,", ",~endDuration,", ",~periodActions,", ",~period,")"
 AddAuraToUnitHint="[MARS] native AddAuraToUnit takes unit auraUnit, integer typeId, item itemAura, boolean multiAurasToTarget, integer priority, boolean multiAurasForOwner, boolean refreshOutEnter, boolean hardRefresh, integer actionsId, boolexpr filter, real radiusMax, real endDuration, boolean periodActions, real period returns nothing"
 
+AddBonusArmorFlat=Add Bonus Armor Flat
+AddBonusArmorFlat="Add Bonus Armor Flat (",~v,")"
+AddBonusArmorFlatHint="[MARS] native AddBonusArmorFlat takes real v returns nothing"
+
+AddBonusArmorPenalty=Add Bonus Armor Penalty
+AddBonusArmorPenalty="Add Bonus Armor Penalty (",~v,")"
+AddBonusArmorPenaltyHint="[MARS] native AddBonusArmorPenalty takes real v returns nothing"
+
+AddBonusArmorIncrease=Add Bonus Armor Increase
+AddBonusArmorIncrease="Add Bonus Armor Increase (",~v,")"
+AddBonusArmorIncreaseHint="[MARS] native AddBonusArmorIncrease takes real v returns nothing"
+
+AddBonusArmorDecrease=Add Bonus Armor Decrease
+AddBonusArmorDecrease="Add Bonus Armor Decrease (",~v,")"
+AddBonusArmorDecreaseHint="[MARS] native AddBonusArmorDecrease takes real v returns nothing"
+
+UpdateUnitArmorBonus=Update Unit Armor Bonus
+UpdateUnitArmorBonus="Update Unit Armor Bonus (",~whichUnit,")"
+UpdateUnitArmorBonusHint="[MARS] native UpdateUnitArmorBonus takes unit whichUnit returns real"
+
+AddBonusDMGFlat=Add Bonus DMG Flat
+AddBonusDMGFlat="Add Bonus DMG Flat (",~v,")"
+AddBonusDMGFlatHint="[MARS] native AddBonusDMGFlat takes real v returns nothing"
+
+AddBonusDMGPenalty=Add Bonus DMG Penalty
+AddBonusDMGPenalty="Add Bonus DMG Penalty (",~v,")"
+AddBonusDMGPenaltyHint="[MARS] native AddBonusDMGPenalty takes real v returns nothing"
+
+AddBonusDMGIncrease=Add Bonus DMG Increase
+AddBonusDMGIncrease="Add Bonus DMG Increase (",~v,")"
+AddBonusDMGIncreaseHint="[MARS] native AddBonusDMGIncrease takes real v returns nothing"
+
+AddBonusDMGDecrease=Add Bonus DMG Decrease
+AddBonusDMGDecrease="Add Bonus DMG Decrease (",~v,")"
+AddBonusDMGDecreaseHint="[MARS] native AddBonusDMGDecrease takes real v returns nothing"
+
+UpdateUnitDamageBonus=Update Unit Damage Bonus
+UpdateUnitDamageBonus="Update Unit Damage Bonus (",~whichUnit,")"
+UpdateUnitDamageBonusHint="[MARS] native UpdateUnitDamageBonus takes unit whichUnit returns real"
+
+AddBonusIntFlat=Add Bonus Int Flat
+AddBonusIntFlat="Add Bonus Int Flat (",~v,")"
+AddBonusIntFlatHint="[MARS] native AddBonusIntFlat takes real v returns nothing"
+
+AddBonusIntPenalty=Add Bonus Int Penalty
+AddBonusIntPenalty="Add Bonus Int Penalty (",~v,")"
+AddBonusIntPenaltyHint="[MARS] native AddBonusIntPenalty takes real v returns nothing"
+
+AddBonusIntIncrease=Add Bonus Int Increase
+AddBonusIntIncrease="Add Bonus Int Increase (",~v,")"
+AddBonusIntIncreaseHint="[MARS] native AddBonusIntIncrease takes real v returns nothing"
+
+AddBonusIntDecrease=Add Bonus Int Decrease
+AddBonusIntDecrease="Add Bonus Int Decrease (",~v,")"
+AddBonusIntDecreaseHint="[MARS] native AddBonusIntDecrease takes real v returns nothing"
+
+AddBonusStrFlat=Add Bonus Str Flat
+AddBonusStrFlat="Add Bonus Str Flat (",~v,")"
+AddBonusStrFlatHint="[MARS] native AddBonusStrFlat takes real v returns nothing"
+
+AddBonusStrPenalty=Add Bonus Str Penalty
+AddBonusStrPenalty="Add Bonus Str Penalty (",~v,")"
+AddBonusStrPenaltyHint="[MARS] native AddBonusStrPenalty takes real v returns nothing"
+
+AddBonusStrIncrease=Add Bonus Str Increase
+AddBonusStrIncrease="Add Bonus Str Increase (",~v,")"
+AddBonusStrIncreaseHint="[MARS] native AddBonusStrIncrease takes real v returns nothing"
+
+AddBonusStrDecrease=Add Bonus Str Decrease
+AddBonusStrDecrease="Add Bonus Str Decrease (",~v,")"
+AddBonusStrDecreaseHint="[MARS] native AddBonusStrDecrease takes real v returns nothing"
+
+AddBonusAgiFlat=Add Bonus Agi Flat
+AddBonusAgiFlat="Add Bonus Agi Flat (",~v,")"
+AddBonusAgiFlatHint="[MARS] native AddBonusAgiFlat takes real v returns nothing"
+
+AddBonusAgiPenalty=Add Bonus Agi Penalty
+AddBonusAgiPenalty="Add Bonus Agi Penalty (",~v,")"
+AddBonusAgiPenaltyHint="[MARS] native AddBonusAgiPenalty takes real v returns nothing"
+
+AddBonusAgiIncrease=Add Bonus Agi Increase
+AddBonusAgiIncrease="Add Bonus Agi Increase (",~v,")"
+AddBonusAgiIncreaseHint="[MARS] native AddBonusAgiIncrease takes real v returns nothing"
+
+AddBonusAgiDecrease=Add Bonus Agi Decrease
+AddBonusAgiDecrease="Add Bonus Agi Decrease (",~v,")"
+AddBonusAgiDecreaseHint="[MARS] native AddBonusAgiDecrease takes real v returns nothing"
+
+UpdateUnitBonusStats=Update Unit Bonus Stats
+UpdateUnitBonusStats="Update Unit Bonus Stats (",~whichUnit,")"
+UpdateUnitBonusStatsHint="[MARS] native UpdateUnitBonusStats takes unit whichUnit returns nothing"
+
 SetBuffDataInt=Set Buff Data Int
 SetBuffDataInt="Set Buff Data Int (",~buf,", ",~dataInt,")"
 SetBuffDataIntHint="[MARS] native SetBuffDataInt takes Buff buf, integer dataInt returns nothing"
@@ -3409,6 +3501,130 @@ AddAuraToUnit=Add Aura To Unit
 AddAuraToUnit="Add Aura To Unit (",~auraUnit,", ",~typeId,", ",~itemAura,", ",~multiAurasToTarget,", ",~priority,", ",~multiAurasForOwner,", ",~refreshOutEnter,", ",~hardRefresh,", ",~actionsId,", ",~filter,", ",~radiusMax,", ",~endDuration,", ",~periodActions,", ",~period,")"
 AddAuraToUnitHint="[MARS] native AddAuraToUnit takes unit auraUnit, integer typeId, item itemAura, boolean multiAurasToTarget, integer priority, boolean multiAurasForOwner, boolean refreshOutEnter, boolean hardRefresh, integer actionsId, boolexpr filter, real radiusMax, real endDuration, boolean periodActions, real period returns nothing"
 
+GetBonusArmorUnit=Get Bonus Armor Unit
+GetBonusArmorUnit="Get Bonus Armor Unit"
+GetBonusArmorUnitHint="[MARS] native GetBonusArmorUnit takes nothing returns unit"
+
+GetBonusArmorFlat=Get Bonus Armor Flat
+GetBonusArmorFlat="Get Bonus Armor Flat"
+GetBonusArmorFlatHint="[MARS] native GetBonusArmorFlat takes nothing returns real"
+
+GetBonusArmorPenalty=Get Bonus Armor Penalty
+GetBonusArmorPenalty="Get Bonus Armor Penalty"
+GetBonusArmorPenaltyHint="[MARS] native GetBonusArmorPenalty takes nothing returns real"
+
+GetBonusArmorIncrease=Get Bonus Armor Increase
+GetBonusArmorIncrease="Get Bonus Armor Increase"
+GetBonusArmorIncreaseHint="[MARS] native GetBonusArmorIncrease takes nothing returns real"
+
+GetBonusArmorDecrease=Get Bonus Armor Decrease
+GetBonusArmorDecrease="Get Bonus Armor Decrease"
+GetBonusArmorDecreaseHint="[MARS] native GetBonusArmorDecrease takes nothing returns real"
+
+GetUnitArmorBonus=Get Unit Armor Bonus
+GetUnitArmorBonus="Get Unit Armor Bonus (",~whichUnit,")"
+GetUnitArmorBonusHint="[MARS] native GetUnitArmorBonus takes unit whichUnit returns real"
+
+UpdateUnitArmorBonus=Update Unit Armor Bonus
+UpdateUnitArmorBonus="Update Unit Armor Bonus (",~whichUnit,")"
+UpdateUnitArmorBonusHint="[MARS] native UpdateUnitArmorBonus takes unit whichUnit returns real"
+
+GetBonusDMGUnit=Get Bonus DMG Unit
+GetBonusDMGUnit="Get Bonus DMG Unit"
+GetBonusDMGUnitHint="[MARS] native GetBonusDMGUnit takes nothing returns unit"
+
+GetBonusDMGFlat=Get Bonus DMG Flat
+GetBonusDMGFlat="Get Bonus DMG Flat"
+GetBonusDMGFlatHint="[MARS] native GetBonusDMGFlat takes nothing returns real"
+
+GetBonusDMGPenalty=Get Bonus DMG Penalty
+GetBonusDMGPenalty="Get Bonus DMG Penalty"
+GetBonusDMGPenaltyHint="[MARS] native GetBonusDMGPenalty takes nothing returns real"
+
+GetBonusDMGIncrease=Get Bonus DMG Increase
+GetBonusDMGIncrease="Get Bonus DMG Increase"
+GetBonusDMGIncreaseHint="[MARS] native GetBonusDMGIncrease takes nothing returns real"
+
+GetBonusDMGDecrease=Get Bonus DMG Decrease
+GetBonusDMGDecrease="Get Bonus DMG Decrease"
+GetBonusDMGDecreaseHint="[MARS] native GetBonusDMGDecrease takes nothing returns real"
+
+GetUnitDamageBonus=Get Unit Damage Bonus
+GetUnitDamageBonus="Get Unit Damage Bonus (",~whichUnit,")"
+GetUnitDamageBonusHint="[MARS] native GetUnitDamageBonus takes unit whichUnit returns real"
+
+UpdateUnitDamageBonus=Update Unit Damage Bonus
+UpdateUnitDamageBonus="Update Unit Damage Bonus (",~whichUnit,")"
+UpdateUnitDamageBonusHint="[MARS] native UpdateUnitDamageBonus takes unit whichUnit returns real"
+
+GetBonusStatsUnit=Get Bonus Stats Unit
+GetBonusStatsUnit="Get Bonus Stats Unit"
+GetBonusStatsUnitHint="[MARS] native GetBonusStatsUnit takes nothing returns unit"
+
+GetBonusIntFlat=Get Bonus Int Flat
+GetBonusIntFlat="Get Bonus Int Flat"
+GetBonusIntFlatHint="[MARS] native GetBonusIntFlat takes nothing returns real"
+
+GetBonusIntPenalty=Get Bonus Int Penalty
+GetBonusIntPenalty="Get Bonus Int Penalty"
+GetBonusIntPenaltyHint="[MARS] native GetBonusIntPenalty takes nothing returns real"
+
+GetBonusIntIncrease=Get Bonus Int Increase
+GetBonusIntIncrease="Get Bonus Int Increase"
+GetBonusIntIncreaseHint="[MARS] native GetBonusIntIncrease takes nothing returns real"
+
+GetBonusIntDecrease=Get Bonus Int Decrease
+GetBonusIntDecrease="Get Bonus Int Decrease"
+GetBonusIntDecreaseHint="[MARS] native GetBonusIntDecrease takes nothing returns real"
+
+GetBonusStrFlat=Get Bonus Str Flat
+GetBonusStrFlat="Get Bonus Str Flat"
+GetBonusStrFlatHint="[MARS] native GetBonusStrFlat takes nothing returns real"
+
+GetBonusStrPenalty=Get Bonus Str Penalty
+GetBonusStrPenalty="Get Bonus Str Penalty"
+GetBonusStrPenaltyHint="[MARS] native GetBonusStrPenalty takes nothing returns real"
+
+GetBonusStrIncrease=Get Bonus Str Increase
+GetBonusStrIncrease="Get Bonus Str Increase"
+GetBonusStrIncreaseHint="[MARS] native GetBonusStrIncrease takes nothing returns real"
+
+GetBonusStrDecrease=Get Bonus Str Decrease
+GetBonusStrDecrease="Get Bonus Str Decrease"
+GetBonusStrDecreaseHint="[MARS] native GetBonusStrDecrease takes nothing returns real"
+
+GetBonusAgiFlat=Get Bonus Agi Flat
+GetBonusAgiFlat="Get Bonus Agi Flat"
+GetBonusAgiFlatHint="[MARS] native GetBonusAgiFlat takes nothing returns real"
+
+GetBonusAgiPenalty=Get Bonus Agi Penalty
+GetBonusAgiPenalty="Get Bonus Agi Penalty"
+GetBonusAgiPenaltyHint="[MARS] native GetBonusAgiPenalty takes nothing returns real"
+
+GetBonusAgiIncrease=Get Bonus Agi Increase
+GetBonusAgiIncrease="Get Bonus Agi Increase"
+GetBonusAgiIncreaseHint="[MARS] native GetBonusAgiIncrease takes nothing returns real"
+
+GetBonusAgiDecrease=Get Bonus Agi Decrease
+GetBonusAgiDecrease="Get Bonus Agi Decrease"
+GetBonusAgiDecreaseHint="[MARS] native GetBonusAgiDecrease takes nothing returns real"
+
+GetUnitBonusInt=Get Unit Bonus Int
+GetUnitBonusInt="Get Unit Bonus Int (",~whichUnit,")"
+GetUnitBonusIntHint="[MARS] native GetUnitBonusInt takes unit whichUnit returns real"
+
+GetUnitBonusStr=Get Unit Bonus Str
+GetUnitBonusStr="Get Unit Bonus Str (",~whichUnit,")"
+GetUnitBonusStrHint="[MARS] native GetUnitBonusStr takes unit whichUnit returns real"
+
+GetUnitBonusAgi=Get Unit Bonus Agi
+GetUnitBonusAgi="Get Unit Bonus Agi (",~whichUnit,")"
+GetUnitBonusAgiHint="[MARS] native GetUnitBonusAgi takes unit whichUnit returns real"
+
+UpdateUnitBonusStats=Update Unit Bonus Stats
+UpdateUnitBonusStats="Update Unit Bonus Stats (",~whichUnit,")"
+UpdateUnitBonusStatsHint="[MARS] native UpdateUnitBonusStats takes unit whichUnit returns nothing"
+
 GetTriggerBuffOwner=Get Trigger Buff Owner
 GetTriggerBuffOwner="Get Trigger Buff Owner"
 GetTriggerBuffOwnerHint="[MARS] native GetTriggerBuffOwner takes nothing returns unit"
@@ -4073,9 +4289,9 @@ UpdateUnitMpRegen=Update Unit Mp Regen
 UpdateUnitMpRegen="Update Unit Mp Regen (",~whichUnit,")"
 UpdateUnitMpRegenHint="[MARS] native UpdateUnitMpRegen takes unit whichUnit returns real"
 
-GetSpellObject=Get Spell Object
-GetSpellObject="Get Spell Object"
-GetSpellObjectHint="[MARS] native GetSpellObject takes nothing returns integer"
+GetSpellObjectId=Get Spell Object Id
+GetSpellObjectId="Get Spell Object Id"
+GetSpellObjectIdHint="[MARS] native GetSpellObjectId takes nothing returns integer"
 
 GetSpellOwnerUnit=Get Spell Owner Unit
 GetSpellOwnerUnit="Get Spell Owner Unit"
@@ -4089,9 +4305,13 @@ GetSpellTargUnit=Get Spell Targ Unit
 GetSpellTargUnit="Get Spell Targ Unit"
 GetSpellTargUnitHint="[MARS] native GetSpellTargUnit takes nothing returns unit"
 
-GetSpellIsEntered=Get Spell Is Entered
-GetSpellIsEntered="Get Spell Is Entered"
-GetSpellIsEnteredHint="[MARS] native GetSpellIsEntered takes nothing returns boolean"
+GetSpellIsEnter=Get Spell Is Enter
+GetSpellIsEnter="Get Spell Is Enter"
+GetSpellIsEnterHint="[MARS] native GetSpellIsEnter takes nothing returns boolean"
+
+GetSpellIsAction=Get Spell Is Action
+GetSpellIsAction="Get Spell Is Action"
+GetSpellIsActionHint="[MARS] native GetSpellIsAction takes nothing returns boolean"
 
 GetSpellIsOut=Get Spell Is Out
 GetSpellIsOut="Get Spell Is Out"
@@ -4292,6 +4512,14 @@ IsUnitDummyHint="[MARS] native IsUnitDummy takes unit whichUnit returns boolean"
 GetObserverForce=Get Observer Force
 GetObserverForce="Get Observer Force"
 GetObserverForceHint="[MARS] native GetObserverForce takes nothing returns force"
+
+GetIntervalUnit=Get Interval Unit
+GetIntervalUnit="Get Interval Unit"
+GetIntervalUnitHint="[MARS] native GetIntervalUnit takes nothing returns unit"
+
+GetIntervalTime=Get Interval Time
+GetIntervalTime="Get Interval Time"
+GetIntervalTimeHint="[MARS] native GetIntervalTime takes nothing returns real"
 
 Unit=Unit
 Unit="Unit (",~whichUnit,")"

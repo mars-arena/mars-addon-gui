@@ -2,6 +2,10 @@
 	//=========== AREA SPELLS ===========
 	type AreaSpell extends integer
 
+	//==================================
+	//=========== ATTACHMENT ===========
+	type Attachment extends integer
+
 	//=============================
 	//=========== AURAS ===========
 	type Aura extends integer
@@ -23,6 +27,10 @@
 	//==========================================
 	//=========== STATIC PROJECTILES ===========
 	type StaticProjectile extends integer
+
+	//=================================
+	//=========== UNIT DATA ===========
+	type UnitData extends integer
 
 
 globals
@@ -58,6 +66,63 @@ globals
 	// IsAuraActions() -> boolean
 	// GetAuraActionsId() -> integer
 	constant Event EVENT_AURA = undefined
+
+	//===================================
+	//=========== BONUS ARMOR ===========
+
+	// Событие модификатора бонусной брони
+	//
+	// GetBonusArmorUnit() -> unit
+	// GetBonusArmorFlat() -> real          // flat bonus
+	// GetBonusArmorPenalty() -> real       // flat penalty
+	// GetBonusArmorIncrease() -> real      // percentage bonus (аддитивно)
+	// GetBonusArmorDecrease() -> real      // percentage penalty (мультипликативно)
+	// AddBonusArmorFlat(real v)
+	// AddBonusArmorPenalty(real v)
+	// AddBonusArmorIncrease(real v)
+	// AddBonusArmorDecrease(real v)
+	// SetBonusArmorFlat(real v)
+	// SetBonusArmorPenalty(real v)
+	// SetBonusArmorIncrease(real v)
+	// SetBonusArmorDecrease(real v)
+	constant Event EVENT_BONUS_ARMOR = undefined
+
+	//====================================
+	//=========== BONUS DAMAGE ===========
+
+	// Событие модификатора бонусного урона урона
+	//
+	// GetBonusDMGUnit() -> unit
+	// GetBonusDMGFlat() -> real          // flat bonus
+	// GetBonusDMGPenalty() -> real       // flat penalty
+	// GetBonusDMGIncrease() -> real      // percentage bonus (аддитивно)
+	// GetBonusDMGDecrease() -> real      // percentage penalty (мультипликативно)
+	// AddBonusDMGFlat(real v)
+	// AddBonusDMGPenalty(real v)
+	// AddBonusDMGIncrease(real v)
+	// AddBonusDMGDecrease(real v)
+	// SetBonusDMGFlat(real v)
+	// SetBonusDMGPenalty(real v)
+	// SetBonusDMGIncrease(real v)
+	// SetBonusDMGDecrease(real v)
+	constant Event EVENT_BONUS_DAMAGE = undefined
+
+	//===================================
+	//=========== BONUS STATS ===========
+
+	// Событие модификатора статов
+	//
+	// Контекст:
+	// GetBonusStatsUnit() -> unit
+	// Int:  GetBonusIntFlat(), GetBonusIntPenalty(), GetBonusIntIncrease(), GetBonusIntDecrease()
+	// Str:  GetBonusStrFlat(), GetBonusStrPenalty(), GetBonusStrIncrease(), GetBonusStrDecrease()
+	// Agi:  GetBonusAgiFlat(), GetBonusAgiPenalty(), GetBonusAgiIncrease(), GetBonusAgiDecrease()
+	//
+	// Запросы:
+	// AddBonusIntFlat(real v) / AddBonusIntPenalty(real v) / AddBonusIntIncrease(real v) / AddBonusIntDecrease(real v)
+	// AddBonusStrFlat(real v) / ...
+	// AddBonusAgiFlat(real v) / ...
+	constant Event EVENT_BONUS_STATS = undefined
 
 	//=============================
 	//=========== BUFFS ===========
@@ -417,6 +482,12 @@ globals
 	constant Event EVENT_MP_REGENERATION = undefined
 
 	//=============================
+	//=========== SPELL ===========
+	constant Event EVENT_SPELL_START = undefined
+	constant Event EVENT_SPELL_ACTION = undefined
+	constant Event EVENT_SPELL_END = undefined
+
+	//=============================
 	//=========== STUNS ===========
 
 	// Событие оглушения юнита
@@ -446,6 +517,15 @@ globals
 	//==============================
 	//=========== TALENT ===========
 	constant Event EVENT_TALENT_CHOSEN = undefined
+
+	//=================================
+	//=========== UNIT DATA ===========
+
+	// Событие, вызываемое с интервалом для каждого юнита
+	//
+	// GetIntervalTime() -> real
+	// GetIntervalUnit() -> unit
+	constant Event EVENT_UNIT_INTERVAL = undefined
 
 	//====================================
 	//=========== HASH CLEANER ===========
@@ -483,7 +563,20 @@ endglobals
 
 	//==================================
 	//=========== ATTACHMENT ===========
+
+	// Присоединяет один юнит к другому.
+	// Повторный вызов для того же attached удалит предыдущую привязку.
+	//
+	// @arg unit attached юнит, которого присоединяем
+	// @arg unit target юнит, к которому присоединяем
+	// @arg real offsetX смещение по локальной оси X
+	// @arg real offsetY смещение по локальной оси Y
+	// @arg real offsetZ смещение по высоте
+	// @return Attachment объект привязки
 	native AttachUnitToUnit takes unit attached, unit target, real offsetX, real offsetY, real offsetZ returns Attachment //! [Unit], TriggerActions, TriggerCalls
+
+	// Отсоединяет attached, если он был привязан.
+	// @arg unit attached кого отсоединяем
 	native DetachUnit takes unit attached returns nothing //! [Unit], TriggerActions
 
 	//====================================
@@ -586,6 +679,76 @@ endglobals
 	// @arg real period интервал периодических действий
 	// @return Aura ссылка на созданную ауру
 	native AddAuraToUnit takes unit auraUnit, integer typeId, item itemAura, boolean multiAurasToTarget, integer priority, boolean multiAurasForOwner, boolean refreshOutEnter, boolean hardRefresh, integer actionsId, boolexpr filter, real radiusMax, real endDuration, boolean periodActions, real period returns nothing //! [Aura], TriggerActions, TriggerCalls
+
+	//===================================
+	//=========== BONUS ARMOR ===========
+	native GetBonusArmorUnit takes nothing returns unit //! [ResponseBonusArmor], TriggerCalls
+	native GetBonusArmorFlat takes nothing returns real //! [ResponseBonusArmor], TriggerCalls
+	native GetBonusArmorPenalty takes nothing returns real //! [ResponseBonusArmor], TriggerCalls
+	native GetBonusArmorIncrease takes nothing returns real //! [ResponseBonusArmor], TriggerCalls
+	native GetBonusArmorDecrease takes nothing returns real //! [ResponseBonusArmor], TriggerCalls
+	native AddBonusArmorFlat takes real v returns nothing //! [RequestBonusArmor], TriggerActions
+	native AddBonusArmorPenalty takes real v returns nothing //! [RequestBonusArmor], TriggerActions
+	native AddBonusArmorIncrease takes real v returns nothing //! [RequestBonusArmor], TriggerActions
+	native AddBonusArmorDecrease takes real v returns nothing //! [RequestBonusArmor], TriggerActions
+
+	// Возвращает кэшированный бонус брони юнита
+	native GetUnitArmorBonus takes unit whichUnit returns real //! [Unit], TriggerCalls
+
+	// Форс-апдейт и возврат нового бонуса брони
+	native UpdateUnitArmorBonus takes unit whichUnit returns real //! [Unit], TriggerActions, TriggerCalls
+
+	//====================================
+	//=========== BONUS DAMAGE ===========
+	native GetBonusDMGUnit takes nothing returns unit //! [ResponseBonusDMG], TriggerCalls
+	native GetBonusDMGFlat takes nothing returns real //! [ResponseBonusDMG], TriggerCalls
+	native GetBonusDMGPenalty takes nothing returns real //! [ResponseBonusDMG], TriggerCalls
+	native GetBonusDMGIncrease takes nothing returns real //! [ResponseBonusDMG], TriggerCalls
+	native GetBonusDMGDecrease takes nothing returns real //! [ResponseBonusDMG], TriggerCalls
+	native AddBonusDMGFlat takes real v returns nothing //! [RequestBonusDMG], TriggerActions
+	native AddBonusDMGPenalty takes real v returns nothing //! [RequestBonusDMG], TriggerActions
+	native AddBonusDMGIncrease takes real v returns nothing //! [RequestBonusDMG], TriggerActions
+	native AddBonusDMGDecrease takes real v returns nothing //! [RequestBonusDMG], TriggerActions
+
+	// Возвращает кэшированный бонус урона юнита
+	native GetUnitDamageBonus takes unit whichUnit returns real //! [Unit], TriggerCalls
+
+	// Форс-апдейт и возврат нового бонуса урона
+	native UpdateUnitDamageBonus takes unit whichUnit returns real //! [Unit], TriggerActions, TriggerCalls
+
+	//===================================
+	//=========== BONUS STATS ===========
+	native GetBonusStatsUnit takes nothing returns unit //! [ResponseBonusStats], TriggerCalls
+	native GetBonusIntFlat takes nothing returns real //! [ResponseBonusStats], TriggerCalls
+	native GetBonusIntPenalty takes nothing returns real //! [ResponseBonusStats], TriggerCalls
+	native GetBonusIntIncrease takes nothing returns real //! [ResponseBonusStats], TriggerCalls
+	native GetBonusIntDecrease takes nothing returns real //! [ResponseBonusStats], TriggerCalls
+	native GetBonusStrFlat takes nothing returns real //! [ResponseBonusStats], TriggerCalls
+	native GetBonusStrPenalty takes nothing returns real //! [ResponseBonusStats], TriggerCalls
+	native GetBonusStrIncrease takes nothing returns real //! [ResponseBonusStats], TriggerCalls
+	native GetBonusStrDecrease takes nothing returns real //! [ResponseBonusStats], TriggerCalls
+	native GetBonusAgiFlat takes nothing returns real //! [ResponseBonusStats], TriggerCalls
+	native GetBonusAgiPenalty takes nothing returns real //! [ResponseBonusStats], TriggerCalls
+	native GetBonusAgiIncrease takes nothing returns real //! [ResponseBonusStats], TriggerCalls
+	native GetBonusAgiDecrease takes nothing returns real //! [ResponseBonusStats], TriggerCalls
+	native AddBonusIntFlat takes real v returns nothing //! [RequestBonusStats], TriggerActions
+	native AddBonusIntPenalty takes real v returns nothing //! [RequestBonusStats], TriggerActions
+	native AddBonusIntIncrease takes real v returns nothing //! [RequestBonusStats], TriggerActions
+	native AddBonusIntDecrease takes real v returns nothing //! [RequestBonusStats], TriggerActions
+	native AddBonusStrFlat takes real v returns nothing //! [RequestBonusStats], TriggerActions
+	native AddBonusStrPenalty takes real v returns nothing //! [RequestBonusStats], TriggerActions
+	native AddBonusStrIncrease takes real v returns nothing //! [RequestBonusStats], TriggerActions
+	native AddBonusStrDecrease takes real v returns nothing //! [RequestBonusStats], TriggerActions
+	native AddBonusAgiFlat takes real v returns nothing //! [RequestBonusStats], TriggerActions
+	native AddBonusAgiPenalty takes real v returns nothing //! [RequestBonusStats], TriggerActions
+	native AddBonusAgiIncrease takes real v returns nothing //! [RequestBonusStats], TriggerActions
+	native AddBonusAgiDecrease takes real v returns nothing //! [RequestBonusStats], TriggerActions
+
+	// Текущие кэшированные бонусы
+	native GetUnitBonusInt takes unit whichUnit returns real //! [Unit], TriggerCalls
+	native GetUnitBonusStr takes unit whichUnit returns real //! [Unit], TriggerCalls
+	native GetUnitBonusAgi takes unit whichUnit returns real //! [Unit], TriggerCalls
+	native UpdateUnitBonusStats takes unit whichUnit returns nothing //! [Unit], TriggerActions, TriggerCalls
 
 	//=============================
 	//=========== BUFFS ===========
@@ -1238,15 +1401,14 @@ endglobals
 	// @return real — новая скорость регенерации маны
 	native UpdateUnitMpRegen takes unit whichUnit returns real //! [Unit], TriggerCalls, TriggerActions
 
-	//=====================================
-	//=========== SPELL GETTERS ===========
-
-	// Getters Functions
-	native GetSpellObject takes nothing returns integer //! [ResponseSpell], TriggerCalls
+	//=============================
+	//=========== SPELL ===========
+	native GetSpellObjectId takes nothing returns integer //! [ResponseSpell], TriggerCalls
 	native GetSpellOwnerUnit takes nothing returns unit //! [ResponseSpell], TriggerCalls
 	native GetSpellDummyUnit takes nothing returns unit //! [ResponseSpell], TriggerCalls
 	native GetSpellTargUnit takes nothing returns unit //! [ResponseSpell], TriggerCalls
-	native GetSpellIsEntered takes nothing returns boolean //! [ResponseSpell], TriggerCalls
+	native GetSpellIsEnter takes nothing returns boolean //! [ResponseSpell], TriggerCalls
+	native GetSpellIsAction takes nothing returns boolean //! [ResponseSpell], TriggerCalls
 	native GetSpellIsOut takes nothing returns boolean //! [ResponseSpell], TriggerCalls
 	native GetSpellActionsId takes nothing returns integer //! [ResponseSpell], TriggerCalls
 	native GetSpellCompletion takes nothing returns real //! [ResponseSpell], TriggerCalls
@@ -1535,6 +1697,12 @@ endglobals
 
 	//=================================
 	//=========== UNIT DATA ===========
+	native GetIntervalUnit takes nothing returns unit //! [ResponseInterval], TriggerCalls
+	native GetIntervalTime takes nothing returns real //! [ResponseInterval], TriggerCalls
+
+	// Возвращает объект данных юнита
+	// @arg unit whichUnit - целевой юнит
+	// @return UnitData - объект данных юнита
 	native Unit takes unit whichUnit returns UnitData //! [UnitData], TriggerCalls
 
 	//====================================
