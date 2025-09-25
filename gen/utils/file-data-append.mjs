@@ -6,8 +6,25 @@ import fs from 'fs'
  * @param {string} part
  */
 export default (filePath, s, part) => {
-    const data = fs.readFileSync(filePath)
+    const data = fs.readFileSync(filePath, 'utf8')
+    const lines = data.split('\n')
     const h = `[${part}]`
-    const pos = data.indexOf(h) + h.length
-    fs.writeFileSync(filePath, Buffer.concat([data.subarray(0, pos), Buffer.from('\n' + s), data.subarray(pos)]))
+
+    // Найти начало секции
+    const startIndex = lines.findIndex(line => line.startsWith(h))
+    if (startIndex === -1) {
+        throw new Error(`Section [${part}] not found in file`)
+    }
+
+    // Найти конец секции или конец файла
+    let endIndex = startIndex + 1
+    while (endIndex < lines.length && !lines[endIndex].startsWith('[')) {
+        endIndex++
+    }
+
+    // Добавить строку в конец секции и пустую строку после неё
+    lines.splice(endIndex, 0, s, '')
+
+    // Записать обновлённые данные обратно в файл
+    fs.writeFileSync(filePath, lines.join('\n'))
 }
