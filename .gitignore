@@ -7,3 +7,4 @@ System Volume Information/
 build/
 node_modules/
 package-lock.json
+dist/*
