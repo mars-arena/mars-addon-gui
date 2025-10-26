@@ -8,4 +8,4 @@ build/
 node_modules/
 package-lock.json
 dist/
-engine_api_gui
+.\engine_api_gui.j
